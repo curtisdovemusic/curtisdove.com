@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 7%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 346 83% 60%;  /* #FF3366 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 5% 12%;  /* #1E1E1E */
+  --secondary-foreground: 0 0% 98%;
+  --accent: 346 83% 60%;  /* #FF3366 */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  /* Music site custom colors */
+  --purple: 277 75% 53%;  /* #8A2BE2 */
+  --cyan: 196 100% 50%;  /* #00C2FF */
+  --light-text: 0 0% 88%;  /* #E0E0E0 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-primary text-foreground font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF3366] via-[#8A2BE2] to-[#00C2FF] animate-gradient-x;
+  }
+  
+  .nav-link {
+    @apply relative hover:text-accent transition-colors duration-300;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute bottom-[-4px] left-0 w-0 h-[2px] bg-accent transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-r from-[#FF3366] via-[#8A2BE2] to-[#00C2FF] bg-[length:200%_200%] animate-gradient-x;
+  }
+  
+  .social-icon {
+    @apply transition-all duration-300 hover:text-accent hover:-translate-y-1;
+  }
+  
+  .album-card {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+  
+  .show-card {
+    @apply transition-all duration-300 hover:scale-[1.02];
+  }
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-text {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
