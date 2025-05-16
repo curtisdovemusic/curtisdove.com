@@ -1,8 +1,6 @@
-import { Link } from "wouter";
-
 export default function Bio() {
   return (
-    <section id="bio" className="py-20 bg-secondary mt-16">
+    <section id="bio" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Artist portrait with gradient effect */}
@@ -24,7 +22,7 @@ export default function Bio() {
             </div>
             
             <p className="text-[hsl(var(--light-text))] mb-6 leading-relaxed">
-              Curtis Dove is a boundary-pushing, genre-blending artist with 15,000+ monthly Spotify listeners and counting. He fuses the vibrant pulse of Afrobeat, the groove of Afro-fusion, the rhythm of Afropop, and the soul of R&B, with the edgy textures of Pop, Alternative Rock, Dance, Darkwave, and Club music.
+              Curtis Dove is a boundary-pushing, genre-blending artist with 20,000+ monthly Spotify listeners and counting. He fuses the vibrant pulse of Afrobeat, the groove of Afro-fusion, the rhythm of Afropop, and the soul of R&B, with the edgy textures of Pop, Alternative Rock, Dance, Darkwave, and Club music.
             </p>
             
             <p className="text-[hsl(var(--light-text))] mb-6 leading-relaxed">
@@ -34,10 +32,6 @@ export default function Bio() {
             <p className="text-[hsl(var(--light-text))] mb-8 leading-relaxed">
               With each release, Curtis continues to innovate and expand his artistic vision, creating a distinct sound that is both contemporary and timeless, familiar yet fresh, and always authentically his own.
             </p>
-            
-            <Link href="/contact" className="inline-block px-6 py-3 bg-secondary border border-accent/50 rounded-full hover:bg-accent/10 transition duration-300 font-medium">
-              Get in Touch <i className="fas fa-arrow-right ml-2"></i>
-            </Link>
           </div>
         </div>
       </div>
