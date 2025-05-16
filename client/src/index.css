@@ -62,7 +62,7 @@
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-[#FF3366] via-[#8A2BE2] to-[#00C2FF] bg-[length:200%_200%] animate-gradient-x;
+    @apply bg-gradient-to-r from-[#FFA500] via-[#FFD700] to-[#FF8C00] bg-[length:200%_200%] animate-gradient-x;
   }
   
   .social-icon {
