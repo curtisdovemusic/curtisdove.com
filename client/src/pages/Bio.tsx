@@ -24,15 +24,15 @@ export default function Bio() {
             </div>
             
             <p className="text-[hsl(var(--light-text))] mb-6 leading-relaxed">
-              Curtis Dove is an innovative artist blending Afrobeat, Soul, and electronic elements into a vibrant sonic experience. With roots spanning multiple continents, his music creates a bridge between traditional African rhythms and modern production techniques.
+              Curtis Dove is a boundary-pushing, genre-blending artist with 15,000+ monthly Spotify listeners and counting. He fuses the vibrant pulse of Afrobeat, the groove of Afro-fusion, the rhythm of Afropop, and the soul of R&B, with the edgy textures of Pop, Alternative Rock, Dance, Darkwave, and Club music.
             </p>
             
             <p className="text-[hsl(var(--light-text))] mb-6 leading-relaxed">
-              Having performed in venues across Nigeria, Japan, and the United States, Curtis brings a global perspective to his craft. His lyrics explore themes of cultural identity, personal growth, and the universal language of rhythm.
+              Bringing global influences to his music, Curtis creates sonic experiences that transcend geographical and cultural boundaries. His music tells stories of life, love, identity, and the human experience through captivating melodies and meaningful lyrics.
             </p>
             
             <p className="text-[hsl(var(--light-text))] mb-8 leading-relaxed">
-              Influenced by pioneers like Fela Kuti, Sade, and contemporary artists like Burna Boy, Curtis continues to push boundaries with each release while staying true to his authentic voice.
+              With each release, Curtis continues to innovate and expand his artistic vision, creating a distinct sound that is both contemporary and timeless, familiar yet fresh, and always authentically his own.
             </p>
             
             <Link href="/contact" className="inline-block px-6 py-3 bg-secondary border border-accent/50 rounded-full hover:bg-accent/10 transition duration-300 font-medium">

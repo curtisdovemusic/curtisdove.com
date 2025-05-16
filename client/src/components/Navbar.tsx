@@ -58,14 +58,20 @@ export default function Navbar() {
           <Link href="/shows" className="text-2xl font-medium hover:text-accent transition duration-300">Shows</Link>
           <Link href="/contact" className="text-2xl font-medium hover:text-accent transition duration-300">Contact</Link>
           <div className="flex space-x-6 mt-8">
-            <a href="https://www.facebook.com/CurtisDoveMusic" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
+            <a href="https://www.facebook.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
               <i className="fab fa-facebook"></i>
             </a>
             <a href="https://www.instagram.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
+            <a href="https://open.spotify.com/artist/5ZCP0tbgVY2Lx7JG0grqNR?si=S2VQDr7fSJu2NNjjjAuFxg" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
               <i className="fab fa-spotify"></i>
+            </a>
+            <a href="https://www.youtube.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
+              <i className="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
+              <i className="fab fa-tiktok"></i>
             </a>
           </div>
         </div>
