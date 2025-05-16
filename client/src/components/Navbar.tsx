@@ -1,43 +1,67 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [location] = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      
+      // Determine which section is in view
+      const sections = ['home', 'bio', 'music'];
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      }) || 'home';
+      
+      setActiveSection(current);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    // Close mobile menu when changing routes
-    setMobileMenuOpen(false);
-  }, [location]);
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+  
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
   };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 bg-primary bg-opacity-80 backdrop-blur-md transition-all duration-300 ${scrolled ? 'py-2 shadow-lg' : 'py-4'}`}>
-      <nav className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold font-montserrat text-white z-10">
-          <span className="gradient-text">Curtis Dove</span>
-          <span className="text-[hsl(var(--light-text))]"> Music</span>
-        </Link>
-        
+      <nav className="container mx-auto px-4 flex justify-center items-center">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
-          <Link href="/" className="nav-link font-medium">Home</Link>
-          <Link href="/bio" className="nav-link font-medium">Bio</Link>
-          <Link href="/music" className="nav-link font-medium">Music</Link>
-          <Link href="/playlists" className="nav-link font-medium">Playlists</Link>
+        <div className="hidden md:flex space-x-8 justify-center">
+          <button 
+            onClick={() => scrollToSection('home')} 
+            className={`nav-link font-medium ${activeSection === 'home' ? 'text-accent' : ''}`}
+          >
+            Home
+          </button>
+          <button 
+            onClick={() => scrollToSection('bio')} 
+            className={`nav-link font-medium ${activeSection === 'bio' ? 'text-accent' : ''}`}
+          >
+            Bio
+          </button>
+          <button 
+            onClick={() => scrollToSection('music')} 
+            className={`nav-link font-medium ${activeSection === 'music' ? 'text-accent' : ''}`}
+          >
+            Music
+          </button>
         </div>
         
         {/* Mobile Navigation Toggle */}
@@ -51,10 +75,25 @@ export default function Navbar() {
         
         {/* Mobile Navigation Menu */}
         <div className={`fixed inset-0 bg-primary bg-opacity-95 flex flex-col items-center justify-center space-y-8 transform transition duration-300 ease-in-out md:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <Link href="/" className="text-2xl font-medium hover:text-accent transition duration-300">Home</Link>
-          <Link href="/bio" className="text-2xl font-medium hover:text-accent transition duration-300">Bio</Link>
-          <Link href="/music" className="text-2xl font-medium hover:text-accent transition duration-300">Music</Link>
-          <Link href="/playlists" className="text-2xl font-medium hover:text-accent transition duration-300">Playlists</Link>
+          <button 
+            onClick={() => scrollToSection('home')} 
+            className="text-2xl font-medium hover:text-accent transition duration-300"
+          >
+            Home
+          </button>
+          <button 
+            onClick={() => scrollToSection('bio')} 
+            className="text-2xl font-medium hover:text-accent transition duration-300"
+          >
+            Bio
+          </button>
+          <button 
+            onClick={() => scrollToSection('music')} 
+            className="text-2xl font-medium hover:text-accent transition duration-300"
+          >
+            Music
+          </button>
+          
           <div className="flex space-x-6 mt-8">
             <a href="https://www.facebook.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
               <i className="fab fa-facebook"></i>
