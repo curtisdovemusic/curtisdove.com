@@ -9,8 +9,7 @@ import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
 import Bio from "@/pages/Bio";
 import Music from "@/pages/Music";
-import Shows from "@/pages/Shows";
-import Contact from "@/pages/Contact";
+import Playlists from "@/pages/Playlists";
 
 function Router() {
   return (
@@ -18,8 +17,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/bio" component={Bio} />
       <Route path="/music" component={Music} />
-      <Route path="/shows" component={Shows} />
-      <Route path="/contact" component={Contact} />
+      <Route path="/playlists" component={Playlists} />
       <Route component={NotFound} />
     </Switch>
   );

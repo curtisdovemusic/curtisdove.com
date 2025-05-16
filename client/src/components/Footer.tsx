@@ -41,8 +41,7 @@ export default function Footer() {
                 <li><Link href="/" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Home</Link></li>
                 <li><Link href="/bio" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Bio</Link></li>
                 <li><Link href="/music" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Music</Link></li>
-                <li><Link href="/shows" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Shows</Link></li>
-                <li><Link href="/contact" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Contact</Link></li>
+                <li><Link href="/playlists" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Playlists</Link></li>
               </ul>
             </div>
             
@@ -58,11 +57,11 @@ export default function Footer() {
             </div>
             
             <div>
-              <h3 className="text-lg font-bold mb-4">Contact</h3>
+              <h3 className="text-lg font-bold mb-4">Follow</h3>
               <ul className="space-y-3">
-                <li><a href="mailto:curtisdovemusic@gmail.com" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Email</a></li>
-                <li><Link href="/contact" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Booking</Link></li>
-                <li><Link href="/contact" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Press Kit</Link></li>
+                <li><a href="https://www.instagram.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">TikTok</a></li>
+                <li><a href="https://www.youtube.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--light-text))] hover:text-accent transition duration-300">YouTube</a></li>
               </ul>
             </div>
           </div>

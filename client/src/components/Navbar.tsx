@@ -29,7 +29,7 @@ export default function Navbar() {
       <nav className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold font-montserrat text-white z-10">
           <span className="gradient-text">Curtis Dove</span>
-          <span className="text-[hsl(var(--light-text))]">Music</span>
+          <span className="text-[hsl(var(--light-text))]"> Music</span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -37,8 +37,7 @@ export default function Navbar() {
           <Link href="/" className="nav-link font-medium">Home</Link>
           <Link href="/bio" className="nav-link font-medium">Bio</Link>
           <Link href="/music" className="nav-link font-medium">Music</Link>
-          <Link href="/shows" className="nav-link font-medium">Shows</Link>
-          <Link href="/contact" className="nav-link font-medium">Contact</Link>
+          <Link href="/playlists" className="nav-link font-medium">Playlists</Link>
         </div>
         
         {/* Mobile Navigation Toggle */}
@@ -55,8 +54,7 @@ export default function Navbar() {
           <Link href="/" className="text-2xl font-medium hover:text-accent transition duration-300">Home</Link>
           <Link href="/bio" className="text-2xl font-medium hover:text-accent transition duration-300">Bio</Link>
           <Link href="/music" className="text-2xl font-medium hover:text-accent transition duration-300">Music</Link>
-          <Link href="/shows" className="text-2xl font-medium hover:text-accent transition duration-300">Shows</Link>
-          <Link href="/contact" className="text-2xl font-medium hover:text-accent transition duration-300">Contact</Link>
+          <Link href="/playlists" className="text-2xl font-medium hover:text-accent transition duration-300">Playlists</Link>
           <div className="flex space-x-6 mt-8">
             <a href="https://www.facebook.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="social-icon text-2xl">
               <i className="fab fa-facebook"></i>
