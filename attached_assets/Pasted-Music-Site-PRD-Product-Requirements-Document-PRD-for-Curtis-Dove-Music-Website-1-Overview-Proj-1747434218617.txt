@@ -1,0 +1,268 @@
+Music Site PRD
+
+Product Requirements Document (PRD) for Curtis Dove Music Website
+
+1. Overview
+
+Project Name: Curtis Dove Music Website
+
+Objective: Build a static website for music artist Curtis Dove Music, hosted on Replit using the custom domain CurtisDoveMusic.com, to showcase music, bio, and social media, linking to streaming platforms and stores, with minimal maintenance via Facebook/Instagram fan engagement.
+
+Stakeholder: Curtis Dove (artist, owner of CurtisDoveMusic.com via Namecheap).
+
+2. Goals
+
+Create a professional, mobile-friendly, visually stunning static website for Curtis Dove Music.
+
+Host on Replit with the custom domain CurtisDoveMusic.com.
+
+Use the simplest, easiest-to-stand-up, and maintainable tech stack Replit supports, ensuring a beautiful, artistic design for a music artist.
+
+Include typical music artist content (bio, music links, shows, contact, social media).
+
+Link to streaming platforms (Spotify, Apple Music, YouTube Music) and stores (e.g., Bandcamp).
+
+Drive fan interaction to Facebook (@CurtisDoveMusic) and Instagram (@curtisdovemusic) to minimize site maintenance.
+
+Ensure compliance with Replit's terms and Namecheap DNS setup.
+
+3. Requirements
+
+3.1 Functional Requirements
+
+Pages and Content:
+
+Home: Hero section with cover art, artist name, and tagline (e.g., "Curtis Dove Music - Vibes from Lagos to Tokyo"). Call-to-action (CTA) buttons to streaming platforms and social media.
+
+Bio: Short artist bio (200-300 words), photo, and style description.
+
+Music: Section with embedded playlist links (via Feature.fm or Linkfire) to Spotify, Apple Music, YouTube Music, and stores. Display cover art for releases.
+
+Shows: List of upcoming performances (date, venue, ticket link) or "No shows scheduled" placeholder.
+
+Contact: Simple contact form (email submission via Formspree) or email link (e.g., curtisdovemusic@gmail.com).
+
+Social Media: Footer and navigation with links to Facebook (@CurtisDoveMusic) and Instagram (@curtisdovemusic).
+
+Links:
+
+Smart links to streaming platforms/stores in Music section and CTAs (e.g., "Stream Now").
+
+Social media icons/links in footer and Home page, directing to Facebook/Instagram.
+
+Navigation:
+
+Responsive navbar (Home, Bio, Music, Shows, Contact) with mobile hamburger menu.
+
+SEO:
+
+Basic meta tags (title, description, keywords) for search visibility (e.g., "Curtis Dove Music - Afrobeat & Soul Artist").
+
+Open Graph tags for social sharing (e.g., Facebook post previews).
+
+3.2 Technical Requirements
+
+Tech Stack:
+
+Replit to choose the simplest, easiest-to-stand-up, and maintainable stack for a static site (e.g., HTML, CSS, JavaScript with a CSS framework like Tailwind CSS or Bootstrap via CDN).
+
+Prioritize minimal setup time (deployable in <1 week) and easy updates (editable by non-experts).
+
+Ensure the stack supports beautiful, artistic design (e.g., vibrant colors, smooth animations, music-themed layouts).
+
+No backend or database; static files only.
+
+Replit Setup:
+
+Use Replit's browser-based IDE to create a new project (likely HTML, CSS, JS template).
+
+Store static files in root directory (/) or /public.
+
+Configure Replit Static Deployments (free tier) with minimal build command (e.g., none for basic HTML).
+
+Custom Domain:
+
+Link CurtisDoveMusic.com via Replit's Deployments > Settings > Link a Domain.
+
+Add DNS records in Namecheap:
+
+A Record: Point to Replit's IP (provided in Deployments).
+
+TXT Record: Verify domain ownership (provided by Replit).
+
+Use Cloudflare (free tier) for CDN and SSL, following Replit's DNS setup guide.
+
+Hosting:
+
+Deploy via Replit's Static Deployments (free, cost-effective for low traffic).
+
+Set Always-On (if premium) or use UptimeRobot to ping every 25 minutes (free) to prevent sleep.
+
+Performance:
+
+Optimize images (e.g., cover art <500KB, use WebP format).
+
+Minify CSS/JavaScript (manual or via Replit tools).
+
+Ensure load time <3 seconds on mobile (test via Lighthouse).
+
+3.3 Design Requirements
+
+Look and Feel:
+
+Vibrant, music-themed design (e.g., bold colors, dynamic gradients, or dark palette).
+
+Use a CSS framework (e.g., Tailwind CSS) for responsive grid, elegant typography, and animated buttons.
+
+Smooth transitions (e.g., hover effects on CTAs) and visually striking layouts (e.g., full-screen hero with cover art).
+
+Branding:
+
+Logo: "Curtis Dove Music" text or custom logo (if provided).
+
+Cover art: Prominently displayed on Home and Music pages.
+
+Accessibility:
+
+Alt text for images (e.g., "Curtis Dove Music cover art").
+
+High-contrast text (e.g., white on dark background).
+
+Keyboard-navigable links and form.
+
+3.4 Non-Functional Requirements
+
+Maintenance:
+
+Minimal upkeep; update Shows and Music manually via Replit IDE (<1 hour/month).
+
+Fan engagement via Facebook/Instagram to avoid site comments.
+
+Scalability:
+
+Handle low to moderate traffic (~1,000-10,000 monthly visitors) on Replit's free tier.
+
+Security:
+
+Use HTTPS via Cloudflare SSL.
+
+Avoid storing sensitive data (e.g., API keys) in public files.
+
+Compliance:
+
+Adhere to Meta's music usage terms (use owned original tracks).
+
+Follow Replit's terms for static deployments (no backend processing).
+
+4. User Stories
+
+As a music fan, I want to visit CurtisDoveMusic.com to learn about Curtis Dove Music, see cover art, and stream music on Spotify, Apple Music, or YouTube Music.
+
+As a fan, I want to follow Curtis on Facebook/Instagram for updates, so I don't check the site often.
+
+As Curtis, I want a simple, beautiful site I can update easily on Replit without deep coding skills.
+
+As Curtis, I want my custom domain (CurtisDoveMusic.com) to host the site for professional branding.
+
+5. Success Metrics
+
+Deployment: Site live on CurtisDoveMusic.com within 1 week.
+
+Traffic: ~1,000 monthly visitors within 3 months, driven by social media.
+
+Engagement: ~100-500 playlist clicks/month (tracked via Feature.fm/Linkfire).
+
+Maintenance: <1 hour/month for updates (e.g., new shows, releases).
+
+Design: Visually stunning, artistic feedback from at least 10 fans (via social media).
+
+6. Implementation Plan
+
+Phase 1: Setup (1 day):
+
+Create Replit project (HTML, CSS, JS template or Replit's choice).
+
+Add CSS framework (e.g., Tailwind CSS via CDN) in index.html.
+
+Structure files: index.html (Home), bio.html, music.html, shows.html, contact.html.
+
+Phase 2: Development (2-3 days):
+
+Build responsive, artistic pages with chosen stack.
+
+Add content (bio, cover art, Feature.fm smart links, social media links).
+
+Implement contact form (Formspree) and navigation.
+
+Phase 3: Deployment (1 day):
+
+Deploy via Replit Static Deployments (root: /public).
+
+Configure CurtisDoveMusic.com in Namecheap DNS (A and TXT records).
+
+Set up Cloudflare for CDN/SSL.
+
+Phase 4: Testing (1 day):
+
+Test mobile responsiveness (Chrome DevTools).
+
+Verify links (streaming, social media, contact).
+
+Check domain propagation (load CurtisDoveMusic.com).
+
+7. Assumptions and Constraints
+
+Assumptions:
+
+You own CurtisDoveMusic.com via Namecheap with DNS access.
+
+You have cover art and bio content ready.
+
+Replit's free tier supports your traffic needs.
+
+Constraints:
+
+Static site only (no backend, comments, or dynamic content).
+
+Limited to Replit's static deployment features.
+
+Basic coding knowledge for HTML/CSS edits.
+
+8. Risks and Mitigation
+
+Risk: Domain setup fails due to DNS propagation delays (up to 48 hours).
+
+Mitigation: Follow Replit's DNS guide; test with temporary subdomain (e.g., curtisdovemusic.replit.app).
+
+Risk: Site sleeps after 30 minutes of inactivity.
+
+Mitigation: Use UptimeRobot (free) to ping every 25 minutes.
+
+Risk: Design not artistic enough for music brand.
+
+Mitigation: Use Tailwind CSS for vibrant, animated styles; test with fans on Instagram.
+
+9. References
+
+Replit Static Deployments: docs.replit.com
+
+Replit Custom Domains: docs.replit.com
+
+Namecheap DNS Setup: namecheap.com/support
+
+Tailwind CSS: tailwindcss.com
+
+Feature.fm Smart Links: feature.fm
+
+10. Notes
+
+Replit to choose the simplest stack (likely HTML, CSS, JS with Tailwind/Bootstrap).
+
+Prioritize beautiful design (vibrant, music-themed, animated) for artistic impact.
+
+Update content via Replit IDE (e.g., new shows, releases).
+
+Promote via Facebook/Instagram (@CurtisDoveMusic, @curtisdovemusic).
+
+Contact Replit or Namecheap support for issues.
+
