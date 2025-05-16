@@ -8,6 +8,7 @@ interface AlbumCardProps {
   featured?: boolean;
   tag?: string;
   tagColor?: string;
+  spotifyUrl?: string;
 }
 
 export default function AlbumCard({ 
@@ -19,7 +20,8 @@ export default function AlbumCard({
   image, 
   featured = false,
   tag = '', 
-  tagColor = 'text-accent' 
+  tagColor = 'text-accent',
+  spotifyUrl = 'https://open.spotify.com/artist/5ZCP0tbgVY2Lx7JG0grqNR?si=S2VQDr7fSJu2NNjjjAuFxg'
 }: AlbumCardProps) {
   return (
     <div className="album-card bg-secondary rounded-xl overflow-hidden shadow-xl transition-all duration-300">
@@ -38,13 +40,13 @@ export default function AlbumCard({
           {featured && <span className={`${tagColor} text-sm font-medium`}>{tag}</span>}
         </div>
         <div className="flex flex-wrap gap-2">
-          <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-2 rounded-full bg-[#1DB954] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+          <a href={spotifyUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-2 rounded-full bg-[#1DB954] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
             <i className="fab fa-spotify mr-2"></i> Spotify
           </a>
-          <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-2 rounded-full bg-[#FA57C1] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
-            <i className="fab fa-apple mr-2"></i> Apple Music
+          <a href="https://www.amazon.com/music/player/artists/B0DD4HQ6D3/curtis-dove" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-2 rounded-full bg-[#232F3E] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+            <i className="fab fa-amazon mr-2"></i> Amazon
           </a>
-          <a href="https://music.youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-2 rounded-full bg-[#FF0000] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+          <a href="https://www.youtube.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-2 rounded-full bg-[#FF0000] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
             <i className="fab fa-youtube mr-2"></i> YouTube
           </a>
         </div>

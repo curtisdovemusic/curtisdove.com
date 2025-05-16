@@ -13,11 +13,11 @@
   --card-foreground: 0 0% 98%;
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
-  --primary: 346 83% 60%;  /* #FF3366 */
+  --primary: 30 100% 7%;  /* #120C00 - dark background */
   --primary-foreground: 0 0% 98%;
-  --secondary: 240 5% 12%;  /* #1E1E1E */
+  --secondary: 30 15% 12%;  /* #1E1A16 - slightly lighter dark */
   --secondary-foreground: 0 0% 98%;
-  --accent: 346 83% 60%;  /* #FF3366 */
+  --accent: 39 100% 50%;  /* #FFA500 - orange accent */
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
@@ -25,9 +25,9 @@
   --radius: 0.5rem;
   
   /* Music site custom colors */
-  --purple: 277 75% 53%;  /* #8A2BE2 */
-  --cyan: 196 100% 50%;  /* #00C2FF */
-  --light-text: 0 0% 88%;  /* #E0E0E0 */
+  --gold: 45 100% 50%;  /* #FFD700 - golden yellow */
+  --amber: 25 100% 50%;  /* #FF8C00 - deep amber */
+  --light-text: 39 30% 88%;  /* #F3EAD9 - pale gold light text */
 }
 
 @layer base {
@@ -46,7 +46,7 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF3366] via-[#8A2BE2] to-[#00C2FF] animate-gradient-x;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FFA500] via-[#FFD700] to-[#FF8C00] animate-gradient-x;
   }
   
   .nav-link {

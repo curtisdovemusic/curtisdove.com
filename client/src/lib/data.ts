@@ -1,37 +1,52 @@
 // Album data
 export const albums = [
   {
-    title: "Midnight Echoes",
-    type: "EP",
+    title: "After Dark in Lagos",
+    type: "Trilogy Playlist",
+    year: "2023",
+    tracks: 3,
+    duration: "12 min",
+    image: "https://i.scdn.co/image/ab67616d0000b273a1f3abca9b7ccfda5d4d1c2e",
+    featured: true,
+    tag: "Explicit",
+    tagColor: "text-accent",
+    spotifyUrl: "https://open.spotify.com/playlist/7qWyO3vNYIWRgiGcTQT9Bd?si=2G-7e7YsQnO_jclShp5isQ"
+  },
+  {
+    title: "Love Songs",
+    type: "Playlist",
     year: "2023",
     tracks: 5,
-    duration: "18 min",
-    image: "https://images.unsplash.com/photo-1544656376-ffe19d4b7353?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+    duration: "20 min",
+    image: "https://i.scdn.co/image/ab67616d0000b2739f63a4b3eaeae39b7a053b5e",
     featured: true,
     tag: "Featured",
-    tagColor: "text-accent"
+    tagColor: "text-[hsl(var(--cyan))]",
+    spotifyUrl: "https://open.spotify.com/playlist/13nhg6SPkxfMaAkj2Cra6M?si=jIspaUvaTcGsxyEpuyz_HA"
   },
   {
-    title: "Lagos to Tokyo",
-    type: "Album",
+    title: "Ashes Trilogy",
+    type: "Playlist",
     year: "2022",
-    tracks: 12,
-    duration: "42 min",
-    image: "https://images.unsplash.com/photo-1596120236172-231808879f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+    tracks: 3,
+    duration: "11 min",
+    image: "https://i.scdn.co/image/ab67616d0000b273fc8d03b21a106533dd7adb8a",
     featured: true,
     tag: "Popular",
-    tagColor: "text-[hsl(var(--light-text))]"
+    tagColor: "text-[hsl(var(--light-text))]",
+    spotifyUrl: "https://open.spotify.com/playlist/7lUurLZ2vBhayCAc96tTp2?si=p8EBYDhcSgWyH5XcMkgzNQ"
   },
   {
-    title: "Soul Rhythms",
-    type: "Single",
-    year: "2021",
-    tracks: 1,
-    duration: "3:45 min",
-    image: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+    title: "Curtis Dove Complete",
+    type: "Full Collection",
+    year: "2023",
+    tracks: 17,
+    duration: "67 min",
+    image: "https://i.scdn.co/image/ab67616d0000b2736681e3950fbe6bd9ba68ddf0",
     featured: true,
-    tag: "Single",
-    tagColor: "text-[hsl(var(--cyan))]"
+    tag: "All Songs",
+    tagColor: "text-[hsl(var(--purple))]",
+    spotifyUrl: "https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn?si=4I0mTFrNTIOZBGfgZQu-fw"
   }
 ];
 

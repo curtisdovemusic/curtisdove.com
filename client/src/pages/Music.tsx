@@ -23,6 +23,7 @@ export default function Music() {
               featured={album.featured}
               tag={album.tag}
               tagColor={album.tagColor}
+              spotifyUrl={album.spotifyUrl}
             />
           ))}
         </div>
@@ -30,20 +31,20 @@ export default function Music() {
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold mb-6">Listen Everywhere</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#1DB954] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+            <a href="https://open.spotify.com/artist/5ZCP0tbgVY2Lx7JG0grqNR?si=S2VQDr7fSJu2NNjjjAuFxg" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#1DB954] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
               <i className="fab fa-spotify text-xl mr-2"></i> Spotify
             </a>
-            <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#FA57C1] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
-              <i className="fab fa-apple text-xl mr-2"></i> Apple Music
+            <a href="https://www.amazon.com/music/player/artists/B0DD4HQ6D3/curtis-dove" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#232F3E] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+              <i className="fab fa-amazon text-xl mr-2"></i> Amazon Music
             </a>
-            <a href="https://music.youtube.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#FF0000] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
-              <i className="fab fa-youtube text-xl mr-2"></i> YouTube Music
+            <a href="https://www.youtube.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#FF0000] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+              <i className="fab fa-youtube text-xl mr-2"></i> YouTube
             </a>
-            <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#FF7700] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+            <a href="https://soundcloud.com/user-314281859" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#FF7700] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
               <i className="fab fa-soundcloud text-xl mr-2"></i> SoundCloud
             </a>
-            <a href="https://bandcamp.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#629aa9] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
-              <i className="fab fa-bandcamp text-xl mr-2"></i> Bandcamp
+            <a href="https://www.tiktok.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-6 py-3 rounded-full bg-[#000000] bg-opacity-10 hover:bg-opacity-20 transition duration-300">
+              <i className="fab fa-tiktok text-xl mr-2"></i> TikTok
             </a>
           </div>
         </div>
