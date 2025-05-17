@@ -826,6 +826,31 @@ export default function Home() {
                           number: "03", 
                           title: "Love in Letters", 
                           album: "Lagos to Tokyo",
+                        },
+                        { 
+                          number: "04", 
+                          title: "Find My Way Back to You", 
+                          album: "Lagos to Tokyo",
+                        },
+                        { 
+                          number: "05", 
+                          title: "The Letter That Started It All", 
+                          album: "Lagos to Tokyo",
+                        },
+                        { 
+                          number: "06", 
+                          title: "XOXO", 
+                          album: "Lagos to Tokyo",
+                        },
+                        { 
+                          number: "07", 
+                          title: "Still Your Boy", 
+                          album: "Lagos to Tokyo",
+                        },
+                        { 
+                          number: "08", 
+                          title: "I'm Coming Home", 
+                          album: "Lagos to Tokyo",
                         }
                       ]}
                     />
