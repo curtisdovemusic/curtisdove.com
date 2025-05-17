@@ -840,29 +840,38 @@ export default function Home() {
                         { 
                           number: "01", 
                           title: "Big Ashawo", 
-                          album: "Big Ashawo – Single",
-                          spotifyUrl: "https://open.spotify.com/track/3PwiZBi7lOeH0dM4Sx6QPK",
-                          appleUrl: "https://music.apple.com/us/album/big-ashawo-single/1812762793",
+                          album: "Eko Island Beats",
+                          spotifyUrl: "https://open.spotify.com/track/3Ma0MUPr5OvHo7lGbZVker",
+                          appleUrl: "https://music.apple.com/tj/album/eko-island-beats/1788734401",
                           amazonUrl: "https://www.amazon.com/dp/B0DZZW6LXD",
-                          youtubeUrl: "https://www.youtube.com/watch?v=tsqTlt7JVRU"
+                          youtubeUrl: "https://www.youtube.com/playlist?list=OLAK5uy_mpvh23PrrVItc2r2i4MCZomat8P7JLD0U"
                         },
                         { 
                           number: "02", 
                           title: "Another Sad Story", 
                           album: "Another Sad Story – Single",
-                          spotifyUrl: "https://open.spotify.com/track/0ZhOeEQ13D6UjoO4QF8MIo",
-                          appleUrl: "https://music.apple.com/us/album/another-sad-story-single/1812762849",
+                          spotifyUrl: "https://open.spotify.com/track/5B1qljjDKR1HMpBNyqqiDR",
+                          appleUrl: "https://music.apple.com/us/album/another-sad-story-single/1810912581",
                           amazonUrl: "https://www.amazon.com/dp/B0DZZW73ZN",
-                          youtubeUrl: "https://www.youtube.com/watch?v=cMcLofeK0Mg"
+                          youtubeUrl: "https://www.youtube.com/playlist?list=OLAK5uy_ksX8toSfWMxe_w2W0J7B_p6jSCXCZmt7U"
                         },
                         { 
                           number: "03", 
                           title: "King of Hearts", 
                           album: "King of Hearts – Single",
-                          spotifyUrl: "https://open.spotify.com/track/1UADxgeW6gWMyEy4mH2Amc",
-                          appleUrl: "https://music.apple.com/us/album/king-of-hearts-single/1812762485",
+                          spotifyUrl: "https://open.spotify.com/track/0RkOJ10BFpwOT24iQmcNFb",
+                          appleUrl: "https://music.apple.com/gb/album/king-of-hearts-single/1767830745",
                           amazonUrl: "https://www.amazon.com/dp/B0DZZW3PSM",
                           youtubeUrl: "https://www.youtube.com/watch?v=QUJJlFiA_hU"
+                        },
+                        { 
+                          number: "04", 
+                          title: "Sticky", 
+                          album: "Sticky – Single",
+                          spotifyUrl: "https://open.spotify.com/track/1AdPAdWMH0afTWVWmZEj0Z",
+                          appleUrl: "https://music.apple.com/us/album/sticky-single/1765943457",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZZW7MLR",
+                          youtubeUrl: "https://www.youtube.com/watch?v=AiRxVhrWMD0"
                         }
                       ]}
                     />
