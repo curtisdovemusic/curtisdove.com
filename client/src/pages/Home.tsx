@@ -465,10 +465,10 @@ export default function Home() {
                         <span className="w-2 h-6 bg-red-500 rounded-full mr-2"></span>
                         <h3 className="text-lg font-bold">The Ashes Trilogy</h3>
                       </div>
-                      <p className="text-sm text-white/60 mb-4">A journey through rock and metal</p>
+                      <p className="text-sm text-white/60 mb-4">A Journey of Renewal</p>
                       <div className="relative">
                         <a 
-                          href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn" 
+                          href="https://open.spotify.com/playlist/7lUurLZ2vBhayCAc96tTp2" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="block"
