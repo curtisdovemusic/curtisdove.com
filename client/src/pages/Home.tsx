@@ -50,8 +50,15 @@ const SOCIAL_MEDIA = [
   { name: "YouTube", icon: "fab fa-youtube", url: "https://www.youtube.com/@curtisdovemusic" }
 ];
 
+// Define section type
+type Section = {
+  id: string;
+  label: string;
+  isLink?: boolean;
+};
+
 // Navigation sections
-const SECTIONS = [
+const SECTIONS: Section[] = [
   { id: "home", label: "Home" },
   { id: "music", label: "Music" },
   { id: "videos", label: "Videos" },
@@ -380,7 +387,7 @@ export default function Home() {
             {/* Featured music with large player */}
             <div className="mb-16">
               <h3 className="text-2xl font-bold text-center mb-6">
-                <span className="text-white">TOP </span>
+                <span className="text-white">FEATURED </span>
                 <span className="text-amber-500">PLAYLISTS</span>
               </h3>
               <div className="max-w-5xl mx-auto">
