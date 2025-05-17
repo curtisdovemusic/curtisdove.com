@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,10 +20,27 @@ export default function Navbar() {
   };
   
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If we're not on the home page, navigate there first
+    if (location !== '/') {
+      setLocation('/');
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setMobileMenuOpen(false);
+  };
+  
+  const navigateTo = (path: string) => {
+    setLocation(path);
     setMobileMenuOpen(false);
   };
 
@@ -52,9 +71,15 @@ export default function Navbar() {
           </button>
           <button 
             onClick={() => scrollToSection('press')} 
-            className="text-amber-500 hover:text-white border border-amber-500 px-4 py-1 rounded-md uppercase text-sm font-bold tracking-wider"
+            className="text-white hover:text-amber-500 transition-colors duration-300 uppercase text-sm font-bold tracking-wider"
           >
             Press
+          </button>
+          <button 
+            onClick={() => navigateTo('/artist-picks')} 
+            className="text-amber-500 hover:text-white border border-amber-500 px-4 py-1 rounded-md uppercase text-sm font-bold tracking-wider"
+          >
+            Artist Picks
           </button>
           <button 
             onClick={() => scrollToSection('connect')} 
@@ -95,9 +120,15 @@ export default function Navbar() {
           </button>
           <button 
             onClick={() => scrollToSection('press')} 
-            className="text-2xl font-bold text-amber-500 border-2 border-amber-500 px-6 py-2 rounded-lg uppercase transition duration-300"
+            className="text-2xl font-bold text-white hover:text-amber-500 uppercase transition duration-300"
           >
             Press
+          </button>
+          <button 
+            onClick={() => navigateTo('/artist-picks')} 
+            className="text-2xl font-bold text-amber-500 border-2 border-amber-500 px-6 py-2 rounded-lg uppercase transition duration-300"
+          >
+            Artist Picks
           </button>
           <button 
             onClick={() => scrollToSection('connect')} 
