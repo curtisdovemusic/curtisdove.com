@@ -4,6 +4,16 @@ interface ShareButtonsProps {
   className?: string;
 }
 
+// Define the share button type
+type ShareButton = {
+  name: string;
+  icon?: string;
+  color: string;
+  isX?: boolean;
+  url?: string;
+  action?: () => void;
+};
+
 export default function ShareButtons({ 
   className = "" 
 }: ShareButtonsProps) {
@@ -23,7 +33,7 @@ export default function ShareButtons({
     }
   };
 
-  const shareButtons = [
+  const shareButtons: ShareButton[] = [
     {
       name: "Copy Link",
       icon: "fas fa-link",

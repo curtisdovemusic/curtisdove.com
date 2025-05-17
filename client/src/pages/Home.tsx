@@ -96,8 +96,8 @@ const SECTIONS: Section[] = [
   { id: "home", label: "Home" },
   { id: "music", label: "Music" },
   { id: "videos", label: "Videos" },
-  { id: "bio", label: "Bio" },
   { id: "press", label: "In The Press" },
+  { id: "bio", label: "Bio" },
   { id: "contact", label: "Contact" }
 ];
 
