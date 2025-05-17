@@ -93,31 +93,7 @@ export default function CollapsibleGenre({
           isExpanded ? 'max-h-[1000px] mt-4 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-4 py-3 mb-4 bg-[#023047]/40 rounded-lg border border-[#219ebc]/20">
-          <h3 className="text-white text-center text-sm font-medium mb-3">Listen on your preferred music platform</h3>
-          <div className="flex justify-center space-x-6">
-            <a href="https://open.spotify.com/artist/4KzGAkZOIjh2HFKBF7qSQ1" target="_blank" rel="noopener noreferrer" 
-               className="flex flex-col items-center group">
-              <FaSpotify className="text-2xl text-[#1DB954] group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-white mt-1">Spotify</span>
-            </a>
-            <a href="https://music.apple.com/us/artist/curtis-dove/1494458246" target="_blank" rel="noopener noreferrer" 
-               className="flex flex-col items-center group">
-              <FaApple className="text-2xl text-[#fa57c1] group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-white mt-1">Apple</span>
-            </a>
-            <a href="https://music.amazon.com/artists/B084DDB4YW/curtis-dove" target="_blank" rel="noopener noreferrer" 
-               className="flex flex-col items-center group">
-              <FaAmazon className="text-2xl text-[#FF9900] group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-white mt-1">Amazon</span>
-            </a>
-            <a href="https://www.youtube.com/channel/UCKGwqYHOIvXz4i645_LZlUQ" target="_blank" rel="noopener noreferrer" 
-               className="flex flex-col items-center group">
-              <FaYoutube className="text-2xl text-[#FF0000] group-hover:scale-110 transition-transform" />
-              <span className="text-xs text-white mt-1">YouTube</span>
-            </a>
-          </div>
-        </div>
+
         <div className="flex flex-col space-y-3 pl-4 pr-2 py-2">
           {songs.map((song, index) => (
             <div 
@@ -136,15 +112,46 @@ export default function CollapsibleGenre({
                   <h4 className="text-white font-medium text-sm sm:text-base truncate">{song.title}</h4>
                   <p className="text-xs sm:text-sm text-[#8ecae6] truncate">{song.album}</p>
                 </div>
-                <div className="shrink-0">
-                  <a 
-                    href={song.spotifyUrl || `https://open.spotify.com/search/${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047] flex items-center"
-                  >
-                    Listen
-                  </a>
+                <div className="shrink-0 flex items-center space-x-2">
+                  <p className="text-xs text-white hidden sm:block">Listen:</p>
+                  <div className="flex space-x-2">
+                    <a 
+                      href={song.spotifyUrl || `https://open.spotify.com/search/${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      title="Listen on Spotify"
+                      className="w-8 h-8 flex items-center justify-center bg-[#1DB954]/20 hover:bg-[#1DB954]/30 rounded-full transition-colors"
+                    >
+                      <FaSpotify className="text-[#1DB954] text-lg" />
+                    </a>
+                    <a 
+                      href={`https://music.apple.com/search?term=${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      title="Listen on Apple Music"
+                      className="w-8 h-8 flex items-center justify-center bg-[#fa57c1]/20 hover:bg-[#fa57c1]/30 rounded-full transition-colors"
+                    >
+                      <FaApple className="text-[#fa57c1] text-lg" />
+                    </a>
+                    <a 
+                      href={`https://music.amazon.com/search/${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      title="Listen on Amazon Music"
+                      className="w-8 h-8 flex items-center justify-center bg-[#FF9900]/20 hover:bg-[#FF9900]/30 rounded-full transition-colors"
+                    >
+                      <FaAmazon className="text-[#FF9900] text-lg" />
+                    </a>
+                    <a 
+                      href={`https://www.youtube.com/results?search_query=${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      title="Listen on YouTube"
+                      className="w-8 h-8 flex items-center justify-center bg-[#FF0000]/20 hover:bg-[#FF0000]/30 rounded-full transition-colors"
+                    >
+                      <FaYoutube className="text-[#FF0000] text-lg" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
