@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
 import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
+import CollapsibleGenre from "../components/CollapsibleGenre";
 
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
@@ -565,145 +566,67 @@ export default function Home() {
                     </Link>
                   </div>
                   
-                  {/* Afrosounds - Featured */}
-                  <div className="mb-12">
-                    <div className="flex items-center justify-between mb-5">
-                      <h3 className="text-2xl font-bold">
-                        <span className="text-white">Afrosounds</span>
-                      </h3>
-                      <Link href="/artist-picks?genre=afrosounds" className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-sm group flex items-center">
-                        <span>See All</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
-                    
-                    {/* Top 3 Afrosounds Songs */}
-                    <div className="flex flex-col space-y-3">
-                      {[
+                  {/* Collapsible Genre Sections */}
+                  <div className="space-y-8">
+                    {/* Afrosounds Collapsible */}
+                    <CollapsibleGenre
+                      title="Afrosounds"
+                      genre="afrosounds"
+                      description="Explore my Afrobeats, Afropop, and Afro-fusion sounds"
+                      songs={[
                         { number: "01", title: "Lagos Nights & Island Lights", genre: "Afrobeat" },
                         { number: "02", title: "Island Gal", genre: "Afrobeat" },
                         { number: "03", title: "Lagos Inferno", genre: "Afrobeat" }
-                      ].map((song, index) => (
-                        <div 
-                          key={index} 
-                          className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
-                        >
-                          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
-                          <div className="relative flex items-center p-3 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
-                            <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-4">
-                              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
-                                {song.number}
-                              </span>
-                            </div>
-                            <div className="flex-grow mr-4">
-                              <h4 className="text-white font-medium">{song.title}</h4>
-                              <p className="text-sm text-[#8ecae6]">{song.genre}</p>
-                            </div>
-                            <div className="shrink-0">
-                              <button className="px-3 py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047]">
-                                Listen Now
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Rock - Featured */}
-                  <div className="mb-12">
-                    <div className="flex items-center justify-between mb-5">
-                      <h3 className="text-2xl font-bold">
-                        <span className="text-white">Rock</span>
-                      </h3>
-                      <Link href="/artist-picks?genre=rock" className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-sm group flex items-center">
-                        <span>See All</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
+                      ]}
+                    />
                     
-                    {/* Top 3 Rock Songs */}
-                    <div className="flex flex-col space-y-3">
-                      {[
+                    {/* Rock Collapsible */}
+                    <CollapsibleGenre 
+                      title="Rock"
+                      genre="rock"
+                      description="My alternative rock and metal collection"
+                      songs={[
                         { number: "01", title: "The Ashes (Pt. 1)", genre: "Rock" },
                         { number: "02", title: "Falling", genre: "Rock" },
                         { number: "03", title: "The Burning (Pt. 2)", genre: "Rock" }
-                      ].map((song, index) => (
-                        <div 
-                          key={index} 
-                          className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
-                        >
-                          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
-                          <div className="relative flex items-center p-3 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
-                            <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-4">
-                              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
-                                {song.number}
-                              </span>
-                            </div>
-                            <div className="flex-grow mr-4">
-                              <h4 className="text-white font-medium">{song.title}</h4>
-                              <p className="text-sm text-[#8ecae6]">{song.genre}</p>
-                            </div>
-                            <div className="shrink-0">
-                              <button className="px-3 py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047]">
-                                Listen Now
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Pop - Featured */}
-                  <div className="mb-12">
-                    <div className="flex items-center justify-between mb-5">
-                      <h3 className="text-2xl font-bold">
-                        <span className="text-white">Pop</span>
-                      </h3>
-                      <Link href="/artist-picks?genre=pop" className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-sm group flex items-center">
-                        <span>See All</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
+                      ]}
+                    />
                     
-                    {/* Top 3 Pop Songs */}
-                    <div className="flex flex-col space-y-3">
-                      {[
+                    {/* Pop Collapsible */}
+                    <CollapsibleGenre 
+                      title="Pop"
+                      genre="pop"
+                      description="Catchy melodies and upbeat vibes"
+                      songs={[
                         { number: "01", title: "One Wish", genre: "Pop" },
                         { number: "02", title: "Nobody Better", genre: "Pop" },
                         { number: "03", title: "Love in Letters", genre: "Pop" }
-                      ].map((song, index) => (
-                        <div 
-                          key={index} 
-                          className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
-                        >
-                          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
-                          <div className="relative flex items-center p-3 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
-                            <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-4">
-                              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
-                                {song.number}
-                              </span>
-                            </div>
-                            <div className="flex-grow mr-4">
-                              <h4 className="text-white font-medium">{song.title}</h4>
-                              <p className="text-sm text-[#8ecae6]">{song.genre}</p>
-                            </div>
-                            <div className="shrink-0">
-                              <button className="px-3 py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047]">
-                                Listen Now
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                      ]}
+                    />
+                    
+                    {/* Hip-Hop Collapsible */}
+                    <CollapsibleGenre 
+                      title="Hip-Hop"
+                      genre="hiphop"
+                      description="Beats, flow, and rhythm"
+                      songs={[
+                        { number: "01", title: "Shorty You a Vibe", genre: "Hip-Hop" },
+                        { number: "02", title: "Baller Life", genre: "Hip-Hop" },
+                        { number: "03", title: "Detty December", genre: "Hip-Hop" }
+                      ]}
+                    />
+                    
+                    {/* Explicit Collapsible */}
+                    <CollapsibleGenre 
+                      title="Explicit"
+                      genre="explicit"
+                      description="Raw, unfiltered musical expressions"
+                      songs={[
+                        { number: "01", title: "Big Ashawo", genre: "Explicit" },
+                        { number: "02", title: "Another Sad Story", genre: "Explicit" },
+                        { number: "03", title: "King of Hearts", genre: "Explicit" }
+                      ]}
+                    />
                   </div>
                 </div>
               </div>
