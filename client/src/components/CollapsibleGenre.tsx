@@ -128,7 +128,7 @@ export default function CollapsibleGenre({
                         </div>
                       </a>
                       <a 
-                        href={`https://music.apple.com/search?term=${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
+                        href={song.appleUrl || `https://music.apple.com/search?term=${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         title="Listen on Apple Music"

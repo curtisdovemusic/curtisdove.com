@@ -639,13 +639,15 @@ export default function Home() {
                           number: "09", 
                           title: "Lose Myself in You", 
                           album: "Lagos to Tokyo",
-                          spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
+                          spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
                         },
                         { 
                           number: "10", 
                           title: "Kano Love", 
                           album: "Lagos to Kano",
-                          spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
+                          spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
                         }
                       ]}
                     />
