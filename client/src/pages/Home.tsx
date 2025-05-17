@@ -594,6 +594,75 @@ export default function Home() {
         </div>
       </section>
       
+      {/* Press Section */}
+      <section id="press" className="py-24 bg-zinc-900 relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
+          <div className="absolute top-1/4 right-0 w-80 h-80 rounded-full bg-amber-500/5 blur-[100px]"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            <span className="text-white">IN THE </span>
+            <span className="text-amber-500">PRESS</span>
+          </h2>
+          
+          <div className="max-w-4xl mx-auto bg-zinc-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-amber-500/20 shadow-lg hover:border-amber-500/40 transition-all">
+            <div className="p-8">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+                <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-zinc-800 rounded-full flex items-center justify-center">
+                  <img 
+                    src="https://i0.wp.com/www.thesoundswontstop.com/wp-content/uploads/2020/08/cropped-Artboard-1-1.png" 
+                    alt="The Sounds Won't Stop Logo" 
+                    className="w-20 h-20 md:w-28 md:h-28 object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">The Sounds Won't Stop</h3>
+                  <div className="flex items-center mb-3">
+                    <div className="flex">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span key={star} className="text-amber-500 text-lg">★</span>
+                      ))}
+                    </div>
+                    <span className="text-white/60 ml-2 text-sm">Featured Review</span>
+                  </div>
+                  <p className="text-white/80 italic">
+                    "Curtis Dove is a true artistic chameleon, moving effortlessly between genres while maintaining his authentic voice."
+                  </p>
+                </div>
+              </div>
+              
+              <div className="prose prose-invert max-w-none">
+                <blockquote className="border-l-4 border-amber-500/50 pl-4 italic text-white/70">
+                  "...the range of talents and styles that Dove incorporates into his music is truly impressive. He's bringing a level of professionalism to his art that is setting him up for some bigger stages as his career continues."
+                </blockquote>
+                
+                <p className="text-white/80 mt-6">
+                  Curtis Dove's genre-spanning abilities were highlighted in a featured review by music publication The Sounds Won't Stop, praising his versatility and unique artistic voice across different styles of music.
+                </p>
+                
+                <div className="mt-6 text-center">
+                  <a 
+                    href="https://www.thesoundswontstop.com/curtis-dove" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-flex items-center px-4 py-2 rounded-md bg-amber-500 text-black font-medium hover:bg-amber-400 transition-colors"
+                  >
+                    Read Full Review
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Bio Section */}
       <section id="bio" className="py-24 bg-zinc-900 relative overflow-hidden">
         {/* Background elements */}
