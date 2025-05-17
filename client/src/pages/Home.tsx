@@ -626,10 +626,10 @@ export default function Home() {
 
             <div className="p-8">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
-                <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-amber-500/10 rounded-full flex items-center justify-center border border-amber-500/30">
+                <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-amber-500/30 to-red-500/20 rounded-xl flex items-center justify-center shadow-lg border border-amber-500/30">
                   <div className="text-center">
-                    <i className="fas fa-music text-amber-500 text-xl mb-1"></i>
-                    <div className="text-lg font-bold text-white">The Sounds<br />Won't Stop</div>
+                    <i className="fas fa-headphones-alt text-amber-500 text-2xl mb-2"></i>
+                    <div className="text-sm font-bold text-white">MUSIC REVIEW</div>
                   </div>
                 </div>
                 <div>
