@@ -584,70 +584,80 @@ export default function Home() {
                           title: "The Lounge Love", 
                           album: "Lagos to Kano",
                           spotifyUrl: "https://open.spotify.com/track/5pazCXbJAALjOPcsuvNwoj?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
+                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ"
                         },
                         { 
                           number: "02", 
                           title: "Lagos Inferno", 
                           album: "Eko Island Beats",
                           spotifyUrl: "https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/ug/song/lagos-inferno/1788734416"
+                          appleUrl: "https://music.apple.com/ug/song/lagos-inferno/1788734416",
+                          amazonUrl: "https://www.amazon.com/Eko-Island-Beats-Curtis-Dove/dp/B0DS9JR9V8"
                         },
                         { 
                           number: "03", 
                           title: "Wine & Kiss", 
                           album: "Lagos to Tokyo",
                           spotifyUrl: "https://open.spotify.com/track/2u5TqSfucAvxvgc7BnIU5x?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
+                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4"
                         },
                         { 
                           number: "04", 
                           title: "Lagos Islands", 
                           album: "Eko Island Beats",
                           spotifyUrl: "https://open.spotify.com/track/5OjzxlwXLT0Sp19VnKRgVV?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/in/song/lagos-islands/1788734402"
+                          appleUrl: "https://music.apple.com/in/song/lagos-islands/1788734402",
+                          amazonUrl: "https://www.amazon.com/Eko-Island-Beats-Curtis-Dove/dp/B0DS9JR9V8"
                         },
                         { 
                           number: "05", 
                           title: "Island Breeze Serenade", 
                           album: "Lagos to Tokyo",
                           spotifyUrl: "https://open.spotify.com/track/5xy7MHBAPFvZZwAZt8F9gf?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/lagos-to-tokyo/1795739853"
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-tokyo/1795739853",
+                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4"
                         },
                         { 
                           number: "06", 
                           title: "Beachside Fire", 
                           album: "Lagos to Kano",
                           spotifyUrl: "https://open.spotify.com/track/0TN5vTY58EquEYYrfWJsEa?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
+                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ"
                         },
                         { 
                           number: "07", 
                           title: "Sweet Poison", 
                           album: "Sweet Poison",
                           spotifyUrl: "https://open.spotify.com/track/3XN6m6KD0IsiLGfpam19y0?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
+                          amazonUrl: "https://www.amazon.com/Sweet-Poison-Curtis-Dove/dp/B0F6KYWYM2"
                         },
                         { 
                           number: "08", 
                           title: "Fire & Wine", 
                           album: "Fire & Wine",
                           spotifyUrl: "https://open.spotify.com/track/1uZC71fpV6uPtmP6XFBBgb?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/fire-wine-single/1798774371"
+                          appleUrl: "https://music.apple.com/us/album/fire-wine-single/1798774371",
+                          amazonUrl: "https://www.amazon.com/Fire-Wine-Curtis-Dove/dp/B0DYKY5FS1"
                         },
                         { 
                           number: "09", 
                           title: "Lose Myself in You", 
                           album: "Lagos to Tokyo",
                           spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
+                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4"
                         },
                         { 
                           number: "10", 
                           title: "Kano Love", 
                           album: "Lagos to Kano",
                           spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
-                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852"
+                          appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
+                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ"
                         }
                       ]}
                     />
