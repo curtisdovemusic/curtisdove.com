@@ -1,7 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 
-// Define a function to get a color for each album
+// Map album names to their cover images
+const albumCovers: Record<string, string> = {
+  'Lagos to Kano': '/album-covers/Lagos to Kano.jpeg',
+  'Eko Island Beats': '/album-covers/Eko Island Beats.jpeg',
+  'Lagos to Tokyo': '/album-covers/Lagos to Tokyo.webp',
+  'Sweet Poison': '/album-covers/Sweet Poison.png',
+  'Fire & Wine': '/album-covers/Fire & Wine.jpeg'
+};
+
+// Fallback color gradients for each album in case image fails to load
 const getAlbumColor = (album: string) => {
   // Create color mapping for each album
   const colors: Record<string, string> = {
@@ -19,7 +28,6 @@ interface Song {
   number: string;
   title: string;
   album: string;
-  albumCover?: string;
 }
 
 interface CollapsibleGenreProps {
@@ -101,9 +109,32 @@ export default function CollapsibleGenre({
                   </span>
                 </div>
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30">
-                  <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`}>
-                    <span className="text-sm font-bold text-white">{song.album.substring(0, 2)}</span>
-                  </div>
+                  {albumCovers[song.album] ? (
+                    <img 
+                      src={albumCovers[song.album]} 
+                      alt={`${song.album} cover`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        target.style.display = 'none';
+                        // Parent is guaranteed to exist since we're inside it
+                        const parent = target.parentElement!;
+                        // Replace with color gradient
+                        const gradientDiv = document.createElement('div');
+                        gradientDiv.className = `w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`;
+                        const span = document.createElement('span');
+                        span.className = 'text-sm font-bold text-white';
+                        span.textContent = song.album.substring(0, 2);
+                        gradientDiv.appendChild(span);
+                        parent.appendChild(gradientDiv);
+                      }}
+                    />
+                  ) : (
+                    <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`}>
+                      <span className="text-sm font-bold text-white">{song.album.substring(0, 2)}</span>
+                    </div>
+                  )}
                 </div>
                 <div className="flex-grow mr-2 sm:mr-4 min-w-0">
                   <h4 className="text-white font-medium text-sm sm:text-base truncate">{song.title}</h4>

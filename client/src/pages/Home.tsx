@@ -6,14 +6,7 @@ import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 
 // Reference album artwork with CSS background classes instead
-// Simpler URLs to album covers
-const albumCovers = {
-  "Lagos to Kano": "/albums/Lagos to Kano.jpeg",
-  "Eko Island Beats": "/albums/Eko Island Beats.jpeg",
-  "Lagos to Tokyo": "/albums/Lagos to Tokyo.webp",
-  "Sweet Poison": "/albums/Sweet Poison.png",
-  "Fire & Wine": "/albums/Fire & Wine.jpeg"
-};
+// We now get album covers directly from CollapsibleGenre
 
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
