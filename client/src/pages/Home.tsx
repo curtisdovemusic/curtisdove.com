@@ -292,12 +292,13 @@ export default function Home() {
         {/* Hero content */}
         <div className="container mx-auto px-6 relative z-10 mt-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
-              CURTIS DOVE MUSIC
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 relative">
+              <span className="relative z-10">CURTIS DOVE MUSIC</span>
+              <span className="absolute -inset-2 rounded-lg bg-gradient-to-r from-amber-500/10 via-purple-500/10 to-red-500/10 blur-md z-0"></span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Boundary-pushing artist with over 141+ songs across streaming platforms
+              <span className="font-bold text-amber-500">Curtis Dove</span> — Boundary-pushing artist with over 141+ songs across streaming platforms
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -359,12 +360,12 @@ export default function Home() {
               <div className="max-w-5xl mx-auto">
                 {/* Top 5 Playlists Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-                  {/* Complete Collection */}
-                  <div className="col-span-full md:col-span-2 bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-amber-500/20 hover:border-amber-500/40 transition-all">
-                    <div className="p-4">
+                  {/* Featured Playlist - Lagos Nights & Island Lights */}
+                  <div className="col-span-full bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-all">
+                    <div className="p-6">
                       <div className="flex items-center mb-4">
-                        <span className="w-2 h-8 bg-amber-500 rounded-full mr-3"></span>
-                        <h3 className="text-xl font-bold">Curtis Dove Complete</h3>
+                        <span className="w-2 h-8 bg-yellow-500 rounded-full mr-3"></span>
+                        <h3 className="text-xl font-bold">Featured: Lagos Nights & Island Lights</h3>
                       </div>
                       <div className="aspect-video">
                         <iframe 
@@ -381,14 +382,14 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* Lagos Nights */}
+                  {/* After Dark in Lagos */}
                   <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-all">
                     <div className="p-4">
                       <div className="flex items-center mb-3">
                         <span className="w-2 h-6 bg-yellow-500 rounded-full mr-2"></span>
-                        <h3 className="text-lg font-bold">Lagos Nights</h3>
+                        <h3 className="text-lg font-bold">After Dark in Lagos</h3>
                       </div>
-                      <p className="text-sm text-white/60 mb-4">Explore the vibrant Afrobeats collection</p>
+                      <p className="text-sm text-white/60 mb-4">The explicit side of Afrobeats</p>
                       <div className="relative">
                         <a 
                           href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn" 
@@ -579,11 +580,11 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-50 blur-xl rounded-2xl transition-all duration-700"></div>
                 <div className="relative overflow-hidden rounded-2xl">
-                  <div className="w-full aspect-[3/4] bg-gradient-to-br from-amber-500/20 to-amber-800/20 flex items-center justify-center shadow-2xl transform transition-transform duration-700 group-hover:scale-105">
-                    <div className="text-6xl text-amber-500/20 group-hover:text-amber-500/40 transition-colors">
-                      <i className="fas fa-user"></i>
-                    </div>
-                  </div>
+                  <img 
+                    src="attached_assets/CurtisDoveProfilePicture.jpg" 
+                    alt="Curtis Dove portrait" 
+                    className="w-full h-auto object-cover shadow-2xl transform transition-transform duration-700 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 </div>
                 
@@ -669,29 +670,13 @@ export default function Home() {
             </div>
             
             {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-zinc-900 transition-all">
-                <div className="text-amber-500 text-2xl mb-3">
+            <div className="max-w-xl mx-auto">
+              <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-zinc-900 transition-all border border-amber-500/20">
+                <div className="text-amber-500 text-3xl mb-4">
                   <i className="fas fa-envelope"></i>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-1">Email</h4>
+                <h4 className="text-xl font-bold text-white mb-2">Email</h4>
                 <p className="text-white/70">contact@curtisdove.com</p>
-              </div>
-              
-              <div className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-zinc-900 transition-all">
-                <div className="text-amber-500 text-2xl mb-3">
-                  <i className="fas fa-briefcase"></i>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-1">Management</h4>
-                <p className="text-white/70">manager@curtisdove.com</p>
-              </div>
-              
-              <div className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-zinc-900 transition-all">
-                <div className="text-amber-500 text-2xl mb-3">
-                  <i className="fas fa-music"></i>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-1">Booking</h4>
-                <p className="text-white/70">booking@curtisdove.com</p>
               </div>
             </div>
           </div>
