@@ -1,14 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 
-// Map album names to their cover images - we use the last part of the album name
-const albumCovers: Record<string, string> = {
-  'Lagos to Kano': '/images/Lagos to Kano.jpeg',
-  'Eko Island Beats': '/images/Eko Island Beats.jpeg',
-  'Lagos to Tokyo': '/images/Lagos to Tokyo.webp',
-  'Sweet Poison': '/images/Sweet Poison.png',
-  'Fire & Wine': '/images/Fire & Wine.jpeg'
-};
+// Color schemes for album visuals
 
 // Fallback color gradients for each album in case image fails to load
 const getAlbumColor = (album: string) => {
@@ -109,32 +102,9 @@ export default function CollapsibleGenre({
                   </span>
                 </div>
                 <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30">
-                  {albumCovers[song.album] ? (
-                    <img 
-                      src={albumCovers[song.album]} 
-                      alt={`${song.album} cover`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        target.style.display = 'none';
-                        // Parent is guaranteed to exist since we're inside it
-                        const parent = target.parentElement!;
-                        // Replace with color gradient
-                        const gradientDiv = document.createElement('div');
-                        gradientDiv.className = `w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`;
-                        const span = document.createElement('span');
-                        span.className = 'text-sm font-bold text-white';
-                        span.textContent = song.album.substring(0, 2);
-                        gradientDiv.appendChild(span);
-                        parent.appendChild(gradientDiv);
-                      }}
-                    />
-                  ) : (
-                    <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`}>
-                      <span className="text-sm font-bold text-white">{song.album.substring(0, 2)}</span>
-                    </div>
-                  )}
+                  <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`}>
+                    <span className="text-sm font-bold text-white">{song.album.substring(0, 2)}</span>
+                  </div>
                 </div>
                 <div className="flex-grow mr-2 sm:mr-4 min-w-0">
                   <h4 className="text-white font-medium text-sm sm:text-base truncate">{song.title}</h4>
