@@ -274,12 +274,38 @@ export default function Home() {
       <section id="music" className="py-24 bg-gradient-to-b from-black via-zinc-900/95 to-black">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
-              FEATURED <span className="text-amber-500">ALBUM</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 opacity-0 animate-ready slide-up">
+              MY <span className="text-amber-500">MUSIC</span>
             </h2>
             
-            {/* Featured album with large player */}
+            {/* Genre filters */}
+            <div className="flex flex-wrap justify-center gap-3 mb-16 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.1s' }}>
+              <button className="px-5 py-2.5 rounded-full bg-amber-500 text-black font-medium hover:bg-amber-600 transition-all">
+                All Genres
+              </button>
+              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+                Afrobeats
+              </button>
+              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+                Pop
+              </button>
+              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+                Rock/Metal
+              </button>
+              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+                Hip-Hop
+              </button>
+              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+                R&B
+              </button>
+            </div>
+            
+            {/* Featured music with large player */}
             <div className="mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-2xl font-bold text-center mb-6">
+                <span className="text-white">COMPLETE </span>
+                <span className="text-amber-500">COLLECTION</span>
+              </h3>
               <div className="max-w-4xl mx-auto rounded-2xl bg-zinc-900/50 p-6 backdrop-blur-sm">
                 <div className="relative overflow-hidden rounded-xl shadow-2xl">
                   <iframe 
@@ -299,8 +325,91 @@ export default function Home() {
               </div>
             </div>
             
+            {/* Genre Playlists */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.3s' }}>
+              {/* Afrobeats */}
+              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <span className="w-3 h-10 bg-yellow-500 rounded-full mr-4"></span>
+                    <h3 className="text-2xl font-bold">Afrobeats Collection</h3>
+                  </div>
+                  <iframe 
+                    style={{ borderRadius: '12px' }} 
+                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+              
+              {/* Pop */}
+              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <span className="w-3 h-10 bg-pink-500 rounded-full mr-4"></span>
+                    <h3 className="text-2xl font-bold">Pop Hits</h3>
+                  </div>
+                  <iframe 
+                    style={{ borderRadius: '12px' }} 
+                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+              
+              {/* Rock/Metal */}
+              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <span className="w-3 h-10 bg-red-600 rounded-full mr-4"></span>
+                    <h3 className="text-2xl font-bold">Rock & Metal</h3>
+                  </div>
+                  <iframe 
+                    style={{ borderRadius: '12px' }} 
+                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+              
+              {/* R&B */}
+              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <span className="w-3 h-10 bg-purple-500 rounded-full mr-4"></span>
+                    <h3 className="text-2xl font-bold">R&B Vibes</h3>
+                  </div>
+                  <iframe 
+                    style={{ borderRadius: '12px' }} 
+                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            
             {/* Listening options section */}
-            <div className="mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="mb-10 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.4s' }}>
               <h3 className="text-3xl font-bold text-center mb-10">
                 LISTEN <span className="text-amber-500">EVERYWHERE</span>
               </h3>
