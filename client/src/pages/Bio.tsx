@@ -67,7 +67,7 @@ export default function Bio() {
                 <div className="animated-gradient-border rounded-xl">
                   <div className="image-hover-zoom">
                     <img 
-                      src="https://pixabay.com/get/gc16c79ed96f50a1173d6135a6653b32b99e235dac46e1755b6c4afb1e6ff0afaa13e5dc884b3bbba059f892acb11124c52512014140eca5b88f02b2704fc81f4_1280.jpg" 
+                      src="/attached_assets/CurtisDoveProfilePicture.jpg" 
                       alt="Curtis Dove portrait" 
                       className="relative w-full h-auto rounded-xl shadow-2xl object-cover" 
                     />

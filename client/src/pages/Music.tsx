@@ -147,109 +147,86 @@ export default function Music() {
           style={{animationDelay: '0.5s'}}
         >
           <div className="glassmorphism rounded-xl p-6 max-w-5xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center gradient-text">Listen Everywhere</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center gradient-text">Listen to Curtis Dove</h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
-              {musicPlatforms.map((platform, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedPlatform(platform.name)}
-                  className={`flex flex-col items-center justify-center p-4 rounded-lg transition-all duration-300 transform ${
-                    selectedPlatform === platform.name 
-                    ? `scale-105 bg-${platform.color.replace('#', '')}/20 ring-2 ring-${platform.color.replace('#', '')}/50 shadow-lg`
-                    : 'bg-secondary hover:bg-white/5 hover:-translate-y-1 hover:shadow-lg'
-                  }`}
-                  style={selectedPlatform === platform.name ? {backgroundColor: `${platform.color}20`} : {}}
-                >
-                  <i className={`${platform.icon} text-2xl mb-2`} style={{color: platform.color}}></i>
-                  <span className="text-sm font-medium">{platform.name}</span>
-                </button>
-              ))}
-            </div>
-            
-            {selectedPlatform && (
-              <div className="animate-fade-in">
-                <div className="bg-secondary/50 rounded-lg p-6 mb-6">
-                  <div className="flex flex-col md:flex-row items-center gap-6">
-                    <div className="md:w-1/3">
-                      <div className="text-center md:text-left">
-                        <h4 className="text-xl font-bold mb-2">
-                          {musicPlatforms.find(p => p.name === selectedPlatform)?.name}
-                        </h4>
-                        <p className="text-[hsl(var(--light-text))] text-sm mb-4">
-                          {musicPlatforms.find(p => p.name === selectedPlatform)?.description}
-                        </p>
-                        <a 
-                          href={musicPlatforms.find(p => p.name === selectedPlatform)?.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors duration-300"
-                        >
-                          <i className={`${musicPlatforms.find(p => p.name === selectedPlatform)?.icon} mr-2`}></i>
-                          Open {selectedPlatform}
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="md:w-2/3 bg-black/20 rounded-lg p-4 overflow-hidden">
-                      {selectedPlatform === "Spotify" && (
-                        <iframe 
-                          src="https://open.spotify.com/embed/artist/5ZCP0tbgVY2Lx7JG0grqNR?utm_source=generator&theme=0" 
-                          width="100%" 
-                          height="152" 
-                          frameBorder="0" 
-                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                          loading="lazy"
-                          className="rounded-lg">
-                        </iframe>
-                      )}
-                      
-                      {selectedPlatform === "YouTube" && (
-                        <div className="aspect-video">
-                          <iframe 
-                            width="100%" 
-                            height="100%" 
-                            src="https://www.youtube.com/embed/videoseries?list=PLtgK30nhYgGZlh7VavbT1wAUFABaIWVLW" 
-                            title="YouTube video player" 
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowFullScreen
-                            className="rounded-lg">
-                          </iframe>
-                        </div>
-                      )}
-                      
-                      {(selectedPlatform !== "Spotify" && selectedPlatform !== "YouTube") && (
-                        <div className="flex items-center justify-center h-48">
-                          <div className="text-center">
-                            <i className={`${musicPlatforms.find(p => p.name === selectedPlatform)?.icon} text-5xl mb-4`} style={{color: musicPlatforms.find(p => p.name === selectedPlatform)?.color}}></i>
-                            <p className="text-[hsl(var(--light-text))]">Click the button below to open {selectedPlatform}</p>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-            
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
               {musicPlatforms.map((platform, index) => (
                 <a 
                   key={index}
                   href={platform.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center justify-center px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                  className="flex items-center p-6 rounded-lg transition-all duration-300 transform hover:scale-[1.03] hover:shadow-lg glow-effect animated-gradient-border"
                   style={{
-                    backgroundColor: `${platform.color}10`,
-                    color: platform.color
+                    backgroundColor: "#121212",
+                    borderWidth: "1px",
+                    borderStyle: "solid",
+                    borderColor: `${platform.color}40`
                   }}
                 >
-                  <i className={`${platform.icon} text-xl mr-2`}></i> {platform.name}
+                  <div className="mr-4 text-4xl" style={{ color: platform.color }}>
+                    <i className={platform.icon}></i>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold mb-1">{platform.name}</h4>
+                    <p className="text-sm text-[hsl(var(--light-text))]">{platform.description}</p>
+                  </div>
+                  <div className="ml-2">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors duration-300">
+                      <i className="fas fa-external-link-alt"></i>
+                    </span>
+                  </div>
                 </a>
               ))}
             </div>
+            
+            <div className="bg-black/20 rounded-xl p-8 mb-10">
+              <h3 className="text-xl font-bold mb-6 text-center">Featured Music Player</h3>
+              
+              <div className="flex justify-center">
+                <div className="w-full max-w-3xl animated-gradient-border rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://open.spotify.com/embed/artist/5ZCP0tbgVY2Lx7JG0grqNR?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="352" 
+                    frameBorder="0" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    className="rounded-lg">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex justify-center">
+              <button
+                onClick={() => setSelectedPlatform(selectedPlatform ? null : "YouTube")}
+                className="spotify-button px-8 py-3 rounded-full font-semibold shadow-lg flex items-center justify-center"
+              >
+                <span>
+                  <i className="fab fa-youtube mr-2"></i> {selectedPlatform === "YouTube" ? "Hide Video" : "Watch Music Video"}
+                </span>
+              </button>
+            </div>
+            
+            {selectedPlatform === "YouTube" && (
+              <div className="mt-8 animate-fade-in">
+                <div className="max-w-4xl mx-auto bg-black/30 p-4 rounded-xl overflow-hidden">
+                  <div className="aspect-video rounded-lg overflow-hidden">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/videoseries?list=PLtgK30nhYgGZlh7VavbT1wAUFABaIWVLW" 
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen
+                      className="rounded-lg">
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
