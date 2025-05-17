@@ -412,22 +412,17 @@ export default function Home() {
                         <h3 className="text-lg font-bold">After Dark in Lagos</h3>
                       </div>
                       <p className="text-sm text-white/60 mb-4">The Explicit Side of Afrobeats</p>
-                      <div className="relative">
-                        <a 
-                          href="https://open.spotify.com/playlist/7qWyO3vNYIWRgiGcTQT9Bd" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="block"
-                        >
-                          <div className="aspect-square rounded-lg bg-gradient-to-br from-yellow-600/30 to-yellow-800/30 flex items-center justify-center relative overflow-hidden group cursor-pointer">
-                            <i className="fab fa-spotify text-6xl text-white/30 group-hover:text-white/50 transition-all"></i>
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50">
-                              <div className="flex items-center px-4 py-2 bg-yellow-500 text-black rounded-full font-medium">
-                                <i className="fas fa-play mr-2"></i> Play now
-                              </div>
-                            </div>
-                          </div>
-                        </a>
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <iframe 
+                          style={{ borderRadius: '12px' }} 
+                          src="https://open.spotify.com/embed/playlist/7qWyO3vNYIWRgiGcTQT9Bd?utm_source=generator" 
+                          width="100%" 
+                          height="100%" 
+                          frameBorder="0" 
+                          allowFullScreen={true}
+                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                          loading="lazy">
+                        </iframe>
                       </div>
                     </div>
                   </div>
@@ -440,22 +435,17 @@ export default function Home() {
                         <h3 className="text-lg font-bold">Curtis Dove - My Love Songs</h3>
                       </div>
                       <p className="text-sm text-white/60 mb-4">Heartfelt love songs across genres</p>
-                      <div className="relative">
-                        <a 
-                          href="https://open.spotify.com/playlist/13nhg6SPkxfMaAkj2Cra6M" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="block"
-                        >
-                          <div className="aspect-square rounded-lg bg-gradient-to-br from-purple-600/30 to-purple-800/30 flex items-center justify-center relative overflow-hidden group cursor-pointer">
-                            <i className="fab fa-spotify text-6xl text-white/30 group-hover:text-white/50 transition-all"></i>
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50">
-                              <div className="flex items-center px-4 py-2 bg-purple-500 text-white rounded-full font-medium">
-                                <i className="fas fa-play mr-2"></i> Play now
-                              </div>
-                            </div>
-                          </div>
-                        </a>
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <iframe 
+                          style={{ borderRadius: '12px' }} 
+                          src="https://open.spotify.com/embed/playlist/13nhg6SPkxfMaAkj2Cra6M?utm_source=generator" 
+                          width="100%" 
+                          height="100%" 
+                          frameBorder="0" 
+                          allowFullScreen={true}
+                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                          loading="lazy">
+                        </iframe>
                       </div>
                     </div>
                   </div>
@@ -468,22 +458,17 @@ export default function Home() {
                         <h3 className="text-lg font-bold">The Ashes Trilogy</h3>
                       </div>
                       <p className="text-sm text-white/60 mb-4">A Journey of Renewal</p>
-                      <div className="relative">
-                        <a 
-                          href="https://open.spotify.com/playlist/7lUurLZ2vBhayCAc96tTp2" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="block"
-                        >
-                          <div className="aspect-square rounded-lg bg-gradient-to-br from-red-600/30 to-red-800/30 flex items-center justify-center relative overflow-hidden group cursor-pointer">
-                            <i className="fab fa-spotify text-6xl text-white/30 group-hover:text-white/50 transition-all"></i>
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50">
-                              <div className="flex items-center px-4 py-2 bg-red-500 text-white rounded-full font-medium">
-                                <i className="fas fa-play mr-2"></i> Play now
-                              </div>
-                            </div>
-                          </div>
-                        </a>
+                      <div className="aspect-video rounded-lg overflow-hidden">
+                        <iframe 
+                          style={{ borderRadius: '12px' }} 
+                          src="https://open.spotify.com/embed/playlist/7lUurLZ2vBhayCAc96tTp2?utm_source=generator" 
+                          width="100%" 
+                          height="100%" 
+                          frameBorder="0" 
+                          allowFullScreen={true}
+                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                          loading="lazy">
+                        </iframe>
                       </div>
                     </div>
                   </div>
