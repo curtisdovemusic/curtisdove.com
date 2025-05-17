@@ -386,7 +386,7 @@ export default function Home() {
             
             {/* Featured music with large player */}
             <div className="mb-16">
-              <h3 className="text-2xl font-bold text-center mb-6">
+              <h3 className="text-4xl font-bold text-center mb-6">
                 <span className="text-white">FEATURED </span>
                 <span className="text-amber-500">PLAYLISTS</span>
               </h3>
