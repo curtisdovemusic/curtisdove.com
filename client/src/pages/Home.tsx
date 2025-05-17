@@ -840,17 +840,29 @@ export default function Home() {
                         { 
                           number: "01", 
                           title: "Big Ashawo", 
-                          album: "Eko Island Beats",
+                          album: "Big Ashawo – Single",
+                          spotifyUrl: "https://open.spotify.com/track/3PwiZBi7lOeH0dM4Sx6QPK",
+                          appleUrl: "https://music.apple.com/us/album/big-ashawo-single/1812762793",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZZW6LXD",
+                          youtubeUrl: "https://www.youtube.com/watch?v=tsqTlt7JVRU"
                         },
                         { 
                           number: "02", 
                           title: "Another Sad Story", 
-                          album: "Fire & Wine",
+                          album: "Another Sad Story – Single",
+                          spotifyUrl: "https://open.spotify.com/track/0ZhOeEQ13D6UjoO4QF8MIo",
+                          appleUrl: "https://music.apple.com/us/album/another-sad-story-single/1812762849",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZZW73ZN",
+                          youtubeUrl: "https://www.youtube.com/watch?v=cMcLofeK0Mg"
                         },
                         { 
                           number: "03", 
                           title: "King of Hearts", 
-                          album: "Sweet Poison",
+                          album: "King of Hearts – Single",
+                          spotifyUrl: "https://open.spotify.com/track/1UADxgeW6gWMyEy4mH2Amc",
+                          appleUrl: "https://music.apple.com/us/album/king-of-hearts-single/1812762485",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZZW3PSM",
+                          youtubeUrl: "https://www.youtube.com/watch?v=QUJJlFiA_hU"
                         }
                       ]}
                     />
