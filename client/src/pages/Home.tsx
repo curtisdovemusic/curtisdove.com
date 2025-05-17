@@ -103,8 +103,8 @@ const SECTIONS: Section[] = [
   { id: "contact", label: "Contact" }
 ];
 
-// Define song type with optional properties
-type Song = {
+// Define different song types for different usage contexts
+type StatSong = {
   title: string;
   streams: number;
   listeners: number;
@@ -113,8 +113,16 @@ type Song = {
   featured?: boolean;
 };
 
-// Top songs data from your spreadsheet
-const TOP_SONGS: Record<string, Song[]> = {
+// This is for the CollapsibleGenre component
+interface Song {
+  number: string;
+  title: string;
+  album: string;
+  albumCover: string;
+}
+
+// Top songs data from your spreadsheet 
+const TOP_SONGS: Record<string, StatSong[]> = {
   afrobeats: [
     { title: "Lagos Inferno", streams: 6915, listeners: 3146, date: "Jan 2025" },
     { title: "Lagos Islands", streams: 6109, listeners: 2738, date: "Jan 2025" },
@@ -638,9 +646,24 @@ export default function Home() {
                       genre="rock"
                       description="My favorite hard-hitting rock tracks featuring powerful guitar riffs, intense drums, and emotional vocals that range from alternative rock to metal elements"
                       songs={[
-                        { number: "01", title: "The Ashes (Pt. 1)", genre: "Rock" },
-                        { number: "02", title: "Falling", genre: "Rock" },
-                        { number: "03", title: "The Burning (Pt. 2)", genre: "Rock" }
+                        { 
+                          number: "01", 
+                          title: "The Ashes (Pt. 1)", 
+                          album: "Sweet Poison",
+                          albumCover: "/attached_assets/Sweet Poison.png"
+                        },
+                        { 
+                          number: "02", 
+                          title: "Falling", 
+                          album: "Fire & Wine",
+                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                        },
+                        { 
+                          number: "03", 
+                          title: "The Burning (Pt. 2)", 
+                          album: "Sweet Poison",
+                          albumCover: "/attached_assets/Sweet Poison.png"
+                        }
                       ]}
                     />
                     
@@ -650,9 +673,24 @@ export default function Home() {
                       genre="pop"
                       description="My favorite catchy melodies, heartfelt lyrics, and radio-ready hooks with crisp contemporary pop production that blends emotion with uplifting beats"
                       songs={[
-                        { number: "01", title: "One Wish", genre: "Pop" },
-                        { number: "02", title: "Nobody Better", genre: "Pop" },
-                        { number: "03", title: "Love in Letters", genre: "Pop" }
+                        { 
+                          number: "01", 
+                          title: "One Wish", 
+                          album: "Lagos to Tokyo",
+                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                        },
+                        { 
+                          number: "02", 
+                          title: "Nobody Better", 
+                          album: "Fire & Wine",
+                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                        },
+                        { 
+                          number: "03", 
+                          title: "Love in Letters", 
+                          album: "Lagos to Tokyo",
+                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                        }
                       ]}
                     />
                     
@@ -662,9 +700,24 @@ export default function Home() {
                       genre="hiphop"
                       description="My favorite contemporary hip-hop tracks with hard-hitting beats, smooth flows, and authentic urban storytelling that captures the essence of street culture"
                       songs={[
-                        { number: "01", title: "Shorty You a Vibe", genre: "Hip-Hop" },
-                        { number: "02", title: "Baller Life", genre: "Hip-Hop" },
-                        { number: "03", title: "Detty December", genre: "Hip-Hop" }
+                        { 
+                          number: "01", 
+                          title: "Shorty You a Vibe", 
+                          album: "Lagos to Kano",
+                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                        },
+                        { 
+                          number: "02", 
+                          title: "Baller Life", 
+                          album: "Eko Island Beats",
+                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                        },
+                        { 
+                          number: "03", 
+                          title: "Detty December", 
+                          album: "Lagos to Kano",
+                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                        }
                       ]}
                     />
                     
@@ -674,9 +727,24 @@ export default function Home() {
                       genre="explicit"
                       description="My favorite raw, unfiltered tracks with mature themes and authentic street language that delivers uncompromising honesty for adult listeners"
                       songs={[
-                        { number: "01", title: "Big Ashawo", genre: "Explicit" },
-                        { number: "02", title: "Another Sad Story", genre: "Explicit" },
-                        { number: "03", title: "King of Hearts", genre: "Explicit" }
+                        { 
+                          number: "01", 
+                          title: "Big Ashawo", 
+                          album: "Eko Island Beats",
+                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                        },
+                        { 
+                          number: "02", 
+                          title: "Another Sad Story", 
+                          album: "Fire & Wine",
+                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                        },
+                        { 
+                          number: "03", 
+                          title: "King of Hearts", 
+                          album: "Sweet Poison",
+                          albumCover: "/attached_assets/Sweet Poison.png"
+                        }
                       ]}
                     />
                   </div>
