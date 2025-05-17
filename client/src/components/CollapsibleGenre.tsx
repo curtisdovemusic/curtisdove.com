@@ -123,8 +123,8 @@ export default function CollapsibleGenre({
                         title="Listen on Spotify"
                         className="group"
                       >
-                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#1DB954]/40 rounded-full shadow-md border border-[#1DB954]/40 group-hover:shadow-[#1DB954]/20 group-hover:border-[#1DB954]/70 transition-all duration-300 group-hover:scale-110">
-                          <FaSpotify className="text-[#1DB954] text-sm group-hover:text-lg transition-all duration-300" />
+                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#1DB954]/20 rounded-full shadow-md border border-[#1DB954]/20 hover:border-[#1DB954]/50 hover:shadow-[#1DB954]/10 transition-all duration-300 hover:scale-110">
+                          <FaSpotify className="text-[#1DB954]/80 text-sm hover:text-[#1DB954] transition-all duration-300" />
                         </div>
                       </a>
                       <a 
@@ -134,8 +134,8 @@ export default function CollapsibleGenre({
                         title="Listen on Apple Music"
                         className="group"
                       >
-                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#fa57c1]/40 rounded-full shadow-md border border-[#fa57c1]/40 group-hover:shadow-[#fa57c1]/20 group-hover:border-[#fa57c1]/70 transition-all duration-300 group-hover:scale-110">
-                          <FaApple className="text-[#fa57c1] text-sm group-hover:text-lg transition-all duration-300" />
+                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#fa57c1]/20 rounded-full shadow-md border border-[#fa57c1]/20 hover:border-[#fa57c1]/50 hover:shadow-[#fa57c1]/10 transition-all duration-300 hover:scale-110">
+                          <FaApple className="text-[#fa57c1]/80 text-sm hover:text-[#fa57c1] transition-all duration-300" />
                         </div>
                       </a>
                       <a 
@@ -145,8 +145,8 @@ export default function CollapsibleGenre({
                         title="Listen on Amazon Music"
                         className="group"
                       >
-                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#FF9900]/40 rounded-full shadow-md border border-[#FF9900]/40 group-hover:shadow-[#FF9900]/20 group-hover:border-[#FF9900]/70 transition-all duration-300 group-hover:scale-110">
-                          <FaAmazon className="text-[#FF9900] text-sm group-hover:text-lg transition-all duration-300" />
+                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#FF9900]/20 rounded-full shadow-md border border-[#FF9900]/20 hover:border-[#FF9900]/50 hover:shadow-[#FF9900]/10 transition-all duration-300 hover:scale-110">
+                          <FaAmazon className="text-[#FF9900]/80 text-sm hover:text-[#FF9900] transition-all duration-300" />
                         </div>
                       </a>
                       <a 
@@ -156,8 +156,8 @@ export default function CollapsibleGenre({
                         title="Listen on YouTube"
                         className="group"
                       >
-                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#FF0000]/40 rounded-full shadow-md border border-[#FF0000]/40 group-hover:shadow-[#FF0000]/20 group-hover:border-[#FF0000]/70 transition-all duration-300 group-hover:scale-110">
-                          <FaYoutube className="text-[#FF0000] text-sm group-hover:text-lg transition-all duration-300" />
+                        <div className="w-7 h-7 flex items-center justify-center bg-gradient-to-br from-black to-[#FF0000]/15 rounded-full shadow-md border border-[#FF0000]/15 hover:border-[#FF0000]/40 hover:shadow-[#FF0000]/10 transition-all duration-300 hover:scale-110">
+                          <FaYoutube className="text-[#FF0000]/70 text-sm hover:text-[#FF0000]/90 transition-all duration-300" />
                         </div>
                       </a>
                     </div>
