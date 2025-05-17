@@ -19,7 +19,7 @@ const MUSIC_PLATFORMS = [
   {
     name: "Amazon Music",
     icon: "fab fa-amazon",
-    color: "#232F3E",
+    color: "#FF9900", // Updated to orange
     url: "https://www.amazon.com/music/player/artists/B0DD4HQ6D3/curtis-dove"
   },
   {
@@ -49,7 +49,7 @@ const MUSIC_PLATFORMS = [
   {
     name: "TikTok",
     icon: "fab fa-tiktok",
-    color: "#000000",
+    color: "#FFFFFF", // Updated to white
     url: "https://www.tiktok.com/@curtisdovemusic?lang=en"
   },
   {
@@ -522,7 +522,7 @@ export default function Home() {
                     href={platform.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-6 rounded-xl bg-zinc-900/80 backdrop-blur-sm hover:bg-zinc-800 transition-all transform hover:scale-105 border border-transparent hover:border-amber-500/30"
+                    className="group p-6 rounded-xl bg-zinc-900/80 backdrop-blur-sm hover:bg-zinc-800 transition-all transform hover:scale-105 border border-transparent hover:border-amber-500/30 hover:shadow-lg hover:shadow-amber-500/20"
                   >
                     <div className="flex flex-col items-center text-center">
                       <div 
