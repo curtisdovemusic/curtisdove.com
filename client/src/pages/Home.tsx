@@ -567,7 +567,7 @@ export default function Home() {
                     <CollapsibleGenre
                       title="Afrosounds"
                       genre="afrosounds"
-                      description="My favorite Afrobeat, Afrofusion, Afropop songs with tropical upbeat, feel-good dance vibes"
+                      description="My favorite Afrobeat, Afrofusion, and Afropop songs with tropical upbeat rhythms and feel-good dance vibes that capture the energy of Lagos nightlife"
                       songs={[
                         { number: "01", title: "Lagos Nights & Island Lights", genre: "Afrobeat" },
                         { number: "02", title: "Island Gal", genre: "Afrobeat" },
@@ -579,7 +579,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Rock"
                       genre="rock"
-                      description="My favorite hard-hitting rock tracks with powerful guitar riffs, intense drums, and emotional vocals"
+                      description="My favorite hard-hitting rock tracks featuring powerful guitar riffs, intense drum patterns, and emotional vocals that range from alternative rock to heavier metal elements"
                       songs={[
                         { number: "01", title: "The Ashes (Pt. 1)", genre: "Rock" },
                         { number: "02", title: "Falling", genre: "Rock" },
@@ -591,7 +591,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Pop"
                       genre="pop"
-                      description="My favorite catchy melodies, heartfelt lyrics, and radio-ready hooks with contemporary pop production"
+                      description="My favorite catchy melodies, heartfelt lyrics, and radio-ready hooks with crisp contemporary pop production that blends emotional themes with uplifting beats"
                       songs={[
                         { number: "01", title: "One Wish", genre: "Pop" },
                         { number: "02", title: "Nobody Better", genre: "Pop" },
@@ -603,7 +603,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Hip-Hop"
                       genre="hiphop"
-                      description="My favorite contemporary hip-hop with hard-hitting beats, smooth flows, and authentic urban storytelling"
+                      description="My favorite contemporary hip-hop tracks with hard-hitting beats, smooth flows, and authentic urban storytelling that captures the essence of modern street culture and experiences"
                       songs={[
                         { number: "01", title: "Shorty You a Vibe", genre: "Hip-Hop" },
                         { number: "02", title: "Baller Life", genre: "Hip-Hop" },
@@ -615,7 +615,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Explicit"
                       genre="explicit"
-                      description="My favorite raw, unfiltered content with mature themes and authentic street language"
+                      description="My favorite raw, unfiltered tracks with mature themes and authentic street language that delivers uncompromising honesty for adult audiences"
                       songs={[
                         { number: "01", title: "Big Ashawo", genre: "Explicit" },
                         { number: "02", title: "Another Sad Story", genre: "Explicit" },
