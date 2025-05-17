@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "wouter";
 
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
@@ -31,6 +32,12 @@ const MUSIC_PLATFORMS = [
     icon: "fab fa-soundcloud",
     color: "#FF7700",
     url: "https://soundcloud.com/user-314281859"
+  },
+  {
+    name: "AudioMack",
+    icon: "fas fa-music",
+    color: "#FFA500",
+    url: "https://audiomack.com/curtisdove"
   }
 ];
 
@@ -48,7 +55,8 @@ const SECTIONS = [
   { id: "music", label: "Music" },
   { id: "videos", label: "Videos" },
   { id: "bio", label: "Bio" },
-  { id: "contact", label: "Contact" }
+  { id: "contact", label: "Contact" },
+  { id: "/playlists", label: "Playlists", isLink: true }
 ];
 
 // Define song type with optional properties
@@ -180,24 +188,34 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-2xl font-bold">
-              CURTIS DOVE
+              CURTIS DOVE MUSIC
             </a>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {SECTIONS.map((section) => (
-                <button
-                  key={section.id}
-                  onClick={() => scrollToSection(section.id)}
-                  className={`relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors ${
-                    currentSection === section.id ? 'text-amber-500' : 'text-white hover:text-amber-500'
-                  }`}
-                >
-                  {section.label}
-                  {currentSection === section.id && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500"></span>
-                  )}
-                </button>
+                section.isLink ? (
+                  <Link 
+                    key={section.id}
+                    href={section.id}
+                    className="relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors text-white hover:text-amber-500"
+                  >
+                    {section.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={section.id}
+                    onClick={() => scrollToSection(section.id)}
+                    className={`relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors ${
+                      currentSection === section.id ? 'text-amber-500' : 'text-white hover:text-amber-500'
+                    }`}
+                  >
+                    {section.label}
+                    {currentSection === section.id && (
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500"></span>
+                    )}
+                  </button>
+                )
               ))}
             </div>
             
@@ -675,7 +693,7 @@ export default function Home() {
                 width="100%" 
                 height="100%" 
                 className="aspect-video rounded-xl"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                src="https://www.youtube.com/embed/bvyBlA0S4BA" 
                 title="Curtis Dove Music Video" 
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
