@@ -107,6 +107,9 @@ export default function Navbar() {
             <a href="https://www.youtube.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-amber-500/20 hover:text-amber-500 transition-all duration-300">
               <i className="fab fa-youtube"></i>
             </a>
+            <a href="https://www.threads.com/@curtisdovemusic?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-amber-500/20 hover:text-amber-500 transition-all duration-300">
+              <i className="fab fa-threads"></i>
+            </a>
           </div>
         </div>
       </nav>
