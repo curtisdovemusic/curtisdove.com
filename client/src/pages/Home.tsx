@@ -713,19 +713,19 @@ export default function Home() {
                           number: "01", 
                           title: "Shorty You a Vibe", 
                           album: "Lagos to Kano",
-                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                          albumCover: albumCovers.lagosToKano
                         },
                         { 
                           number: "02", 
                           title: "Baller Life", 
                           album: "Eko Island Beats",
-                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                          albumCover: albumCovers.ekoIslandBeats
                         },
                         { 
                           number: "03", 
                           title: "Detty December", 
                           album: "Lagos to Kano",
-                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                          albumCover: albumCovers.lagosToKano
                         }
                       ]}
                     />
@@ -740,19 +740,19 @@ export default function Home() {
                           number: "01", 
                           title: "Big Ashawo", 
                           album: "Eko Island Beats",
-                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                          albumCover: albumCovers.ekoIslandBeats
                         },
                         { 
                           number: "02", 
                           title: "Another Sad Story", 
                           album: "Fire & Wine",
-                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "03", 
                           title: "King of Hearts", 
                           album: "Sweet Poison",
-                          albumCover: "/attached_assets/Sweet Poison.png"
+                          albumCover: albumCovers.sweetPoison
                         }
                       ]}
                     />
