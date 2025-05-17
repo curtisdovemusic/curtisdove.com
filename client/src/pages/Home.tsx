@@ -35,6 +35,12 @@ const MUSIC_PLATFORMS = [
     url: "https://soundcloud.com/user-314281859"
   },
   {
+    name: "TikTok",
+    icon: "fab fa-tiktok",
+    color: "#000000",
+    url: "https://www.tiktok.com/@curtisdovemusic?lang=en"
+  },
+  {
     name: "AudioMack",
     icon: "fas fa-music",
     color: "#FFA500",
