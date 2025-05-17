@@ -747,15 +747,121 @@ export default function Home() {
                 <div className="pt-6">
                   <h3 className="text-2xl font-bold mb-6 text-white">Musical Influences</h3>
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Afrobeat</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Afro-fusion</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Afropop</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">R&B</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Pop</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Alternative Rock</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Dance</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Darkwave</span>
-                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Club</span>
+                    {/* Musical influences with glowing effect */}
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Afrobeat</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Afro-fusion</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Afropop</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">R&B</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Pop</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Alternative Rock</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Dance</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Club</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Tropical</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Tropical Pop</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Dance-pop</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Afro-house</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Darkwave</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Soul</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Hip-Hop</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Trap Soul</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Highlife</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Funk</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Reggae</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Indie</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">World Music</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Electronic</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Soft Rock</span>
+                    </span>
                   </div>
                 </div>
               </div>
