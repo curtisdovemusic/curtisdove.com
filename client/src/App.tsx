@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch } from "wouter";
 import Home from "@/pages/Home";
 import Playlists from "@/pages/Playlists";
-import CurtisDoveProfilePicture from './assets/CurtisDoveProfilePicture.jpg';
 
 function App() {
   return (
