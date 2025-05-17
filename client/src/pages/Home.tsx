@@ -5,6 +5,15 @@ import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 
+// Reference album artwork from public folder
+const albumCovers = {
+  lagosToKano: "/Lagos to Kano.jpeg",
+  ekoIslandBeats: "/Eko Island Beats.jpeg",
+  lagosToTokyo: "/Lagos to Tokyo.webp",
+  sweetPoison: "/Sweet Poison.png",
+  fireAndWine: "/Fire & Wine.jpeg"
+};
+
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
   {
@@ -581,61 +590,61 @@ export default function Home() {
                           number: "01", 
                           title: "The Lounge Love", 
                           album: "Lagos to Kano",
-                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                          albumCover: albumCovers.lagosToKano
                         },
                         { 
                           number: "02", 
                           title: "Lagos Inferno", 
                           album: "Eko Island Beats",
-                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                          albumCover: albumCovers.ekoIslandBeats
                         },
                         { 
                           number: "03", 
                           title: "Wine & Kiss", 
                           album: "Lagos to Tokyo",
-                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                          albumCover: albumCovers.lagosToTokyo
                         },
                         { 
                           number: "04", 
                           title: "Lagos Islands", 
                           album: "Eko Island Beats",
-                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                          albumCover: albumCovers.ekoIslandBeats
                         },
                         { 
                           number: "05", 
                           title: "Island Breeze Serenade", 
                           album: "Lagos to Tokyo",
-                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                          albumCover: albumCovers.lagosToTokyo
                         },
                         { 
                           number: "06", 
                           title: "Beachside Fire", 
                           album: "Lagos to Kano",
-                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                          albumCover: albumCovers.lagosToKano
                         },
                         { 
                           number: "07", 
                           title: "Sweet Poison", 
                           album: "Sweet Poison",
-                          albumCover: "/attached_assets/Sweet Poison.png"
+                          albumCover: albumCovers.sweetPoison
                         },
                         { 
                           number: "08", 
                           title: "Fire & Wine", 
                           album: "Fire & Wine",
-                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "09", 
                           title: "Lose Myself in You", 
                           album: "Lagos to Tokyo",
-                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                          albumCover: albumCovers.lagosToTokyo
                         },
                         { 
                           number: "10", 
                           title: "Kano Love", 
                           album: "Lagos to Kano",
-                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                          albumCover: albumCovers.lagosToKano
                         }
                       ]}
                     />
@@ -650,19 +659,19 @@ export default function Home() {
                           number: "01", 
                           title: "The Ashes (Pt. 1)", 
                           album: "Sweet Poison",
-                          albumCover: "/attached_assets/Sweet Poison.png"
+                          albumCover: albumCovers.sweetPoison
                         },
                         { 
                           number: "02", 
                           title: "Falling", 
                           album: "Fire & Wine",
-                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "03", 
                           title: "The Burning (Pt. 2)", 
                           album: "Sweet Poison",
-                          albumCover: "/attached_assets/Sweet Poison.png"
+                          albumCover: albumCovers.sweetPoison
                         }
                       ]}
                     />
@@ -677,19 +686,19 @@ export default function Home() {
                           number: "01", 
                           title: "One Wish", 
                           album: "Lagos to Tokyo",
-                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                          albumCover: albumCovers.lagosToTokyo
                         },
                         { 
                           number: "02", 
                           title: "Nobody Better", 
                           album: "Fire & Wine",
-                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "03", 
                           title: "Love in Letters", 
                           album: "Lagos to Tokyo",
-                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                          albumCover: albumCovers.lagosToTokyo
                         }
                       ]}
                     />
