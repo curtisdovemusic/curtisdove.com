@@ -600,12 +600,14 @@ export default function Home() {
                         { 
                           number: "04", 
                           title: "Lagos Islands", 
-                          album: "Eko Island Beats"
+                          album: "Eko Island Beats",
+                          spotifyUrl: "https://open.spotify.com/track/5OjzxlwXLT0Sp19VnKRgVV?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "05", 
                           title: "Island Breeze Serenade", 
                           album: "Lagos to Tokyo",
+                          spotifyUrl: "https://open.spotify.com/track/5xy7MHBAPFvZZwAZt8F9gf?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "06", 
