@@ -35,21 +35,23 @@ export default function CollapsibleGenre({
       >
         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
         <div className="relative flex items-center justify-between p-5 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
-          <div className="flex items-center">
-            <div className="mr-4 text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
+          <div className="flex items-center w-full md:pr-4">
+            <div className="w-24 md:w-28 shrink-0 text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
               {title}
             </div>
-            <p className="hidden md:block text-[#8ecae6] text-sm">{description}</p>
+            <div className="flex-1 pl-3 md:pl-4 border-l border-[#219ebc]/30">
+              <p className="text-[#8ecae6] text-xs md:text-sm text-left line-clamp-2 md:line-clamp-1">{description}</p>
+            </div>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center shrink-0 ml-2">
             <Link 
               href={`/artist-picks?genre=${genre}`} 
-              className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-sm hidden md:flex items-center"
+              className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-xs md:text-sm flex items-center mr-2 md:mr-4"
               onClick={(e) => e.stopPropagation()}
             >
               <span>See All</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 md:h-4 md:w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
             </Link>
