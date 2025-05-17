@@ -669,6 +669,33 @@ export default function Home() {
               </div>
             </div>
             
+            {/* WhatsApp Section */}
+            <div className="text-center bg-zinc-900 text-white py-12 px-4 rounded-xl mb-16">
+              <h3 className="text-3xl font-bold mb-6">Stay Connected on WhatsApp 📲</h3>
+              <p className="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
+                Whether you want to chat directly or join the community for updates, I've got you covered.
+              </p>
+
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a 
+                  href="https://wa.me/15712461177" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition"
+                >
+                  💬 Chat with Curtis
+                </a>
+                <a 
+                  href="https://whatsapp.com/channel/0029Vb5ovLS8kyyEmh98OP2j" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-800 hover:bg-gray-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition"
+                >
+                  📢 Join the Fan Channel
+                </a>
+              </div>
+            </div>
+            
             {/* Contact Information */}
             <div className="max-w-xl mx-auto">
               <div className="bg-zinc-900/50 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-zinc-900 transition-all border border-amber-500/20">
@@ -676,7 +703,7 @@ export default function Home() {
                   <i className="fas fa-envelope"></i>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-2">Email</h4>
-                <p className="text-white/70">contact@curtisdove.com</p>
+                <p className="text-white/70">CurtisDoveMusic@gmail.com</p>
               </div>
             </div>
           </div>
