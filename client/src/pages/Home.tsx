@@ -296,7 +296,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Boundary-pushing artist with over 135 songs across streaming platforms
+              Boundary-pushing artist with over 141+ songs across streaming platforms
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -412,26 +412,128 @@ export default function Home() {
             </div>
             
             {/* Featured music with large player */}
-            <div className="mb-20">
+            <div className="mb-16">
               <h3 className="text-2xl font-bold text-center mb-6">
-                <span className="text-white">CURTIS DOVE </span>
-                <span className="text-amber-500">COMPLETE</span>
+                <span className="text-white">TOP </span>
+                <span className="text-amber-500">PLAYLISTS</span>
               </h3>
-              <div className="max-w-4xl mx-auto rounded-2xl bg-zinc-900/50 p-6 backdrop-blur-sm">
-                <div className="relative overflow-hidden rounded-xl shadow-2xl">
-                  <iframe 
-                    style={{ borderRadius: '12px' }} 
-                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator" 
-                    width="100%" 
-                    height="352" 
-                    frameBorder="0" 
-                    allowFullScreen={true}
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                  </iframe>
+              <div className="max-w-5xl mx-auto">
+                {/* Top 5 Playlists Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                  {/* Complete Collection */}
+                  <div className="col-span-full md:col-span-2 bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-amber-500/20 hover:border-amber-500/40 transition-all">
+                    <div className="p-4">
+                      <div className="flex items-center mb-4">
+                        <span className="w-2 h-8 bg-amber-500 rounded-full mr-3"></span>
+                        <h3 className="text-xl font-bold">Curtis Dove Complete</h3>
+                      </div>
+                      <div className="aspect-video">
+                        <iframe 
+                          style={{ borderRadius: '12px' }} 
+                          src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator" 
+                          width="100%" 
+                          height="100%" 
+                          frameBorder="0" 
+                          allowFullScreen={true}
+                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                          loading="lazy">
+                        </iframe>
+                      </div>
+                    </div>
+                  </div>
                   
-                  {/* Animated border */}
-                  <div className="absolute inset-0 border-2 border-amber-500/30 rounded-xl pointer-events-none"></div>
+                  {/* Lagos Nights */}
+                  <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-all">
+                    <div className="p-4">
+                      <div className="flex items-center mb-3">
+                        <span className="w-2 h-6 bg-yellow-500 rounded-full mr-2"></span>
+                        <h3 className="text-lg font-bold">Lagos Nights</h3>
+                      </div>
+                      <p className="text-sm text-white/60 mb-4">Explore the vibrant Afrobeats collection</p>
+                      <div className="relative">
+                        <a 
+                          href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block"
+                        >
+                          <div className="aspect-square rounded-lg bg-gradient-to-br from-yellow-600/30 to-yellow-800/30 flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                            <i className="fab fa-spotify text-6xl text-white/30 group-hover:text-white/50 transition-all"></i>
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50">
+                              <div className="flex items-center px-4 py-2 bg-yellow-500 text-black rounded-full font-medium">
+                                <i className="fas fa-play mr-2"></i> Play now
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* My Love Songs */}
+                  <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <div className="p-4">
+                      <div className="flex items-center mb-3">
+                        <span className="w-2 h-6 bg-purple-500 rounded-full mr-2"></span>
+                        <h3 className="text-lg font-bold">My Love Songs</h3>
+                      </div>
+                      <p className="text-sm text-white/60 mb-4">Heartfelt love songs across genres</p>
+                      <div className="relative">
+                        <a 
+                          href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block"
+                        >
+                          <div className="aspect-square rounded-lg bg-gradient-to-br from-purple-600/30 to-purple-800/30 flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                            <i className="fab fa-spotify text-6xl text-white/30 group-hover:text-white/50 transition-all"></i>
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50">
+                              <div className="flex items-center px-4 py-2 bg-purple-500 text-white rounded-full font-medium">
+                                <i className="fas fa-play mr-2"></i> Play now
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* The Ashes Trilogy */}
+                  <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-red-500/20 hover:border-red-500/40 transition-all">
+                    <div className="p-4">
+                      <div className="flex items-center mb-3">
+                        <span className="w-2 h-6 bg-red-500 rounded-full mr-2"></span>
+                        <h3 className="text-lg font-bold">The Ashes Trilogy</h3>
+                      </div>
+                      <p className="text-sm text-white/60 mb-4">A journey through rock and metal</p>
+                      <div className="relative">
+                        <a 
+                          href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block"
+                        >
+                          <div className="aspect-square rounded-lg bg-gradient-to-br from-red-600/30 to-red-800/30 flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                            <i className="fab fa-spotify text-6xl text-white/30 group-hover:text-white/50 transition-all"></i>
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50">
+                              <div className="flex items-center px-4 py-2 bg-red-500 text-white rounded-full font-medium">
+                                <i className="fas fa-play mr-2"></i> Play now
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center">
+                  <Link href="/playlists">
+                    <a className="inline-flex items-center px-6 py-3 rounded-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-medium transition-colors">
+                      <i className="fas fa-headphones-alt mr-2"></i>
+                      View All Playlists
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -733,20 +835,23 @@ export default function Home() {
           
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 to-amber-600 opacity-20 blur-xl rounded-2xl"></div>
-                <img 
-                  src="/attached_assets/CurtisDoveProfilePicture.jpg" 
-                  alt="Curtis Dove portrait" 
-                  className="relative rounded-2xl w-full h-auto shadow-2xl object-cover"
-                />
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-50 blur-xl rounded-2xl transition-all duration-700"></div>
+                <div className="relative overflow-hidden rounded-2xl">
+                  <img 
+                    src="/attached_assets/CurtisDoveProfilePicture.jpg" 
+                    alt="Curtis Dove portrait" 
+                    className="w-full h-auto shadow-2xl object-cover transform transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -bottom-6 -right-6 px-6 py-3 bg-zinc-800/90 backdrop-blur-sm rounded-xl border border-amber-500/20 shadow-xl">
+                <div className="absolute -bottom-6 -right-6 px-6 py-3 bg-zinc-800/90 backdrop-blur-sm rounded-xl border border-amber-500/30 shadow-xl transform group-hover:translate-y-2 group-hover:-translate-x-2 transition-transform duration-500">
                   <div className="flex items-center gap-3">
                     <i className="fas fa-music text-amber-500"></i>
                     <div>
-                      <div className="text-sm font-bold">135+ Songs</div>
+                      <div className="text-sm font-bold">141+ Songs</div>
                       <div className="text-xs text-white/60">Available on all platforms</div>
                     </div>
                   </div>
@@ -757,7 +862,7 @@ export default function Home() {
             <div className="lg:w-1/2">
               <div className="space-y-6">
                 <p className="text-xl leading-relaxed text-white/90">
-                  Curtis Dove is a boundary-pushing artist known for blending genres and creating a sound uniquely his own. With over 135 songs released across major streaming platforms, Curtis has developed a diverse catalog that fuses elements from across the musical spectrum.
+                  Curtis Dove is a boundary-pushing artist known for blending genres and creating a sound uniquely his own. With over 141+ songs released across major streaming platforms, Curtis has developed a diverse catalog that fuses elements from across the musical spectrum.
                 </p>
                 
                 <p className="text-xl leading-relaxed text-white/90">
@@ -798,13 +903,14 @@ export default function Home() {
         
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="text-white">CONNECT </span>
-            <span className="text-amber-500">WITH ME</span>
+            <span className="text-white">CONTACT </span>
+            <span className="text-amber-500">INFORMATION</span>
           </h2>
           
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="flex justify-center mb-12">
-              <div className="flex flex-wrap justify-center gap-6">
+          <div className="max-w-3xl mx-auto">
+            {/* Social Media Links */}
+            <div className="flex justify-center mb-16">
+              <div className="flex flex-wrap justify-center gap-8">
                 {SOCIAL_MEDIA.map((social, index) => (
                   <a 
                     key={index}
@@ -813,86 +919,38 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="group"
                   >
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-16 h-16 flex items-center justify-center rounded-full bg-zinc-800 group-hover:bg-amber-500 transition-colors">
-                        <i className={`${social.icon} text-2xl group-hover:text-black transition-colors`}></i>
-                      </div>
-                      <span className="text-white/80 group-hover:text-white transition-colors">{social.name}</span>
+                    <div className="w-16 h-16 flex items-center justify-center rounded-full bg-zinc-800 group-hover:bg-amber-500 transition-all transform group-hover:scale-110">
+                      <i className={`${social.icon} text-2xl group-hover:text-black transition-colors`}></i>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-                <div className="space-y-6 text-white/80">
-                  <div className="flex items-start gap-4">
-                    <div className="text-amber-500 mt-1">
-                      <i className="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-medium text-white">Email</h4>
-                      <p>contact@curtisdove.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="text-amber-500 mt-1">
-                      <i className="fas fa-briefcase"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-medium text-white">Management</h4>
-                      <p>manager@curtisdove.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="text-amber-500 mt-1">
-                      <i className="fas fa-music"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-medium text-white">Booking</h4>
-                      <p>booking@curtisdove.com</p>
-                    </div>
-                  </div>
+            {/* Contact Information */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-zinc-900 transition-all">
+                <div className="text-amber-500 text-2xl mb-3">
+                  <i className="fas fa-envelope"></i>
                 </div>
+                <h4 className="text-lg font-bold text-white mb-1">Email</h4>
+                <p className="text-white/70">contact@curtisdove.com</p>
               </div>
               
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Send A Message</h3>
-                <form className="space-y-4">
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Your Name" 
-                      className="w-full px-4 py-3 bg-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                    />
-                  </div>
-                  <div>
-                    <input 
-                      type="email" 
-                      placeholder="Your Email" 
-                      className="w-full px-4 py-3 bg-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                    />
-                  </div>
-                  <div>
-                    <textarea 
-                      rows={4}
-                      placeholder="Your Message" 
-                      className="w-full px-4 py-3 bg-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <button 
-                      type="submit"
-                      className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-bold rounded-lg transition-all"
-                    >
-                      SEND MESSAGE
-                    </button>
-                  </div>
-                </form>
+              <div className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-zinc-900 transition-all">
+                <div className="text-amber-500 text-2xl mb-3">
+                  <i className="fas fa-briefcase"></i>
+                </div>
+                <h4 className="text-lg font-bold text-white mb-1">Management</h4>
+                <p className="text-white/70">manager@curtisdove.com</p>
+              </div>
+              
+              <div className="bg-zinc-900/50 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-zinc-900 transition-all">
+                <div className="text-amber-500 text-2xl mb-3">
+                  <i className="fas fa-music"></i>
+                </div>
+                <h4 className="text-lg font-bold text-white mb-1">Booking</h4>
+                <p className="text-white/70">booking@curtisdove.com</p>
               </div>
             </div>
           </div>
