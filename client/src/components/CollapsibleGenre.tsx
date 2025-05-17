@@ -117,6 +117,7 @@ export default function CollapsibleGenre({
                     <div className="flex justify-center items-center gap-1 mb-1 hidden sm:flex w-full">
                       <FaHeadphones className="text-[#ffb703] text-[10px] animate-pulse" />
                       <p className="text-[10px] text-white/80 font-medium">Listen On</p>
+                      <FaHeadphones className="text-[#ffb703] text-[10px] animate-pulse" />
                     </div>
                     <div className="flex justify-center space-x-3">
                       <a 
