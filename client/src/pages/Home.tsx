@@ -612,13 +612,13 @@ export default function Home() {
           
           <div className="max-w-4xl mx-auto bg-zinc-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-amber-500/20 shadow-lg hover:border-amber-500/40 transition-all">
             {/* Banner image */}
-            <div className="relative h-48 md:h-64 lg:h-80 w-full overflow-hidden">
+            <div className="relative h-64 md:h-80 lg:h-96 w-full overflow-hidden">
               <img 
                 src={PhoenixImage} 
                 alt="Phoenix rising from ashes - symbolic imagery" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center object-bottom"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
               <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-zinc-900/80 backdrop-blur-sm py-2 px-4 rounded-lg border border-amber-500/30">
                 <h3 className="text-xl font-bold text-white">Featured Artist Review</h3>
               </div>
@@ -626,12 +626,8 @@ export default function Home() {
 
             <div className="p-8">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
-                <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-zinc-800 rounded-full flex items-center justify-center">
-                  <img 
-                    src="https://i0.wp.com/www.thesoundswontstop.com/wp-content/uploads/2020/08/cropped-Artboard-1-1.png" 
-                    alt="The Sounds Won't Stop Logo" 
-                    className="w-20 h-20 md:w-28 md:h-28 object-contain"
-                  />
+                <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-amber-500/10 rounded-full flex items-center justify-center border border-amber-500/30">
+                  <span className="text-2xl font-bold text-white">TSWT</span>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">The Sounds Won't Stop</h3>
