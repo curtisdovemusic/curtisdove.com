@@ -585,7 +585,8 @@ export default function Home() {
                           album: "Lagos to Kano",
                           spotifyUrl: "https://open.spotify.com/track/5pazCXbJAALjOPcsuvNwoj?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
-                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ"
+                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=kpLowI-DSBM"
                         },
                         { 
                           number: "02", 
@@ -593,7 +594,8 @@ export default function Home() {
                           album: "Eko Island Beats",
                           spotifyUrl: "https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/ug/song/lagos-inferno/1788734416",
-                          amazonUrl: "https://www.amazon.com/Eko-Island-Beats-Curtis-Dove/dp/B0DS9JR9V8"
+                          amazonUrl: "https://www.amazon.com/Eko-Island-Beats-Curtis-Dove/dp/B0DS9JR9V8",
+                          youtubeUrl: "https://www.youtube.com/watch?v=aEDOnJLXgJs"
                         },
                         { 
                           number: "03", 
@@ -601,7 +603,8 @@ export default function Home() {
                           album: "Lagos to Tokyo",
                           spotifyUrl: "https://open.spotify.com/track/2u5TqSfucAvxvgc7BnIU5x?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
-                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4"
+                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4",
+                          youtubeUrl: "https://www.youtube.com/watch?v=ZEkjydHHJTU"
                         },
                         { 
                           number: "04", 
@@ -609,7 +612,8 @@ export default function Home() {
                           album: "Eko Island Beats",
                           spotifyUrl: "https://open.spotify.com/track/5OjzxlwXLT0Sp19VnKRgVV?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/in/song/lagos-islands/1788734402",
-                          amazonUrl: "https://www.amazon.com/Eko-Island-Beats-Curtis-Dove/dp/B0DS9JR9V8"
+                          amazonUrl: "https://www.amazon.com/Eko-Island-Beats-Curtis-Dove/dp/B0DS9JR9V8",
+                          youtubeUrl: "https://www.youtube.com/watch?v=0Lv-N1fYx7E"
                         },
                         { 
                           number: "05", 
@@ -617,7 +621,8 @@ export default function Home() {
                           album: "Lagos to Tokyo",
                           spotifyUrl: "https://open.spotify.com/track/5xy7MHBAPFvZZwAZt8F9gf?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/lagos-to-tokyo/1795739853",
-                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4"
+                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4",
+                          youtubeUrl: "https://www.youtube.com/watch?v=YcZQHn0GXhM"
                         },
                         { 
                           number: "06", 
@@ -625,7 +630,8 @@ export default function Home() {
                           album: "Lagos to Kano",
                           spotifyUrl: "https://open.spotify.com/track/0TN5vTY58EquEYYrfWJsEa?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
-                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ"
+                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=0Lv-N1fYx7E"
                         },
                         { 
                           number: "07", 
@@ -633,7 +639,8 @@ export default function Home() {
                           album: "Sweet Poison",
                           spotifyUrl: "https://open.spotify.com/track/3XN6m6KD0IsiLGfpam19y0?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
-                          amazonUrl: "https://www.amazon.com/Sweet-Poison-Curtis-Dove/dp/B0F6KYWYM2"
+                          amazonUrl: "https://www.amazon.com/Sweet-Poison-Curtis-Dove/dp/B0F6KYWYM2",
+                          youtubeUrl: "https://www.youtube.com/playlist?list=OLAK5uy_mEnEXXDGWMmqGN_QSwdsd6qx4EqsXtOGI"
                         },
                         { 
                           number: "08", 
@@ -641,7 +648,8 @@ export default function Home() {
                           album: "Fire & Wine",
                           spotifyUrl: "https://open.spotify.com/track/1uZC71fpV6uPtmP6XFBBgb?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/fire-wine-single/1798774371",
-                          amazonUrl: "https://www.amazon.com/Fire-Wine-Curtis-Dove/dp/B0DYKY5FS1"
+                          amazonUrl: "https://www.amazon.com/Fire-Wine-Curtis-Dove/dp/B0DYKY5FS1",
+                          youtubeUrl: "https://www.youtube.com/watch?v=mu6j90DfHdQ"
                         },
                         { 
                           number: "09", 
