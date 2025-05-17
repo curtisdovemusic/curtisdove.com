@@ -611,14 +611,14 @@ export default function Home() {
           </h2>
           
           <div className="max-w-4xl mx-auto bg-zinc-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-amber-500/20 shadow-lg hover:border-amber-500/40 transition-all">
-            {/* Banner image */}
-            <div className="relative h-64 md:h-80 lg:h-96 w-full overflow-hidden">
+            {/* Banner image with hover effect */}
+            <div className="group relative w-full overflow-hidden" style={{ height: "450px" }}>
               <img 
                 src={PhoenixImage} 
                 alt="Phoenix rising from ashes - symbolic imagery" 
-                className="w-full h-full object-cover object-center object-bottom"
+                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-zinc-900/80 backdrop-blur-sm py-2 px-4 rounded-lg border border-amber-500/30">
                 <h3 className="text-xl font-bold text-white">Featured Artist Review</h3>
               </div>
@@ -627,7 +627,10 @@ export default function Home() {
             <div className="p-8">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
                 <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-amber-500/10 rounded-full flex items-center justify-center border border-amber-500/30">
-                  <span className="text-2xl font-bold text-white">TSWT</span>
+                  <div className="text-center">
+                    <i className="fas fa-music text-amber-500 text-xl mb-1"></i>
+                    <div className="text-lg font-bold text-white">The Sounds<br />Won't Stop</div>
+                  </div>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">The Sounds Won't Stop</h3>
