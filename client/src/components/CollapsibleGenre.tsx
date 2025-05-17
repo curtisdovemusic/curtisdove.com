@@ -1,6 +1,20 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 
+// Define a function to get a color for each album
+const getAlbumColor = (album: string) => {
+  // Create color mapping for each album
+  const colors: Record<string, string> = {
+    'Lagos to Kano': 'from-orange-500 to-yellow-500',
+    'Eko Island Beats': 'from-blue-500 to-cyan-400',
+    'Lagos to Tokyo': 'from-pink-500 to-purple-500',
+    'Sweet Poison': 'from-red-500 to-pink-500',
+    'Fire & Wine': 'from-amber-500 to-red-500'
+  };
+  
+  return colors[album] || 'from-gray-600 to-gray-800';
+};
+
 interface Song {
   number: string;
   title: string;
@@ -86,10 +100,9 @@ export default function CollapsibleGenre({
                     {song.number}
                   </span>
                 </div>
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30 bg-gray-800">
-                  {/* Album art placeholder */}
-                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-700 to-gray-900">
-                    <span className="text-xs text-gray-400">{song.album.substring(0, 2)}</span>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30">
+                  <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`}>
+                    <span className="text-sm font-bold text-white">{song.album.substring(0, 2)}</span>
                   </div>
                 </div>
                 <div className="flex-grow mr-2 sm:mr-4 min-w-0">

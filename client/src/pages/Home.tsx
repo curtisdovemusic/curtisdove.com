@@ -6,12 +6,13 @@ import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 
 // Reference album artwork with CSS background classes instead
+// Simpler URLs to album covers
 const albumCovers = {
-  lagosToKano: "bg-lagos-kano",
-  ekoIslandBeats: "bg-eko-island",
-  lagosToTokyo: "bg-lagos-tokyo",
-  sweetPoison: "bg-sweet-poison",
-  fireAndWine: "bg-fire-wine"
+  "Lagos to Kano": "/albums/Lagos to Kano.jpeg",
+  "Eko Island Beats": "/albums/Eko Island Beats.jpeg",
+  "Lagos to Tokyo": "/albums/Lagos to Tokyo.webp",
+  "Sweet Poison": "/albums/Sweet Poison.png",
+  "Fire & Wine": "/albums/Fire & Wine.jpeg"
 };
 
 // Music platforms information with your actual links
