@@ -790,7 +790,10 @@ export default function Home() {
                     className="group"
                   >
                     <div className="w-16 h-16 flex items-center justify-center rounded-full bg-zinc-800 group-hover:bg-amber-500 transition-all transform group-hover:scale-110">
-                      <i className={`${social.icon} text-2xl group-hover:text-black transition-colors`}></i>
+                      {social.customIcon ? 
+                        <span className="text-2xl font-bold group-hover:text-black transition-colors">@</span> : 
+                        <i className={`${social.icon} text-2xl group-hover:text-black transition-colors`}></i>
+                      }
                     </div>
                   </a>
                 ))}
