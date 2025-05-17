@@ -41,6 +41,12 @@ const MUSIC_PLATFORMS = [
     url: "https://www.deezer.com/us/artist/277818781"
   },
   {
+    name: "iHeartRadio",
+    icon: "fas fa-heartbeat",
+    color: "#C6002B",
+    url: "https://www.iheart.com/artist/curtis-dove-43752714/"
+  },
+  {
     name: "TikTok",
     icon: "fab fa-tiktok",
     color: "#000000",
@@ -353,10 +359,10 @@ export default function Home() {
                   href={platform.url} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all group"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-zinc-800 transition-all transform hover:scale-105 group border border-transparent hover:border-amber-500/50"
                 >
-                  <i className={`${platform.icon}`} style={{color: platform.color}}></i>
-                  <span className="text-sm font-medium">{platform.name}</span>
+                  <i className={`${platform.icon} transition-all duration-300 group-hover:text-amber-500`} style={{color: platform.color}}></i>
+                  <span className="text-sm font-medium group-hover:text-amber-400 transition-colors duration-300">{platform.name}</span>
                 </a>
               ))}
             </div>
@@ -516,20 +522,20 @@ export default function Home() {
                     href={platform.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-6 rounded-xl bg-zinc-900/80 backdrop-blur-sm hover:bg-zinc-800 transition-all"
+                    className="group p-6 rounded-xl bg-zinc-900/80 backdrop-blur-sm hover:bg-zinc-800 transition-all transform hover:scale-105 border border-transparent hover:border-amber-500/30"
                   >
                     <div className="flex flex-col items-center text-center">
                       <div 
-                        className="w-16 h-16 flex items-center justify-center mb-4 rounded-full transition-transform duration-500 group-hover:scale-110" 
+                        className="w-16 h-16 flex items-center justify-center mb-4 rounded-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-md group-hover:shadow-amber-500/20" 
                         style={{ backgroundColor: `${platform.color}20` }}
                       >
-                        <i className={`${platform.icon} text-3xl transition-all`} style={{color: platform.color}}></i>
+                        <i className={`${platform.icon} text-3xl transition-all duration-300 group-hover:text-amber-500`} style={{color: platform.color}}></i>
                       </div>
-                      <h4 className="text-xl font-bold mb-2">{platform.name}</h4>
-                      <p className="text-white/60 text-sm">Stream my complete catalog</p>
-                      <div className="mt-4 flex items-center text-amber-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <h4 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors duration-300">{platform.name}</h4>
+                      <p className="text-white/60 text-sm group-hover:text-white/80 transition-colors">Stream my complete catalog</p>
+                      <div className="mt-4 flex items-center text-amber-500 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
                         <span className="mr-2">Listen now</span>
-                        <i className="fas fa-arrow-right text-sm"></i>
+                        <i className="fas fa-arrow-right text-sm animate-pulse"></i>
                       </div>
                     </div>
                   </a>
