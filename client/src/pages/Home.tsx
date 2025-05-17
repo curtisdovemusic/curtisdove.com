@@ -289,7 +289,7 @@ export default function Home() {
           
           {/* Background image */}
           <img 
-            src="/attached_assets/CurtisDoveProfilePicture.jpg" 
+            src="attached_assets/CurtisDoveProfilePicture.jpg" 
             alt="Curtis Dove" 
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
