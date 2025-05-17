@@ -5,7 +5,7 @@ interface Song {
   number: string;
   title: string;
   album: string;
-  albumCover: string;
+  albumCover?: string;
 }
 
 interface CollapsibleGenreProps {
@@ -77,7 +77,7 @@ export default function CollapsibleGenre({
           {songs.map((song, index) => (
             <div 
               key={index} 
-              className="group relative bg-gradient-to-r from-[#023047]/60 to-[#219ebc]/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
+              className="group relative bg-gradient-to-r from-[#023047]/60 to-[#219ebc]/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 mb-2"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
               <div className="relative flex items-center p-2 sm:p-3 border border-[#219ebc]/10 rounded-xl bg-[#023047]/95 z-10">
@@ -86,13 +86,11 @@ export default function CollapsibleGenre({
                     {song.number}
                   </span>
                 </div>
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30">
-                  <img 
-                    src={song.albumCover} 
-                    alt={`${song.album} album cover`}
-                    className="w-full h-full object-cover aspect-square"
-                    loading="lazy"
-                  />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30 bg-gray-800">
+                  {/* Album art placeholder */}
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-700 to-gray-900">
+                    <span className="text-xs text-gray-400">{song.album.substring(0, 2)}</span>
+                  </div>
                 </div>
                 <div className="flex-grow mr-2 sm:mr-4 min-w-0">
                   <h4 className="text-white font-medium text-sm sm:text-base truncate">{song.title}</h4>

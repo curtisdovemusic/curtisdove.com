@@ -5,13 +5,13 @@ import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 
-// Reference album artwork from our organized album-art folders
+// Reference album artwork with CSS background classes instead
 const albumCovers = {
-  lagosToKano: "/album-art/lagos-to-kano/cover.jpeg",
-  ekoIslandBeats: "/album-art/eko-island-beats/cover.jpeg",
-  lagosToTokyo: "/album-art/lagos-to-tokyo/cover.webp",
-  sweetPoison: "/album-art/sweet-poison/cover.png",
-  fireAndWine: "/album-art/fire-and-wine/cover.jpeg"
+  lagosToKano: "bg-lagos-kano",
+  ekoIslandBeats: "bg-eko-island",
+  lagosToTokyo: "bg-lagos-tokyo",
+  sweetPoison: "bg-sweet-poison",
+  fireAndWine: "bg-fire-wine"
 };
 
 // Music platforms information with your actual links
