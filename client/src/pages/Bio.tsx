@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
+import CasualPicture from "../assets/2023-06-19.jpg";
 
 export default function Bio() {
   const imageRef = useRef<HTMLDivElement>(null);
@@ -70,7 +72,7 @@ export default function Bio() {
                 {/* First image (formal) */}
                 <div className="col-span-3 rounded-l-xl overflow-hidden transform transition-all duration-700 group-hover:scale-105">
                   <img 
-                    src="/attached_assets/CurtisDoveProfilePicture.jpg" 
+                    src={ProfilePicture} 
                     alt="Curtis Dove formal portrait" 
                     className="w-full h-full object-cover object-center"
                   />

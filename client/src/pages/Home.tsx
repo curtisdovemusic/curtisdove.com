@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
-import CurtisDoveProfilePicture from '../assets/CurtisDoveProfilePicture.jpg';
+import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
 
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
@@ -588,7 +588,7 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-50 blur-xl rounded-2xl transition-all duration-700"></div>
                 <div className="relative overflow-hidden rounded-2xl">
                   <img 
-                    src="attached_assets/CurtisDoveProfilePicture.jpg" 
+                    src={ProfilePicture} 
                     alt="Curtis Dove portrait" 
                     className="w-full h-auto object-cover shadow-2xl transform transition-transform duration-700 group-hover:scale-105"
                   />
