@@ -56,8 +56,7 @@ const SECTIONS = [
   { id: "music", label: "Music" },
   { id: "videos", label: "Videos" },
   { id: "bio", label: "Bio" },
-  { id: "contact", label: "Contact" },
-  { id: "/playlists", label: "Playlists", isLink: true }
+  { id: "contact", label: "Contact" }
 ];
 
 // Define song type with optional properties
