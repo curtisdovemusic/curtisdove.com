@@ -151,15 +151,16 @@ export default function Bio() {
             <div className="mt-8">
               <h3 className="text-lg font-bold mb-3 opacity-0 animate-ready fade-in" style={{animationDelay: '0.9s'}}>Musical Influences</h3>
               <div className="flex flex-wrap gap-2 opacity-0 animate-ready fade-in" style={{animationDelay: '1s'}}>
-                <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">Afrobeat</span>
-                <span className="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full text-sm">Afro-fusion</span>
-                <span className="px-3 py-1 bg-amber-600/10 text-amber-600 rounded-full text-sm">Afropop</span>
-                <span className="px-3 py-1 bg-[hsl(var(--purple))]/10 text-[hsl(var(--purple))] rounded-full text-sm">R&B</span>
-                <span className="px-3 py-1 bg-[hsl(var(--cyan))]/10 text-[hsl(var(--cyan))] rounded-full text-sm">Pop</span>
-                <span className="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full text-sm">Alternative Rock</span>
-                <span className="px-3 py-1 bg-amber-600/10 text-amber-600 rounded-full text-sm">Dance</span>
-                <span className="px-3 py-1 bg-[hsl(var(--purple))]/10 text-[hsl(var(--purple))] rounded-full text-sm">Darkwave</span>
-                <span className="px-3 py-1 bg-[hsl(var(--cyan))]/10 text-[hsl(var(--cyan))] rounded-full text-sm">Club</span>
+                <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm transition-all duration-300 hover:bg-accent hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Afrobeat</span>
+                <span className="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full text-sm transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Afro-fusion</span>
+                <span className="px-3 py-1 bg-amber-600/10 text-amber-600 rounded-full text-sm transition-all duration-300 hover:bg-amber-600 hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Afropop</span>
+                <span className="px-3 py-1 bg-[hsl(var(--purple))]/10 text-[hsl(var(--purple))] rounded-full text-sm transition-all duration-300 hover:bg-[hsl(var(--purple))] hover:text-white hover:scale-110 hover:shadow-lg cursor-default">R&B</span>
+                <span className="px-3 py-1 bg-[hsl(var(--cyan))]/10 text-[hsl(var(--cyan))] rounded-full text-sm transition-all duration-300 hover:bg-[hsl(var(--cyan))] hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Pop</span>
+                <span className="px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full text-sm transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Alternative Rock</span>
+                <span className="px-3 py-1 bg-emerald-500/10 text-emerald-500 rounded-full text-sm transition-all duration-300 hover:bg-emerald-500 hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Hip-Hop</span>
+                <span className="px-3 py-1 bg-amber-600/10 text-amber-600 rounded-full text-sm transition-all duration-300 hover:bg-amber-600 hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Dance</span>
+                <span className="px-3 py-1 bg-[hsl(var(--purple))]/10 text-[hsl(var(--purple))] rounded-full text-sm transition-all duration-300 hover:bg-[hsl(var(--purple))] hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Darkwave</span>
+                <span className="px-3 py-1 bg-[hsl(var(--cyan))]/10 text-[hsl(var(--cyan))] rounded-full text-sm transition-all duration-300 hover:bg-[hsl(var(--cyan))] hover:text-white hover:scale-110 hover:shadow-lg cursor-default">Club</span>
               </div>
             </div>
           </div>

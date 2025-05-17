@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch } from "wouter";
 import Home from "@/pages/Home";
-import Playlists from "@/pages/Playlists";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
           <main className="flex-grow overflow-x-hidden">
             <Switch>
               <Route path="/" component={Home} />
-              <Route path="/playlists" component={Playlists} />
             </Switch>
           </main>
         </div>

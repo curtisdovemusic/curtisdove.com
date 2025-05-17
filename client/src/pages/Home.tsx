@@ -474,14 +474,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="flex justify-center">
-                  <Link href="/playlists">
-                    <a className="inline-flex items-center px-6 py-3 rounded-full bg-zinc-800 hover:bg-amber-500 hover:text-black text-white font-medium transition-colors">
-                      <i className="fas fa-headphones-alt mr-2"></i>
-                      View All Playlists
-                    </a>
-                  </Link>
-                </div>
+                {/* Removed Playlists link */}
               </div>
             </div>
             
