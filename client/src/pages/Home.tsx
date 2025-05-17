@@ -816,7 +816,7 @@ export default function Home() {
                           number: "01", 
                           title: "One Wish", 
                           album: "One Wish – Single",
-                          spotifyUrl: "https://open.spotify.com/track/3jPLqB5Qu6S1AvUrcyC2Qt?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/6n97QoeYhQr7hAKiDeWYL4?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/one-wish-single/1805412296",
                           amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
                           youtubeUrl: "https://www.youtube.com/watch?v=FDAvAFSviMk"
@@ -825,63 +825,63 @@ export default function Home() {
                           number: "02", 
                           title: "Nobody Better", 
                           album: "Nobody Better – Single",
-                          spotifyUrl: "https://open.spotify.com/track/5B1qljjDKR1HMpBNyqqiDR?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/35kZw8I3ixENRmkh3y2KY1?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/nobody-better-single/1811572653",
-                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZW7S12M",
                           youtubeUrl: "https://www.youtube.com/watch?v=FeRSmN-OV7o"
                         },
                         { 
                           number: "03", 
                           title: "Love in Letters", 
                           album: "Love in Letters – Single",
-                          spotifyUrl: "https://open.spotify.com/track/3Ma0MUPr5OvHo7lGbZVker?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/07bvTEDnvb1Hti4dRD8Z1H?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/love-in-letters-single/1812762443",
-                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZZW4TT7",
                           youtubeUrl: "https://www.youtube.com/watch?v=MTJ1gIenisg"
                         },
                         { 
                           number: "04", 
                           title: "Find My Way Back to You", 
                           album: "Find My Way Back to You – Single",
-                          spotifyUrl: "https://open.spotify.com/track/0RkOJ10BFpwOT24iQmcNFb?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/4CQqjRr0ANHOjKSzcUbZdC?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/find-my-way-back-to-you-single/1811572652",
-                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZW7R2HR",
                           youtubeUrl: "https://www.youtube.com/watch?v=FKDEYgeNiIU"
                         },
                         { 
                           number: "05", 
                           title: "The Letter That Started It All", 
                           album: "The Letter That Started It All – Single",
-                          spotifyUrl: "https://open.spotify.com/track/1AdPAdWMH0afTWVWmZEj0Z?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/1ls9cJUAf9DLC2DMNRBYSo?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/the-letter-that-started-it-all-single/1812762793",
-                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZZW6LXD",
                           youtubeUrl: "https://www.youtube.com/watch?v=bFezSDPgnzI"
                         },
                         { 
                           number: "06", 
                           title: "XOXO", 
                           album: "XOXO – Single",
-                          spotifyUrl: "https://open.spotify.com/track/3Tx9L3rqISDq1nyJq8H5Eq?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/3LruWhD9FaUdgnqVINknn1?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/xoxo-single/1811572652",
-                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZW7R2HR",
                           youtubeUrl: "https://www.youtube.com/watch?v=sVp9uGcbLNs"
                         },
                         { 
                           number: "07", 
                           title: "Still Your Boy", 
                           album: "Still Your Boy – Single",
-                          spotifyUrl: "https://open.spotify.com/track/3Tx9L3rqISDq1nyJq8H5Eq?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/6Rd8C2h7LuUhFliaFeIQ41?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/still-your-boy-single/1811572652",
-                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZW7R2HR",
                           youtubeUrl: "https://www.youtube.com/watch?v=IFBa-n4k-YI"
                         },
                         { 
                           number: "08", 
                           title: "I'm Coming Home", 
                           album: "I'm Coming Home – Single",
-                          spotifyUrl: "https://open.spotify.com/track/3Tx9L3rqISDq1nyJq8H5Eq?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          spotifyUrl: "https://open.spotify.com/track/0kSA6wt1gdxhu4Vqk1OI7R?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
                           appleUrl: "https://music.apple.com/us/album/im-coming-home-single/1811572652",
-                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          amazonUrl: "https://www.amazon.com/dp/B0DZW7R2HR",
                           youtubeUrl: "https://www.youtube.com/watch?v=mu6j90DfHdQ"
                         }
                       ]}
