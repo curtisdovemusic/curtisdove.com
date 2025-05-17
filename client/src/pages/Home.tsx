@@ -41,6 +41,12 @@ const MUSIC_PLATFORMS = [
     url: "https://www.deezer.com/us/artist/277818781"
   },
   {
+    name: "Tidal",
+    icon: "fas fa-water",
+    color: "#00FFFF",
+    url: "https://tidal.com/artist/49781849"
+  },
+  {
     name: "iHeartRadio",
     icon: "fas fa-heartbeat",
     color: "#C6002B",
