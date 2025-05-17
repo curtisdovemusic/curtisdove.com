@@ -58,7 +58,7 @@ export default function Navbar() {
           </button>
           <button 
             onClick={() => scrollToSection('press')} 
-            className="text-white hover:text-amber-500 transition-colors duration-300 uppercase text-sm font-bold tracking-wider"
+            className="text-amber-500 hover:text-white border border-amber-500 px-4 py-1 rounded-md uppercase text-sm font-bold tracking-wider"
           >
             Press
           </button>
@@ -101,7 +101,7 @@ export default function Navbar() {
           </button>
           <button 
             onClick={() => scrollToSection('press')} 
-            className="text-2xl font-bold text-white hover:text-amber-500 uppercase transition duration-300"
+            className="text-2xl font-bold text-amber-500 border-2 border-amber-500 px-6 py-2 rounded-lg uppercase transition duration-300"
           >
             Press
           </button>

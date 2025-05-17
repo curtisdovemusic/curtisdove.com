@@ -86,7 +86,7 @@ export default function Footer() {
         
         <div className="border-t border-zinc-800 pt-8 mt-8 text-center text-sm text-white/50">
           <p>&copy; {new Date().getFullYear()} Curtis Dove Music. All rights reserved.</p>
-          <p className="mt-1">Dove Music, LLC</p>
+          <p className="mt-1 text-amber-500 font-bold">Dove Music, LLC</p>
         </div>
       </div>
     </footer>
