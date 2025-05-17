@@ -92,7 +92,7 @@ export default function CollapsibleGenre({
           {songs.map((song, index) => (
             <div 
               key={index} 
-              className="group relative bg-gradient-to-r from-[#023047]/60 to-[#219ebc]/20 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 mb-2"
+              className="group relative bg-gradient-to-r from-[#023047]/60 to-[#219ebc]/20 rounded-xl overflow-hidden hover:shadow-xl hover:bg-[#8ecae6]/15 transition-all duration-500 mb-2"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
               <div className="relative flex items-center p-2 sm:p-3 border border-[#219ebc]/10 rounded-xl bg-[#023047]/95 z-10">
