@@ -95,6 +95,7 @@ type Section = {
 const SECTIONS: Section[] = [
   { id: "home", label: "Home" },
   { id: "music", label: "Music" },
+  { id: "artist-pick", label: "Artist Pick", isLink: true },
   { id: "videos", label: "Videos" },
   { id: "press", label: "In The Press" },
   { id: "bio", label: "Bio" },
@@ -250,8 +251,8 @@ export default function Home() {
                 section.isLink ? (
                   <Link 
                     key={section.id}
-                    href={section.id}
-                    className="relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors text-white hover:text-amber-500"
+                    href={`/${section.id}`}
+                    className="relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors text-amber-500 hover:text-white"
                   >
                     {section.label}
                   </Link>
@@ -292,15 +293,26 @@ export default function Home() {
       >
         <div className="container px-6 py-10">
           <div className="flex flex-col space-y-6 items-center">
-            {SECTIONS.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className="text-2xl uppercase font-bold hover:text-amber-500 transition-colors"
-              >
-                {section.label}
-              </button>
-            ))}
+            {SECTIONS.map((section) => 
+              section.isLink ? (
+                <Link
+                  key={section.id}
+                  href={`/${section.id}`}
+                  className="text-2xl uppercase font-bold text-amber-500 hover:text-white transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {section.label}
+                </Link>
+              ) : (
+                <button
+                  key={section.id}
+                  onClick={() => scrollToSection(section.id)}
+                  className="text-2xl uppercase font-bold hover:text-amber-500 transition-colors"
+                >
+                  {section.label}
+                </button>
+              )
+            )}
             
             <div className="flex space-x-6 mt-10">
               {SOCIAL_MEDIA.map((social, index) => (
