@@ -4,7 +4,8 @@ import { Link } from 'wouter';
 interface Song {
   number: string;
   title: string;
-  genre: string;
+  album: string;
+  albumCover: string;
 }
 
 interface CollapsibleGenreProps {
@@ -80,14 +81,21 @@ export default function CollapsibleGenre({
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
               <div className="relative flex items-center p-3 border border-[#219ebc]/10 rounded-xl bg-[#023047]/95 z-10">
-                <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-4">
+                <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-3">
                   <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
                     {song.number}
                   </span>
                 </div>
+                <div className="w-12 h-12 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30">
+                  <img 
+                    src={song.albumCover} 
+                    alt={`${song.album} album cover`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="flex-grow mr-4">
                   <h4 className="text-white font-medium">{song.title}</h4>
-                  <p className="text-sm text-[#8ecae6]">{song.genre}</p>
+                  <p className="text-sm text-[#8ecae6]">{song.album}</p>
                 </div>
                 <div className="shrink-0">
                   <button className="px-3 py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047]">

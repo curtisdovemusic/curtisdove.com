@@ -569,9 +569,66 @@ export default function Home() {
                       genre="afrosounds"
                       description="My favorite Afrobeat, Afrofusion, and Afropop songs with tropical upbeat rhythms and feel-good dance vibes that capture the energy of Lagos nightlife"
                       songs={[
-                        { number: "01", title: "Lagos Nights & Island Lights", genre: "Afrobeat" },
-                        { number: "02", title: "Island Gal", genre: "Afrobeat" },
-                        { number: "03", title: "Lagos Inferno", genre: "Afrobeat" }
+                        { 
+                          number: "01", 
+                          title: "The Lounge Love", 
+                          album: "Lagos to Kano",
+                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                        },
+                        { 
+                          number: "02", 
+                          title: "Lagos Inferno", 
+                          album: "Eko Island Beats",
+                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                        },
+                        { 
+                          number: "03", 
+                          title: "Wine & Kiss", 
+                          album: "Lagos to Tokyo",
+                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                        },
+                        { 
+                          number: "04", 
+                          title: "Lagos Islands", 
+                          album: "Eko Island Beats",
+                          albumCover: "/attached_assets/Eko Island Beats.jpeg"
+                        },
+                        { 
+                          number: "05", 
+                          title: "Island Breeze Serenade", 
+                          album: "Lagos to Tokyo",
+                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                        },
+                        { 
+                          number: "06", 
+                          title: "Beachside Fire", 
+                          album: "Lagos to Kano",
+                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                        },
+                        { 
+                          number: "07", 
+                          title: "Sweet Poison", 
+                          album: "Sweet Poison",
+                          albumCover: "/attached_assets/Sweet Poison.png"
+                        },
+                        { 
+                          number: "08", 
+                          title: "Fire & Wine", 
+                          album: "Fire & Wine",
+                          albumCover: "/attached_assets/Fire & Wine.jpeg"
+                        },
+                        { 
+                          number: "09", 
+                          title: "Lose Myself in You", 
+                          album: "Lagos to Tokyo",
+                          albumCover: "/attached_assets/Lagos to Tokyo.webp"
+                        },
+                        { 
+                          number: "10", 
+                          title: "Kano Love", 
+                          album: "Lagos to Kano",
+                          albumCover: "/attached_assets/Lagos to Kano.jpeg"
+                        }
                       ]}
                     />
                     
