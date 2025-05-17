@@ -204,9 +204,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10"></div>
           
           {/* Background gradient orbs */}
-          <div className="absolute top-[20%] right-[10%] w-96 h-96 rounded-full bg-purple-500/10 blur-[100px] animate-float"></div>
-          <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px] animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px] animate-float" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-[20%] right-[10%] w-96 h-96 rounded-full bg-purple-500/10 blur-[100px]"></div>
+          <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px]"></div>
+          <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px]"></div>
           
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/60 z-5"></div>
@@ -222,15 +222,15 @@ export default function Home() {
         {/* Hero content */}
         <div className="container mx-auto px-6 relative z-10 mt-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-fade-in">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
               CURTIS DOVE
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
               Boundary-pushing artist with over 135 songs across streaming platforms
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3 mb-12 opacity-0 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
               {MUSIC_PLATFORMS.map((platform, index) => (
                 <a 
                   key={index}
@@ -245,7 +245,7 @@ export default function Home() {
               ))}
             </div>
             
-            <div className="opacity-0 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+            <div>
               <button 
                 onClick={() => scrollToSection('music')}
                 className="px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-bold transition-all transform hover:scale-105"
@@ -260,7 +260,7 @@ export default function Home() {
         </div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection('music')}
             className="text-white text-3xl focus:outline-none"
@@ -454,12 +454,12 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             <span className="text-white">FEATURED </span>
             <span className="text-amber-500">VIDEOS</span>
           </h2>
           
-          <div className="max-w-4xl mx-auto mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="max-w-4xl mx-auto mb-20">
             <div className="relative overflow-hidden rounded-xl shadow-2xl">
               <iframe 
                 width="100%" 
@@ -474,7 +474,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="text-center opacity-0 animate-ready slide-up" style={{ animationDelay: '0.4s' }}>
+          <div className="text-center">
             <a 
               href="https://www.youtube.com/@curtisdovemusic"
               target="_blank"
@@ -498,13 +498,13 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             <span className="text-white">ABOUT </span>
             <span className="text-amber-500">CURTIS</span>
           </h2>
           
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2 opacity-0 animate-ready slide-in-left" style={{ animationDelay: '0.2s' }}>
+            <div className="lg:w-1/2">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 to-amber-600 opacity-20 blur-xl rounded-2xl"></div>
                 <img 
@@ -526,7 +526,7 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="lg:w-1/2 opacity-0 animate-ready slide-in-right" style={{ animationDelay: '0.4s' }}>
+            <div className="lg:w-1/2">
               <div className="space-y-6">
                 <p className="text-xl leading-relaxed text-white/90">
                   Curtis Dove is a boundary-pushing artist known for blending genres and creating a sound uniquely his own. With over 135 songs released across major streaming platforms, Curtis has developed a diverse catalog that fuses elements from across the musical spectrum.
@@ -569,12 +569,12 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             <span className="text-white">CONNECT </span>
             <span className="text-amber-500">WITH ME</span>
           </h2>
           
-          <div className="max-w-5xl mx-auto mb-16 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="max-w-5xl mx-auto mb-16">
             <div className="flex justify-center mb-12">
               <div className="flex flex-wrap justify-center gap-6">
                 {SOCIAL_MEDIA.map((social, index) => (
