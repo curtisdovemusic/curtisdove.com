@@ -349,13 +349,13 @@ export default function Home() {
             
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
               <div className="flex flex-wrap justify-center text-xl md:text-2xl text-white/90 mb-3">
-                <span className="text-amber-400 font-semibold mx-1">8 albums</span>
+                <span className="text-amber-400 font-semibold mx-1">8 ALBUMS</span>
                 <span className="mx-1">,</span>
-                <span className="text-purple-400 font-semibold mx-1">33 singles</span>
+                <span className="text-purple-400 font-semibold mx-1">33 SINGLES</span>
                 <span className="mx-1">,</span>
-                <span className="text-blue-400 font-semibold mx-1">1 compilation</span>
+                <span className="text-blue-400 font-semibold mx-1">1 COMPILATION</span>
                 <span className="mx-1">,</span>
-                <span className="text-green-400 font-semibold mx-1">141+ songs</span>
+                <span className="text-green-400 font-semibold mx-1">141+ SONGS</span>
               </div>
               
               <div className="w-3/4 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent mx-auto my-3"></div>
@@ -395,10 +395,11 @@ export default function Home() {
         </div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-28 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection('music')}
             className="text-white text-3xl focus:outline-none"
+            aria-label="Scroll to music section"
           >
             <i className="fas fa-chevron-down"></i>
           </button>
