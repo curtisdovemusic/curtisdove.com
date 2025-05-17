@@ -583,61 +583,61 @@ export default function Home() {
                           number: "01", 
                           title: "The Lounge Love", 
                           album: "Lagos to Kano",
-                          spotifyUrl: "https://open.spotify.com/track/5pazCXbJAALjOPcsuvNwoj?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/5pazCXbJAALjOPcsuvNwoj?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "02", 
                           title: "Lagos Inferno", 
                           album: "Eko Island Beats",
-                          spotifyUrl: "https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "03", 
                           title: "Wine & Kiss", 
                           album: "Lagos to Tokyo",
-                          spotifyUrl: "https://open.spotify.com/track/2u5TqSfucAvxvgc7BnIU5x?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/2u5TqSfucAvxvgc7BnIU5x?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "04", 
                           title: "Lagos Islands", 
                           album: "Eko Island Beats",
-                          spotifyUrl: "https://open.spotify.com/track/5OjzxlwXLT0Sp19VnKRgVV?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/5OjzxlwXLT0Sp19VnKRgVV?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "05", 
                           title: "Island Breeze Serenade", 
                           album: "Lagos to Tokyo",
-                          spotifyUrl: "https://open.spotify.com/track/5xy7MHBAPFvZZwAZt8F9gf?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/5xy7MHBAPFvZZwAZt8F9gf?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "06", 
                           title: "Beachside Fire", 
                           album: "Lagos to Kano",
-                          spotifyUrl: "https://open.spotify.com/track/0TN5vTY58EquEYYrfWJsEa?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/0TN5vTY58EquEYYrfWJsEa?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "07", 
                           title: "Sweet Poison", 
                           album: "Sweet Poison",
-                          spotifyUrl: "https://open.spotify.com/track/3XN6m6KD0IsiLGfpam19y0?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/3XN6m6KD0IsiLGfpam19y0?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "08", 
                           title: "Fire & Wine", 
                           album: "Fire & Wine",
-                          spotifyUrl: "https://open.spotify.com/track/1uZC71fpV6uPtmP6XFBBgb?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/1uZC71fpV6uPtmP6XFBBgb?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "09", 
                           title: "Lose Myself in You", 
                           album: "Lagos to Tokyo",
-                          spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         },
                         { 
                           number: "10", 
                           title: "Kano Love", 
                           album: "Lagos to Kano",
-                          spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
+                          spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ"
                         }
                       ]}
                     />
