@@ -38,7 +38,7 @@ const MUSIC_PLATFORMS = [
     name: "AudioMack",
     icon: "fas fa-music",
     color: "#FFA500",
-    url: "https://audiomack.com/curtisdove"
+    url: "https://audiomack.com/curtisdovemusic"
   }
 ];
 
