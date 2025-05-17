@@ -815,42 +815,74 @@ export default function Home() {
                         { 
                           number: "01", 
                           title: "One Wish", 
-                          album: "Lagos to Tokyo",
+                          album: "One Wish – Single",
+                          spotifyUrl: "https://open.spotify.com/track/3jPLqB5Qu6S1AvUrcyC2Qt?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/one-wish-single/1805412296",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=FDAvAFSviMk"
                         },
                         { 
                           number: "02", 
                           title: "Nobody Better", 
-                          album: "Fire & Wine",
+                          album: "Nobody Better – Single",
+                          spotifyUrl: "https://open.spotify.com/track/5B1qljjDKR1HMpBNyqqiDR?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/nobody-better-single/1811572653",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=FeRSmN-OV7o"
                         },
                         { 
                           number: "03", 
                           title: "Love in Letters", 
-                          album: "Lagos to Tokyo",
+                          album: "Love in Letters – Single",
+                          spotifyUrl: "https://open.spotify.com/track/3Ma0MUPr5OvHo7lGbZVker?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/love-in-letters-single/1812762443",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=MTJ1gIenisg"
                         },
                         { 
                           number: "04", 
                           title: "Find My Way Back to You", 
-                          album: "Lagos to Tokyo",
+                          album: "Find My Way Back to You – Single",
+                          spotifyUrl: "https://open.spotify.com/track/0RkOJ10BFpwOT24iQmcNFb?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/find-my-way-back-to-you-single/1811572652",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=FKDEYgeNiIU"
                         },
                         { 
                           number: "05", 
                           title: "The Letter That Started It All", 
-                          album: "Lagos to Tokyo",
+                          album: "The Letter That Started It All – Single",
+                          spotifyUrl: "https://open.spotify.com/track/1AdPAdWMH0afTWVWmZEj0Z?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/the-letter-that-started-it-all-single/1812762793",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=bFezSDPgnzI"
                         },
                         { 
                           number: "06", 
                           title: "XOXO", 
-                          album: "Lagos to Tokyo",
+                          album: "XOXO – Single",
+                          spotifyUrl: "https://open.spotify.com/track/3Tx9L3rqISDq1nyJq8H5Eq?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/xoxo-single/1811572652",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=sVp9uGcbLNs"
                         },
                         { 
                           number: "07", 
                           title: "Still Your Boy", 
-                          album: "Lagos to Tokyo",
+                          album: "Still Your Boy – Single",
+                          spotifyUrl: "https://open.spotify.com/track/3Tx9L3rqISDq1nyJq8H5Eq?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/still-your-boy-single/1811572652",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=IFBa-n4k-YI"
                         },
                         { 
                           number: "08", 
                           title: "I'm Coming Home", 
-                          album: "Lagos to Tokyo",
+                          album: "I'm Coming Home – Single",
+                          spotifyUrl: "https://open.spotify.com/track/3Tx9L3rqISDq1nyJq8H5Eq?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M",
+                          appleUrl: "https://music.apple.com/us/album/im-coming-home-single/1811572652",
+                          amazonUrl: "https://www.amazon.com/dp/B0F2ZRKMYS",
+                          youtubeUrl: "https://www.youtube.com/watch?v=mu6j90DfHdQ"
                         }
                       ]}
                     />
