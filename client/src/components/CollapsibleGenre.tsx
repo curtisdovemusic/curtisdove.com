@@ -36,10 +36,10 @@ export default function CollapsibleGenre({
         <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
         <div className="relative flex items-center justify-between p-5 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
           <div className="flex items-center w-full md:pr-4">
-            <div className="w-24 md:w-28 shrink-0 text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
+            <div className="w-24 md:w-32 lg:w-36 shrink-0 text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
               {title}
             </div>
-            <div className="flex-1 pl-3 md:pl-4 border-l border-[#219ebc]/30">
+            <div className="flex-1 pl-6 md:pl-8">
               <p className="text-[#8ecae6] text-xs md:text-sm text-left line-clamp-2 md:line-clamp-1">{description}</p>
             </div>
           </div>
