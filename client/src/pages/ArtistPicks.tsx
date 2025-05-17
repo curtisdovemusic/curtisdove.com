@@ -408,7 +408,7 @@ export default function ArtistPicks() {
             ))}
           </div>
           
-          {/* Songs Grid */}
+          {/* Songs Grid - Vertical long tiles */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {getActiveSongs().map((song, index) => (
               <div 
@@ -418,14 +418,25 @@ export default function ArtistPicks() {
                 {/* Glowing effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-50 blur-md transition-all duration-500"></div>
                 
-                <div className="relative flex items-center p-4 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 h-full z-10">
-                  {/* Song number */}
-                  <div className="mr-3 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
-                    {song.number}
+                <div className="relative flex flex-col border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 h-full z-10">
+                  {/* Top section with number and title */}
+                  <div className="flex items-center p-4 border-b border-[#219ebc]/20">
+                    {/* Song number */}
+                    <div className="w-12 h-12 flex items-center justify-center shrink-0 mr-3">
+                      <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
+                        {song.number}
+                      </span>
+                    </div>
+                    
+                    {/* Song title */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{song.title}</h3>
+                      <div className="text-sm text-[#8ecae6]">{song.genre}</div>
+                    </div>
                   </div>
                   
                   {/* Album thumbnail */}
-                  <div className="w-16 h-16 shrink-0 mr-4 rounded-md overflow-hidden">
+                  <div className="w-full h-48 overflow-hidden">
                     <img 
                       src={song.image} 
                       alt={song.title} 
@@ -433,14 +444,11 @@ export default function ArtistPicks() {
                     />
                   </div>
                   
-                  {/* Song info */}
-                  <div className="flex-grow">
-                    <h3 className="text-lg font-semibold text-white mb-1">{song.title}</h3>
-                    <div className="text-sm text-[#8ecae6]">{song.genre}</div>
-                    
-                    {/* Listen Now Button */}
-                    <div className="mt-4">
-                      <div className="relative group/btn inline-block">
+                  {/* Listen section */}
+                  <div className="p-4">
+                    <div className="flex justify-between items-center">
+                      {/* Listen Now Button */}
+                      <div className="relative group/btn">
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-white via-[#ffb703] to-[#fb8500] rounded-full opacity-75 group-hover/btn:opacity-100 blur-sm transition-all duration-500"></div>
                         <button className="relative px-4 py-2 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-sm font-medium text-[#023047] z-10">
                           Listen Now
@@ -448,7 +456,7 @@ export default function ArtistPicks() {
                       </div>
                       
                       {/* Platform Icons */}
-                      <div className="mt-3 flex space-x-2">
+                      <div className="flex space-x-2">
                         {PLATFORMS.map((platform, i) => (
                           <a 
                             key={i}

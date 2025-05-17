@@ -64,6 +64,12 @@ export default function Navbar() {
             Music
           </button>
           <button 
+            onClick={() => navigateTo('/artist-picks')} 
+            className="text-amber-500 hover:text-white border border-amber-500 px-4 py-1 rounded-md uppercase text-sm font-bold tracking-wider"
+          >
+            Artist Picks
+          </button>
+          <button 
             onClick={() => scrollToSection('video')} 
             className="text-white hover:text-amber-500 transition-colors duration-300 uppercase text-sm font-bold tracking-wider"
           >
@@ -74,12 +80,6 @@ export default function Navbar() {
             className="text-white hover:text-amber-500 transition-colors duration-300 uppercase text-sm font-bold tracking-wider"
           >
             Press
-          </button>
-          <button 
-            onClick={() => navigateTo('/artist-picks')} 
-            className="text-amber-500 hover:text-white border border-amber-500 px-4 py-1 rounded-md uppercase text-sm font-bold tracking-wider"
-          >
-            Artist Picks
           </button>
           <button 
             onClick={() => scrollToSection('connect')} 
@@ -113,6 +113,12 @@ export default function Navbar() {
             Music
           </button>
           <button 
+            onClick={() => navigateTo('/artist-picks')} 
+            className="text-2xl font-bold text-amber-500 border-2 border-amber-500 px-6 py-2 rounded-lg uppercase transition duration-300"
+          >
+            Artist Picks
+          </button>
+          <button 
             onClick={() => scrollToSection('video')} 
             className="text-2xl font-bold text-white hover:text-amber-500 uppercase transition duration-300"
           >
@@ -123,12 +129,6 @@ export default function Navbar() {
             className="text-2xl font-bold text-white hover:text-amber-500 uppercase transition duration-300"
           >
             Press
-          </button>
-          <button 
-            onClick={() => navigateTo('/artist-picks')} 
-            className="text-2xl font-bold text-amber-500 border-2 border-amber-500 px-6 py-2 rounded-lg uppercase transition duration-300"
-          >
-            Artist Picks
           </button>
           <button 
             onClick={() => scrollToSection('connect')} 
