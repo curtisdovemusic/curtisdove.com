@@ -899,6 +899,9 @@ export default function Home() {
             <p className="text-white/40 text-xs">
               &copy; {new Date().getFullYear()} Curtis Dove Music. All rights reserved.
             </p>
+            <p className="text-white/40 text-xs mt-1">
+              Dove Music, LLC
+            </p>
           </div>
         </div>
       </footer>
