@@ -771,6 +771,106 @@ export default function Home() {
                       ]}
                     />
                     
+                    {/* Rock Collapsible */}
+                    <CollapsibleGenre
+                      title="Rock"
+                      genre="rock"
+                      description="My rock and metal tracks spanning from melodic rock to nu metal, featuring heavy guitars and emotional themes about personal struggles and renewal"
+                      songs={[
+                        { 
+                          number: "01", 
+                          title: "Burn it Down", 
+                          album: "Rise From Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/1dPzDtp6EFHkLrtmbehVx4",
+                          appleUrl: "https://music.apple.com/us/album/burn-it-down/1805412296?i=1805412297",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=6HP5HRGqlZE"
+                        },
+                        { 
+                          number: "02", 
+                          title: "Whispers in the Wind", 
+                          album: "Rise From Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/5B4RtvM6NOyMNRCfLai2ez",
+                          appleUrl: "https://music.apple.com/us/album/whispers-in-the-wind/1805412296?i=1805412298",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=wQ85OXHBD3E"
+                        },
+                        { 
+                          number: "03", 
+                          title: "Brother Eternal", 
+                          album: "Beyond the Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/2J3dRxGzT1nh6PnBIyd6Sn",
+                          appleUrl: "https://music.apple.com/us/album/brother-eternal/1787170020?i=1787170022",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=ZEkjydHHJTU"
+                        },
+                        { 
+                          number: "04", 
+                          title: "Fading Echoes", 
+                          album: "Rise From Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/3DDOb1fYZkHAcjNZKICVWF",
+                          appleUrl: "https://music.apple.com/us/album/fading-echoes/1805412296?i=1805412299",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=wQ85OXHBD3E"
+                        },
+                        { 
+                          number: "05", 
+                          title: "Rebuild", 
+                          album: "Rise From Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/5xy7MHBAPFvZZwAZt8F9gf",
+                          appleUrl: "https://music.apple.com/us/album/rebuild/1805412296?i=1805412300",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=YcZQHn0GXhM"
+                        },
+                        { 
+                          number: "06", 
+                          title: "Reflections of Us", 
+                          album: "Rise From Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/0TN5vTY58EquEYYrfWJsEa",
+                          appleUrl: "https://music.apple.com/us/album/reflections-of-us/1805412296?i=1805412301",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=0Lv-N1fYx7E"
+                        },
+                        { 
+                          number: "07", 
+                          title: "Safe Haven", 
+                          album: "Rise From Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/3XN6m6KD0IsiLGfpam19y0",
+                          appleUrl: "https://music.apple.com/us/album/safe-haven/1805412296?i=1805412302",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=kpLowI-DSBM"
+                        },
+                        { 
+                          number: "08", 
+                          title: "Behind the Mask", 
+                          album: "Behind the Mask - Single",
+                          spotifyUrl: "https://open.spotify.com/track/0c5LutD2com768w39h5OGp",
+                          appleUrl: "https://music.apple.com/us/album/behind-the-mask/1775675672?i=1775675673",
+                          amazonUrl: "https://www.amazon.com/dp/B0DYKY5FS1",
+                          youtubeUrl: "https://www.youtube.com/watch?v=mu6j90DfHdQ"
+                        },
+                        { 
+                          number: "09", 
+                          title: "Ashes of Us", 
+                          album: "Beyond the Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF",
+                          appleUrl: "https://music.apple.com/us/album/ashes-of-us/1787170020?i=1787170021",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=zfhlJMJhRFs"
+                        },
+                        { 
+                          number: "10", 
+                          title: "Beyond the Ashes", 
+                          album: "Beyond the Ashes",
+                          spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx",
+                          appleUrl: "https://music.apple.com/us/album/beyond-the-ashes/1787170020?i=1787170023",
+                          amazonUrl: "https://www.amazon.com/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=kpLowI-DSBM"
+                        }
+                      ]}
+                    />
+                    
+                    {/* Hip-Hop Collapsible */}
                     <CollapsibleGenre
                       title="Hip-Hop"
                       genre="hiphop"
