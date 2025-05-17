@@ -64,7 +64,7 @@ export default function Navbar() {
             Music
           </button>
           <button 
-            onClick={() => navigateTo('/artist-picks')} 
+            onClick={() => scrollToSection('artist-picks')} 
             className="text-amber-500 hover:text-white border border-amber-500 px-4 py-1 rounded-md uppercase text-sm font-bold tracking-wider"
           >
             Artist Pick
@@ -113,7 +113,7 @@ export default function Navbar() {
             Music
           </button>
           <button 
-            onClick={() => navigateTo('/artist-picks')} 
+            onClick={() => scrollToSection('artist-picks')} 
             className="text-2xl font-bold text-amber-500 border-2 border-amber-500 px-6 py-2 rounded-lg uppercase transition duration-300"
           >
             Artist Pick
