@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
+import PhoenixImage from "../assets/phoenix_image.webp";
 
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
@@ -610,6 +611,19 @@ export default function Home() {
           </h2>
           
           <div className="max-w-4xl mx-auto bg-zinc-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-amber-500/20 shadow-lg hover:border-amber-500/40 transition-all">
+            {/* Banner image */}
+            <div className="relative h-48 md:h-64 lg:h-80 w-full overflow-hidden">
+              <img 
+                src={PhoenixImage} 
+                alt="Phoenix rising from ashes - symbolic imagery" 
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-zinc-900/80 backdrop-blur-sm py-2 px-4 rounded-lg border border-amber-500/30">
+                <h3 className="text-xl font-bold text-white">Featured Artist Review</h3>
+              </div>
+            </div>
+
             <div className="p-8">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
                 <div className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 bg-zinc-800 rounded-full flex items-center justify-center">
