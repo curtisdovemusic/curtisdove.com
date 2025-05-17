@@ -415,8 +415,8 @@ export default function ArtistPicks() {
                 key={index} 
                 className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:scale-[1.01]"
               >
-                {/* Glowing effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-50 blur-md transition-all duration-500"></div>
+                {/* Glowing effect - enhanced yellow glow on hover */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
                 
                 <div className="relative flex items-center border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 h-full z-10 p-3 md:p-4">
                   {/* Song number */}
