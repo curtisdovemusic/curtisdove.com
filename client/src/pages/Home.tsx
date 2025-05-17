@@ -657,7 +657,8 @@ export default function Home() {
                           album: "Lagos to Tokyo",
                           spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
-                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4"
+                          amazonUrl: "https://www.amazon.com/Lagos-Tokyo-Curtis-Dove/dp/B0F1CXRSX4",
+                          youtubeUrl: "https://www.youtube.com/watch?v=zfhlJMJhRFs"
                         },
                         { 
                           number: "10", 
@@ -665,7 +666,8 @@ export default function Home() {
                           album: "Lagos to Kano",
                           spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=Cwyc-KLEQoKWEsptzs-3oQ",
                           appleUrl: "https://music.apple.com/us/album/lagos-to-kano-ep/1795739852",
-                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ"
+                          amazonUrl: "https://www.amazon.com/Lagos-Kano-Curtis-Dove/dp/B0DWTF2ZCQ",
+                          youtubeUrl: "https://www.youtube.com/watch?v=kpLowI-DSBM"
                         }
                       ]}
                     />
