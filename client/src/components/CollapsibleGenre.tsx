@@ -101,11 +101,7 @@ export default function CollapsibleGenre({
                     {song.number}
                   </span>
                 </div>
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-md overflow-hidden shrink-0 mr-3 border border-[#219ebc]/30">
-                  <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${getAlbumColor(song.album)}`}>
-                    <span className="text-sm font-bold text-white">{song.album.substring(0, 2)}</span>
-                  </div>
-                </div>
+
                 <div className="flex-grow mr-2 sm:mr-4 min-w-0">
                   <h4 className="text-white font-medium text-sm sm:text-base truncate">{song.title}</h4>
                   <p className="text-xs sm:text-sm text-[#8ecae6] truncate">{song.album}</p>
