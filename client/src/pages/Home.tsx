@@ -347,69 +347,7 @@ export default function Home() {
               MY <span className="text-amber-500">MUSIC</span>
             </h2>
             
-            {/* Genre filters */}
-            <div className="flex flex-wrap justify-center gap-3 mb-16">
-              <button 
-                onClick={() => setSelectedGenre("all")}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  selectedGenre === "all" 
-                    ? "bg-amber-500 text-black" 
-                    : "bg-white/10 text-white hover:bg-amber-500/80 hover:text-black"
-                }`}
-              >
-                All Genres
-              </button>
-              <button 
-                onClick={() => setSelectedGenre("afrobeats")}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  selectedGenre === "afrobeats" 
-                    ? "bg-yellow-500 text-black" 
-                    : "bg-white/10 text-white hover:bg-yellow-500/80 hover:text-black"
-                }`}
-              >
-                Afrobeats
-              </button>
-              <button 
-                onClick={() => setSelectedGenre("pop")}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  selectedGenre === "pop" 
-                    ? "bg-pink-500 text-black" 
-                    : "bg-white/10 text-white hover:bg-pink-500/80 hover:text-black"
-                }`}
-              >
-                Pop
-              </button>
-              <button 
-                onClick={() => setSelectedGenre("rockMetal")}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  selectedGenre === "rockMetal" 
-                    ? "bg-red-600 text-white" 
-                    : "bg-white/10 text-white hover:bg-red-600/80 hover:text-white"
-                }`}
-              >
-                Rock/Metal
-              </button>
-              <button 
-                onClick={() => setSelectedGenre("hiphop")}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  selectedGenre === "hiphop" 
-                    ? "bg-blue-500 text-white" 
-                    : "bg-white/10 text-white hover:bg-blue-500/80 hover:text-white"
-                }`}
-              >
-                Hip-Hop
-              </button>
-              <button 
-                onClick={() => setSelectedGenre("rnb")}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  selectedGenre === "rnb" 
-                    ? "bg-purple-500 text-white" 
-                    : "bg-white/10 text-white hover:bg-purple-500/80 hover:text-white"
-                }`}
-              >
-                R&B
-              </button>
-            </div>
+            {/* No genre filters */}
             
             {/* Featured music with large player */}
             <div className="mb-16">
@@ -839,7 +777,7 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-50 blur-xl rounded-2xl transition-all duration-700"></div>
                 <div className="relative overflow-hidden rounded-2xl">
                   <img 
-                    src="/attached_assets/CurtisDoveProfilePicture.jpg" 
+                    src="./attached_assets/CurtisDoveProfilePicture.jpg" 
                     alt="Curtis Dove portrait" 
                     className="w-full h-auto shadow-2xl object-cover transform transition-transform duration-700 group-hover:scale-105"
                   />
