@@ -139,7 +139,7 @@ export default function CollapsibleGenre({
                         </div>
                       </a>
                       <a 
-                        href={`https://music.amazon.com/search/${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
+                        href={song.amazonUrl || `https://music.amazon.com/search/${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         title="Listen on Amazon Music"
