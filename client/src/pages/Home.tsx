@@ -308,17 +308,19 @@ export default function Home() {
             <div className="relative inline-block mb-12">
               <span className="absolute -inset-1 -z-10 bg-gradient-to-r from-purple-600 via-amber-500 to-orange-500 blur-sm opacity-50 rounded-lg"></span>
               <h2 className="relative text-2xl md:text-3xl text-white font-medium tracking-wider py-2 px-6 rounded-lg backdrop-blur-sm">
-                BOUNDARY-BREAKING MUSICIAN
+                BOUNDARY-BREAKING ARTIST
               </h2>
             </div>
             
             <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
-              <span className="text-xl md:text-2xl">Groundbreaking artist with </span>
-              <span className="text-amber-400 font-semibold">141+ songs</span>
-              <span className="text-xl md:text-2xl"> spanning genres from </span>
-              <span className="text-purple-400 font-semibold">Afrobeats</span>
-              <span className="text-xl md:text-2xl"> to </span>
-              <span className="text-red-400 font-semibold">Rock</span>
+              <span className="text-xl md:text-2xl">
+                <span className="text-amber-400 font-semibold">8 albums</span>, 
+                <span className="text-purple-400 font-semibold"> 33 singles</span>,
+                <span className="text-blue-400 font-semibold"> 1 compilation</span>,
+                <span className="text-green-400 font-semibold"> 141+ songs</span>
+              </span>
+              <br />
+              <span className="text-xl md:text-2xl">across all major music platforms</span>
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -385,7 +387,7 @@ export default function Home() {
                     <div className="p-6">
                       <div className="flex items-center mb-4">
                         <span className="w-2 h-8 bg-yellow-500 rounded-full mr-3"></span>
-                        <h3 className="text-xl font-bold">Featured: Lagos Nights & Island Lights</h3>
+                        <h3 className="text-xl font-bold">Lagos Nights & Island Lights</h3>
                       </div>
                       <div className="aspect-video">
                         <iframe 
