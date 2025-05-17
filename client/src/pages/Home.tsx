@@ -5,160 +5,222 @@ import { useEffect, useRef } from "react";
 export default function Home() {
   const featuredPlaylist = albums.find(album => album.featured);
   const otherPlaylists = albums.filter(album => !album.featured);
-  const heroRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const featuredRef = useRef<HTMLDivElement>(null);
-  const otherPlaylistsRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
-    // Animate elements on load
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100');
-            entry.target.classList.remove('opacity-0');
-            if (entry.target.classList.contains('animate-ready')) {
-              if (entry.target.classList.contains('slide-up')) {
-                entry.target.classList.add('animate-slide-up');
-              } else if (entry.target.classList.contains('fade-in')) {
-                entry.target.classList.add('animate-fade-in');
-              } else if (entry.target.classList.contains('slide-in-right')) {
-                entry.target.classList.add('animate-slide-in-right');
-              } else if (entry.target.classList.contains('slide-in-left')) {
-                entry.target.classList.add('animate-slide-in-left');
-              } else if (entry.target.classList.contains('scale-in')) {
-                entry.target.classList.add('animate-scale-in');
-              }
-            }
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  // Music platforms information
+  const musicPlatforms = [
+    {
+      name: "Spotify",
+      icon: "fab fa-spotify",
+      color: "#1DB954",
+      url: "https://open.spotify.com/artist/5ZCP0tbgVY2Lx7JG0grqNR?si=S2VQDr7fSJu2NNjjjAuFxg"
+    },
+    {
+      name: "Apple Music",
+      icon: "fab fa-apple",
+      color: "#fc3c44",
+      url: "#"
+    },
+    {
+      name: "Amazon Music",
+      icon: "fab fa-amazon",
+      color: "#232F3E",
+      url: "https://www.amazon.com/music/player/artists/B0DD4HQ6D3/curtis-dove"
+    },
+    {
+      name: "YouTube",
+      icon: "fab fa-youtube",
+      color: "#FF0000",
+      url: "https://www.youtube.com/@curtisdovemusic"
+    },
+    {
+      name: "SoundCloud",
+      icon: "fab fa-soundcloud",
+      color: "#FF7700",
+      url: "https://soundcloud.com/user-314281859"
+    }
+  ];
 
-    // Observe elements
-    if (titleRef.current) observer.observe(titleRef.current);
-    if (subtitleRef.current) observer.observe(subtitleRef.current);
-    if (featuredRef.current) observer.observe(featuredRef.current);
-    if (otherPlaylistsRef.current) observer.observe(otherPlaylistsRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-  
   return (
-    <section id="home" className="min-h-screen py-24 pt-32 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-[10%] right-[15%] w-64 h-64 rounded-full bg-amber-500/5 blur-3xl animate-float"></div>
-        <div className="absolute top-[40%] left-[10%] w-72 h-72 rounded-full bg-amber-600/10 blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-[20%] right-[20%] w-56 h-56 rounded-full bg-amber-400/5 blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-      </div>
-      
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div ref={heroRef} className="mb-16">
-          <h1 
-            ref={titleRef}
-            className="text-5xl md:text-7xl font-bold font-montserrat mb-8 leading-tight gradient-text opacity-0 animate-ready slide-up"
-          >
-            Curtis Dove
-          </h1>
-          <p 
-            ref={subtitleRef}
-            className="text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto text-[hsl(var(--light-text))] opacity-0 animate-ready slide-up"
-            style={{animationDelay: '0.2s'}}
-          >
-            Boundary-pushing, genre-blending artist with 20,000+ monthly Spotify listeners
-          </p>
+    <section id="home" className="min-h-screen overflow-hidden bg-black">
+      {/* Hero Section - Full height with background video */}
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background video or image */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black z-10"></div>
+          <img 
+            src="/attached_assets/CurtisDoveProfilePicture.jpg" 
+            alt="Curtis Dove" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         </div>
         
-        {featuredPlaylist && (
-          <div ref={featuredRef} className="mb-16 opacity-0 animate-ready fade-in">
-            <div className="max-w-5xl mx-auto glassmorphism rounded-2xl p-6 md:p-8">
-              <h2 className="text-3xl font-bold mb-6 gradient-text">{featuredPlaylist.title}</h2>
-              <div className="flex justify-center mb-8 relative glow-effect rounded-xl overflow-hidden">
-                <div className="animated-gradient-border rounded-xl w-full max-w-[700px]">
+        {/* Hero content */}
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 animate-fade-in">
+            CURTIS DOVE
+          </h1>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up">
+            {musicPlatforms.map((platform, index) => (
+              <a 
+                key={index}
+                href={platform.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center bg-white/10 backdrop-blur-sm px-5 py-3 rounded-full hover:bg-white/20 transition-all duration-300"
+              >
+                <i className={`${platform.icon} text-xl mr-2`} style={{color: platform.color}}></i>
+                <span className="text-white font-medium">{platform.name}</span>
+              </a>
+            ))}
+          </div>
+          
+          {/* Call to action */}
+          <div className="animate-slide-up" style={{animationDelay: '0.3s'}}>
+            <a 
+              href="#music" 
+              className="inline-block bg-gradient-to-r from-amber-500 to-amber-600 px-8 py-4 rounded-full text-lg font-medium text-white hover:from-amber-600 hover:to-amber-700 hover:shadow-lg transition-all duration-300 animate-pulse-slow" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('music')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              LISTEN NOW
+            </a>
+          </div>
+        </div>
+        
+        {/* Scroll down indicator */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <a 
+            href="#music"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('music')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="text-white text-3xl opacity-75 hover:opacity-100 transition-opacity"
+          >
+            <i className="fas fa-chevron-down"></i>
+          </a>
+        </div>
+      </div>
+      
+      {/* Featured Music Section */}
+      <div id="music" className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-3 text-white">LATEST <span className="text-amber-500">MUSIC</span></h2>
+            <p className="text-white/80 max-w-2xl mx-auto text-lg">
+              Stream Curtis Dove's genre-blending sound featuring Afrobeat, R&B, Pop, and more
+            </p>
+          </div>
+          
+          {featuredPlaylist && (
+            <div className="mb-20">
+              <div className="max-w-4xl mx-auto">
+                <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
                   <iframe 
                     src={`https://open.spotify.com/embed/playlist/${featuredPlaylist.spotifyUrl.split('/').pop()?.split('?')[0]}?utm_source=generator&theme=0`}
                     width="100%" 
-                    height="352" 
-                    style={{maxWidth: '700px', borderRadius: '0.75rem'}}
+                    height="100%" 
+                    style={{minHeight: '380px'}}
                     frameBorder="0" 
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                     loading="lazy">
                   </iframe>
                 </div>
               </div>
-              
-              <div className="flex justify-center mb-6">
-                <a 
-                  href={featuredPlaylist.spotifyUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="spotify-button px-8 py-3 rounded-full font-semibold shadow-lg flex items-center justify-center"
-                >
-                  <span><i className="fab fa-spotify mr-2"></i> Save to Spotify</span>
-                </a>
-              </div>
             </div>
-          </div>
-        )}
-        
-        {otherPlaylists.length > 0 && (
-          <div ref={otherPlaylistsRef} className="mb-16 opacity-0 animate-ready slide-up">
-            <h2 className="text-2xl font-bold mb-8">More Playlists</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto staggered-children">
-              {otherPlaylists.map((playlist, index) => (
-                <div key={index} className="playlist-card bg-secondary rounded-lg overflow-hidden shadow-lg">
-                  <div className="p-5">
-                    <div className="flex items-start mb-3">
-                      <div className="image-hover-zoom w-16 h-16 rounded-md overflow-hidden mr-3 flex-shrink-0">
-                        <img
-                          src={playlist.image}
-                          alt={playlist.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-1 truncate">{playlist.title}</h3>
-                        <p className="text-sm text-[hsl(var(--light-text))]">
+          )}
+          
+          {/* Other playlists in a grid */}
+          {otherPlaylists.length > 0 && (
+            <div className="mb-16">
+              <h3 className="text-2xl font-bold mb-8 text-center text-white">MORE MUSIC</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {otherPlaylists.map((playlist, index) => (
+                  <div key={index} className="bg-zinc-900 rounded-lg overflow-hidden shadow-xl transform transition duration-500 hover:scale-[1.02] hover:shadow-amber-500/20">
+                    <div className="relative aspect-square overflow-hidden">
+                      <img
+                        src={playlist.image}
+                        alt={playlist.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-70"></div>
+                      <div className="absolute bottom-0 left-0 p-4">
+                        <h3 className="text-xl font-bold text-white mb-1">{playlist.title}</h3>
+                        <p className="text-white/70 text-sm">
                           {playlist.type} • {playlist.tracks} tracks
                         </p>
                       </div>
-                    </div>
-                    <iframe 
-                      src={`https://open.spotify.com/embed/playlist/${playlist.spotifyUrl.split('/').pop()?.split('?')[0]}?utm_source=generator&theme=0`}
-                      width="100%" 
-                      height="80" 
-                      frameBorder="0" 
-                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                      loading="lazy">
-                    </iframe>
-                    <div className="mt-3 text-right">
                       <a 
                         href={playlist.spotifyUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm text-[hsl(var(--light-text))] hover:text-accent transition-colors duration-300"
+                        className="absolute right-4 bottom-4 w-12 h-12 flex items-center justify-center bg-green-500 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
                       >
-                        <span className="mr-1">Listen on Spotify</span>
-                        <i className="fas fa-external-link-alt text-xs"></i>
+                        <i className="fab fa-spotify text-xl text-white"></i>
                       </a>
                     </div>
                   </div>
-                </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      
+      {/* Video Section */}
+      <div className="py-20 bg-zinc-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-3 text-white">WATCH <span className="text-amber-500">VIDEO</span></h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/videoseries?list=PLtgK30nhYgGZlh7VavbT1wAUFABaIWVLW" 
+                title="Curtis Dove Music Video" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Connect Section */}
+      <div className="py-20 bg-black">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-10 text-white">CONNECT <span className="text-amber-500">WITH ME</span></h2>
+          <SocialLinks size="lg" className="flex justify-center mb-10" />
+          
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold mb-6 text-white">STREAM MY MUSIC</h3>
+            <div className="flex flex-wrap justify-center gap-6">
+              {musicPlatforms.map((platform, index) => (
+                <a 
+                  key={index}
+                  href={platform.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex flex-col items-center gap-2 group"
+                >
+                  <div 
+                    className="w-16 h-16 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110" 
+                    style={{backgroundColor: `${platform.color}20`}}
+                  >
+                    <i className={`${platform.icon} text-3xl`} style={{color: platform.color}}></i>
+                  </div>
+                  <span className="text-white/80 font-medium group-hover:text-white transition-colors">{platform.name}</span>
+                </a>
               ))}
             </div>
           </div>
-        )}
-        
-        <div className="opacity-0 animate-ready fade-in" style={{animationDelay: '0.4s'}}>
-          <h3 className="text-2xl font-bold mb-6">Connect With Me</h3>
-          <SocialLinks size="lg" className="mb-8" />
         </div>
       </div>
     </section>
