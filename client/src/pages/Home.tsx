@@ -51,8 +51,18 @@ const SECTIONS = [
   { id: "contact", label: "Contact" }
 ];
 
+// Define song type with optional properties
+type Song = {
+  title: string;
+  streams: number;
+  listeners: number;
+  date: string;
+  tag?: string;
+  featured?: boolean;
+};
+
 // Top songs data from your spreadsheet
-const TOP_SONGS = {
+const TOP_SONGS: Record<string, Song[]> = {
   afrobeats: [
     { title: "Lagos Inferno", streams: 6915, listeners: 3146, date: "Jan 2025" },
     { title: "Lagos Islands", streams: 6109, listeners: 2738, date: "Jan 2025" },
@@ -264,7 +274,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10 mt-20">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
-              CURTIS DOVE
+              CURTIS DOVE MUSIC
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
@@ -700,7 +710,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             <span className="text-white">ABOUT </span>
-            <span className="text-amber-500">CURTIS</span>
+            <span className="text-amber-500">CURTIS DOVE</span>
           </h2>
           
           <div className="flex flex-col lg:flex-row items-center gap-16">
