@@ -92,10 +92,10 @@ export default function CollapsibleGenre({
           {songs.map((song, index) => (
             <div 
               key={index} 
-              className="group relative bg-gradient-to-r from-[#023047]/60 to-[#219ebc]/20 rounded-xl overflow-hidden transition-all duration-300 mb-2 transform hover:scale-[1.02]"
+              className="relative bg-gradient-to-r from-[#023047]/60 to-[#219ebc]/20 rounded-xl overflow-hidden transition-all duration-300 mb-2 transform hover:scale-[1.02]"
             >
-              <div className="absolute inset-0 bg-[#8ecae6]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative flex items-center p-2 sm:p-3 border border-[#219ebc]/10 group-hover:border-[#8ecae6]/50 rounded-xl bg-[#023047]/95 z-10">
+              <div className="absolute inset-0 bg-[#8ecae6]/20 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative flex items-center p-2 sm:p-3 border border-[#219ebc]/10 hover:border-[#8ecae6]/50 rounded-xl bg-[#023047]/95 z-10">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shrink-0 mr-2 sm:mr-3">
                   <span className="text-base sm:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
                     {song.number}
