@@ -38,7 +38,7 @@ export default function Footer() {
           <a href="https://www.amazon.com/music/player/artists/B0DD4HQ6D3/curtis-dove" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 text-white hover:bg-amber-500 hover:text-white transition-all duration-300">
             <i className="fab fa-amazon"></i>
           </a>
-          <a href="https://www.threads.net/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 text-white hover:bg-amber-500 hover:text-white transition-all duration-300">
+          <a href="https://www.threads.com/@curtisdovemusic?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 text-white hover:bg-amber-500 hover:text-white transition-all duration-300">
             <i className="fab fa-threads"></i>
           </a>
         </div>
@@ -68,7 +68,7 @@ export default function Footer() {
             <h3 className="text-sm uppercase tracking-wider font-bold mb-4 text-amber-500">Follow</h3>
             <ul className="space-y-3">
               <li><a href="https://www.instagram.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-amber-500 transition duration-300">Instagram</a></li>
-              <li><a href="https://www.threads.net/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-amber-500 transition duration-300">Threads</a></li>
+              <li><a href="https://www.threads.com/@curtisdovemusic?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-amber-500 transition duration-300">Threads</a></li>
               <li><a href="https://www.tiktok.com/@curtisdovemusic" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-amber-500 transition duration-300">TikTok</a></li>
               <li><a href="https://www.facebook.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-amber-500 transition duration-300">Facebook</a></li>
             </ul>
