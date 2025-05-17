@@ -47,7 +47,7 @@ export default function CollapsibleGenre({
           <div className="flex items-center shrink-0 ml-2">
             <Link 
               href={`/artist-picks?genre=${genre}`} 
-              className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-xs md:text-sm flex items-center mr-2 md:mr-4"
+              className="text-[#ffb703] hover:text-white transition-colors text-xs md:text-sm flex items-center mr-2 md:mr-4 font-medium"
               onClick={(e) => e.stopPropagation()}
             >
               <span>See All</span>

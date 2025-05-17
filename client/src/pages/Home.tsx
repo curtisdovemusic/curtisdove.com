@@ -615,7 +615,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Explicit"
                       genre="explicit"
-                      description="Unfiltered content with mature themes, raw emotion, and authentic street language for adult listeners"
+                      description="Raw, unfiltered content with mature themes and authentic street language"
                       songs={[
                         { number: "01", title: "Big Ashawo", genre: "Explicit" },
                         { number: "02", title: "Another Sad Story", genre: "Explicit" },
