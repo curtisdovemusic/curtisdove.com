@@ -357,9 +357,12 @@ export default function Home() {
                 <span className="mx-1">,</span>
                 <span className="text-green-400 font-semibold mx-1">141+ songs</span>
               </div>
-              <div className="text-xl md:text-2xl text-white/80 bg-black py-1 px-3 rounded-md mt-3">
-                across all major music platforms
-              </div>
+            </div>
+            
+            <div className="text-center w-full py-2 px-3 mb-6">
+              <p className="text-xl md:text-2xl text-white/80 inline-block border-b border-amber-500/30 pb-1">
+                Available on all major music platforms
+              </p>
             </div>
             
             <div className="flex flex-wrap justify-center gap-3 mb-12">
