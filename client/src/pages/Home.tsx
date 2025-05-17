@@ -579,7 +579,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Rock"
                       genre="rock"
-                      description="Hard-hitting rock tracks with powerful guitar riffs, intense drums, and emotional vocals"
+                      description="My favorite hard-hitting rock tracks with powerful guitar riffs, intense drums, and emotional vocals"
                       songs={[
                         { number: "01", title: "The Ashes (Pt. 1)", genre: "Rock" },
                         { number: "02", title: "Falling", genre: "Rock" },
@@ -591,7 +591,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Pop"
                       genre="pop"
-                      description="Catchy melodies, heartfelt lyrics, and radio-ready hooks with contemporary pop production"
+                      description="My favorite catchy melodies, heartfelt lyrics, and radio-ready hooks with contemporary pop production"
                       songs={[
                         { number: "01", title: "One Wish", genre: "Pop" },
                         { number: "02", title: "Nobody Better", genre: "Pop" },
@@ -603,7 +603,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Hip-Hop"
                       genre="hiphop"
-                      description="Contemporary hip-hop with hard-hitting beats, smooth flows, and authentic urban storytelling"
+                      description="My favorite contemporary hip-hop with hard-hitting beats, smooth flows, and authentic urban storytelling"
                       songs={[
                         { number: "01", title: "Shorty You a Vibe", genre: "Hip-Hop" },
                         { number: "02", title: "Baller Life", genre: "Hip-Hop" },
@@ -615,7 +615,7 @@ export default function Home() {
                     <CollapsibleGenre 
                       title="Explicit"
                       genre="explicit"
-                      description="Raw, unfiltered content with mature themes and authentic street language"
+                      description="My favorite raw, unfiltered content with mature themes and authentic street language"
                       songs={[
                         { number: "01", title: "Big Ashawo", genre: "Explicit" },
                         { number: "02", title: "Another Sad Story", genre: "Explicit" },

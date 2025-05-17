@@ -33,7 +33,8 @@ export default function CollapsibleGenre({
         onClick={toggleExpand}
         className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 cursor-pointer"
       >
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500"></div>
+        <div className="absolute -inset-1 bg-gradient-to-r from-[#8ecae6]/30 to-[#219ebc]/20 rounded-xl opacity-0 group-hover:opacity-100 blur-lg transition-all duration-500 group-hover:scale-105"></div>
         <div className="relative flex items-center justify-between p-5 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
           <div className="flex items-center w-full md:pr-4">
             <div className="w-24 md:w-32 lg:w-36 shrink-0 text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
