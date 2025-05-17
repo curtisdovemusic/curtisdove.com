@@ -121,7 +121,6 @@ interface Song {
   number: string;
   title: string;
   album: string;
-  albumCover: string;
 }
 
 // Top songs data from your spreadsheet 
@@ -583,62 +582,52 @@ export default function Home() {
                         { 
                           number: "01", 
                           title: "The Lounge Love", 
-                          album: "Lagos to Kano",
-                          albumCover: albumCovers.lagosToKano
+                          album: "Lagos to Kano"
                         },
                         { 
                           number: "02", 
                           title: "Lagos Inferno", 
-                          album: "Eko Island Beats",
-                          albumCover: albumCovers.ekoIslandBeats
+                          album: "Eko Island Beats"
                         },
                         { 
                           number: "03", 
                           title: "Wine & Kiss", 
-                          album: "Lagos to Tokyo",
-                          albumCover: albumCovers.lagosToTokyo
+                          album: "Lagos to Tokyo"
                         },
                         { 
                           number: "04", 
                           title: "Lagos Islands", 
-                          album: "Eko Island Beats",
-                          albumCover: albumCovers.ekoIslandBeats
+                          album: "Eko Island Beats"
                         },
                         { 
                           number: "05", 
                           title: "Island Breeze Serenade", 
                           album: "Lagos to Tokyo",
-                          albumCover: albumCovers.lagosToTokyo
                         },
                         { 
                           number: "06", 
                           title: "Beachside Fire", 
                           album: "Lagos to Kano",
-                          albumCover: albumCovers.lagosToKano
                         },
                         { 
                           number: "07", 
                           title: "Sweet Poison", 
                           album: "Sweet Poison",
-                          albumCover: albumCovers.sweetPoison
                         },
                         { 
                           number: "08", 
                           title: "Fire & Wine", 
                           album: "Fire & Wine",
-                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "09", 
                           title: "Lose Myself in You", 
                           album: "Lagos to Tokyo",
-                          albumCover: albumCovers.lagosToTokyo
                         },
                         { 
                           number: "10", 
                           title: "Kano Love", 
                           album: "Lagos to Kano",
-                          albumCover: albumCovers.lagosToKano
                         }
                       ]}
                     />
@@ -653,19 +642,16 @@ export default function Home() {
                           number: "01", 
                           title: "The Ashes (Pt. 1)", 
                           album: "Sweet Poison",
-                          albumCover: albumCovers.sweetPoison
                         },
                         { 
                           number: "02", 
                           title: "Falling", 
                           album: "Fire & Wine",
-                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "03", 
                           title: "The Burning (Pt. 2)", 
                           album: "Sweet Poison",
-                          albumCover: albumCovers.sweetPoison
                         }
                       ]}
                     />
@@ -680,19 +666,16 @@ export default function Home() {
                           number: "01", 
                           title: "One Wish", 
                           album: "Lagos to Tokyo",
-                          albumCover: albumCovers.lagosToTokyo
                         },
                         { 
                           number: "02", 
                           title: "Nobody Better", 
                           album: "Fire & Wine",
-                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "03", 
                           title: "Love in Letters", 
                           album: "Lagos to Tokyo",
-                          albumCover: albumCovers.lagosToTokyo
                         }
                       ]}
                     />
@@ -707,19 +690,16 @@ export default function Home() {
                           number: "01", 
                           title: "Shorty You a Vibe", 
                           album: "Lagos to Kano",
-                          albumCover: albumCovers.lagosToKano
                         },
                         { 
                           number: "02", 
                           title: "Baller Life", 
                           album: "Eko Island Beats",
-                          albumCover: albumCovers.ekoIslandBeats
                         },
                         { 
                           number: "03", 
                           title: "Detty December", 
                           album: "Lagos to Kano",
-                          albumCover: albumCovers.lagosToKano
                         }
                       ]}
                     />
@@ -734,19 +714,16 @@ export default function Home() {
                           number: "01", 
                           title: "Big Ashawo", 
                           album: "Eko Island Beats",
-                          albumCover: albumCovers.ekoIslandBeats
                         },
                         { 
                           number: "02", 
                           title: "Another Sad Story", 
                           album: "Fire & Wine",
-                          albumCover: albumCovers.fireAndWine
                         },
                         { 
                           number: "03", 
                           title: "King of Hearts", 
                           album: "Sweet Poison",
-                          albumCover: albumCovers.sweetPoison
                         }
                       ]}
                     />

@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 
-// Map album names to their cover images
+// Map album names to their cover images - we use the last part of the album name
 const albumCovers: Record<string, string> = {
-  'Lagos to Kano': '/album-covers/Lagos to Kano.jpeg',
-  'Eko Island Beats': '/album-covers/Eko Island Beats.jpeg',
-  'Lagos to Tokyo': '/album-covers/Lagos to Tokyo.webp',
-  'Sweet Poison': '/album-covers/Sweet Poison.png',
-  'Fire & Wine': '/album-covers/Fire & Wine.jpeg'
+  'Lagos to Kano': '/album-covers/Kano.jpeg',
+  'Eko Island Beats': '/album-covers/Beats.jpeg',
+  'Lagos to Tokyo': '/album-covers/Tokyo.webp',
+  'Sweet Poison': '/album-covers/Poison.png',
+  'Fire & Wine': '/album-covers/Wine.jpeg'
 };
 
 // Fallback color gradients for each album in case image fails to load
