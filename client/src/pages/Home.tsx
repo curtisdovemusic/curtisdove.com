@@ -96,7 +96,7 @@ type Section = {
 const SECTIONS: Section[] = [
   { id: "home", label: "Home" },
   { id: "music", label: "Music" },
-  { id: "artist-pick", label: "Artist Pick", isLink: true },
+  { id: "artist-picks", label: "Artist Pick" },
   { id: "videos", label: "Videos" },
   { id: "press", label: "In The Press" },
   { id: "bio", label: "Bio" },
@@ -540,7 +540,7 @@ export default function Home() {
             </div>
             
             {/* Artist Pick - Featured Songs Section */}
-            <div className="py-16 bg-gradient-to-b from-zinc-900/90 to-black relative overflow-hidden">
+            <section id="artist-picks" className="py-16 bg-gradient-to-b from-zinc-900/90 to-black relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
               <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
               
@@ -630,7 +630,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
             
             {/* Top 20 Feature Removed */}
             
