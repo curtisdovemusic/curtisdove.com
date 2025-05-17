@@ -114,11 +114,11 @@ export default function CollapsibleGenre({
                 </div>
                 <div className="shrink-0 flex items-center">
                   <div className="text-center">
-                    <div className="flex items-center gap-1 mb-1 hidden sm:flex">
+                    <div className="flex justify-center items-center gap-1 mb-1 hidden sm:flex w-full">
                       <FaHeadphones className="text-[#ffb703] text-[10px] animate-pulse" />
-                      <p className="text-[10px] text-white/80 font-medium">Listen on:</p>
+                      <p className="text-[10px] text-white/80 font-medium">Listen On</p>
                     </div>
-                    <div className="flex space-x-3">
+                    <div className="flex justify-center space-x-3">
                       <a 
                         href={song.spotifyUrl || `https://open.spotify.com/search/${encodeURIComponent(song.title + ' ' + 'Curtis Dove')}`} 
                         target="_blank" 
