@@ -613,26 +613,31 @@ export default function Home() {
                           number: "06", 
                           title: "Beachside Fire", 
                           album: "Lagos to Kano",
+                          spotifyUrl: "https://open.spotify.com/track/0TN5vTY58EquEYYrfWJsEa?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "07", 
                           title: "Sweet Poison", 
                           album: "Sweet Poison",
+                          spotifyUrl: "https://open.spotify.com/track/3XN6m6KD0IsiLGfpam19y0?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "08", 
                           title: "Fire & Wine", 
                           album: "Fire & Wine",
+                          spotifyUrl: "https://open.spotify.com/track/1uZC71fpV6uPtmP6XFBBgb?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "09", 
                           title: "Lose Myself in You", 
                           album: "Lagos to Tokyo",
+                          spotifyUrl: "https://open.spotify.com/track/6LUwOmBa1aKU7xEnu2aTKF?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "10", 
                           title: "Kano Love", 
                           album: "Lagos to Kano",
+                          spotifyUrl: "https://open.spotify.com/track/23V2Z2R5wcWDHMbqg5zDXx?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         }
                       ]}
                     />
