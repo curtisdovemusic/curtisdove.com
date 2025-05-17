@@ -347,16 +347,17 @@ export default function Home() {
               </h2>
             </div>
             
-            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
-              <span className="text-xl md:text-2xl">
+            <div className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
+              <div>
                 <span className="text-amber-400 font-semibold">8 albums</span>, 
                 <span className="text-purple-400 font-semibold"> 33 singles</span>,
                 <span className="text-blue-400 font-semibold"> 1 compilation</span>,
                 <span className="text-green-400 font-semibold"> 141+ songs</span>
-              </span>
-              <br />
-              <span className="text-xl md:text-2xl">across all major music platforms</span>
-            </p>
+              </div>
+              <div className="mt-2">
+                across all major music platforms
+              </div>
+            </div>
             
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {MUSIC_PLATFORMS.map((platform, index) => (
