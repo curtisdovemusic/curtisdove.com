@@ -175,14 +175,20 @@ export default function Home() {
   
   return (
     <div className="bg-black text-white overflow-hidden">
-      {/* Custom cursor effect */}
+      {/* Custom music note cursor effect */}
       <div 
         ref={cursorRef}
-        className="hidden md:block fixed w-8 h-8 rounded-full border-2 border-amber-500 pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 opacity-70 mix-blend-difference"
+        className="hidden md:block fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 opacity-80"
         style={{ 
-          transition: 'transform 0.15s ease-out, width 0.2s, height 0.2s',
+          transition: 'transform 0.15s ease-out',
+          width: '24px',
+          height: '24px',
         }}
-      ></div>
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500">
+          <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
+        </svg>
+      </div>
       
       {/* Fixed Navigation */}
       <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'bg-black/90 backdrop-blur-sm py-4' : 'bg-transparent py-6'}`}>
@@ -292,13 +298,27 @@ export default function Home() {
         {/* Hero content */}
         <div className="container mx-auto px-6 relative z-10 mt-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 relative">
-              <span className="relative z-10">CURTIS DOVE MUSIC</span>
-              <span className="absolute -inset-2 rounded-lg bg-gradient-to-r from-amber-500/10 via-purple-500/10 to-red-500/10 blur-md z-0"></span>
-            </h1>
+            <div className="relative mb-6">
+              <div className="absolute -inset-3 bg-gradient-to-r from-purple-600 via-amber-500 to-orange-500 blur-xl opacity-30 rounded-lg"></div>
+              <h1 className="relative text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-amber-400 to-amber-500">
+                CURTIS DOVE
+              </h1>
+            </div>
+            
+            <div className="relative inline-block mb-12">
+              <span className="absolute -inset-1 -z-10 bg-gradient-to-r from-purple-600 via-amber-500 to-orange-500 blur-sm opacity-50 rounded-lg"></span>
+              <h2 className="relative text-2xl md:text-3xl text-white font-medium tracking-wider py-2 px-6 rounded-lg backdrop-blur-sm">
+                BOUNDARY-BREAKING MUSICIAN
+              </h2>
+            </div>
             
             <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
-              <span className="font-bold text-amber-500">Curtis Dove</span> — Boundary-pushing artist with over 141+ songs across streaming platforms
+              <span className="text-xl md:text-2xl">Groundbreaking artist with </span>
+              <span className="text-amber-400 font-semibold">141+ songs</span>
+              <span className="text-xl md:text-2xl"> spanning genres from </span>
+              <span className="text-purple-400 font-semibold">Afrobeats</span>
+              <span className="text-xl md:text-2xl"> to </span>
+              <span className="text-red-400 font-semibold">Rock</span>
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -370,7 +390,7 @@ export default function Home() {
                       <div className="aspect-video">
                         <iframe 
                           style={{ borderRadius: '12px' }} 
-                          src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator" 
+                          src="https://open.spotify.com/embed/playlist/7qWyO3vNYIWRgiGcTQT9Bd?utm_source=generator" 
                           width="100%" 
                           height="100%" 
                           frameBorder="0" 
@@ -389,10 +409,10 @@ export default function Home() {
                         <span className="w-2 h-6 bg-yellow-500 rounded-full mr-2"></span>
                         <h3 className="text-lg font-bold">After Dark in Lagos</h3>
                       </div>
-                      <p className="text-sm text-white/60 mb-4">The explicit side of Afrobeats</p>
+                      <p className="text-sm text-white/60 mb-4">The Explicit Side of Afrobeats</p>
                       <div className="relative">
                         <a 
-                          href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn" 
+                          href="https://open.spotify.com/playlist/7qWyO3vNYIWRgiGcTQT9Bd" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="block"
@@ -415,12 +435,12 @@ export default function Home() {
                     <div className="p-4">
                       <div className="flex items-center mb-3">
                         <span className="w-2 h-6 bg-purple-500 rounded-full mr-2"></span>
-                        <h3 className="text-lg font-bold">My Love Songs</h3>
+                        <h3 className="text-lg font-bold">Curtis Dove - My Love Songs</h3>
                       </div>
                       <p className="text-sm text-white/60 mb-4">Heartfelt love songs across genres</p>
                       <div className="relative">
                         <a 
-                          href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn" 
+                          href="https://open.spotify.com/playlist/13nhg6SPkxfMaAkj2Cra6M" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="block"
