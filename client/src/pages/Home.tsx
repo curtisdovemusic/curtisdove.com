@@ -538,6 +538,177 @@ export default function Home() {
               </div>
             </div>
             
+            {/* Artist Pick - Featured Songs Section */}
+            <div className="py-16 bg-gradient-to-b from-zinc-900/90 to-black relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
+              <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
+              
+              {/* Background Elements */}
+              <div className="absolute top-1/4 right-10 w-96 h-96 rounded-full bg-[#ffb703]/10 blur-[150px]"></div>
+              <div className="absolute bottom-1/4 left-10 w-64 h-64 rounded-full bg-[#219ebc]/10 blur-[100px]"></div>
+              
+              <div className="container mx-auto px-6 relative z-10">
+                <div className="max-w-5xl mx-auto">
+                  <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                      <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                        <span className="text-white">ARTIST </span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">PICKS</span>
+                      </h2>
+                      <p className="text-lg text-white/70">Featured tracks from my top genre collections</p>
+                    </div>
+                    <Link href="/artist-picks" className="mt-4 md:mt-0 inline-flex items-center text-[#8ecae6] hover:text-[#ffb703] transition-colors group">
+                      <span>View All Collections</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
+                  </div>
+                  
+                  {/* Afrosounds - Featured */}
+                  <div className="mb-12">
+                    <div className="flex items-center justify-between mb-5">
+                      <h3 className="text-2xl font-bold">
+                        <span className="text-white">Afrosounds</span>
+                      </h3>
+                      <Link href="/artist-picks?genre=afrosounds" className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-sm group flex items-center">
+                        <span>See All</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                    
+                    {/* Top 3 Afrosounds Songs */}
+                    <div className="flex flex-col space-y-3">
+                      {[
+                        { number: "01", title: "Lagos Nights & Island Lights", genre: "Afrobeat" },
+                        { number: "02", title: "Island Gal", genre: "Afrobeat" },
+                        { number: "03", title: "Lagos Inferno", genre: "Afrobeat" }
+                      ].map((song, index) => (
+                        <div 
+                          key={index} 
+                          className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
+                        >
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
+                          <div className="relative flex items-center p-3 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
+                            <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-4">
+                              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
+                                {song.number}
+                              </span>
+                            </div>
+                            <div className="flex-grow mr-4">
+                              <h4 className="text-white font-medium">{song.title}</h4>
+                              <p className="text-sm text-[#8ecae6]">{song.genre}</p>
+                            </div>
+                            <div className="shrink-0">
+                              <button className="px-3 py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047]">
+                                Listen Now
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Rock - Featured */}
+                  <div className="mb-12">
+                    <div className="flex items-center justify-between mb-5">
+                      <h3 className="text-2xl font-bold">
+                        <span className="text-white">Rock</span>
+                      </h3>
+                      <Link href="/artist-picks?genre=rock" className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-sm group flex items-center">
+                        <span>See All</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                    
+                    {/* Top 3 Rock Songs */}
+                    <div className="flex flex-col space-y-3">
+                      {[
+                        { number: "01", title: "The Ashes (Pt. 1)", genre: "Rock" },
+                        { number: "02", title: "Falling", genre: "Rock" },
+                        { number: "03", title: "The Burning (Pt. 2)", genre: "Rock" }
+                      ].map((song, index) => (
+                        <div 
+                          key={index} 
+                          className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
+                        >
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
+                          <div className="relative flex items-center p-3 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
+                            <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-4">
+                              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
+                                {song.number}
+                              </span>
+                            </div>
+                            <div className="flex-grow mr-4">
+                              <h4 className="text-white font-medium">{song.title}</h4>
+                              <p className="text-sm text-[#8ecae6]">{song.genre}</p>
+                            </div>
+                            <div className="shrink-0">
+                              <button className="px-3 py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047]">
+                                Listen Now
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Pop - Featured */}
+                  <div className="mb-12">
+                    <div className="flex items-center justify-between mb-5">
+                      <h3 className="text-2xl font-bold">
+                        <span className="text-white">Pop</span>
+                      </h3>
+                      <Link href="/artist-picks?genre=pop" className="text-[#8ecae6] hover:text-[#ffb703] transition-colors text-sm group flex items-center">
+                        <span>See All</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                    
+                    {/* Top 3 Pop Songs */}
+                    <div className="flex flex-col space-y-3">
+                      {[
+                        { number: "01", title: "One Wish", genre: "Pop" },
+                        { number: "02", title: "Nobody Better", genre: "Pop" },
+                        { number: "03", title: "Love in Letters", genre: "Pop" }
+                      ].map((song, index) => (
+                        <div 
+                          key={index} 
+                          className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500"
+                        >
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-70 blur-md transition-all duration-500"></div>
+                          <div className="relative flex items-center p-3 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
+                            <div className="w-10 h-10 flex items-center justify-center shrink-0 mr-4">
+                              <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
+                                {song.number}
+                              </span>
+                            </div>
+                            <div className="flex-grow mr-4">
+                              <h4 className="text-white font-medium">{song.title}</h4>
+                              <p className="text-sm text-[#8ecae6]">{song.genre}</p>
+                            </div>
+                            <div className="shrink-0">
+                              <button className="px-3 py-1.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-xs font-bold text-[#023047]">
+                                Listen Now
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             {/* Top 20 Feature Removed */}
             
             {/* Listening options section */}
