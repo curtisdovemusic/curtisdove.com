@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide any unwanted elements */
+.replit-dev-banner,
+#replit-dev-banner,
+.replit-banner,
+img[alt="Error"],
+img[src=""],
+img:not([src]) {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  overflow: hidden !important;
+}
+
 /* Custom animations */
 @keyframes float {
   0% {
