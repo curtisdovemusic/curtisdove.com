@@ -56,6 +56,12 @@ export default function Navbar() {
           >
             Connect
           </button>
+          <button 
+            onClick={() => scrollToSection('press')} 
+            className="text-white hover:text-amber-500 transition-colors duration-300 uppercase text-sm font-bold tracking-wider"
+          >
+            Press
+          </button>
         </div>
         
         {/* Mobile Navigation Toggle */}
