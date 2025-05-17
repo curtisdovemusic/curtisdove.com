@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
 import PhoenixImage from "../assets/phoenix_image.webp";
+import ShareButtons from "../components/ShareButtons";
 
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
@@ -878,6 +879,9 @@ export default function Home() {
                 </a>
               ))}
             </div>
+            
+            {/* Share buttons */}
+            <ShareButtons className="mb-8" />
             
             <div className="flex justify-center mb-10">
               <nav className="flex flex-wrap justify-center gap-x-6">
