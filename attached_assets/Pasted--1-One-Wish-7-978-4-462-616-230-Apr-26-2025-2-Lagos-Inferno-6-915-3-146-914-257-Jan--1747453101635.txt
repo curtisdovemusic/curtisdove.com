@@ -1,0 +1,401 @@
+#	
+1	
+
+One Wish
+7,978	4,462	616	230	Apr 26, 2025	
+2	
+
+Lagos Inferno
+6,915	3,146	914	257	Jan 4, 2025	
+3	
+
+Lagos Islands
+6,109	2,738	968	448	Jan 4, 2025	
+4	
+
+Whispers in the Wind
+4,464	117	12	4	Oct 14, 2024	
+5	
+
+Island Breeze Serenade
+3,948	1,954	477	210	Mar 21, 2025	
+6	
+
+The Lounge Love
+2,340	1,118	236	60	Feb 21, 2025	
+7	
+
+Sweet Poison
+2,075	1,059	—	123	Apr 26, 2025	
+8	
+
+Kano Love
+1,990	975	213	62	Feb 21, 2025	
+9	
+
+Lagos Luv
+1,887	1,009	228	49	Feb 21, 2025	
+10	
+
+Rebuild
+1,878	1,165	212	55	Nov 8, 2024	
+11	
+
+Beachside Fire
+1,839	962	224	89	Feb 21, 2025	
+12	
+
+Slow Fire
+1,616	932	169	57	Mar 21, 2025	
+13	
+
+Behind the Mask
+1,433	1,064	138	32	Nov 1, 2024	
+14	
+
+Safe Haven
+1,430	866	—	42	Nov 8, 2024	
+15	
+
+Island Breeze
+1,336	765	186	69	Jan 4, 2025	
+16	
+
+Reflections of Us
+1,271	953	93	34	Nov 8, 2024	
+17	
+
+Brother Eternal
+1,241	610	—	12	Dec 21, 2024	
+18	
+
+Lagos Flow
+1,135	709	163	41	Jan 4, 2025	
+19	
+
+Island Hustle
+1,090	702	123	54	Jan 4, 2025	
+20	
+
+Fire & Wine
+959	471	126	44	Feb 22, 2025	
+21	
+
+Black Heat
+929	640	—	18	Dec 31, 2024	
+22	
+
+One Sip Deep
+898	543	95	33	Feb 21, 2025	
+23	
+
+Turn up the Heat
+851	575	—	20	Dec 31, 2024	
+24	
+
+Wine & Kiss
+849	402	128	50	Mar 21, 2025	
+25	
+
+Fading Echoes
+819	381	—	11	Oct 14, 2024	
+26	
+
+Transcend
+788	466	67	22	Nov 8, 2024	
+27	
+
+Three Cities Groove
+745	438	82	42	Feb 21, 2025	
+28	
+
+Ọ Dị M Mma (Feels So Right)
+734	334	—	197	May 4, 2025	
+29	
+
+Lagos Nights
+731	474	88	42	Jan 4, 2025	
+30	
+
+Africa Vibe
+692	475	—	29	Apr 26, 2025	
+31	
+
+Lose Myself in You
+682	291	92	41	Mar 21, 2025	
+32	
+
+Eko Vibes
+681	346	87	47	Jan 4, 2025	
+33	
+
+Beyond the Ashes (Nu Metal)
+631	396	—	15	Dec 21, 2024	
+34	
+
+Craving Game
+626	426	—	15	Dec 31, 2024	
+35	
+
+Sweet Vibration
+610	405	—	16	Dec 31, 2024	
+36	
+
+Tokyo Breeze
+553	308	76	31	Mar 21, 2025	
+37	
+
+Through the Mirror
+535	312	46	20	Nov 8, 2024	
+38	
+
+Burn it Down
+530	254	76	10	Oct 14, 2024	
+39	
+
+Dust and Bones
+524	315	31	15	Nov 8, 2024	
+40	
+
+The Clocks Last Beat
+515	186	—	5	Oct 14, 2024	
+41	
+
+Detty December
+487	262	—	191	Apr 29, 2025	
+42	
+
+Bongo Love
+467	225	36	34	Mar 21, 2025	
+43	
+
+Lagos Bounce
+404	208	46	46	Jan 4, 2025	
+44	
+
+Now It's Game (Eko Version)
+393	204	—	14	Jan 1, 2025	
+45	
+
+Gimme Love
+353	172	45	28	Mar 21, 2025	
+46	
+
+Body Language
+305	148	28	23	Mar 21, 2025	
+47	
+
+Sweat (Eko Vibes)
+272	155	—	9	Dec 31, 2024	
+48	
+
+Move to Me
+248	146	—	17	Dec 31, 2024	
+49	
+
+Now It's Game
+236	143	—	8	Dec 31, 2024	
+50	
+
+Rising from Shadows
+231	109	—	11	Nov 8, 2024	
+51	
+
+Rise Again
+230	67	16	5	Oct 14, 2024	
+52	
+
+Find my way back to you
+205	89	—	182	Apr 28, 2025	
+53	
+
+All We Need
+203	85	31	3	Oct 14, 2024	
+54	
+
+Shorty you a Vibe
+191	96	—	182	May 5, 2025	
+55	
+
+Echoes of Yesterday
+184	64	—	2	Oct 14, 2024	
+56	
+
+Ghost of the Past
+175	80	—	3	Oct 14, 2024	
+57	
+
+Beacon in the Storm
+165	71	—	3	Oct 14, 2024	
+58	
+
+Baller Life
+163	73	—	13	Apr 28, 2025	
+59	
+
+XOXO
+155	98	—	12	May 9, 2025	
+60	
+
+Out of the Abyss
+149	64	—	4	Oct 14, 2024	
+61	
+
+Tara
+144	66	—	176	Apr 26, 2025	
+62	
+
+Echoes of Hope
+142	62	26	4	Oct 14, 2024	
+63	
+
+Breaking the Chains
+135	63	—	4	Oct 14, 2024	
+64	
+
+The Weight of Silence
+134	51	—	2	Oct 14, 2024	
+65	
+
+Battling the Beast
+133	74	—	2	Oct 14, 2024	
+66	
+
+Fading Fast
+131	68	10	9	Nov 8, 2024	
+67	
+
+Unbound
+122	33	—	9	Nov 8, 2024	
+68	
+
+Still Your Boy
+111	57	—	11	May 9, 2025	
+69	
+
+Real as I Am
+106	54	—	9	Nov 8, 2024	
+70	
+
+Love in Letters
+105	73	—	10	May 8, 2025	
+71	
+
+Rise above the Shadows
+102	58	—	3	Oct 14, 2024	
+72	
+
+Ashes of Us
+100	50	—	5	Dec 21, 2024	
+73	
+
+Nobody Better
+84	43	—	7	Apr 26, 2025	
+74	
+
+Sticky
+82	37	—	3	Aug 30, 2024	
+75	
+
+The Letter That Started It All
+76	39	—	174	May 8, 2025	
+76	
+
+Cut the Ties
+75	45	4	2	Oct 14, 2024	
+77	
+
+Big Ashawo
+73	28	—	12	Apr 26, 2025	
+78	
+
+All a Sham
+70	30	—	9	Nov 8, 2024	
+79	
+
+Ride the Tides
+66	23	3	3	Aug 29, 2024	
+80	
+
+Embers in the Dark
+61	27	—	2	Oct 14, 2024	
+81	
+
+From the Ashes
+55	25	3	1	Oct 14, 2024	
+82	
+
+Another Sad Story
+52	25	—	5	Apr 26, 2025	
+83	
+
+Through the Abyss
+47	22	—	2	Oct 14, 2024	
+84	
+
+Heart of Gold
+35	15	3	1	Aug 30, 2024	
+85	
+
+Carry the Weight
+31	11	—	2	Dec 21, 2024	
+86	
+
+Late Night Confessions
+28	8	—	—	Sep 5, 2024	
+87	
+
+In Your Eyes
+27	9	—	—	Sep 5, 2024	
+88	
+
+Let Me Love You Right
+27	9	—	—	Sep 5, 2024	
+89	
+
+Fuck Ai
+25	14	—	3	Dec 21, 2024	
+90	
+
+Just Us Tonight
+25	7	—	—	Sep 5, 2024	
+91	
+
+Beyond the Ashes
+24	10	—	2	Dec 21, 2024	
+92	
+
+Craving You
+24	8	—	—	Sep 5, 2024	
+93	
+
+Slow Burn
+24	7	—	—	Sep 5, 2024	
+94	
+
+In the Heat of You
+23	7	—	—	Sep 5, 2024	
+95	
+
+Stikity Stikity
+22	6	—	—	Sep 5, 2024	
+96	
+
+Under the Covers
+20	4	—	—	Sep 5, 2024	
+97	
+
+Midnight Heat
+20	4	—	—	Sep 5, 2024	
+98	
+
+Play with Fire
+20	4	—	—	Sep 5, 2024	
+99	
+
+Tease Me
+20	5	—	—	Sep 5, 2024	
+100	
+
+Velvet Shadows
+19	4	—	—	Sep 5, 2024	

@@ -51,11 +51,52 @@ const SECTIONS = [
   { id: "contact", label: "Contact" }
 ];
 
+// Top songs data from your spreadsheet
+const TOP_SONGS = {
+  afrobeats: [
+    { title: "Lagos Inferno", streams: 6915, listeners: 3146, date: "Jan 2025" },
+    { title: "Lagos Islands", streams: 6109, listeners: 2738, date: "Jan 2025" },
+    { title: "Island Breeze Serenade", streams: 3948, listeners: 1954, date: "Mar 2025" },
+    { title: "Lagos Luv", streams: 1887, listeners: 1009, date: "Feb 2025" },
+    { title: "Island Breeze", streams: 1336, listeners: 765, date: "Jan 2025" },
+    { title: "Ọ Dị M Mma (Feels So Right)", streams: 734, listeners: 334, date: "May 2025", tag: "New" }
+  ],
+  pop: [
+    { title: "One Wish", streams: 7978, listeners: 4462, date: "Apr 2025", tag: "Hot" },
+    { title: "The Lounge Love", streams: 2340, listeners: 1118, date: "Feb 2025" },
+    { title: "Sweet Poison", streams: 2075, listeners: 1059, date: "Apr 2025" },
+    { title: "Beachside Fire", streams: 1839, listeners: 962, date: "Feb 2025" },
+    { title: "Fire & Wine", streams: 959, listeners: 471, date: "Feb 2025", featured: true }
+  ],
+  rockMetal: [
+    { title: "Rebuild", streams: 1878, listeners: 1165, date: "Nov 2024" },
+    { title: "Behind the Mask", streams: 1433, listeners: 1064, date: "Nov 2024" },
+    { title: "Beyond the Ashes (Nu Metal)", streams: 631, listeners: 396, date: "Dec 2024" },
+    { title: "Burn it Down", streams: 530, listeners: 254, date: "Oct 2024" },
+    { title: "Dust and Bones", streams: 524, listeners: 315, date: "Nov 2024" }
+  ],
+  rnb: [
+    { title: "Whispers in the Wind", streams: 4464, listeners: 117, date: "Oct 2024" },
+    { title: "Slow Fire", streams: 1616, listeners: 932, date: "Mar 2025" },
+    { title: "Reflections of Us", streams: 1271, listeners: 953, date: "Nov 2024" },
+    { title: "Wine & Kiss", streams: 849, listeners: 402, date: "Mar 2025" },
+    { title: "Lose Myself in You", streams: 682, listeners: 291, date: "Mar 2025" }
+  ],
+  hiphop: [
+    { title: "Kano Love", streams: 1990, listeners: 975, date: "Feb 2025" },
+    { title: "Brother Eternal", streams: 1241, listeners: 610, date: "Dec 2024" },
+    { title: "Black Heat", streams: 929, listeners: 640, date: "Dec 2024" },
+    { title: "Detty December", streams: 487, listeners: 262, date: "Apr 2025", tag: "New" },
+    { title: "Baller Life", streams: 163, listeners: 73, date: "Apr 2025", tag: "New" }
+  ]
+};
+
 export default function Home() {
   const [currentSection, setCurrentSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
+  const [selectedGenre, setSelectedGenre] = useState("all");
   const cursorRef = useRef<HTMLDivElement>(null);
   
   // Track mouse position for custom cursor effects
@@ -280,22 +321,64 @@ export default function Home() {
             
             {/* Genre filters */}
             <div className="flex flex-wrap justify-center gap-3 mb-16">
-              <button className="px-5 py-2.5 rounded-full bg-amber-500 text-black font-medium hover:bg-amber-600 transition-all">
+              <button 
+                onClick={() => setSelectedGenre("all")}
+                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
+                  selectedGenre === "all" 
+                    ? "bg-amber-500 text-black" 
+                    : "bg-white/10 text-white hover:bg-amber-500/80 hover:text-black"
+                }`}
+              >
                 All Genres
               </button>
-              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+              <button 
+                onClick={() => setSelectedGenre("afrobeats")}
+                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
+                  selectedGenre === "afrobeats" 
+                    ? "bg-yellow-500 text-black" 
+                    : "bg-white/10 text-white hover:bg-yellow-500/80 hover:text-black"
+                }`}
+              >
                 Afrobeats
               </button>
-              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+              <button 
+                onClick={() => setSelectedGenre("pop")}
+                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
+                  selectedGenre === "pop" 
+                    ? "bg-pink-500 text-black" 
+                    : "bg-white/10 text-white hover:bg-pink-500/80 hover:text-black"
+                }`}
+              >
                 Pop
               </button>
-              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+              <button 
+                onClick={() => setSelectedGenre("rockMetal")}
+                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
+                  selectedGenre === "rockMetal" 
+                    ? "bg-red-600 text-white" 
+                    : "bg-white/10 text-white hover:bg-red-600/80 hover:text-white"
+                }`}
+              >
                 Rock/Metal
               </button>
-              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+              <button 
+                onClick={() => setSelectedGenre("hiphop")}
+                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
+                  selectedGenre === "hiphop" 
+                    ? "bg-blue-500 text-white" 
+                    : "bg-white/10 text-white hover:bg-blue-500/80 hover:text-white"
+                }`}
+              >
                 Hip-Hop
               </button>
-              <button className="px-5 py-2.5 rounded-full bg-white/10 text-white font-medium hover:bg-amber-500 hover:text-black transition-all">
+              <button 
+                onClick={() => setSelectedGenre("rnb")}
+                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
+                  selectedGenre === "rnb" 
+                    ? "bg-purple-500 text-white" 
+                    : "bg-white/10 text-white hover:bg-purple-500/80 hover:text-white"
+                }`}
+              >
                 R&B
               </button>
             </div>
@@ -303,8 +386,8 @@ export default function Home() {
             {/* Featured music with large player */}
             <div className="mb-20">
               <h3 className="text-2xl font-bold text-center mb-6">
-                <span className="text-white">COMPLETE </span>
-                <span className="text-amber-500">COLLECTION</span>
+                <span className="text-white">CURTIS DOVE </span>
+                <span className="text-amber-500">COMPLETE</span>
               </h3>
               <div className="max-w-4xl mx-auto rounded-2xl bg-zinc-900/50 p-6 backdrop-blur-sm">
                 <div className="relative overflow-hidden rounded-xl shadow-2xl">
@@ -325,86 +408,203 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Genre Playlists */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-              {/* Afrobeats */}
-              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <span className="w-3 h-10 bg-yellow-500 rounded-full mr-4"></span>
-                    <h3 className="text-2xl font-bold">Afrobeats Collection</h3>
-                  </div>
-                  <iframe 
-                    style={{ borderRadius: '12px' }} 
-                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
-                    width="100%" 
-                    height="152" 
-                    frameBorder="0" 
-                    allowFullScreen={true}
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                  </iframe>
-                </div>
+            {/* Top Songs Section */}
+            <div className={`${selectedGenre !== "all" && selectedGenre !== "afrobeats" ? "hidden" : ""}`}>
+              <div className="flex items-center mb-6">
+                <span className="w-2 h-8 bg-yellow-500 rounded-full mr-3"></span>
+                <h3 className="text-2xl font-bold">Afrobeats Hits</h3>
               </div>
               
-              {/* Pop */}
-              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <span className="w-3 h-10 bg-pink-500 rounded-full mr-4"></span>
-                    <h3 className="text-2xl font-bold">Pop Hits</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                {TOP_SONGS.afrobeats.map((song, index) => (
+                  <div key={`afro-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-yellow-500/20 hover:border-yellow-500/50 transition-all">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
+                        <p className="text-white/60 text-sm">{song.date}</p>
+                      </div>
+                      {song.tag && (
+                        <span className="px-2 py-1 text-xs font-medium bg-yellow-500 text-black rounded-full">
+                          {song.tag}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-between mt-3">
+                      <div className="flex items-center text-white/60 text-sm">
+                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
+                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
+                      </div>
+                      <a 
+                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all"
+                      >
+                        <i className="fab fa-spotify"></i>
+                      </a>
+                    </div>
                   </div>
-                  <iframe 
-                    style={{ borderRadius: '12px' }} 
-                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
-                    width="100%" 
-                    height="152" 
-                    frameBorder="0" 
-                    allowFullScreen={true}
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                  </iframe>
-                </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Pop Section */}
+            <div className={`${selectedGenre !== "all" && selectedGenre !== "pop" ? "hidden" : ""}`}>
+              <div className="flex items-center mb-6">
+                <span className="w-2 h-8 bg-pink-500 rounded-full mr-3"></span>
+                <h3 className="text-2xl font-bold">Pop Hits</h3>
               </div>
               
-              {/* Rock/Metal */}
-              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <span className="w-3 h-10 bg-red-600 rounded-full mr-4"></span>
-                    <h3 className="text-2xl font-bold">Rock & Metal</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                {TOP_SONGS.pop.map((song, index) => (
+                  <div key={`pop-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-pink-500/20 hover:border-pink-500/50 transition-all">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
+                        <p className="text-white/60 text-sm">{song.date}</p>
+                      </div>
+                      {song.tag && (
+                        <span className="px-2 py-1 text-xs font-medium bg-pink-500 text-white rounded-full">
+                          {song.tag}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-between mt-3">
+                      <div className="flex items-center text-white/60 text-sm">
+                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
+                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
+                      </div>
+                      <a 
+                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all"
+                      >
+                        <i className="fab fa-spotify"></i>
+                      </a>
+                    </div>
                   </div>
-                  <iframe 
-                    style={{ borderRadius: '12px' }} 
-                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
-                    width="100%" 
-                    height="152" 
-                    frameBorder="0" 
-                    allowFullScreen={true}
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                  </iframe>
-                </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Rock/Metal Section */}
+            <div className={`${selectedGenre !== "all" && selectedGenre !== "rockMetal" ? "hidden" : ""}`}>
+              <div className="flex items-center mb-6">
+                <span className="w-2 h-8 bg-red-600 rounded-full mr-3"></span>
+                <h3 className="text-2xl font-bold">Rock & Metal</h3>
               </div>
               
-              {/* R&B */}
-              <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <span className="w-3 h-10 bg-purple-500 rounded-full mr-4"></span>
-                    <h3 className="text-2xl font-bold">R&B Vibes</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                {TOP_SONGS.rockMetal.map((song, index) => (
+                  <div key={`rock-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-red-600/20 hover:border-red-600/50 transition-all">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
+                        <p className="text-white/60 text-sm">{song.date}</p>
+                      </div>
+                      {song.tag && (
+                        <span className="px-2 py-1 text-xs font-medium bg-red-600 text-white rounded-full">
+                          {song.tag}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-between mt-3">
+                      <div className="flex items-center text-white/60 text-sm">
+                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
+                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
+                      </div>
+                      <a 
+                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"
+                      >
+                        <i className="fab fa-spotify"></i>
+                      </a>
+                    </div>
                   </div>
-                  <iframe 
-                    style={{ borderRadius: '12px' }} 
-                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
-                    width="100%" 
-                    height="152" 
-                    frameBorder="0" 
-                    allowFullScreen={true}
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy">
-                  </iframe>
-                </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Hip-Hop Section */}
+            <div className={`${selectedGenre !== "all" && selectedGenre !== "hiphop" ? "hidden" : ""}`}>
+              <div className="flex items-center mb-6">
+                <span className="w-2 h-8 bg-blue-500 rounded-full mr-3"></span>
+                <h3 className="text-2xl font-bold">Hip-Hop</h3>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                {TOP_SONGS.hiphop.map((song, index) => (
+                  <div key={`hiphop-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-blue-500/20 hover:border-blue-500/50 transition-all">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
+                        <p className="text-white/60 text-sm">{song.date}</p>
+                      </div>
+                      {song.tag && (
+                        <span className="px-2 py-1 text-xs font-medium bg-blue-500 text-white rounded-full">
+                          {song.tag}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-between mt-3">
+                      <div className="flex items-center text-white/60 text-sm">
+                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
+                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
+                      </div>
+                      <a 
+                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all"
+                      >
+                        <i className="fab fa-spotify"></i>
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* R&B Section */}
+            <div className={`${selectedGenre !== "all" && selectedGenre !== "rnb" ? "hidden" : ""}`}>
+              <div className="flex items-center mb-6">
+                <span className="w-2 h-8 bg-purple-500 rounded-full mr-3"></span>
+                <h3 className="text-2xl font-bold">R&B Vibes</h3>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                {TOP_SONGS.rnb.map((song, index) => (
+                  <div key={`rnb-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-all">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
+                        <p className="text-white/60 text-sm">{song.date}</p>
+                      </div>
+                      {song.tag && (
+                        <span className="px-2 py-1 text-xs font-medium bg-purple-500 text-white rounded-full">
+                          {song.tag}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-between mt-3">
+                      <div className="flex items-center text-white/60 text-sm">
+                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
+                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
+                      </div>
+                      <a 
+                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-purple-500 hover:text-white transition-all"
+                      >
+                        <i className="fab fa-spotify"></i>
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
             
