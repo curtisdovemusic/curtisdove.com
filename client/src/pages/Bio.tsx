@@ -56,21 +56,41 @@ export default function Bio() {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-10">
-          {/* Artist portrait with advanced gradient effect */}
+          {/* Artist portrait with fancy dual image effect */}
           <div 
             ref={imageRef} 
             className="md:w-1/2 mb-8 md:mb-0 opacity-0 animate-ready slide-in-left"
           >
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-br from-accent via-[#FFD700] to-[hsl(var(--purple))] opacity-70 blur-md rounded-xl transition-all duration-700 group-hover:opacity-90 group-hover:blur-lg"></div>
-              <div className="relative overflow-hidden rounded-xl">
-                <div className="animated-gradient-border rounded-xl">
-                  <div className="image-hover-zoom">
-                    <img 
-                      src="/attached_assets/CurtisDoveProfilePicture.jpg" 
-                      alt="Curtis Dove portrait" 
-                      className="relative w-full h-auto rounded-xl shadow-2xl object-cover" 
-                    />
+              {/* Fancy animated background */}
+              <div className="absolute -inset-6 bg-gradient-to-br from-blue-500 via-amber-500 to-purple-600 opacity-70 blur-xl rounded-2xl transition-all duration-700 group-hover:opacity-90 group-hover:-inset-4 group-hover:blur-2xl"></div>
+              
+              {/* Main image container */}
+              <div className="relative grid grid-cols-5 gap-2 p-1 bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden">
+                {/* First image (formal) */}
+                <div className="col-span-3 rounded-l-xl overflow-hidden transform transition-all duration-700 group-hover:scale-105">
+                  <img 
+                    src="attached_assets/CurtisDoveProfilePicture.jpg" 
+                    alt="Curtis Dove formal portrait" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80"></div>
+                </div>
+                
+                {/* Second image (casual) */}
+                <div className="col-span-2 rounded-r-xl overflow-hidden transform transition-all duration-700 group-hover:scale-[1.02] relative">
+                  <img 
+                    src="attached_assets/2023-06-19.jpg" 
+                    alt="Curtis Dove casual portrait" 
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 opacity-60"></div>
+                </div>
+                
+                {/* Overlay text */}
+                <div className="absolute bottom-4 left-4 right-4 text-white text-center">
+                  <div className="text-sm font-medium bg-black/60 backdrop-blur-sm py-2 px-3 rounded-full inline-block">
+                    <span className="text-amber-400">From Studio</span> <span className="text-white/70">to</span> <span className="text-blue-400">Stage</span>
                   </div>
                 </div>
               </div>
