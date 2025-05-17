@@ -558,12 +558,7 @@ export default function Home() {
                       </h2>
                       <p className="text-lg text-white/70">Featured tracks from my top genre collections</p>
                     </div>
-                    <Link href="/artist-picks" className="mt-4 md:mt-0 inline-flex items-center text-[#8ecae6] hover:text-[#ffb703] transition-colors group">
-                      <span>View All Collections</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </Link>
+
                   </div>
                   
                   {/* Collapsible Genre Sections */}
