@@ -408,69 +408,54 @@ export default function ArtistPicks() {
             ))}
           </div>
           
-          {/* Songs Grid - Vertical long tiles */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Songs List - Horizontal tiles like the example */}
+          <div className="flex flex-col space-y-4">
             {getActiveSongs().map((song, index) => (
               <div 
                 key={index} 
-                className="group relative bg-gradient-to-br from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
+                className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:scale-[1.01]"
               >
                 {/* Glowing effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-50 blur-md transition-all duration-500"></div>
                 
-                <div className="relative flex flex-col border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 h-full z-10">
-                  {/* Top section with number and title */}
-                  <div className="flex items-center p-4 border-b border-[#219ebc]/20">
-                    {/* Song number */}
-                    <div className="w-12 h-12 flex items-center justify-center shrink-0 mr-3">
-                      <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
-                        {song.number}
-                      </span>
-                    </div>
-                    
-                    {/* Song title */}
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">{song.title}</h3>
-                      <div className="text-sm text-[#8ecae6]">{song.genre}</div>
+                <div className="relative flex items-center border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 h-full z-10 p-3 md:p-4">
+                  {/* Song number */}
+                  <div className="w-16 h-16 flex items-center justify-center shrink-0 mr-4">
+                    <span className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
+                      {song.number}
+                    </span>
+                  </div>
+                  
+                  {/* Song title & genre */}
+                  <div className="flex-grow mr-6">
+                    <h3 className="text-lg md:text-xl font-semibold text-white">{song.title}</h3>
+                    <div className="text-sm text-[#8ecae6] flex items-center">
+                      <i className="fas fa-music mr-1 text-xs opacity-70"></i> {song.genre}
                     </div>
                   </div>
                   
-                  {/* Album thumbnail */}
-                  <div className="w-full h-48 overflow-hidden">
-                    <img 
-                      src={song.image} 
-                      alt={song.title} 
-                      className="w-full h-full object-cover"
-                    />
+                  {/* Listen Now Button */}
+                  <div className="relative group/btn shrink-0 mr-2 md:mr-6">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-white via-[#ffb703] to-[#fb8500] rounded-full opacity-75 group-hover/btn:opacity-100 blur-sm transition-all duration-500"></div>
+                    <button className="relative px-4 py-2 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-sm font-bold text-[#023047] z-10 whitespace-nowrap">
+                      Listen Now
+                    </button>
                   </div>
                   
-                  {/* Listen section */}
-                  <div className="p-4">
-                    <div className="flex justify-between items-center">
-                      {/* Listen Now Button */}
-                      <div className="relative group/btn">
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-white via-[#ffb703] to-[#fb8500] rounded-full opacity-75 group-hover/btn:opacity-100 blur-sm transition-all duration-500"></div>
-                        <button className="relative px-4 py-2 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-full text-sm font-medium text-[#023047] z-10">
-                          Listen Now
-                        </button>
-                      </div>
-                      
-                      {/* Platform Icons */}
-                      <div className="flex space-x-2">
-                        {PLATFORMS.map((platform, i) => (
-                          <a 
-                            key={i}
-                            href={song.spotifyUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="w-7 h-7 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-                            title={`Listen on ${platform.name}`}
-                          >
-                            <i className={`${platform.icon} text-xs`}></i>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
+                  {/* Platform Icons */}
+                  <div className="flex space-x-2 shrink-0">
+                    {PLATFORMS.slice(0, 3).map((platform, i) => (
+                      <a 
+                        key={i}
+                        href={song.spotifyUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                        title={`Listen on ${platform.name}`}
+                      >
+                        <i className={`${platform.icon}`}></i>
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>
