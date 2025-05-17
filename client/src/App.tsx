@@ -5,25 +5,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
-import Bio from "@/pages/Bio";
-import Music from "@/pages/Music";
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-black">
           <Navbar />
           <main className="flex-grow overflow-x-hidden">
-            <div id="home" className="scroll-mt-16">
-              <Home />
-            </div>
-            <div id="bio" className="scroll-mt-16">
-              <Bio />
-            </div>
-            <div id="music" className="scroll-mt-16">
-              <Music />
-            </div>
+            <Home />
           </main>
           <Footer />
         </div>
