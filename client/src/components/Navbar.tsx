@@ -99,6 +99,12 @@ export default function Navbar() {
           >
             Connect
           </button>
+          <button 
+            onClick={() => scrollToSection('press')} 
+            className="text-2xl font-bold text-white hover:text-amber-500 uppercase transition duration-300"
+          >
+            Press
+          </button>
           
           <div className="flex space-x-6 mt-8">
             <a href="https://www.facebook.com/curtisdovemusic" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-amber-500/20 hover:text-amber-500 transition-all duration-300">
