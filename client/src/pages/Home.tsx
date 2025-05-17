@@ -347,8 +347,8 @@ export default function Home() {
               </h2>
             </div>
             
-            <div className="flex flex-col items-center justify-center mb-10">
-              <div className="flex flex-wrap justify-center text-xl md:text-2xl text-white/80">
+            <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
+              <div className="flex flex-wrap justify-center text-xl md:text-2xl text-white/90 mb-3">
                 <span className="text-amber-400 font-semibold mx-1">8 albums</span>
                 <span className="mx-1">,</span>
                 <span className="text-purple-400 font-semibold mx-1">33 singles</span>
@@ -357,12 +357,12 @@ export default function Home() {
                 <span className="mx-1">,</span>
                 <span className="text-green-400 font-semibold mx-1">141+ songs</span>
               </div>
-            </div>
-            
-            <div className="text-center w-full py-2 px-3 mb-6">
-              <p className="text-xl md:text-2xl text-white/80 inline-block border-b border-amber-500/30 pb-1">
-                Available on all major music platforms
-              </p>
+              
+              <div className="w-3/4 h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent mx-auto my-3"></div>
+              
+              <h3 className="text-xl md:text-2xl text-white/90 text-center font-light">
+                Available worldwide on all streaming platforms
+              </h3>
             </div>
             
             <div className="flex flex-wrap justify-center gap-3 mb-12">
