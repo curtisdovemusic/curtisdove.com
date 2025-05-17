@@ -33,9 +33,8 @@ export default function CollapsibleGenre({
         onClick={toggleExpand}
         className="group relative bg-gradient-to-r from-[#023047]/80 to-[#219ebc]/40 rounded-xl overflow-visible hover:shadow-2xl transition-all duration-700 cursor-pointer hover:scale-[1.01] hover:translate-y-[-6px] transform"
       >
-        <div className="absolute inset-0 -bottom-4 bg-gradient-to-r from-[#ffb703] to-[#fb8500] rounded-xl opacity-0 group-hover:opacity-90 blur-xl transition-opacity duration-700"></div>
-        <div className="absolute inset-0 bottom-[-10px] bg-gradient-to-r from-[#8ecae6]/70 to-[#219ebc]/60 rounded-xl opacity-0 group-hover:opacity-80 blur-2xl transition-opacity duration-700"></div>
-        <div className="absolute inset-x-0 bottom-[-12px] h-6 bg-gradient-to-r from-[#ffb703]/80 to-[#fb8500]/70 rounded-b-full opacity-0 group-hover:opacity-90 blur-xl transition-opacity duration-700"></div>
+        <div className="absolute inset-0 -bottom-3 bg-gradient-to-r from-[#ffb703]/50 to-[#fb8500]/40 rounded-xl opacity-0 group-hover:opacity-10 blur-lg transition-opacity duration-700"></div>
+        <div className="absolute inset-x-0 bottom-[-8px] h-4 bg-gradient-to-r from-[#8ecae6]/30 to-[#219ebc]/20 rounded-b-full opacity-0 group-hover:opacity-15 blur-xl transition-opacity duration-700"></div>
         <div className="relative flex items-center justify-between p-6 border border-[#219ebc]/20 rounded-xl bg-[#023047]/95 z-10">
           <div className="flex items-center w-full md:pr-4">
             <div className="w-24 md:w-32 lg:w-36 shrink-0 text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
