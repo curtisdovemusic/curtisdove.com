@@ -35,6 +35,12 @@ const MUSIC_PLATFORMS = [
     url: "https://soundcloud.com/user-314281859"
   },
   {
+    name: "Deezer",
+    icon: "fab fa-deezer",
+    color: "#00C7F2",
+    url: "https://www.deezer.com/us/artist/277818781"
+  },
+  {
     name: "TikTok",
     icon: "fab fa-tiktok",
     color: "#000000",
