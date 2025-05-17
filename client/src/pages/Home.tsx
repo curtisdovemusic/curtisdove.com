@@ -1,207 +1,243 @@
-import { useState } from "react";
-import { Link } from "wouter";
-import { albums } from "@/lib/data";
+import { useState, useEffect, useRef } from "react";
 
-// Define sections/pages for the site
-const SECTIONS = [
-  { id: "home", label: "Home" },
-  { id: "bio", label: "Bio" },
-  { id: "music", label: "Music" },
-  { id: "videos", label: "Videos" },
-  { id: "lyrics", label: "Lyrics" },
-  { id: "contact", label: "Contact" }
-];
-
-// Music platforms information
+// Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
   {
     name: "Spotify",
     icon: "fab fa-spotify",
     color: "#1DB954",
-    url: "#spotify-link"
+    url: "https://open.spotify.com/artist/5ZCP0tbgVY2Lx7JG0grqNR?si=S2VQDr7fSJu2NNjjjAuFxg"
   },
   {
     name: "Apple Music",
     icon: "fab fa-apple",
     color: "#fc3c44",
-    url: "#apple-music-link"
+    url: "#"
   },
   {
     name: "Amazon Music",
     icon: "fab fa-amazon",
     color: "#232F3E",
-    url: "#amazon-music-link"
+    url: "https://www.amazon.com/music/player/artists/B0DD4HQ6D3/curtis-dove"
   },
   {
-    name: "YouTube Music",
+    name: "YouTube",
     icon: "fab fa-youtube",
     color: "#FF0000",
-    url: "#youtube-music-link"
+    url: "https://www.youtube.com/@curtisdovemusic"
   },
   {
     name: "SoundCloud",
     icon: "fab fa-soundcloud",
     color: "#FF7700",
-    url: "#soundcloud-link"
+    url: "https://soundcloud.com/user-314281859"
   }
 ];
 
-// Social media platforms
+// Social media profiles
 const SOCIAL_MEDIA = [
-  { name: "Instagram", icon: "fab fa-instagram", url: "#instagram-link" },
-  { name: "Twitter", icon: "fab fa-twitter", url: "#twitter-link" },
-  { name: "Facebook", icon: "fab fa-facebook-f", url: "#facebook-link" },
-  { name: "TikTok", icon: "fab fa-tiktok", url: "#tiktok-link" },
-  { name: "YouTube", icon: "fab fa-youtube", url: "#youtube-link" }
+  { name: "Instagram", icon: "fab fa-instagram", url: "https://www.instagram.com/curtisdovemusic" },
+  { name: "Facebook", icon: "fab fa-facebook-f", url: "https://www.facebook.com/curtisdovemusic" },
+  { name: "TikTok", icon: "fab fa-tiktok", url: "https://www.tiktok.com/@curtisdovemusic" },
+  { name: "YouTube", icon: "fab fa-youtube", url: "https://www.youtube.com/@curtisdovemusic" }
 ];
 
-// Sample albums
-const ALBUMS = [
-  {
-    title: "Sunset Dreams",
-    type: "Album",
-    year: "2023",
-    cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=500&auto=format&fit=crop",
-    spotifyUrl: "#album1-link"
-  },
-  {
-    title: "Midnight Waves",
-    type: "EP",
-    year: "2022",
-    cover: "https://images.unsplash.com/photo-1504782388400-07afbcebe30e?q=80&w=500&auto=format&fit=crop",
-    spotifyUrl: "#album2-link"
-  },
-  {
-    title: "Urban Soul",
-    type: "Single",
-    year: "2023",
-    cover: "https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=500&auto=format&fit=crop",
-    spotifyUrl: "#album3-link"
-  }
-];
-
-// Sample videos
-const VIDEOS = [
-  {
-    title: "Music Video - Sunset Dreams",
-    thumbnail: "https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=500&auto=format&fit=crop",
-    url: "#video1-link"
-  },
-  {
-    title: "Live Performance - Urban Soul",
-    thumbnail: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=500&auto=format&fit=crop",
-    url: "#video2-link"
-  },
-  {
-    title: "Behind the Scenes - Studio Session",
-    thumbnail: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=500&auto=format&fit=crop",
-    url: "#video3-link"
-  }
-];
-
-// Sample lyrics
-const LYRICS = [
-  {
-    song: "Sunset Dreams",
-    album: "Sunset Dreams",
-    year: "2023",
-    content: `Verse 1:
-City lights fade in the distance
-As the sun sets on another day
-Memories flash through my mind
-Wonder if you feel the same way
-
-Chorus:
-Under sunset dreams
-Colors fill the sky
-Under sunset dreams
-Where our hearts collide`
-  },
-  {
-    song: "Midnight Waves",
-    album: "Midnight Waves EP",
-    year: "2022",
-    content: `Verse 1:
-Ocean deep, stars align
-Midnight waves crash in my mind
-Thinking of what could have been
-If only we had more time
-
-Chorus:
-Midnight waves, pull me under
-Midnight waves, feel the thunder
-Crashing down, washing away
-Everything that keeps me under`
-  }
+// Navigation sections
+const SECTIONS = [
+  { id: "home", label: "Home" },
+  { id: "music", label: "Music" },
+  { id: "videos", label: "Videos" },
+  { id: "bio", label: "Bio" },
+  { id: "contact", label: "Contact" }
 ];
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  
+  // Track mouse position for custom cursor effects
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
+  // Update custom cursor position
+  useEffect(() => {
+    if (cursorRef.current) {
+      cursorRef.current.style.transform = `translate(${mousePosition.x}px, ${mousePosition.y}px)`;
+    }
+  }, [mousePosition]);
+  
+  // Determine active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = SECTIONS.map(section => section.id);
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const offset = 300; // Adjust as needed
+          
+          if (rect.top <= offset && rect.bottom >= offset) {
+            setCurrentSection(section);
+            break;
+          }
+        }
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   const scrollToSection = (sectionId: string) => {
     setCurrentSection(sectionId);
+    setIsMobileMenuOpen(false);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
   
   return (
-    <div className="bg-zinc-900 text-white">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-black/90 backdrop-blur-md">
-        <div className="container mx-auto">
-          <div className="flex justify-between items-center py-4 px-6">
-            <div className="text-2xl font-bold text-white">CURTIS DOVE</div>
+    <div className="bg-black text-white overflow-hidden">
+      {/* Custom cursor effect */}
+      <div 
+        ref={cursorRef}
+        className="hidden md:block fixed w-8 h-8 rounded-full border-2 border-amber-500 pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 opacity-70 mix-blend-difference"
+        style={{ 
+          transition: 'transform 0.15s ease-out, width 0.2s, height 0.2s',
+        }}
+      ></div>
+      
+      {/* Fixed Navigation */}
+      <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'bg-black/90 backdrop-blur-sm py-4' : 'bg-transparent py-6'}`}>
+        <div className="container mx-auto px-6">
+          <div className="flex justify-between items-center">
+            <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-2xl font-bold">
+              CURTIS DOVE
+            </a>
             
-            <div className="hidden md:flex items-center space-x-8">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
               {SECTIONS.map((section) => (
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`text-sm font-medium uppercase tracking-wider transition-colors ${
+                  className={`relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors ${
                     currentSection === section.id ? 'text-amber-500' : 'text-white hover:text-amber-500'
                   }`}
                 >
                   {section.label}
+                  {currentSection === section.id && (
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500"></span>
+                  )}
                 </button>
               ))}
             </div>
             
-            <div className="md:hidden">
-              <button className="text-white focus:outline-none">
-                <i className="fas fa-bars text-xl"></i>
-              </button>
-            </div>
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden text-2xl focus:outline-none"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle navigation menu"
+            >
+              <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+            </button>
           </div>
         </div>
       </nav>
       
-      {/* Home Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center pt-16">
-        <div className="relative w-full h-screen">
-          {/* Background image */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-zinc-900 z-10"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1520483601560-389dff434fdf?q=80&w=1000&auto=format&fit=crop" 
-              alt="Artist performing on stage" 
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+      {/* Mobile Navigation Menu */}
+      <div 
+        className={`fixed inset-0 bg-black z-30 flex flex-col items-center justify-center transform transition-transform duration-500 ${
+          isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <div className="container px-6 py-10">
+          <div className="flex flex-col space-y-6 items-center">
+            {SECTIONS.map((section) => (
+              <button
+                key={section.id}
+                onClick={() => scrollToSection(section.id)}
+                className="text-2xl uppercase font-bold hover:text-amber-500 transition-colors"
+              >
+                {section.label}
+              </button>
+            ))}
+            
+            <div className="flex space-x-6 mt-10">
+              {SOCIAL_MEDIA.map((social, index) => (
+                <a 
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 hover:bg-amber-500 hover:text-black transition-colors"
+                >
+                  <i className={social.icon}></i>
+                </a>
+              ))}
+            </div>
           </div>
+        </div>
+      </div>
+      
+      {/* Hero Section */}
+      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10"></div>
           
-          {/* Hero content */}
-          <div className="container mx-auto px-6 relative z-10 h-full flex flex-col justify-center items-center text-center">
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
+          {/* Background gradient orbs */}
+          <div className="absolute top-[20%] right-[10%] w-96 h-96 rounded-full bg-purple-500/10 blur-[100px] animate-float"></div>
+          <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px] animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px] animate-float" style={{ animationDelay: '1s' }}></div>
+          
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/60 z-5"></div>
+          
+          {/* Background image */}
+          <img 
+            src="/attached_assets/CurtisDoveProfilePicture.jpg" 
+            alt="Curtis Dove" 
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </div>
+        
+        {/* Hero content */}
+        <div className="container mx-auto px-6 relative z-10 mt-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-fade-in">
               CURTIS DOVE
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-xl mb-10">
-              Boundary-pushing artist blending genres with a unique sound
+            
+            <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              Boundary-pushing artist with over 135 songs across streaming platforms
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
+            <div className="flex flex-wrap justify-center gap-3 mb-12 opacity-0 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               {MUSIC_PLATFORMS.map((platform, index) => (
                 <a 
                   key={index}
                   href={platform.url} 
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all group"
                 >
                   <i className={`${platform.icon}`} style={{color: platform.color}}></i>
                   <span className="text-sm font-medium">{platform.name}</span>
@@ -209,232 +245,90 @@ export default function Home() {
               ))}
             </div>
             
-            <div className="flex gap-4">
+            <div className="opacity-0 animate-slide-up" style={{ animationDelay: '0.6s' }}>
               <button 
                 onClick={() => scrollToSection('music')}
-                className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-full transition-all"
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-bold transition-all transform hover:scale-105"
               >
-                MUSIC
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="px-6 py-3 bg-transparent border border-white hover:border-amber-500 hover:text-amber-500 font-bold rounded-full transition-all"
-              >
-                CONTACT
+                <span className="flex items-center">
+                  <i className="fas fa-headphones-alt mr-2"></i>
+                  LISTEN NOW
+                </span>
               </button>
             </div>
-          </div>
-          
-          {/* Scroll down indicator */}
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white">
-            <button 
-              onClick={() => scrollToSection('bio')}
-              className="text-2xl focus:outline-none"
-            >
-              <i className="fas fa-chevron-down"></i>
-            </button>
           </div>
         </div>
-      </section>
-      
-      {/* Bio Section */}
-      <section id="bio" className="py-20 bg-zinc-900">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            <span className="text-white">ABOUT </span>
-            <span className="text-amber-500">CURTIS</span>
-          </h2>
-          
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-amber-600 opacity-20 blur-xl rounded-2xl"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1615247644823-a5f0d3b5f795?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Curtis Dove portrait" 
-                  className="relative rounded-2xl w-full h-auto shadow-2xl object-cover"
-                />
-              </div>
-            </div>
-            
-            <div className="lg:w-1/2">
-              <div className="space-y-6 text-white/80">
-                <p className="text-lg leading-relaxed">
-                  Curtis Dove is a boundary-pushing artist known for blending genres and creating a sound uniquely his own. With a passion for music that began at a young age, Curtis has developed a style that fuses elements from across the musical spectrum.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  His music draws inspiration from a diverse range of influences, creating sonic experiences that resonate with listeners across the globe. Curtis has built a dedicated following with his authentic approach to songwriting and performance.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  Having performed at venues around the country, Curtis continues to push creative boundaries with each new release, crafting songs that tell stories while keeping the audience moving.
-                </p>
-                
-                <div className="pt-6">
-                  <h3 className="text-xl font-bold mb-4 text-white">Musical Influences</h3>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">R&B</span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">Soul</span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">Pop</span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">Electronic</span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">Hip Hop</span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">Alternative</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
+          <button 
+            onClick={() => scrollToSection('music')}
+            className="text-white text-3xl focus:outline-none"
+          >
+            <i className="fas fa-chevron-down"></i>
+          </button>
         </div>
       </section>
       
       {/* Music Section */}
-      <section id="music" className="py-20 bg-black">
+      <section id="music" className="py-24 bg-gradient-to-b from-black via-zinc-900/95 to-black">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            <span className="text-white">LATEST </span>
-            <span className="text-amber-500">MUSIC</span>
-          </h2>
-          
-          <div className="mb-16">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold mb-6 text-center text-white">FEATURED RELEASE</h3>
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <iframe 
-                  src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT?utm_source=generator" 
-                  width="100%" 
-                  height="352" 
-                  frameBorder="0" 
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                  loading="lazy">
-                </iframe>
-              </div>
-            </div>
-          </div>
-          
-          <h3 className="text-2xl font-bold mb-8 text-center text-white">DISCOGRAPHY</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ALBUMS.map((album, index) => (
-              <div key={index} className="bg-zinc-800 rounded-lg overflow-hidden shadow-lg hover:shadow-amber-500/20 transition-all group">
-                <div className="relative aspect-square overflow-hidden">
-                  <img 
-                    src={album.cover} 
-                    alt={album.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                  <div className="absolute bottom-0 left-0 p-4">
-                    <h4 className="text-xl font-bold text-white">{album.title}</h4>
-                    <p className="text-white/70">
-                      {album.type} • {album.year}
-                    </p>
-                  </div>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
+              FEATURED <span className="text-amber-500">ALBUM</span>
+            </h2>
+            
+            {/* Featured album with large player */}
+            <div className="mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.2s' }}>
+              <div className="max-w-4xl mx-auto rounded-2xl bg-zinc-900/50 p-6 backdrop-blur-sm">
+                <div className="relative overflow-hidden rounded-xl shadow-2xl">
+                  <iframe 
+                    style={{ borderRadius: '12px' }} 
+                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator" 
+                    width="100%" 
+                    height="352" 
+                    frameBorder="0" 
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                  </iframe>
                   
-                  <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <a 
-                      href={album.spotifyUrl} 
-                      className="w-10 h-10 flex items-center justify-center bg-green-500 rounded-full shadow-lg hover:scale-110 transition-all"
-                    >
-                      <i className="fab fa-spotify text-white"></i>
-                    </a>
-                  </div>
+                  {/* Animated border */}
+                  <div className="absolute inset-0 border-2 border-amber-500/30 rounded-xl pointer-events-none"></div>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <h3 className="text-2xl font-bold mb-8 text-center text-white">STREAMING PLATFORMS</h3>
-            <div className="flex flex-wrap justify-center gap-6">
-              {MUSIC_PLATFORMS.map((platform, index) => (
-                <a 
-                  key={index}
-                  href={platform.url} 
-                  className="flex flex-col items-center gap-3 group" 
-                >
-                  <div 
-                    className="w-16 h-16 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110" 
-                    style={{backgroundColor: `${platform.color}30`}}
+            </div>
+            
+            {/* Listening options section */}
+            <div className="mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.4s' }}>
+              <h3 className="text-3xl font-bold text-center mb-10">
+                LISTEN <span className="text-amber-500">EVERYWHERE</span>
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                {MUSIC_PLATFORMS.map((platform, index) => (
+                  <a 
+                    key={index}
+                    href={platform.url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group p-6 rounded-xl bg-zinc-900/80 backdrop-blur-sm hover:bg-zinc-800 transition-all"
                   >
-                    <i className={`${platform.icon} text-2xl`} style={{color: platform.color}}></i>
-                  </div>
-                  <span className="text-white/80 group-hover:text-white transition-colors">{platform.name}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Videos Section */}
-      <section id="videos" className="py-20 bg-zinc-900">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            <span className="text-white">MUSIC </span>
-            <span className="text-amber-500">VIDEOS</span>
-          </h2>
-          
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-6 text-center text-white">FEATURED VIDEO</h3>
-            <div className="max-w-4xl mx-auto">
-              <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                  title="Featured Music Video" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen>
-                </iframe>
-              </div>
-            </div>
-          </div>
-          
-          <h3 className="text-2xl font-bold mb-8 text-center text-white">MORE VIDEOS</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {VIDEOS.map((video, index) => (
-              <div key={index} className="bg-zinc-800 rounded-lg overflow-hidden shadow-lg hover:shadow-amber-500/20 transition-all group">
-                <div className="relative aspect-video overflow-hidden">
-                  <img 
-                    src={video.thumbnail} 
-                    alt={video.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center">
-                      <i className="fas fa-play text-black text-xl"></i>
+                    <div className="flex flex-col items-center text-center">
+                      <div 
+                        className="w-16 h-16 flex items-center justify-center mb-4 rounded-full transition-transform duration-500 group-hover:scale-110" 
+                        style={{ backgroundColor: `${platform.color}20` }}
+                      >
+                        <i className={`${platform.icon} text-3xl transition-all`} style={{color: platform.color}}></i>
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">{platform.name}</h4>
+                      <p className="text-white/60 text-sm">Stream my complete catalog</p>
+                      <div className="mt-4 flex items-center text-amber-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="mr-2">Listen now</span>
+                        <i className="fas fa-arrow-right text-sm"></i>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h4 className="text-lg font-medium text-white">{video.title}</h4>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Lyrics Section */}
-      <section id="lyrics" className="py-20 bg-black">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            <span className="text-white">SONG </span>
-            <span className="text-amber-500">LYRICS</span>
-          </h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {LYRICS.map((lyric, index) => (
-                  <div key={index} className="bg-zinc-800 rounded-xl p-6 shadow-lg">
-                    <h3 className="text-2xl font-bold mb-2 text-white">{lyric.song}</h3>
-                    <p className="text-amber-500 mb-4">{lyric.album} ({lyric.year})</p>
-                    <div className="text-white/80 whitespace-pre-line font-light">
-                      {lyric.content}
-                    </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -442,19 +336,161 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-zinc-900">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            <span className="text-white">GET IN </span>
-            <span className="text-amber-500">TOUCH</span>
+      {/* Videos Section */}
+      <section id="videos" className="py-24 bg-black relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-amber-600/5 blur-[80px]"></div>
+          <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-zinc-900/20 to-transparent"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
+            <span className="text-white">FEATURED </span>
+            <span className="text-amber-500">VIDEOS</span>
           </h2>
           
-          <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="max-w-4xl mx-auto mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="relative overflow-hidden rounded-xl shadow-2xl">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                className="aspect-video rounded-xl"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="Curtis Dove Music Video" 
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div className="text-center opacity-0 animate-ready slide-up" style={{ animationDelay: '0.4s' }}>
+            <a 
+              href="https://www.youtube.com/@curtisdovemusic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-red-600 hover:bg-red-700 text-white font-bold transition-all transform hover:scale-105"
+            >
+              <i className="fab fa-youtube mr-2"></i>
+              VIEW ALL VIDEOS
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      {/* Bio Section */}
+      <section id="bio" className="py-24 bg-zinc-900 relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent"></div>
+          <div className="absolute top-1/4 right-0 w-80 h-80 rounded-full bg-amber-500/5 blur-[100px]"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
+            <span className="text-white">ABOUT </span>
+            <span className="text-amber-500">CURTIS</span>
+          </h2>
+          
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2 opacity-0 animate-ready slide-in-left" style={{ animationDelay: '0.2s' }}>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 to-amber-600 opacity-20 blur-xl rounded-2xl"></div>
+                <img 
+                  src="/attached_assets/CurtisDoveProfilePicture.jpg" 
+                  alt="Curtis Dove portrait" 
+                  className="relative rounded-2xl w-full h-auto shadow-2xl object-cover"
+                />
+                
+                {/* Decorative elements */}
+                <div className="absolute -bottom-6 -right-6 px-6 py-3 bg-zinc-800/90 backdrop-blur-sm rounded-xl border border-amber-500/20 shadow-xl">
+                  <div className="flex items-center gap-3">
+                    <i className="fas fa-music text-amber-500"></i>
+                    <div>
+                      <div className="text-sm font-bold">135+ Songs</div>
+                      <div className="text-xs text-white/60">Available on all platforms</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2 opacity-0 animate-ready slide-in-right" style={{ animationDelay: '0.4s' }}>
+              <div className="space-y-6">
+                <p className="text-xl leading-relaxed text-white/90">
+                  Curtis Dove is a boundary-pushing artist known for blending genres and creating a sound uniquely his own. With over 135 songs released across major streaming platforms, Curtis has developed a diverse catalog that fuses elements from across the musical spectrum.
+                </p>
+                
+                <p className="text-xl leading-relaxed text-white/90">
+                  His music draws inspiration from a diverse range of influences, creating sonic experiences that resonate with listeners across the globe. Curtis has built a dedicated following with his authentic approach to songwriting and performance.
+                </p>
+                
+                <p className="text-xl leading-relaxed text-white/90">
+                  Having performed at venues around the country, Curtis continues to push creative boundaries with each new release, crafting songs that tell stories while keeping the audience moving.
+                </p>
+                
+                <div className="pt-6">
+                  <h3 className="text-2xl font-bold mb-6 text-white">Musical Influences</h3>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Afrobeat</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Afro-fusion</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Afropop</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">R&B</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Pop</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Alternative Rock</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Dance</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Darkwave</span>
+                    <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Club</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-black relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-zinc-900 to-transparent opacity-80"></div>
+          <div className="absolute top-1/3 left-1/3 w-96 h-96 rounded-full bg-amber-500/5 blur-[100px]"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 opacity-0 animate-ready slide-up">
+            <span className="text-white">CONNECT </span>
+            <span className="text-amber-500">WITH ME</span>
+          </h2>
+          
+          <div className="max-w-5xl mx-auto mb-16 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="flex justify-center mb-12">
+              <div className="flex flex-wrap justify-center gap-6">
+                {SOCIAL_MEDIA.map((social, index) => (
+                  <a 
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 flex items-center justify-center rounded-full bg-zinc-800 group-hover:bg-amber-500 transition-colors">
+                        <i className={`${social.icon} text-2xl group-hover:text-black transition-colors`}></i>
+                      </div>
+                      <span className="text-white/80 group-hover:text-white transition-colors">{social.name}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-white">CONTACT INFO</h3>
-                <div className="space-y-4 text-white/80">
+                <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
+                <div className="space-y-6 text-white/80">
                   <div className="flex items-start gap-4">
                     <div className="text-amber-500 mt-1">
                       <i className="fas fa-envelope"></i>
@@ -485,25 +521,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                
-                <div className="mt-8">
-                  <h3 className="text-2xl font-bold mb-6 text-white">FOLLOW ME</h3>
-                  <div className="flex gap-4">
-                    {SOCIAL_MEDIA.map((social, index) => (
-                      <a 
-                        key={index}
-                        href={social.url}
-                        className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-amber-500 hover:text-black transition-all"
-                      >
-                        <i className={social.icon}></i>
-                      </a>
-                    ))}
-                  </div>
-                </div>
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-white">MESSAGE ME</h3>
+                <h3 className="text-2xl font-bold mb-6">Send A Message</h3>
                 <form className="space-y-4">
                   <div>
                     <input 
@@ -521,13 +542,16 @@ export default function Home() {
                   </div>
                   <div>
                     <textarea 
-                      rows={5}
+                      rows={4}
                       placeholder="Your Message" 
                       className="w-full px-4 py-3 bg-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
                     ></textarea>
                   </div>
                   <div>
-                    <button className="w-full py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-lg transition-all">
+                    <button 
+                      type="submit"
+                      className="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black font-bold rounded-lg transition-all"
+                    >
                       SEND MESSAGE
                     </button>
                   </div>
@@ -542,26 +566,43 @@ export default function Home() {
       <footer className="py-12 bg-black border-t border-zinc-800">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <h3 className="text-3xl font-bold mb-6">CURTIS DOVE</h3>
-            <div className="flex justify-center gap-6 mb-8">
+            <div className="mb-6">
+              <a 
+                href="#home" 
+                onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
+                className="text-3xl font-bold text-white hover:text-amber-500 transition-colors"
+              >
+                CURTIS DOVE
+              </a>
+            </div>
+            
+            <div className="max-w-xl mx-auto mb-8">
+              <p className="text-white/60 text-sm">
+                Boundary-pushing, genre-blending artist fusing Afrobeat, Afro-fusion, Afropop, R&B with Pop, Alternative Rock, Dance, Darkwave, and Club music. 20,000+ monthly Spotify listeners and counting.
+              </p>
+            </div>
+            
+            <div className="flex justify-center space-x-4 mb-8">
               {SOCIAL_MEDIA.map((social, index) => (
                 <a 
                   key={index}
                   href={social.url}
-                  className="w-10 h-10 flex items-center justify-center bg-zinc-800 rounded-full hover:bg-amber-500 hover:text-black transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-800 hover:bg-amber-500 hover:text-black transition-colors"
                 >
                   <i className={social.icon}></i>
                 </a>
               ))}
             </div>
             
-            <div className="flex justify-center mb-8">
-              <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+            <div className="flex justify-center mb-10">
+              <nav className="flex flex-wrap justify-center gap-x-6">
                 {SECTIONS.map((section) => (
                   <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className="text-sm text-white/70 hover:text-amber-500 transition-colors"
+                    className="text-sm font-medium text-white/60 hover:text-amber-500 transition-colors px-2 py-1"
                   >
                     {section.label}
                   </button>
@@ -569,12 +610,15 @@ export default function Home() {
               </nav>
             </div>
             
-            <p className="text-white/50 text-sm">
+            <p className="text-white/40 text-xs">
               &copy; {new Date().getFullYear()} Curtis Dove Music. All rights reserved.
             </p>
           </div>
         </div>
       </footer>
+      
+      {/* Add these animation classes to make them available */}
+      <div className="hidden animate-fade-in animate-slide-up animate-slide-in-right animate-slide-in-left"></div>
     </div>
   );
 }
