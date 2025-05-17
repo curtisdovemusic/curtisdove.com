@@ -72,7 +72,15 @@ const SOCIAL_MEDIA = [
   { name: "Instagram", icon: "fab fa-instagram", url: "https://www.instagram.com/curtisdovemusic" },
   { name: "Facebook", icon: "fab fa-facebook-f", url: "https://www.facebook.com/curtisdovemusic" },
   { name: "TikTok", icon: "fab fa-tiktok", url: "https://www.tiktok.com/@curtisdovemusic?lang=en" },
-  { name: "YouTube", icon: "fab fa-youtube", url: "https://www.youtube.com/@curtisdovemusic" }
+  { name: "YouTube", icon: "fab fa-youtube", url: "https://www.youtube.com/@curtisdovemusic" },
+  { 
+    name: "Threads", 
+    url: "https://www.threads.com/@curtisdovemusic?igshid=NTc4MTIwNjQ2YQ==",
+    customIcon: true, // Flag to use custom rendering
+    render: (className: string) => (
+      <span className={className}>@</span>
+    )
+  }
 ];
 
 // Define section type
@@ -302,7 +310,10 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 hover:bg-amber-500 hover:text-black transition-colors"
                 >
-                  <i className={social.icon}></i>
+                  {social.customIcon ? 
+                    <span className="text-xl font-bold">@</span> : 
+                    <i className={social.icon}></i>
+                  }
                 </a>
               ))}
             </div>
@@ -857,7 +868,10 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-800 hover:bg-amber-500 hover:text-black transition-colors"
                 >
-                  <i className={social.icon}></i>
+                  {social.customIcon ? 
+                    <span className="text-base font-bold">@</span> : 
+                    <i className={social.icon}></i>
+                  }
                 </a>
               ))}
             </div>
