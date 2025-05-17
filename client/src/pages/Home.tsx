@@ -14,7 +14,7 @@ const MUSIC_PLATFORMS = [
     name: "Apple Music",
     icon: "fab fa-apple",
     color: "#fc3c44",
-    url: "#"
+    url: "https://music.apple.com/us/artist/curtis-dove/1762565282"
   },
   {
     name: "Amazon Music",
