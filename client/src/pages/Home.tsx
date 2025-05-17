@@ -394,16 +394,7 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Scroll indicator - positioned above platform buttons for mobile */}
-        <div className="absolute bottom-44 sm:bottom-52 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-          <button 
-            onClick={() => scrollToSection('music')}
-            className="text-white text-3xl bg-black/50 rounded-full p-2 focus:outline-none"
-            aria-label="Scroll to music section"
-          >
-            <i className="fas fa-chevron-down"></i>
-          </button>
-        </div>
+        {/* Removed the scroll indicator arrow that was positioned poorly on mobile devices */}
       </section>
       
       {/* Music Section */}
