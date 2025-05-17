@@ -274,12 +274,12 @@ export default function Home() {
       <section id="music" className="py-24 bg-gradient-to-b from-black via-zinc-900/95 to-black">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 opacity-0 animate-ready slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
               MY <span className="text-amber-500">MUSIC</span>
             </h2>
             
             {/* Genre filters */}
-            <div className="flex flex-wrap justify-center gap-3 mb-16 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.1s' }}>
+            <div className="flex flex-wrap justify-center gap-3 mb-16">
               <button className="px-5 py-2.5 rounded-full bg-amber-500 text-black font-medium hover:bg-amber-600 transition-all">
                 All Genres
               </button>
@@ -301,7 +301,7 @@ export default function Home() {
             </div>
             
             {/* Featured music with large player */}
-            <div className="mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="mb-20">
               <h3 className="text-2xl font-bold text-center mb-6">
                 <span className="text-white">COMPLETE </span>
                 <span className="text-amber-500">COLLECTION</span>
@@ -326,7 +326,7 @@ export default function Home() {
             </div>
             
             {/* Genre Playlists */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.3s' }}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
               {/* Afrobeats */}
               <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden">
                 <div className="p-6">
@@ -409,7 +409,7 @@ export default function Home() {
             </div>
             
             {/* Listening options section */}
-            <div className="mb-10 opacity-0 animate-ready slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="mb-10">
               <h3 className="text-3xl font-bold text-center mb-10">
                 LISTEN <span className="text-amber-500">EVERYWHERE</span>
               </h3>
