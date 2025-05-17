@@ -826,6 +826,27 @@ export default function Home() {
         </div>
       </section>
       
+      {/* Press Section */}
+      <section id="press" className="py-24 bg-zinc-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold text-center mb-16 text-white">PRESS</h2>
+          <div className="max-w-4xl mx-auto bg-black/50 p-8 rounded-xl border border-amber-500">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full md:w-1/3">
+                <img src="https://images.unsplash.com/photo-1604076913837-52ab5629fba9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Phoenix Rising" className="rounded-lg shadow-lg w-full" />
+              </div>
+              <div className="w-full md:w-2/3">
+                <h3 className="text-2xl font-bold text-amber-500 mb-4">The Sounds Won't Stop</h3>
+                <p className="text-white/80 mb-4">
+                  "Curtis Dove's blend of Afrobeats and R&B creates a unique sonic landscape that transcends traditional genre boundaries. His latest release showcases an artist rising from the ashes of convention, blazing a new trail in contemporary music."
+                </p>
+                <p className="text-white/70 italic">— Music Review, March 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Footer */}
       <footer className="py-12 bg-black border-t border-zinc-800">
         <div className="container mx-auto px-6">
