@@ -771,7 +771,7 @@ export default function Home() {
                       ]}
                     />
                     
-                    {/* Rock Collapsible */}
+                    {/* Hip-Hop Collapsible */}
                     <CollapsibleGenre
                       title="Rock"
                       genre="rock"
