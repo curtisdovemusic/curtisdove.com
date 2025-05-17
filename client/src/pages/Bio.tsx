@@ -82,7 +82,7 @@ export default function Bio() {
                 {/* Second image (casual) */}
                 <div className="col-span-2 rounded-r-xl overflow-hidden transform transition-all duration-700 group-hover:scale-[1.02] relative">
                   <img 
-                    src="/attached_assets/2023-06-19.jpg" 
+                    src={CasualPicture} 
                     alt="Curtis Dove casual portrait" 
                     className="w-full h-full object-cover object-center"
                   />
