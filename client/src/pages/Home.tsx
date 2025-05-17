@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
+import CurtisDoveProfilePicture from '../assets/CurtisDoveProfilePicture.jpg';
 
 // Music platforms information with your actual links
 const MUSIC_PLATFORMS = [
@@ -476,205 +477,7 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Top Songs Section */}
-            <div className={`${selectedGenre !== "all" && selectedGenre !== "afrobeats" ? "hidden" : ""}`}>
-              <div className="flex items-center mb-6">
-                <span className="w-2 h-8 bg-yellow-500 rounded-full mr-3"></span>
-                <h3 className="text-2xl font-bold">Afrobeats Hits</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                {TOP_SONGS.afrobeats.map((song, index) => (
-                  <div key={`afro-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-yellow-500/20 hover:border-yellow-500/50 transition-all">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
-                        <p className="text-white/60 text-sm">{song.date}</p>
-                      </div>
-                      {song.tag && (
-                        <span className="px-2 py-1 text-xs font-medium bg-yellow-500 text-black rounded-full">
-                          {song.tag}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center justify-between mt-3">
-                      <div className="flex items-center text-white/60 text-sm">
-                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
-                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
-                      </div>
-                      <a 
-                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all"
-                      >
-                        <i className="fab fa-spotify"></i>
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Pop Section */}
-            <div className={`${selectedGenre !== "all" && selectedGenre !== "pop" ? "hidden" : ""}`}>
-              <div className="flex items-center mb-6">
-                <span className="w-2 h-8 bg-pink-500 rounded-full mr-3"></span>
-                <h3 className="text-2xl font-bold">Pop Hits</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                {TOP_SONGS.pop.map((song, index) => (
-                  <div key={`pop-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-pink-500/20 hover:border-pink-500/50 transition-all">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
-                        <p className="text-white/60 text-sm">{song.date}</p>
-                      </div>
-                      {song.tag && (
-                        <span className="px-2 py-1 text-xs font-medium bg-pink-500 text-white rounded-full">
-                          {song.tag}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center justify-between mt-3">
-                      <div className="flex items-center text-white/60 text-sm">
-                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
-                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
-                      </div>
-                      <a 
-                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all"
-                      >
-                        <i className="fab fa-spotify"></i>
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Rock/Metal Section */}
-            <div className={`${selectedGenre !== "all" && selectedGenre !== "rockMetal" ? "hidden" : ""}`}>
-              <div className="flex items-center mb-6">
-                <span className="w-2 h-8 bg-red-600 rounded-full mr-3"></span>
-                <h3 className="text-2xl font-bold">Rock & Metal</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                {TOP_SONGS.rockMetal.map((song, index) => (
-                  <div key={`rock-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-red-600/20 hover:border-red-600/50 transition-all">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
-                        <p className="text-white/60 text-sm">{song.date}</p>
-                      </div>
-                      {song.tag && (
-                        <span className="px-2 py-1 text-xs font-medium bg-red-600 text-white rounded-full">
-                          {song.tag}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center justify-between mt-3">
-                      <div className="flex items-center text-white/60 text-sm">
-                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
-                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
-                      </div>
-                      <a 
-                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"
-                      >
-                        <i className="fab fa-spotify"></i>
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Hip-Hop Section */}
-            <div className={`${selectedGenre !== "all" && selectedGenre !== "hiphop" ? "hidden" : ""}`}>
-              <div className="flex items-center mb-6">
-                <span className="w-2 h-8 bg-blue-500 rounded-full mr-3"></span>
-                <h3 className="text-2xl font-bold">Hip-Hop</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                {TOP_SONGS.hiphop.map((song, index) => (
-                  <div key={`hiphop-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-blue-500/20 hover:border-blue-500/50 transition-all">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
-                        <p className="text-white/60 text-sm">{song.date}</p>
-                      </div>
-                      {song.tag && (
-                        <span className="px-2 py-1 text-xs font-medium bg-blue-500 text-white rounded-full">
-                          {song.tag}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center justify-between mt-3">
-                      <div className="flex items-center text-white/60 text-sm">
-                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
-                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
-                      </div>
-                      <a 
-                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all"
-                      >
-                        <i className="fab fa-spotify"></i>
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* R&B Section */}
-            <div className={`${selectedGenre !== "all" && selectedGenre !== "rnb" ? "hidden" : ""}`}>
-              <div className="flex items-center mb-6">
-                <span className="w-2 h-8 bg-purple-500 rounded-full mr-3"></span>
-                <h3 className="text-2xl font-bold">R&B Vibes</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                {TOP_SONGS.rnb.map((song, index) => (
-                  <div key={`rnb-${index}`} className="bg-zinc-900/50 backdrop-blur-sm p-4 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-all">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="font-bold text-lg text-white mb-1">{song.title}</h4>
-                        <p className="text-white/60 text-sm">{song.date}</p>
-                      </div>
-                      {song.tag && (
-                        <span className="px-2 py-1 text-xs font-medium bg-purple-500 text-white rounded-full">
-                          {song.tag}
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center justify-between mt-3">
-                      <div className="flex items-center text-white/60 text-sm">
-                        <span className="flex items-center mr-3"><i className="fas fa-headphones text-xs mr-1"></i> {song.listeners.toLocaleString()}</span>
-                        <span className="flex items-center"><i className="fas fa-play text-xs mr-1"></i> {song.streams.toLocaleString()}</span>
-                      </div>
-                      <a 
-                        href={`https://open.spotify.com/search/${encodeURIComponent(`Curtis Dove ${song.title}`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-purple-500 hover:text-white transition-all"
-                      >
-                        <i className="fab fa-spotify"></i>
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Top 20 Feature Removed */}
             
             {/* Listening options section */}
             <div className="mb-10">
@@ -776,11 +579,11 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-50 blur-xl rounded-2xl transition-all duration-700"></div>
                 <div className="relative overflow-hidden rounded-2xl">
-                  <img 
-                    src="./attached_assets/CurtisDoveProfilePicture.jpg" 
-                    alt="Curtis Dove portrait" 
-                    className="w-full h-auto shadow-2xl object-cover transform transition-transform duration-700 group-hover:scale-105"
-                  />
+                  <div className="w-full aspect-[3/4] bg-gradient-to-br from-amber-500/20 to-amber-800/20 flex items-center justify-center shadow-2xl transform transition-transform duration-700 group-hover:scale-105">
+                    <div className="text-6xl text-amber-500/20 group-hover:text-amber-500/40 transition-colors">
+                      <i className="fas fa-user"></i>
+                    </div>
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 </div>
                 
