@@ -582,17 +582,20 @@ export default function Home() {
                         { 
                           number: "01", 
                           title: "The Lounge Love", 
-                          album: "Lagos to Kano"
+                          album: "Lagos to Kano",
+                          spotifyUrl: "https://open.spotify.com/track/5pazCXbJAALjOPcsuvNwoj?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "02", 
                           title: "Lagos Inferno", 
-                          album: "Eko Island Beats"
+                          album: "Eko Island Beats",
+                          spotifyUrl: "https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "03", 
                           title: "Wine & Kiss", 
-                          album: "Lagos to Tokyo"
+                          album: "Lagos to Tokyo",
+                          spotifyUrl: "https://open.spotify.com/track/2u5TqSfucAvxvgc7BnIU5x?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn"
                         },
                         { 
                           number: "04", 
