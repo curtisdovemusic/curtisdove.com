@@ -408,60 +408,18 @@ export default function Home() {
               </h2>
             </div>
             
-            {/* Preview Music Button - Opens Spotify player */}
-            <div 
-              className="play-button-container relative inline-flex items-center gap-3 px-6 py-3 mb-8 bg-black/40 backdrop-blur-sm rounded-full border border-amber-500/40 hover:border-amber-500 cursor-pointer group overflow-hidden transition-all duration-300"
-              onClick={() => {
-                const dialog = document.getElementById('preview-dialog');
-                if (dialog) {
-                  dialog.classList.toggle('hidden');
-                }
-              }}
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-purple-500/10 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
-              <span className="relative z-10 w-10 h-10 flex items-center justify-center rounded-full bg-amber-500 text-black">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-              </span>
-              <span className="relative z-10 text-white font-semibold">Preview "Lagos Inferno"</span>
-            </div>
-            
-            {/* Music Preview Dialog */}
-            <div id="preview-dialog" className="hidden fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center" onClick={(e) => {
-              if ((e.target as HTMLElement).id === 'preview-dialog') {
-                (e.target as HTMLElement).classList.add('hidden');
-              }
-            }}>
-              <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
-              <div className="relative bg-zinc-900 p-5 rounded-xl border border-amber-500/20 w-full max-w-lg shadow-2xl">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-xl font-bold text-white">Lagos Inferno</h3>
-                  <button 
-                    className="text-gray-400 hover:text-white" 
-                    onClick={() => {
-                      const dialog = document.getElementById('preview-dialog');
-                      if (dialog) dialog.classList.add('hidden');
-                    }}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-                <div className="aspect-video bg-black rounded-lg overflow-hidden">
-                  <iframe 
-                    style={{ borderRadius: '12px' }} 
-                    src="https://open.spotify.com/embed/track/3jPLqB5Qu6S1AvUrcyC2Qt?utm_source=generator" 
-                    width="100%" 
-                    height="100%" 
-                    frameBorder="0" 
-                    allowFullScreen={true} 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy"
-                  ></iframe>
-                </div>
-              </div>
+            {/* Music Player for Lagos Inferno */}
+            <div className="audio-player-container w-full max-w-md mx-auto mb-8">
+              <iframe 
+                src="https://open.spotify.com/embed/track/3jPLqB5Qu6S1AvUrcyC2Qt?utm_source=generator&theme=0" 
+                width="100%" 
+                height="80" 
+                frameBorder="0" 
+                allowFullScreen 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+                className="rounded-lg shadow-lg"
+              ></iframe>
             </div>
             
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
