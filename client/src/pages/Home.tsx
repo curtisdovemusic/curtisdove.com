@@ -350,6 +350,20 @@ export default function Home() {
       
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Play Button - Highly Visible */}
+        <button 
+          className="fixed top-24 right-6 z-50 bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-6 rounded-full shadow-lg flex items-center gap-2 transition-all hover:scale-105"
+          onClick={() => {
+            const audio = new Audio('/lagos-inferno.mp3');
+            audio.play().catch(e => console.error("Error playing audio:", e));
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Play Lagos Inferno</span>
+        </button>
+
         {/* Animated background with audio visualizer */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10"></div>
@@ -361,7 +375,6 @@ export default function Home() {
           
           {/* Music Tile and Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
-
             
             {/* Regular visualizer at the bottom */}
             <div className="w-full absolute bottom-0 left-0 flex justify-center mb-6">
