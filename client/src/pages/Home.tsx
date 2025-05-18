@@ -1394,11 +1394,11 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative group w-3/4 md:w-2/3">
-                {/* Simpler amber glow */}
-                <div className="absolute inset-0 rounded-full bg-amber-500/20 blur-md animate-pulse"></div>
+                {/* Slower, thicker amber glow */}
+                <div className="absolute -inset-3 rounded-full bg-amber-500/30 blur-xl animate-pulse-slow"></div>
                 
-                {/* Simple elegant border */}
-                <div className="absolute inset-1 rounded-full bg-gradient-to-r from-amber-500/40 to-amber-600/40 animate-pulse"></div>
+                {/* Thicker elegant border */}
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-amber-500/50 to-amber-600/50 animate-pulse-slow"></div>
                 
                 {/* Inner content container */}
                 <div className="relative mx-1.5 my-1.5 overflow-hidden rounded-full border-4 border-zinc-900">
@@ -1425,16 +1425,16 @@ export default function Home() {
                       }}
                     ></div>
                     
-                    {/* Clean, elegant signature */}
-                    <div className="flex flex-col items-center">
+                    {/* Clean, elegant signature with less glow */}
+                    <div className="flex flex-col items-center mt-3">
                       <div 
                         className="font-signature text-6xl text-center whitespace-nowrap group-hover:scale-105 transition-transform duration-700"
                         style={{
-                          color: '#d1d5db',
+                          color: '#b0b8c1',
                           fontFamily: "'Great Vibes', cursive",
                           fontWeight: "400",
                           letterSpacing: "0.01em",
-                          textShadow: '0.5px 0.5px 0px rgba(0, 0, 0, 0.3)',
+                          textShadow: '0.5px 0.5px 0px rgba(0, 0, 0, 0.2)',
                           transform: 'scale(1.15)'
                         }}
                       >
@@ -1445,7 +1445,7 @@ export default function Home() {
                       <div
                         className="mt-2 text-sm whitespace-nowrap"
                         style={{
-                          color: '#94a3b8',
+                          color: '#7a8695',
                           fontFamily: "'Great Vibes', cursive",
                           letterSpacing: "0.03em",
                         }}

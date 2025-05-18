@@ -36,6 +36,22 @@ img:not([src]) {
   animation: float 6s ease-in-out infinite;
 }
 
+@keyframes pulseSlow {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 5s ease-in-out infinite;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
