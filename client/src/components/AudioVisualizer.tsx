@@ -7,6 +7,7 @@ interface AudioVisualizerProps {
   maxHeight?: number;
   baseColor?: string;
   accentColor?: string;
+  speed?: number; // Animation speed in ms (lower = faster)
 }
 
 const AudioVisualizer = ({
@@ -15,40 +16,41 @@ const AudioVisualizer = ({
   minHeight = 5,
   maxHeight = 50,
   baseColor = 'rgba(255, 165, 0, 0.3)',
-  accentColor = 'rgba(255, 165, 0, 0.8)'
+  accentColor = 'rgba(255, 165, 0, 0.8)',
+  speed = 700 // Medium speed animation
 }: AudioVisualizerProps) => {
   const [bars, setBars] = useState<number[]>([]);
+  
+  // Function to create a pattern with more tall bars
+  const generatePattern = () => {
+    return Array(barCount).fill(0).map((_, index) => {
+      // Create wave-like pattern with some randomness
+      const position = index / barCount;
+      const wave = Math.sin(position * Math.PI * 4) * 0.4 + 0.5; // Wave pattern
+      
+      // Add randomness for natural look
+      const random = Math.random() * 0.3;
+      
+      // Calculate height with more medium-high bars
+      const heightPercent = 0.3 + (wave * 0.5) + random;
+      
+      // Apply to min-max range
+      return minHeight + ((maxHeight - minHeight) * heightPercent);
+    });
+  };
 
   // Generate animated bars
   useEffect(() => {
-    // Initialize bars with random heights
-    const initialBars = Array(barCount).fill(0).map(() => 
-      minHeight + Math.random() * (maxHeight - minHeight)
-    );
-    setBars(initialBars);
+    // Initialize bars with pattern
+    setBars(generatePattern());
     
-    // Create animation interval
+    // Create animation interval with medium speed
     const interval = setInterval(() => {
-      setBars(prev => 
-        prev.map(() => {
-          // Create more natural-looking distribution
-          const random = Math.random();
-          if (random > 0.85) {
-            // High peaks (15% chance)
-            return minHeight + (maxHeight - minHeight) * (0.7 + Math.random() * 0.3);
-          } else if (random > 0.6) {
-            // Medium-high (25% chance)
-            return minHeight + (maxHeight - minHeight) * (0.4 + Math.random() * 0.3);
-          } else {
-            // Low-medium (60% chance)
-            return minHeight + (maxHeight - minHeight) * (Math.random() * 0.4);
-          }
-        })
-      );
-    }, 1000); // Update every second for consistent timing
+      setBars(generatePattern());
+    }, speed);
     
     return () => clearInterval(interval);
-  }, [barCount, minHeight, maxHeight]);
+  }, [barCount, minHeight, maxHeight, speed]);
 
   return (
     <div className={`audio-visualizer ${className}`}>
@@ -60,10 +62,10 @@ const AudioVisualizer = ({
             style={{
               height: `${height}px`,
               maxWidth: '6px',
-              backgroundColor: height > (minHeight + (maxHeight - minHeight) * 0.7) 
+              backgroundColor: height > (minHeight + ((maxHeight - minHeight) * 0.7)) 
                 ? accentColor 
                 : baseColor,
-              transition: 'height 1s ease-in-out'
+              transition: `height ${speed * 0.8}ms ease-in-out`
             }}
           />
         ))}

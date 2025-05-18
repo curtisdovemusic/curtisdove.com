@@ -350,12 +350,13 @@ export default function Home() {
             <div className="w-full h-32 absolute bottom-0 left-0 flex justify-center items-end">
               <div className="bg-black/30 backdrop-blur-sm w-full py-4 px-2">
                 <AudioVisualizer 
-                  barCount={60}
-                  minHeight={10}
-                  maxHeight={60}
+                  barCount={80}
+                  minHeight={15}
+                  maxHeight={70}
                   baseColor="rgba(255, 165, 0, 0.4)"
                   accentColor="rgba(255, 165, 0, 1)"
                   className="w-full max-w-4xl mx-auto h-24"
+                  speed={800}
                 />
               </div>
             </div>
