@@ -1455,37 +1455,38 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* Professional title panel - moved much further down with single line */}
+                {/* Professional title panel with blue glow effect */}
                 <div className="absolute -bottom-48 left-0 right-0 flex justify-center">
                   <div className="relative">
-                    {/* Subtle glow effect */}
-                    <div className="absolute inset-0 bg-amber-500/10 blur-lg rounded-full"></div>
+                    {/* Blue glow effect */}
+                    <div className="absolute -inset-3 bg-blue-500/20 blur-xl rounded-full animate-pulse-slow"></div>
+                    <div className="absolute -inset-1 bg-blue-600/15 blur-lg rounded-full"></div>
                     
-                    <div className="relative px-12 py-3 bg-zinc-900/90 backdrop-blur-md rounded-full border border-zinc-800 shadow-xl">
+                    <div className="relative px-12 py-4 bg-zinc-900/95 backdrop-blur-md rounded-full border border-blue-900/30 shadow-xl">
                       <div className="flex items-center justify-center space-x-12">
                         <div className="flex items-center gap-2">
                           <div className="text-amber-500">
                             <i className="fas fa-music text-xs"></i>
                           </div>
-                          <div className="text-xs uppercase tracking-wider text-gray-300 font-medium">Digital Sound Architect</div>
+                          <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Digital Sound Architect</div>
                         </div>
                         
-                        <div className="h-4 w-px bg-zinc-700"></div>
+                        <div className="h-5 w-px bg-zinc-700"></div>
                         
                         <div className="flex items-center gap-2">
                           <div className="text-amber-500">
                             <i className="fas fa-pen text-xs"></i>
                           </div>
-                          <div className="text-xs uppercase tracking-wider text-gray-300 font-medium">Songwriter</div>
+                          <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Songwriter</div>
                         </div>
                         
-                        <div className="h-4 w-px bg-zinc-700"></div>
+                        <div className="h-5 w-px bg-zinc-700"></div>
                         
                         <div className="flex items-center gap-2">
                           <div className="text-amber-500">
                             <i className="fas fa-microphone text-xs"></i>
                           </div>
-                          <div className="text-xs uppercase tracking-wider text-gray-300 font-medium">Recording Artist</div>
+                          <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Recording Artist</div>
                         </div>
                       </div>
                     </div>
