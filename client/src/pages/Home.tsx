@@ -358,17 +358,19 @@ export default function Home() {
           <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px]"></div>
           <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px]"></div>
           
-          {/* Audio Visualizer that responds to music */}
-          <div className="absolute inset-0 z-[5]">
-            <MusicVisualizer 
-              barCount={80}
-              minHeight={3}
-              maxHeight={50}
-              baseColor="rgba(255, 165, 0, 0.15)"
-              accentColor="rgba(255, 165, 0, 0.6)"
-              className="w-full h-1/3 bottom-0 absolute px-4"
-              audioSrc="/lagos-inferno.mp3"
-            />
+          {/* Audio Visualizer with Music Control */}
+          <div className="absolute inset-0 z-[5] flex flex-col justify-end">
+            <div className="w-full flex justify-center mb-6">
+              <MusicVisualizer 
+                barCount={80}
+                minHeight={3}
+                maxHeight={50}
+                baseColor="rgba(255, 165, 0, 0.2)"
+                accentColor="rgba(255, 165, 0, 0.8)"
+                className="w-full max-w-3xl px-4"
+                audioSrc="/lagos-inferno.mp3"
+              />
+            </div>
           </div>
           
           {/* Hidden audio element with Lagos Inferno */}
