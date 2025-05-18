@@ -1391,7 +1391,7 @@ export default function Home() {
             <span className="text-amber-500">CURTIS DOVE</span>
           </h2>
           
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="flex flex-col lg:flex-row items-start gap-16 pt-8">
             <div className="lg:w-1/2 flex justify-center">
               <div className="relative group w-3/4 md:w-2/3">
                 {/* Slower, thicker amber glow */}
@@ -1430,11 +1430,10 @@ export default function Home() {
                       <div 
                         className="font-signature text-6xl text-center whitespace-nowrap group-hover:scale-105 transition-transform duration-700"
                         style={{
-                          color: '#b0b8c1',
+                          color: '#a0a8b1',
                           fontFamily: "'Great Vibes', cursive",
                           fontWeight: "400",
                           letterSpacing: "0.01em",
-                          textShadow: '0.5px 0.5px 0px rgba(0, 0, 0, 0.2)',
                           transform: 'scale(1.15)'
                         }}
                       >
