@@ -6,7 +6,7 @@ import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
 import MusicVisualizer from "../components/MusicVisualizer";
-import MusicTile from "../components/MusicTile";
+import SimpleMusicPlayer from "../components/SimpleMusicPlayer";
 
 // Reference album artwork with CSS background classes instead
 // We now get album covers directly from CollapsibleGenre
@@ -362,13 +362,13 @@ export default function Home() {
           {/* Music Tile and Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
             {/* Music Tile in the top-left */}
-            <div className="absolute top-16 left-16 z-50">
-              <MusicTile 
+            <div className="fixed top-20 left-10 z-50">
+              <SimpleMusicPlayer
                 title="Lagos Inferno"
                 artist="Curtis Dove"
-                coverImage="/album-covers/Beats.jpeg"
+                coverImage="/lagos-inferno-cover.jpeg"
                 audioSrc="/lagos-inferno.mp3"
-                className="w-64 transform transition-all hover:scale-105"
+                className="w-72 transform hover:scale-105 hover:shadow-amber-600/20"
               />
             </div>
             
