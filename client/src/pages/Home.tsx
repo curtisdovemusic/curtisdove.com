@@ -171,6 +171,7 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [selectedGenre, setSelectedGenre] = useState("all");
   const [isClicking, setIsClicking] = useState(false);
+  const [cursorShape, setCursorShape] = useState(0); // Track which cursor shape to display
   const cursorRef = useRef<HTMLDivElement>(null);
   
   // Track mouse position and click events for custom cursor effects
@@ -185,6 +186,8 @@ export default function Home() {
     
     const handleMouseDown = () => {
       setIsClicking(true);
+      // Cycle to next cursor shape (0, 1, 2, 3, 4, then back to 0)
+      setCursorShape((prevShape) => (prevShape + 1) % 5);
       // Reset click state after animation completes
       setTimeout(() => setIsClicking(false), 500);
     };
@@ -238,14 +241,14 @@ export default function Home() {
   
   return (
     <div className="bg-black text-white overflow-hidden">
-      {/* Custom music cursor effect with shape-changing interaction */}
+      {/* Custom music cursor effect with multiple shape-changing interactions */}
       <div 
         ref={cursorRef}
         className={`hidden md:block fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 ${isClicking ? 'opacity-100' : 'opacity-80'}`}
         style={{ 
           transition: 'transform 0.15s ease-out',
-          width: '24px',
-          height: '24px',
+          width: '28px',
+          height: '28px',
         }}
       >
         {!isClicking ? (
@@ -259,16 +262,75 @@ export default function Home() {
             <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
           </svg>
         ) : (
-          // Clicked state: Headphones
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 24 24" 
-            fill="currentColor" 
-            className="text-purple-500 scale-150 transform transition-all duration-500"
-            style={{filter: 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.8))'}}
-          >
-            <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z" />
-          </svg>
+          // Show different cursor shapes based on cursorShape value
+          <>
+            {/* Shape 0: Headphones */}
+            {cursorShape === 0 && (
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+                className="text-purple-500 scale-150 transform transition-all duration-500"
+                style={{filter: 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.8))'}}
+              >
+                <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z" />
+              </svg>
+            )}
+            
+            {/* Shape 1: Microphone */}
+            {cursorShape === 1 && (
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+                className="text-blue-500 scale-150 rotate-12 transform transition-all duration-500"
+                style={{filter: 'drop-shadow(0 0 8px rgba(59, 130, 246, 0.8))'}}
+              >
+                <path d="M8.25 4.5a3.75 3.75 0 117.5 0v8.25a3.75 3.75 0 11-7.5 0V4.5z" />
+                <path d="M6 10.5a.75.75 0 01.75.75v1.5a5.25 5.25 0 1010.5 0v-1.5a.75.75 0 011.5 0v1.5a6.751 6.751 0 01-6 6.709v2.291h3a.75.75 0 010 1.5h-7.5a.75.75 0 010-1.5h3v-2.291a6.751 6.751 0 01-6-6.709v-1.5A.75.75 0 016 10.5z" />
+              </svg>
+            )}
+            
+            {/* Shape 2: Speaker */}
+            {cursorShape === 2 && (
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+                className="text-green-500 scale-150 -rotate-12 transform transition-all duration-500"
+                style={{filter: 'drop-shadow(0 0 8px rgba(34, 197, 94, 0.8))'}}
+              >
+                <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM18.584 5.106a.75.75 0 00-1.06 1.06 5.25 5.25 0 010 7.42.75.75 0 001.06 1.06 6.75 6.75 0 000-9.54z" />
+                <path d="M15.932 7.757a.75.75 0 00-1.061 1.06 2.25 2.25 0 010 3.182.75.75 0 001.06 1.06 3.75 3.75 0 000-5.302z" />
+              </svg>
+            )}
+            
+            {/* Shape 3: Radio */}
+            {cursorShape === 3 && (
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+                className="text-red-500 scale-150 rotate-45 transform transition-all duration-500"
+                style={{filter: 'drop-shadow(0 0 8px rgba(239, 68, 68, 0.8))'}}
+              >
+                <path fillRule="evenodd" d="M20.432 4.103a.75.75 0 00-.364-1.455L4.128 6.632l-.2.033C2.498 6.904 1.5 8.158 1.5 9.575v9.175a3 3 0 003 3h15a3 3 0 003-3V9.574c0-1.416-.997-2.67-2.429-2.909a49.016 49.016 0 00-7.255-.658l7.616-1.904zm-9.585 8.56a.75.75 0 010 1.06l-.666.667a.75.75 0 01-1.06 0l-.667-.667a.75.75 0 010-1.06l.667-.667a.75.75 0 011.06 0l.666.667zm2.329-2.33a.75.75 0 000-1.06l-.666-.667a.75.75 0 00-1.06 0l-.667.667a.75.75 0 000 1.06l.667.667a.75.75 0 001.06 0l.666-.667zm2.329 2.33a.75.75 0 010 1.06l-4 4a.75.75 0 01-1.06 0l-1.333-1.334a.75.75 0 010-1.06l4-4a.75.75 0 011.06 0l1.333 1.334zm2.329-2.33a.75.75 0 000-1.06l-1.334-1.333a.75.75 0 00-1.06 0l-4 4a.75.75 0 000 1.06l1.334 1.334a.75.75 0 001.06 0l4-4z" clipRule="evenodd" />
+              </svg>
+            )}
+            
+            {/* Shape 4: Guitar */}
+            {cursorShape === 4 && (
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+                className="text-yellow-500 scale-150 rotate-180 transform transition-all duration-500"
+                style={{filter: 'drop-shadow(0 0 8px rgba(234, 179, 8, 0.8))'}}
+              >
+                <path d="M17.721 1.599a.75.75 0 01.279.584v11.29a2.25 2.25 0 01-1.774 2.198l-2.041.442a2.216 2.216 0 01-.938-4.333l2.662-.576a.75.75 0 00.591-.734V6.112l-8.968 1.94a.75.75 0 01-.921-.611l-.153-.9a.75.75 0 01.61-.92l9.592-2.07a.75.75 0 01.161-.017zM3.43 15.178a.75.75 0 01.906-.524l2.432.811a2.25 2.25 0 011.575 2.152v2.458a2.25 2.25 0 01-2.25 2.25h-1.5a2.25 2.25 0 01-2.25-2.25v-2.909a2.25 2.25 0 011.087-1.922l-.001-.002zm13.5 3.322a.75.75 0 01.584.873l-.262 1.574a2.25 2.25 0 01-2.215 1.878h-1.8a2.25 2.25 0 01-2.13-1.515l-.704-2.113a.75.75 0 01.452-.956l3.369-1.226a2.249 2.249 0 012.491.489l.214.214.001-.001z" />
+              </svg>
+            )}
+          </>
         )}
       </div>
       
