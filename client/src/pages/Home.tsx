@@ -334,41 +334,92 @@ export default function Home() {
         )}
       </div>
       
-      {/* Fixed Navigation */}
-      <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'bg-black/90 backdrop-blur-sm py-4' : 'bg-transparent py-6'}`}>
+      {/* Enhanced Fixed Navigation with gradient background and stylized elements */}
+      <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${
+        scrollY > 50 
+          ? 'bg-gradient-to-r from-black/95 via-black/90 to-black/95 backdrop-blur-sm py-3 shadow-lg shadow-black/30' 
+          : 'bg-gradient-to-r from-black/80 via-black/60 to-black/80 backdrop-blur-sm py-5'
+      }`}>
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
-            <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-2xl font-bold flex items-center gap-2">
-              <span className="text-amber-500">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
+            {/* Stylized Logo */}
+            <a 
+              href="#home" 
+              onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} 
+              className="font-bold flex items-center gap-2 my-1 group"
+            >
+              {/* Animated Left Music Note */}
+              <span className="text-amber-500 transform transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="musicNoteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#F59E0B" />
+                      <stop offset="100%" stopColor="#F5C033" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" fill="url(#musicNoteGradient)" />
                 </svg>
               </span>
-
+              
+              {/* Stylized Name */}
+              <span 
+                className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500 text-xl tracking-wide"
+                style={{ 
+                  fontFamily: "'Montserrat', sans-serif", 
+                  fontWeight: "700",
+                  letterSpacing: "0.05em",
+                  textShadow: "0 0 20px rgba(245, 158, 11, 0.2)"
+                }}
+              >
+                CURTIS DOVE
+              </span>
+              
+              {/* Animated Right Music Note */}
+              <span className="text-amber-500 transform transition-transform duration-500 group-hover:-rotate-12 group-hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24">
+                  <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" fill="url(#musicNoteGradient)" />
+                </svg>
+              </span>
             </a>
             
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            {/* Enhanced Desktop Navigation */}
+            <div className="hidden md:flex space-x-8 items-center">
               {SECTIONS.map((section) => (
                 section.isLink ? (
                   <Link 
                     key={section.id}
                     href={`/${section.id}`}
-                    className="relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors text-amber-500 hover:text-white"
+                    className="relative px-2 py-1 uppercase font-medium transition-all duration-300 text-amber-500 hover:text-amber-300 group"
+                    style={{ fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.1em" }}
                   >
-                    {section.label}
+                    {/* Hover Glow Effect */}
+                    <span className="absolute inset-0 bg-amber-500/0 group-hover:bg-amber-500/10 rounded-md blur-md transition-all duration-300"></span>
+                    <span className="relative">{section.label}</span>
+                    <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-amber-500 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
                   </Link>
                 ) : (
                   <button
                     key={section.id}
                     onClick={() => scrollToSection(section.id)}
-                    className={`relative px-2 py-1 uppercase tracking-wider text-sm font-medium transition-colors ${
-                      currentSection === section.id ? 'text-amber-500' : 'text-white hover:text-amber-500'
-                    }`}
+                    className={`relative px-2 py-1 uppercase transition-all duration-300 group`}
+                    style={{ 
+                      fontFamily: "'Montserrat', sans-serif", 
+                      fontWeight: currentSection === section.id ? "600" : "500",
+                      letterSpacing: "0.1em"
+                    }}
                   >
-                    {section.label}
-                    {currentSection === section.id && (
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500"></span>
+                    {/* Hover Glow Effect */}
+                    <span className="absolute inset-0 bg-amber-500/0 group-hover:bg-amber-500/10 rounded-md blur-md transition-all duration-300"></span>
+                    
+                    <span className={`relative ${
+                      currentSection === section.id ? 'text-amber-500' : 'text-white group-hover:text-amber-300'
+                    }`}>{section.label}</span>
+                    
+                    {/* Animated underline */}
+                    {currentSection === section.id ? (
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-amber-500/70 via-amber-500 to-amber-500/70"></span>
+                    ) : (
+                      <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-amber-500 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
                     )}
                   </button>
                 )
