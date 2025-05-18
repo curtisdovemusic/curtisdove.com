@@ -1331,10 +1331,15 @@ export default function Home() {
                     <h4 className="text-xl font-bold text-white mb-1">One Wish</h4>
                     <p className="text-white/60 text-sm mb-3">Album: One Wish – Single</p>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center">
+                      <a 
+                        href="https://open.spotify.com/track/6n97QoeYhQr7hAKiDeWYL4?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M&si=mmahD9sCQVaS0zRZO8Z6Vw" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center text-white/70 hover:text-green-500 transition-colors"
+                      >
                         <i className="fab fa-spotify text-green-500 mr-2"></i>
-                        <span className="text-white/70 text-sm">7,978 streams</span>
-                      </div>
+                        <span className="text-sm">7,978 streams</span>
+                      </a>
                       <a 
                         href="https://youtu.be/FDAvAFSviMk?si=aS-x64dELs_CqGJr" 
                         target="_blank" 
@@ -1379,10 +1384,15 @@ export default function Home() {
                     <h4 className="text-xl font-bold text-white mb-1">Lagos Inferno</h4>
                     <p className="text-white/60 text-sm mb-3">Album: Eko Island Beats</p>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <i className="fas fa-headphones-alt text-amber-500 mr-2"></i>
-                        <span className="text-white/70 text-sm">6,915 streams</span>
-                      </div>
+                      <a 
+                        href="https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center text-white/70 hover:text-green-500 transition-colors"
+                      >
+                        <i className="fab fa-spotify text-green-500 mr-2"></i>
+                        <span className="text-sm">6,915 streams</span>
+                      </a>
                       <a 
                         href="https://www.youtube.com/watch?v=aEDOnJLXgJs" 
                         target="_blank" 
@@ -1426,10 +1436,15 @@ export default function Home() {
                     <h4 className="text-xl font-bold text-white mb-1">Whispers in the Wind</h4>
                     <p className="text-white/60 text-sm mb-3">Album: Rise From Ashes</p>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <i className="fas fa-headphones-alt text-amber-500 mr-2"></i>
-                        <span className="text-white/70 text-sm">4,464 streams</span>
-                      </div>
+                      <a 
+                        href="https://open.spotify.com/track/5B4RtvM6NOyMNRCfLai2ez" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center text-white/70 hover:text-green-500 transition-colors"
+                      >
+                        <i className="fab fa-spotify text-green-500 mr-2"></i>
+                        <span className="text-sm">4,464 streams</span>
+                      </a>
                       <a 
                         href="https://www.youtube.com/watch?v=wQ85OXHBD3E" 
                         target="_blank" 
