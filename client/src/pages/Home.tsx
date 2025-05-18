@@ -719,132 +719,89 @@ export default function Home() {
             
             {/* No genre filters */}
             
-            {/* Featured music with large player */}
+            {/* Playlist Collection */}
             <div className="mb-16">
-              <h3 className="text-4xl font-bold text-center mb-6">
-                <span className="text-white">FEATURED </span>
-                <span className="text-amber-500">PLAYLISTS</span>
-              </h3>
               <div className="max-w-5xl mx-auto">
-                {/* Top 5 Playlists Grid */}
+                {/* Top 3 Playlists Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-                  {/* Featured Playlist - Lagos Nights & Island Lights */}
-                  <div className="col-span-full bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-all">
-                    <div className="p-6">
-                      <div className="flex items-center mb-4">
-                        <span className="w-2 h-8 bg-yellow-500 rounded-full mr-3"></span>
-                        <h3 className="text-xl font-bold">Lagos Nights & Island Lights</h3>
-                      </div>
-                      <div className="aspect-video" id="lagos-nights-player">
-                        <iframe 
-                          ref={(el) => {
-                            if (el) {
-                              // Create intersection observer for this element
-                              const observer = new IntersectionObserver(
-                                (entries) => {
-                                  entries.forEach(entry => {
-                                    if (entry.isIntersecting) {
-                                      // When element is in view, reload iframe with autoplay parameter
-                                      // Only do this if user has interacted with the page
-                                      if (window.hasInteracted) {
-                                        const iframe = entry.target.querySelector('iframe');
-                                        if (iframe) {
-                                          // Add autoplay=1 to the URL
-                                          const currentSrc = iframe.src;
-                                          if (!currentSrc.includes('autoplay=1')) {
-                                            iframe.src = `${currentSrc}&autoplay=1`;
-                                          }
-                                        }
-                                      }
-                                      // Unobserve after first play attempt
-                                      observer.unobserve(entry.target);
-                                    }
-                                  });
-                                },
-                                { threshold: 0.7 } // 70% of element must be visible
-                              );
-                              
-                              observer.observe(el);
-                            }
-                          }}
-                          style={{ borderRadius: '12px' }} 
-                          src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator" 
-                          width="100%" 
-                          height="100%" 
-                          frameBorder="0" 
-                          allowFullScreen={true}
-                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                          loading="lazy">
-                        </iframe>
-                      </div>
-                    </div>
-                  </div>
                   
                   {/* After Dark in Lagos */}
-                  <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500/40 transition-all">
-                    <div className="p-4">
-                      <div className="flex items-center mb-3">
-                        <span className="w-2 h-6 bg-yellow-500 rounded-full mr-2"></span>
-                        <h3 className="text-lg font-bold">After Dark in Lagos</h3>
-                      </div>
-                      <p className="text-sm text-white/60 mb-4">The Explicit Side of Afrobeats</p>
-                      <div className="aspect-video rounded-lg overflow-hidden">
-                        <iframe 
-                          style={{ borderRadius: '12px' }} 
-                          src="https://open.spotify.com/embed/playlist/7qWyO3vNYIWRgiGcTQT9Bd?utm_source=generator" 
-                          width="100%" 
-                          height="100%" 
-                          frameBorder="0" 
-                          allowFullScreen={true}
-                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                          loading="lazy">
-                        </iframe>
+                  <div className="relative group">
+                    {/* Glow effect */}
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-600/30 to-yellow-400/30 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-yellow-500/30 hover:border-yellow-500/50 transition-all shadow-lg shadow-yellow-900/20">
+                      <div className="p-5">
+                        <div className="flex items-center mb-3">
+                          <span className="w-2 h-6 bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full mr-2"></span>
+                          <h3 className="text-lg font-bold group-hover:text-yellow-400 transition-colors">After Dark in Lagos</h3>
+                        </div>
+                        <p className="text-sm text-white/60 mb-4">The Explicit Side of Afrobeats</p>
+                        <div className="aspect-video rounded-lg overflow-hidden shadow-inner">
+                          <iframe 
+                            style={{ borderRadius: '12px' }} 
+                            src="https://open.spotify.com/embed/playlist/7qWyO3vNYIWRgiGcTQT9Bd?utm_source=generator" 
+                            width="100%" 
+                            height="100%" 
+                            frameBorder="0" 
+                            allowFullScreen={true}
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                          </iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
                   
                   {/* My Love Songs */}
-                  <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-500/40 transition-all">
-                    <div className="p-4">
-                      <div className="flex items-center mb-3">
-                        <span className="w-2 h-6 bg-purple-500 rounded-full mr-2"></span>
-                        <h3 className="text-lg font-bold">Curtis Dove - My Love Songs</h3>
-                      </div>
-                      <p className="text-sm text-white/60 mb-4">Heartfelt love songs across genres</p>
-                      <div className="aspect-video rounded-lg overflow-hidden">
-                        <iframe 
-                          style={{ borderRadius: '12px' }} 
-                          src="https://open.spotify.com/embed/playlist/13nhg6SPkxfMaAkj2Cra6M?utm_source=generator" 
-                          width="100%" 
-                          height="100%" 
-                          frameBorder="0" 
-                          allowFullScreen={true}
-                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                          loading="lazy">
-                        </iframe>
+                  <div className="relative group">
+                    {/* Glow effect */}
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/30 to-pink-400/30 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-purple-500/30 hover:border-purple-500/50 transition-all shadow-lg shadow-purple-900/20">
+                      <div className="p-5">
+                        <div className="flex items-center mb-3">
+                          <span className="w-2 h-6 bg-gradient-to-b from-purple-400 to-purple-600 rounded-full mr-2"></span>
+                          <h3 className="text-lg font-bold group-hover:text-purple-400 transition-colors">Curtis Dove - My Love Songs</h3>
+                        </div>
+                        <p className="text-sm text-white/60 mb-4">Heartfelt love songs across genres</p>
+                        <div className="aspect-video rounded-lg overflow-hidden shadow-inner">
+                          <iframe 
+                            style={{ borderRadius: '12px' }} 
+                            src="https://open.spotify.com/embed/playlist/13nhg6SPkxfMaAkj2Cra6M?utm_source=generator" 
+                            width="100%" 
+                            height="100%" 
+                            frameBorder="0" 
+                            allowFullScreen={true}
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                          </iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
                   
                   {/* The Ashes Trilogy */}
-                  <div className="bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-red-500/20 hover:border-red-500/40 transition-all">
-                    <div className="p-4">
-                      <div className="flex items-center mb-3">
-                        <span className="w-2 h-6 bg-red-500 rounded-full mr-2"></span>
-                        <h3 className="text-lg font-bold">The Ashes Trilogy</h3>
-                      </div>
-                      <p className="text-sm text-white/60 mb-4">A Journey of Renewal</p>
-                      <div className="aspect-video rounded-lg overflow-hidden">
-                        <iframe 
-                          style={{ borderRadius: '12px' }} 
-                          src="https://open.spotify.com/embed/playlist/7lUurLZ2vBhayCAc96tTp2?utm_source=generator" 
-                          width="100%" 
-                          height="100%" 
-                          frameBorder="0" 
-                          allowFullScreen={true}
-                          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                          loading="lazy">
-                        </iframe>
+                  <div className="relative group">
+                    {/* Glow effect */}
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600/30 to-orange-400/30 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative bg-zinc-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-red-500/30 hover:border-red-500/50 transition-all shadow-lg shadow-red-900/20">
+                      <div className="p-5">
+                        <div className="flex items-center mb-3">
+                          <span className="w-2 h-6 bg-gradient-to-b from-red-400 to-red-600 rounded-full mr-2"></span>
+                          <h3 className="text-lg font-bold group-hover:text-red-400 transition-colors">The Ashes Trilogy</h3>
+                        </div>
+                        <p className="text-sm text-white/60 mb-4">A Journey of Renewal</p>
+                        <div className="aspect-video rounded-lg overflow-hidden shadow-inner">
+                          <iframe 
+                            style={{ borderRadius: '12px' }} 
+                            src="https://open.spotify.com/embed/playlist/7lUurLZ2vBhayCAc96tTp2?utm_source=generator" 
+                            width="100%" 
+                            height="100%" 
+                            frameBorder="0" 
+                            allowFullScreen={true}
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                          </iframe>
+                        </div>
                       </div>
                     </div>
                   </div>
