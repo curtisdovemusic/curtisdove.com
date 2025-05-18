@@ -507,18 +507,27 @@ export default function Home() {
               </h2>
             </div>
             
-            {/* Music Player for Lagos Inferno */}
-            <div className="audio-player-container w-full max-w-md mx-auto mb-8">
-              <iframe 
-                src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator&theme=0" 
-                width="100%" 
-                height="80" 
-                frameBorder="0" 
-                allowFullScreen 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy"
-                className="rounded-lg shadow-lg"
-              ></iframe>
+            {/* Music Player for Lagos Inferno with glowing edge */}
+            <div className="audio-player-container w-full max-w-md mx-auto mb-8 relative">
+              {/* Multi-layered glow effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-600/20 via-amber-400/30 to-amber-600/20 rounded-xl blur-sm"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/10 via-amber-300/15 to-amber-500/10 rounded-xl blur-md"></div>
+              <div className="absolute -inset-1.5 bg-gradient-to-tr from-amber-600/5 via-amber-400/10 to-amber-600/5 rounded-xl blur-lg"></div>
+              
+              {/* Player container */}
+              <div className="relative bg-[#121212] rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="80" 
+                  frameBorder="0" 
+                  allowFullScreen 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                  className="rounded-lg"
+                  style={{ background: "#121212" }}
+                ></iframe>
+              </div>
             </div>
             
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
