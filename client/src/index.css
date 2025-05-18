@@ -352,3 +352,8 @@ img:not([src]) {
   0%, 100% { opacity: 0.7; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(1.02); }
 }
+
+@keyframes pulse {
+  0% { transform: scaleY(0.2); }
+  100% { transform: scaleY(1); }
+}
