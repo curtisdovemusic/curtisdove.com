@@ -5,7 +5,7 @@ import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
-import AudioVisualizer from "../components/AudioVisualizer";
+import MusicVisualizer from "../components/MusicVisualizer";
 
 // Reference album artwork with CSS background classes instead
 // We now get album covers directly from CollapsibleGenre
@@ -360,14 +360,14 @@ export default function Home() {
           
           {/* Audio Visualizer that responds to music */}
           <div className="absolute inset-0 z-[5]">
-            <AudioVisualizer 
+            <MusicVisualizer 
               barCount={80}
               minHeight={3}
               maxHeight={50}
               baseColor="rgba(255, 165, 0, 0.15)"
               accentColor="rgba(255, 165, 0, 0.6)"
               className="w-full h-1/3 bottom-0 absolute px-4"
-              audioUrl="/lagos-inferno.mp3"
+              audioSrc="/lagos-inferno.mp3"
             />
           </div>
           
