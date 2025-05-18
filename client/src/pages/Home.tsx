@@ -411,7 +411,7 @@ export default function Home() {
             {/* Music Player for Lagos Inferno */}
             <div className="audio-player-container w-full max-w-md mx-auto mb-8">
               <iframe 
-                src="https://open.spotify.com/embed/track/3jPLqB5Qu6S1AvUrcyC2Qt?utm_source=generator&theme=0" 
+                src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator&theme=0" 
                 width="100%" 
                 height="80" 
                 frameBorder="0" 
