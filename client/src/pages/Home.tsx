@@ -1319,15 +1319,14 @@ export default function Home() {
                       >
                         <i className="fab fa-spotify text-lg"></i>
                       </a>
-                      <button 
+                      <a 
+                        href="https://youtu.be/FDAvAFSviMk?si=aS-x64dELs_CqGJr" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
-                        onClick={() => {
-                          const audio = new Audio("https://p.scdn.co/mp3-preview/9b237a7aaf5a3d60b0d80de7c9aad4c2b0a98349");
-                          audio.play();
-                        }}
                       >
                         <i className="fas fa-play text-xl pl-1"></i>
-                      </button>
+                      </a>
                     </div>
                     <h4 className="text-xl font-bold text-white mb-1">One Wish</h4>
                     <p className="text-white/60 text-sm mb-3">Album: One Wish – Single</p>
@@ -1368,15 +1367,14 @@ export default function Home() {
                       >
                         <i className="fab fa-spotify text-lg"></i>
                       </a>
-                      <button 
+                      <a 
+                        href="https://www.youtube.com/watch?v=aEDOnJLXgJs" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
-                        onClick={() => {
-                          const audio = new Audio("/lagos-inferno.mp3");
-                          audio.play();
-                        }}
                       >
                         <i className="fas fa-play text-xl pl-1"></i>
-                      </button>
+                      </a>
                     </div>
                     <h4 className="text-xl font-bold text-white mb-1">Lagos Inferno</h4>
                     <p className="text-white/60 text-sm mb-3">Album: Eko Island Beats</p>
@@ -1416,15 +1414,14 @@ export default function Home() {
                       >
                         <i className="fab fa-spotify text-lg"></i>
                       </a>
-                      <button 
+                      <a 
+                        href="https://www.youtube.com/watch?v=wQ85OXHBD3E" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
-                        onClick={() => {
-                          const audio = new Audio("https://p.scdn.co/mp3-preview/0c9e79a6b2c53dd4889e035ed827b3a0dee5b5ff");
-                          audio.play();
-                        }}
                       >
                         <i className="fas fa-play text-xl pl-1"></i>
-                      </button>
+                      </a>
                     </div>
                     <h4 className="text-xl font-bold text-white mb-1">Whispers in the Wind</h4>
                     <p className="text-white/60 text-sm mb-3">Album: Rise From Ashes</p>
