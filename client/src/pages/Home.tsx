@@ -496,10 +496,14 @@ export default function Home() {
               </h1>
             </div>
             
-            <div className="relative inline-block mb-12">
-              <span className="absolute -inset-1 -z-10 bg-black/50 blur-sm opacity-50 rounded-lg"></span>
-              <h2 className="relative text-2xl md:text-3xl font-medium tracking-widest py-2 px-6 rounded-lg backdrop-blur-sm text-white" style={{
-                letterSpacing: "0.2em"
+            <div className="relative inline-block mb-12 w-full">
+              <span className="absolute -inset-1 -z-10 bg-gradient-to-r from-purple-900/70 via-amber-800/50 to-purple-900/70 blur-sm opacity-80 rounded-lg"></span>
+              <h2 className="relative text-2xl md:text-3xl font-medium tracking-widest py-3 px-6 rounded-lg backdrop-blur-sm w-full" style={{
+                letterSpacing: "0.25em",
+                background: "linear-gradient(to right, #f3e7d3, #ffffff, #f3e7d3)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                textShadow: "0 1px 4px rgba(255, 255, 255, 0.15)"
               }}>
                 BOUNDARY-BREAKING ARTIST
               </h2>
