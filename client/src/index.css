@@ -8,13 +8,7 @@
 .replit-banner,
 img[alt="Error"],
 img[src=""],
-img:not([src]),
-/* The following selector targets the Curtis Dove text in upper left corner */
-a[title="Curtis Dove"],
-div[title="Curtis Dove"],
-span[title="Curtis Dove"],
-p[title="Curtis Dove"],
-*[data-content="Curtis Dove"] {
+img:not([src]) {
   display: none !important;
   visibility: hidden !important;
   width: 0 !important;
@@ -360,13 +354,6 @@ p[title="Curtis Dove"],
 }
 
 @keyframes pulse {
-  0% { transform: scaleY(0.6); }
-  50% { transform: scaleY(0.9); }
-  100% { transform: scaleY(0.7); }
-}
-
-@keyframes soundwave {
-  0% { height: 3px; }
-  50% { height: 12px; }
-  100% { height: 3px; }
+  0% { transform: scaleY(0.2); }
+  100% { transform: scaleY(1); }
 }

@@ -4,8 +4,7 @@ import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
 import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
-import AudioVisualizer from "../components/AudioVisualizer";
-import SimpleMusicPlayer from "../components/SimpleMusicPlayer";
+import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
 
 // Reference album artwork with CSS background classes instead
 // We now get album covers directly from CollapsibleGenre
@@ -171,8 +170,6 @@ export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
   const [selectedGenre, setSelectedGenre] = useState("all");
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
   
   // Track mouse position for custom cursor effects
@@ -232,14 +229,33 @@ export default function Home() {
   
   return (
     <div className="bg-black text-white overflow-hidden">
-      {/* Custom cursor effect removed */}
+      {/* Custom music note cursor effect */}
+      <div 
+        ref={cursorRef}
+        className="hidden md:block fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 opacity-80"
+        style={{ 
+          transition: 'transform 0.15s ease-out',
+          width: '24px',
+          height: '24px',
+        }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500">
+          <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
+        </svg>
+      </div>
       
       {/* Fixed Navigation */}
       <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'bg-black/90 backdrop-blur-sm py-4' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
-            {/* Empty div to maintain layout */}
-            <div></div>
+            <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-2xl font-bold flex items-center gap-2">
+              <span className="text-amber-500">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
+                </svg>
+              </span>
+
+            </a>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -332,8 +348,6 @@ export default function Home() {
       
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-
-
         {/* Animated background with audio visualizer */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10"></div>
@@ -343,23 +357,16 @@ export default function Home() {
           <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px]"></div>
           <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px]"></div>
           
-          {/* Music Tile and Audio Visualizer */}
+          {/* Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
-            
-            {/* Prominent visualizer at the bottom */}
-            <div className="w-full h-32 absolute bottom-0 left-0 flex justify-center items-end">
-              <div className="bg-black/30 backdrop-blur-sm w-full py-4 px-2">
-                <AudioVisualizer 
-                  barCount={80}
-                  minHeight={15}
-                  maxHeight={70}
-                  baseColor="rgba(255, 165, 0, 0.4)"
-                  accentColor="rgba(255, 165, 0, 1)"
-                  className="w-full max-w-4xl mx-auto h-24"
-                  speed={800}
-                />
-              </div>
-            </div>
+            <SimpleAudioVisualizer 
+              barCount={80}
+              minHeight={5}
+              maxHeight={70}
+              baseColor="rgba(255, 165, 0, 0.15)"
+              accentColor="rgba(255, 165, 0, 0.6)"
+              className="w-full h-1/3 bottom-0 absolute px-4"
+            />
           </div>
           
           {/* Hidden audio element with Lagos Inferno */}
@@ -401,10 +408,10 @@ export default function Home() {
               </h2>
             </div>
             
-            {/* Spotify Player for Lagos Inferno */}
-            <div className="w-full max-w-md mx-auto mb-8">
+            {/* Music Player for Lagos Inferno */}
+            <div className="audio-player-container w-full max-w-md mx-auto mb-8">
               <iframe 
-                src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator" 
+                src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator&theme=0" 
                 width="100%" 
                 height="80" 
                 frameBorder="0" 

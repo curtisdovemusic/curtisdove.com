@@ -19,9 +19,9 @@ const SimpleAudioVisualizer = ({
 }: SimpleAudioVisualizerProps) => {
   const bars = Array.from({ length: barCount }, (_, i) => ({
     id: i,
-    // Medium pattern with consistent timing
-    delay: (i % 5) * 0.2, // Fixed .2 second delay as requested
-    duration: 1.0 // Fixed 1.0 second duration as requested
+    // Randomized animation delay and duration for natural movement
+    delay: Math.random() * 2,
+    duration: 1 + Math.random() * 1.5
   }));
   
   return (
@@ -36,11 +36,13 @@ const SimpleAudioVisualizer = ({
           }}
         >
           <div 
-            className="bar w-full rounded-t-md"
+            className="bar w-full rounded-t-md transition-all duration-200"
             style={{ 
-              height: `${minHeight + (15 + bar.id % 4 * 5)}%`, // Much shorter bars
-              backgroundColor: (bar.id % 7 === 0) ? accentColor : baseColor,
-              transformOrigin: 'bottom'
+              height: `${minHeight + Math.random() * (maxHeight - minHeight)}%`,
+              backgroundColor: Math.random() > 0.7 ? accentColor : baseColor,
+              transform: `scaleY(${0.2 + Math.random() * 0.8})`,
+              transformOrigin: 'bottom',
+              transition: 'transform 0.5s ease-out, background-color 0.5s ease'
             }}
           />
         </div>
