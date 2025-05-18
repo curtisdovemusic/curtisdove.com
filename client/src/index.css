@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Petit+Formal+Script&family=Shadows+Into+Light&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 /* Hide any unwanted elements */
 .replit-dev-banner,

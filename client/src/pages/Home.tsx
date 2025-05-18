@@ -1425,21 +1425,39 @@ export default function Home() {
                       }}
                     ></div>
                     
-                    {/* Silver metallic text with enhanced glow - more elegant and professional */}
-                    <div 
-                      className="font-signature text-7xl text-center whitespace-nowrap filter drop-shadow-lg group-hover:scale-110 transition-transform duration-700"
-                      style={{
-                        background: 'linear-gradient(to bottom, #f8fafc, #94a3b8, #cbd5e1, #e2e8f0)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        textShadow: '0 0 10px rgba(226, 232, 240, 0.6), 0 0 20px rgba(226, 232, 240, 0.4), 0 0 30px rgba(226, 232, 240, 0.2), 0 0 2px #fff',
-                        fontFamily: "'Great Vibes', cursive",
-                        fontWeight: "400",
-                        letterSpacing: "0.02em",
-                        transform: 'scale(1.4)'
-                      }}
-                    >
-                      Curtis Dove
+                    {/* Baseball autograph style signature */}
+                    <div className="flex flex-col items-center">
+                      <div 
+                        className="font-signature text-6xl text-center whitespace-nowrap filter drop-shadow-lg group-hover:scale-110 transition-transform duration-700"
+                        style={{
+                          background: 'linear-gradient(to bottom, #f8fafc, #94a3b8, #cbd5e1, #e2e8f0)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          textShadow: '0 0 10px rgba(226, 232, 240, 0.6), 0 0 20px rgba(226, 232, 240, 0.4), 0 0 30px rgba(226, 232, 240, 0.2), 0 0 2px #fff',
+                          fontFamily: "'Shadows Into Light', cursive",
+                          fontWeight: "400",
+                          letterSpacing: "-0.02em",
+                          transform: 'scale(1.3) rotate(-8deg)',
+                          borderBottom: '2px solid rgba(226, 232, 240, 0.4)',
+                          paddingBottom: '2px'
+                        }}
+                      >
+                        Curtis Dove
+                      </div>
+                      
+                      {/* Owner line */}
+                      <div
+                        className="mt-1 text-sm whitespace-nowrap"
+                        style={{
+                          color: '#94a3b8',
+                          fontFamily: "'Petit Formal Script', cursive",
+                          fontStyle: 'italic',
+                          transform: 'rotate(-5deg) translateY(-5px)',
+                          textShadow: '0 0 5px rgba(148, 163, 184, 0.5)'
+                        }}
+                      >
+                        Owner of Dove Music, LLC
+                      </div>
                     </div>
                   </div>
                 </div>
