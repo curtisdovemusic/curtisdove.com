@@ -19,9 +19,9 @@ const SimpleAudioVisualizer = ({
 }: SimpleAudioVisualizerProps) => {
   const bars = Array.from({ length: barCount }, (_, i) => ({
     id: i,
-    // Randomized animation delay and duration for natural movement
-    delay: Math.random() * 2,
-    duration: 1 + Math.random() * 1.5
+    // More rhythmic, music-like patterns with less randomness
+    delay: (i % 4) * 0.3, // Creates a wave-like pattern based on position
+    duration: 2.5 + (i % 3) * 0.8 // Slower animation with slight variations
   }));
   
   return (
