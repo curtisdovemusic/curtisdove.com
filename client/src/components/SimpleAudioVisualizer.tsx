@@ -36,13 +36,13 @@ const SimpleAudioVisualizer = ({
           }}
         >
           <div 
-            className="bar w-full rounded-t-md transition-all duration-200"
+            className="bar w-full rounded-t-md transition-all duration-700"
             style={{ 
-              height: `${minHeight + Math.random() * (maxHeight - minHeight)}%`,
-              backgroundColor: Math.random() > 0.7 ? accentColor : baseColor,
-              transform: `scaleY(${0.2 + Math.random() * 0.8})`,
+              height: `${minHeight + Math.sin(bar.id * 0.2) * (maxHeight - minHeight) * 0.5 + (maxHeight - minHeight) * 0.3}%`,
+              backgroundColor: (bar.id % 7 === 0) ? accentColor : baseColor,
+              transform: `scaleY(${0.7 + Math.sin(bar.id) * 0.3})`,
               transformOrigin: 'bottom',
-              transition: 'transform 0.5s ease-out, background-color 0.5s ease'
+              transition: 'transform 1.2s ease-out, background-color 1.2s ease'
             }}
           />
         </div>

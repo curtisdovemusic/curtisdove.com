@@ -354,6 +354,6 @@ img:not([src]) {
 }
 
 @keyframes pulse {
-  0% { transform: scaleY(0.2); }
+  0% { transform: scaleY(0.8); }
   100% { transform: scaleY(1); }
 }
