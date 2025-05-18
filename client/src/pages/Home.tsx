@@ -372,11 +372,13 @@ export default function Home() {
           {/* Hidden audio element with Lagos Inferno */}
           <audio 
             id="background-audio" 
-            src="/music/lagos-inferno.mp3" 
             loop 
             preload="auto" 
             className="hidden"
-          ></audio>
+          >
+            <source src="/music/lagos-inferno.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
           
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/60 z-5"></div>
@@ -406,18 +408,13 @@ export default function Home() {
               </h2>
             </div>
             
-            {/* Preview Music Button */}
+            {/* Preview Music Button - Opens Spotify player */}
             <div 
               className="play-button-container relative inline-flex items-center gap-3 px-6 py-3 mb-8 bg-black/40 backdrop-blur-sm rounded-full border border-amber-500/40 hover:border-amber-500 cursor-pointer group overflow-hidden transition-all duration-300"
               onClick={() => {
-                const audio = document.getElementById('background-audio') as HTMLAudioElement;
-                if (audio) {
-                  if (audio.paused) {
-                    audio.volume = 0.7;
-                    audio.play();
-                  } else {
-                    audio.pause();
-                  }
+                const dialog = document.getElementById('preview-dialog');
+                if (dialog) {
+                  dialog.classList.toggle('hidden');
                 }
               }}
             >
@@ -428,6 +425,43 @@ export default function Home() {
                 </svg>
               </span>
               <span className="relative z-10 text-white font-semibold">Preview "Lagos Inferno"</span>
+            </div>
+            
+            {/* Music Preview Dialog */}
+            <div id="preview-dialog" className="hidden fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center" onClick={(e) => {
+              if ((e.target as HTMLElement).id === 'preview-dialog') {
+                (e.target as HTMLElement).classList.add('hidden');
+              }
+            }}>
+              <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+              <div className="relative bg-zinc-900 p-5 rounded-xl border border-amber-500/20 w-full max-w-lg shadow-2xl">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-bold text-white">Lagos Inferno</h3>
+                  <button 
+                    className="text-gray-400 hover:text-white" 
+                    onClick={() => {
+                      const dialog = document.getElementById('preview-dialog');
+                      if (dialog) dialog.classList.add('hidden');
+                    }}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                  <iframe 
+                    style={{ borderRadius: '12px' }} 
+                    src="https://open.spotify.com/embed/track/6n97QoeYhQr7hAKiDeWYL4?utm_source=generator" 
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0" 
+                    allowFullScreen={true} 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
             </div>
             
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
