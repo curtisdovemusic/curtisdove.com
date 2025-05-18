@@ -363,7 +363,7 @@ export default function Home() {
               
               {/* Stylized Name */}
               <span 
-                className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500 text-xl tracking-wide"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500 text-lg tracking-wide"
                 style={{ 
                   fontFamily: "'Montserrat', sans-serif", 
                   fontWeight: "700",
@@ -371,7 +371,7 @@ export default function Home() {
                   textShadow: "0 0 20px rgba(245, 158, 11, 0.2)"
                 }}
               >
-                CURTIS DOVE
+                CURTIS DOVE MUSIC
               </span>
               
               {/* Animated Right Music Note */}
