@@ -135,7 +135,27 @@ const MusicVisualizer = ({
   };
 
   return (
-    <div className={`visualizer-container ${className}`}>
+    <div className={`visualizer-container relative ${className}`}>
+      {/* Play/Pause Button - Positioned prominently */}
+      <div className="absolute top-4 left-4 z-20">
+        <button
+          onClick={togglePlay}
+          className="bg-amber-600 hover:bg-amber-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-xl transition-all"
+          aria-label={isPlaying ? 'Pause' : 'Play'}
+        >
+          {isPlaying ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          )}
+        </button>
+      </div>
+
       {/* Audio bars */}
       <div className="bars-container w-full h-full flex items-end justify-center gap-[2px]">
         {freqData.map((height, index) => (
@@ -158,26 +178,6 @@ const MusicVisualizer = ({
 
       {/* Hidden audio element */}
       <audio ref={audioRef} src={audioSrc} preload="auto" />
-
-      {/* Play/Pause Button */}
-      <div className="flex justify-center mt-4">
-        <button
-          onClick={togglePlay}
-          className="bg-amber-600 hover:bg-amber-700 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors"
-          aria-label={isPlaying ? 'Pause' : 'Play'}
-        >
-          {isPlaying ? (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="6" y="4" width="4" height="16"></rect>
-              <rect x="14" y="4" width="4" height="16"></rect>
-            </svg>
-          ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-          )}
-        </button>
-      </div>
     </div>
   );
 };
