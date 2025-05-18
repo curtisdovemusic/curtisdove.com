@@ -1423,6 +1423,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                
+                {/* Title badge */}
+                <div className="absolute -top-4 -left-4 px-4 py-2 bg-gradient-to-r from-amber-600/80 to-amber-500/80 backdrop-blur-sm rounded-xl border border-amber-400/50 shadow-xl transform rotate-355 group-hover:rotate-0 transition-transform duration-500">
+                  <div className="flex items-center gap-2">
+                    <div className="text-sm font-bold text-black">Digital Sound Architect</div>
+                  </div>
+                </div>
               </div>
             </div>
             
