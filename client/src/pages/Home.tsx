@@ -234,39 +234,14 @@ export default function Home() {
   
   return (
     <div className="bg-black text-white overflow-hidden">
-      {/* Custom music note cursor effect */}
-      <div 
-        ref={cursorRef}
-        className="hidden md:block fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 opacity-80"
-        style={{ 
-          transition: 'transform 0.15s ease-out',
-          width: '24px',
-          height: '24px',
-        }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500">
-          <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
-        </svg>
-      </div>
+      {/* Custom cursor effect removed */}
       
       {/* Fixed Navigation */}
       <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'bg-black/90 backdrop-blur-sm py-4' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
-            {/* Spotify Player in the header */}
-            <div className="hidden lg:block">
-              <iframe 
-                src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator" 
-                width="300" 
-                height="80" 
-                frameBorder="0" 
-                allowFullScreen 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy"
-                title="Lagos Inferno Spotify Player"
-                style={{ opacity: 0.9 }}
-              ></iframe>
-            </div>
+            {/* Empty div to maintain layout */}
+            <div></div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -426,6 +401,20 @@ export default function Home() {
               <h2 className="relative text-2xl md:text-3xl text-white font-medium tracking-wider py-2 px-6 rounded-lg backdrop-blur-sm">
                 BOUNDARY-BREAKING ARTIST
               </h2>
+            </div>
+            
+            {/* Spotify Player for Lagos Inferno */}
+            <div className="w-full max-w-md mx-auto mb-8">
+              <iframe 
+                src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator" 
+                width="100%" 
+                height="80" 
+                frameBorder="0" 
+                allowFullScreen 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+                className="rounded-lg shadow-lg"
+              ></iframe>
             </div>
             
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
