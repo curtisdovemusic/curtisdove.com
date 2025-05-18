@@ -1425,18 +1425,16 @@ export default function Home() {
                       }}
                     ></div>
                     
-                    {/* Elegant etched signature */}
+                    {/* Clean, elegant signature */}
                     <div className="flex flex-col items-center">
                       <div 
                         className="font-signature text-6xl text-center whitespace-nowrap group-hover:scale-105 transition-transform duration-700"
                         style={{
-                          color: 'transparent',
+                          color: '#d1d5db',
                           fontFamily: "'Great Vibes', cursive",
                           fontWeight: "400",
                           letterSpacing: "0.01em",
-                          WebkitTextStroke: '1px rgba(211, 211, 211, 0.7)',
-                          filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.7))',
-                          textShadow: '-1px -1px 0 rgba(70, 70, 70, 0.3), 1px -1px 0 rgba(70, 70, 70, 0.3), -1px 1px 0 rgba(70, 70, 70, 0.3), 1px 1px 0 rgba(70, 70, 70, 0.3)',
+                          textShadow: '0.5px 0.5px 0px rgba(0, 0, 0, 0.3)',
                           transform: 'scale(1.15)'
                         }}
                       >
@@ -1445,13 +1443,11 @@ export default function Home() {
                       
                       {/* Owner line */}
                       <div
-                        className="mt-1 text-sm whitespace-nowrap"
+                        className="mt-2 text-sm whitespace-nowrap"
                         style={{
-                          color: '#a3a3a3',
+                          color: '#94a3b8',
                           fontFamily: "'Great Vibes', cursive",
-                          letterSpacing: "0.05em",
-                          WebkitTextStroke: '0.2px rgba(170, 170, 170, 0.5)',
-                          textShadow: '0 0 3px rgba(80, 80, 80, 0.5)'
+                          letterSpacing: "0.03em",
                         }}
                       >
                         Owner of Dove Music, LLC
@@ -1460,24 +1456,35 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* Title badges */}
-                <div className="absolute -top-4 -left-4 px-4 py-2 bg-gradient-to-r from-amber-600/80 to-amber-500/80 backdrop-blur-sm rounded-xl border border-amber-400/50 shadow-xl transform rotate-355 group-hover:rotate-0 transition-transform duration-500">
-                  <div className="flex items-center gap-2">
-                    <div className="text-sm font-bold text-black">Digital Sound Architect</div>
-                  </div>
-                </div>
-                
-                {/* Songwriter badge */}
-                <div className="absolute top-1/4 -right-4 px-4 py-2 bg-gradient-to-r from-purple-600/80 to-purple-500/80 backdrop-blur-sm rounded-xl border border-purple-400/50 shadow-xl transform rotate-5 group-hover:rotate-0 transition-transform duration-500">
-                  <div className="flex items-center gap-2">
-                    <div className="text-sm font-bold text-black">Songwriter</div>
-                  </div>
-                </div>
-                
-                {/* Recording Artist badge */}
-                <div className="absolute bottom-1/4 -left-4 px-4 py-2 bg-gradient-to-r from-blue-600/80 to-blue-500/80 backdrop-blur-sm rounded-xl border border-blue-400/50 shadow-xl transform rotate-355 group-hover:rotate-0 transition-transform duration-500">
-                  <div className="flex items-center gap-2">
-                    <div className="text-sm font-bold text-black">Recording Artist</div>
+                {/* Professional title panel */}
+                <div className="absolute -bottom-24 left-0 right-0 flex justify-center">
+                  <div className="px-6 py-3 bg-zinc-900/80 backdrop-blur-md rounded-lg border border-zinc-800 shadow-lg">
+                    <div className="flex items-center justify-center space-x-5">
+                      <div className="flex flex-col items-center">
+                        <div className="text-amber-500 mb-1">
+                          <i className="fas fa-music text-xs"></i>
+                        </div>
+                        <div className="text-xs uppercase tracking-wider text-gray-300 font-medium">Digital Sound Architect</div>
+                      </div>
+                      
+                      <div className="h-8 w-px bg-zinc-700"></div>
+                      
+                      <div className="flex flex-col items-center">
+                        <div className="text-amber-500 mb-1">
+                          <i className="fas fa-pen text-xs"></i>
+                        </div>
+                        <div className="text-xs uppercase tracking-wider text-gray-300 font-medium">Songwriter</div>
+                      </div>
+                      
+                      <div className="h-8 w-px bg-zinc-700"></div>
+                      
+                      <div className="flex flex-col items-center">
+                        <div className="text-amber-500 mb-1">
+                          <i className="fas fa-microphone text-xs"></i>
+                        </div>
+                        <div className="text-xs uppercase tracking-wider text-gray-300 font-medium">Recording Artist</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
