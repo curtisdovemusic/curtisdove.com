@@ -1337,7 +1337,7 @@ export default function Home() {
                         <span className="text-white/70 text-sm">7,978 streams</span>
                       </div>
                       <a 
-                        href="https://www.youtube.com/watch?v=FDAvAFSviMk" 
+                        href="https://youtu.be/FDAvAFSviMk?si=aS-x64dELs_CqGJr" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-white/70 hover:text-red-500 transition-colors"
