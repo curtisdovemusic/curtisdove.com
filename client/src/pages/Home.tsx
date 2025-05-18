@@ -763,30 +763,28 @@ export default function Home() {
                           </iframe>
                         </div>
                         
-                        {/* Slide-out links panel */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
-                          <div className="text-center p-5">
-                            <h4 className="text-white text-lg font-semibold mb-4">Visit playlist on</h4>
-                            <div className="flex justify-center gap-8 mb-3">
-                              <a 
-                                href="https://open.spotify.com/playlist/7qWyO3vNYIWRgiGcTQT9Bd?si=5DnfyoQySAOW-kghO-mdEg" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-green-400 transition-colors transform hover:scale-110"
-                              >
-                                <i className="fab fa-spotify text-4xl"></i>
-                                <p className="mt-2 text-sm">Spotify</p>
-                              </a>
-                              <a 
-                                href="https://youtube.com/playlist?list=PLli7EgSWWodvRCs3OIS0vOEqsan96bOsP&si=26GYkZEuCgMrvIbo" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-red-500 transition-colors transform hover:scale-110"
-                              >
-                                <i className="fab fa-youtube text-4xl"></i>
-                                <p className="mt-2 text-sm">YouTube</p>
-                              </a>
-                            </div>
+                        {/* Links below player */}
+                        <div className="mt-4 pt-3 border-t border-gray-700/50">
+                          <p className="text-white text-sm mb-2 text-center">Visit playlist on:</p>
+                          <div className="flex justify-center gap-6">
+                            <a 
+                              href="https://open.spotify.com/playlist/7qWyO3vNYIWRgiGcTQT9Bd?si=5DnfyoQySAOW-kghO-mdEg" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-green-400 transition-colors transform hover:scale-110 flex items-center gap-1"
+                            >
+                              <i className="fab fa-spotify text-lg"></i>
+                              <span className="text-sm">Spotify</span>
+                            </a>
+                            <a 
+                              href="https://youtube.com/playlist?list=PLli7EgSWWodvRCs3OIS0vOEqsan96bOsP&si=26GYkZEuCgMrvIbo" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-red-500 transition-colors transform hover:scale-110 flex items-center gap-1"
+                            >
+                              <i className="fab fa-youtube text-lg"></i>
+                              <span className="text-sm">YouTube</span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -817,30 +815,28 @@ export default function Home() {
                           </iframe>
                         </div>
                         
-                        {/* Slide-out links panel */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
-                          <div className="text-center p-5">
-                            <h4 className="text-white text-lg font-semibold mb-4">Visit playlist on</h4>
-                            <div className="flex justify-center gap-8 mb-3">
-                              <a 
-                                href="https://open.spotify.com/playlist/13nhg6SPkxfMaAkj2Cra6M?si=J6YxCxITQVuaLEHunXBZRA" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-green-400 transition-colors transform hover:scale-110"
-                              >
-                                <i className="fab fa-spotify text-4xl"></i>
-                                <p className="mt-2 text-sm">Spotify</p>
-                              </a>
-                              <a 
-                                href="https://youtu.be/MTJ1gIenisg?si=XctmuL0lx2aFyuiK" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-red-500 transition-colors transform hover:scale-110"
-                              >
-                                <i className="fab fa-youtube text-4xl"></i>
-                                <p className="mt-2 text-sm">YouTube</p>
-                              </a>
-                            </div>
+                        {/* Links below player */}
+                        <div className="mt-4 pt-3 border-t border-gray-700/50">
+                          <p className="text-white text-sm mb-2 text-center">Visit playlist on:</p>
+                          <div className="flex justify-center gap-6">
+                            <a 
+                              href="https://open.spotify.com/playlist/13nhg6SPkxfMaAkj2Cra6M?si=J6YxCxITQVuaLEHunXBZRA" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-green-400 transition-colors transform hover:scale-110 flex items-center gap-1"
+                            >
+                              <i className="fab fa-spotify text-lg"></i>
+                              <span className="text-sm">Spotify</span>
+                            </a>
+                            <a 
+                              href="https://youtu.be/MTJ1gIenisg?si=XctmuL0lx2aFyuiK" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-red-500 transition-colors transform hover:scale-110 flex items-center gap-1"
+                            >
+                              <i className="fab fa-youtube text-lg"></i>
+                              <span className="text-sm">YouTube</span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -871,30 +867,28 @@ export default function Home() {
                           </iframe>
                         </div>
                         
-                        {/* Slide-out links panel */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
-                          <div className="text-center p-5">
-                            <h4 className="text-white text-lg font-semibold mb-4">Visit playlist on</h4>
-                            <div className="flex justify-center gap-8 mb-3">
-                              <a 
-                                href="https://open.spotify.com/playlist/7lUurLZ2vBhayCAc96tTp2?si=8inNft5JT9uZ0j8Mxy5RSg" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-green-400 transition-colors transform hover:scale-110"
-                              >
-                                <i className="fab fa-spotify text-4xl"></i>
-                                <p className="mt-2 text-sm">Spotify</p>
-                              </a>
-                              <a 
-                                href="https://youtu.be/XvrDGxfMeGc?si=IWP89hlaIZxEETxJ" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-white hover:text-red-500 transition-colors transform hover:scale-110"
-                              >
-                                <i className="fab fa-youtube text-4xl"></i>
-                                <p className="mt-2 text-sm">YouTube</p>
-                              </a>
-                            </div>
+                        {/* Links below player */}
+                        <div className="mt-4 pt-3 border-t border-gray-700/50">
+                          <p className="text-white text-sm mb-2 text-center">Visit playlist on:</p>
+                          <div className="flex justify-center gap-6">
+                            <a 
+                              href="https://open.spotify.com/playlist/7lUurLZ2vBhayCAc96tTp2?si=8inNft5JT9uZ0j8Mxy5RSg" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-green-400 transition-colors transform hover:scale-110 flex items-center gap-1"
+                            >
+                              <i className="fab fa-spotify text-lg"></i>
+                              <span className="text-sm">Spotify</span>
+                            </a>
+                            <a 
+                              href="https://youtu.be/XvrDGxfMeGc?si=IWP89hlaIZxEETxJ" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-white hover:text-red-500 transition-colors transform hover:scale-110 flex items-center gap-1"
+                            >
+                              <i className="fab fa-youtube text-lg"></i>
+                              <span className="text-sm">YouTube</span>
+                            </a>
                           </div>
                         </div>
                       </div>
