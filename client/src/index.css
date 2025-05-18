@@ -8,7 +8,13 @@
 .replit-banner,
 img[alt="Error"],
 img[src=""],
-img:not([src]) {
+img:not([src]),
+/* The following selector targets the Curtis Dove text in upper left corner */
+a[title="Curtis Dove"],
+div[title="Curtis Dove"],
+span[title="Curtis Dove"],
+p[title="Curtis Dove"],
+*[data-content="Curtis Dove"] {
   display: none !important;
   visibility: hidden !important;
   width: 0 !important;
