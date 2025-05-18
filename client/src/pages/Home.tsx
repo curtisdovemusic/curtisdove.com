@@ -1067,7 +1067,7 @@ export default function Home() {
                     <span className="text-white/60 ml-2 text-sm">Featured Review</span>
                   </div>
                   <p className="text-white/80 italic">
-                    "Curtis Dove is a true artistic chameleon, moving effortlessly between genres while maintaining his authentic voice."
+                    "Curtis Dove is a true artistic chameleon, moving effortlessly between genres."
                   </p>
                 </div>
               </div>
