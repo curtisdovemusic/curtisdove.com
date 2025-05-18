@@ -406,6 +406,30 @@ export default function Home() {
               </h2>
             </div>
             
+            {/* Preview Music Button */}
+            <div 
+              className="play-button-container relative inline-flex items-center gap-3 px-6 py-3 mb-8 bg-black/40 backdrop-blur-sm rounded-full border border-amber-500/40 hover:border-amber-500 cursor-pointer group overflow-hidden transition-all duration-300"
+              onClick={() => {
+                const audio = document.getElementById('background-audio') as HTMLAudioElement;
+                if (audio) {
+                  if (audio.paused) {
+                    audio.volume = 0.7;
+                    audio.play();
+                  } else {
+                    audio.pause();
+                  }
+                }
+              }}
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-purple-500/10 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></span>
+              <span className="relative z-10 w-10 h-10 flex items-center justify-center rounded-full bg-amber-500 text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <span className="relative z-10 text-white font-semibold">Preview "Lagos Inferno"</span>
+            </div>
+            
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
               <div className="flex flex-wrap justify-center text-xl md:text-2xl text-white/90 mb-3">
                 <span className="text-amber-400 font-semibold mx-1">8 ALBUMS</span>
