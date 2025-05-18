@@ -428,20 +428,6 @@ export default function Home() {
               </h2>
             </div>
             
-            {/* Music Player for Lagos Inferno */}
-            <div className="audio-player-container w-full max-w-md mx-auto mb-8">
-              <iframe 
-                src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator&theme=0" 
-                width="100%" 
-                height="80" 
-                frameBorder="0" 
-                allowFullScreen 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy"
-                className="rounded-lg shadow-lg"
-              ></iframe>
-            </div>
-            
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
               <div className="flex flex-wrap justify-center text-xl md:text-2xl text-white/90 mb-3">
                 <span className="text-amber-400 font-semibold mx-1">8 ALBUMS</span>
