@@ -172,6 +172,8 @@ export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
   const [selectedGenre, setSelectedGenre] = useState("all");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
   
   // Track mouse position for custom cursor effects
@@ -354,28 +356,66 @@ export default function Home() {
         <button 
           className="fixed top-24 right-6 z-50 bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-6 rounded-full shadow-lg flex items-center gap-2 transition-all hover:scale-105"
           onClick={() => {
-            // Create a persistent audio element if it doesn't exist
-            if (!document.getElementById('lagosinfernoaudio')) {
-              const audioElement = document.createElement('audio');
-              audioElement.id = 'lagosinfernoaudio';
-              audioElement.src = '/lagos-inferno-track.mp3';
-              document.body.appendChild(audioElement);
-            }
-            
-            // Get the audio element and play it
-            const audioEl = document.getElementById('lagosinfernoaudio') as HTMLAudioElement;
-            if (audioEl) {
-              audioEl.play()
-                .then(() => console.log("Audio playing successfully"))
-                .catch(e => console.error("Error playing audio:", e));
+            // Toggle between play and pause
+            if (isPlaying && audioRef.current) {
+              audioRef.current.pause();
+              setIsPlaying(false);
+            } else {
+              // If we don't have an audio element yet, create one
+              if (!audioRef.current) {
+                audioRef.current = new Audio('/lagos-inferno-track.mp3');
+                audioRef.current.addEventListener('ended', () => setIsPlaying(false));
+              }
+              
+              // Play the audio
+              const playPromise = audioRef.current.play();
+              if (playPromise !== undefined) {
+                playPromise
+                  .then(() => {
+                    console.log("Audio playing successfully");
+                    setIsPlaying(true);
+                  })
+                  .catch(e => {
+                    console.error("Error playing audio:", e);
+                    
+                    // Try an alternative approach for browser compatibility
+                    if (!document.getElementById('audio-element')) {
+                      const audioEl = document.createElement('audio');
+                      audioEl.id = 'audio-element';
+                      audioEl.src = '/lagos-inferno-track.mp3';
+                      audioEl.controls = true;
+                      audioEl.style.display = 'none';
+                      document.body.appendChild(audioEl);
+                      
+                      setTimeout(() => {
+                        const addedAudio = document.getElementById('audio-element') as HTMLAudioElement;
+                        addedAudio?.play()
+                          .then(() => setIsPlaying(true))
+                          .catch(err => console.error("Second attempt failed:", err));
+                      }, 100);
+                    }
+                  });
+              }
             }
           }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            {isPlaying ? (
+              <rect x="6" y="4" width="4" height="16" /> /* Pause icon left bar */
+            ) : (
+              <polygon points="5 3 19 12 5 21 5 3"></polygon> /* Play icon */
+            )}
           </svg>
-          <span>Play Lagos Inferno</span>
+          <span>{isPlaying ? 'Pause' : 'Play Lagos Inferno'}</span>
         </button>
+        
+        {/* Hidden backup audio element */}
+        <audio 
+          id="lagos-inferno"
+          src="/lagos-inferno-track.mp3"
+          preload="auto" 
+          style={{ display: 'none' }}
+        ></audio>
 
         {/* Animated background with audio visualizer */}
         <div className="absolute inset-0 z-0">
