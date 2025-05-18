@@ -19,9 +19,9 @@ const SimpleAudioVisualizer = ({
 }: SimpleAudioVisualizerProps) => {
   const bars = Array.from({ length: barCount }, (_, i) => ({
     id: i,
-    // Staggered pattern for fluid movement
-    delay: (i % 4) * 0.1, 
-    duration: 0.8 + (i % 3) * 0.3 // Faster animation
+    // Medium pattern with consistent timing
+    delay: (i % 5) * 0.2, // Fixed .2 second delay as requested
+    duration: 1.0 // Fixed 1.0 second duration as requested
   }));
   
   return (
