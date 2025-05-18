@@ -358,15 +358,16 @@ export default function Home() {
           <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px]"></div>
           <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px]"></div>
           
-          {/* Audio Visualizer */}
+          {/* Audio Visualizer that responds to music */}
           <div className="absolute inset-0 z-[5]">
-            <SimpleAudioVisualizer 
+            <AudioVisualizer 
               barCount={80}
-              minHeight={5}
-              maxHeight={70}
+              minHeight={3}
+              maxHeight={50}
               baseColor="rgba(255, 165, 0, 0.15)"
               accentColor="rgba(255, 165, 0, 0.6)"
               className="w-full h-1/3 bottom-0 absolute px-4"
+              audioUrl="/lagos-inferno.mp3"
             />
           </div>
           

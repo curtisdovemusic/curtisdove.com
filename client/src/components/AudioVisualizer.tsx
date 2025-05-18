@@ -22,38 +22,18 @@ const AudioVisualizer = ({
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
+  const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
   const [audioData, setAudioData] = useState<Uint8Array>(new Uint8Array(barCount).fill(minHeight));
   const animationRef = useRef<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isAudioInitialized, setIsAudioInitialized] = useState(false);
 
-  // Setup audio context and analyzer
+  // Setup audio element
   useEffect(() => {
-    // Create audio element
     const audio = new Audio(audioUrl);
     audio.crossOrigin = 'anonymous';
     audioRef.current = audio;
 
-    // Create audio context
-    const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
-    const audioContext = new AudioContext();
-    audioContextRef.current = audioContext;
-
-    // Create analyzer
-    const analyser = audioContext.createAnalyser();
-    analyser.fftSize = 256;
-    analyserRef.current = analyser;
-
-    // Create source from audio element
-    const source = audioContext.createMediaElementSource(audio);
-    source.connect(analyser);
-    analyser.connect(audioContext.destination);
-
-    // Set up audio data array
-    const bufferLength = analyser.frequencyBinCount;
-    const audioDataArray = new Uint8Array(bufferLength);
-    setAudioData(audioDataArray);
-
-    // Clean up
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -67,6 +47,33 @@ const AudioVisualizer = ({
       }
     };
   }, [audioUrl]);
+
+  // Initialize audio context (must be called after user interaction)
+  const initializeAudio = () => {
+    if (isAudioInitialized || !audioRef.current) return;
+    
+    try {
+      // Create audio context
+      const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+      const audioContext = new AudioContext();
+      audioContextRef.current = audioContext;
+      
+      // Create analyzer
+      const analyser = audioContext.createAnalyser();
+      analyser.fftSize = 256;
+      analyserRef.current = analyser;
+      
+      // Connect audio to analyzer
+      const source = audioContext.createMediaElementSource(audioRef.current);
+      sourceRef.current = source;
+      source.connect(analyser);
+      analyser.connect(audioContext.destination);
+      
+      setIsAudioInitialized(true);
+    } catch (error) {
+      console.error("Error initializing audio context:", error);
+    }
+  };
 
   // Animation function to update bars
   const updateBars = () => {
@@ -84,6 +91,11 @@ const AudioVisualizer = ({
 
   // Handle play/pause
   const togglePlayback = () => {
+    // Initialize audio context on first play (must happen on user interaction)
+    if (!isAudioInitialized) {
+      initializeAudio();
+    }
+    
     if (!audioRef.current || !audioContextRef.current) return;
     
     // Resume audio context if suspended
