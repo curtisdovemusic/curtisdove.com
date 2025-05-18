@@ -1116,25 +1116,34 @@ export default function Home() {
           </h2>
           
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-br from-amber-500 via-purple-500 to-red-500 opacity-0 group-hover:opacity-50 blur-xl rounded-2xl transition-all duration-700"></div>
-                <div className="relative overflow-hidden rounded-2xl">
+            <div className="lg:w-1/2 flex justify-center">
+              <div className="relative group w-3/4 md:w-2/3">
+                {/* Pulsing outer ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-500 via-purple-500 to-red-500 blur-md animate-pulse"></div>
+                
+                {/* Rotating gradient border */}
+                <div className="absolute inset-1 rounded-full bg-gradient-to-r from-amber-400 via-purple-500 to-amber-400 animate-spin-slow"></div>
+                
+                {/* Inner content container */}
+                <div className="relative mx-1.5 my-1.5 overflow-hidden rounded-full border-4 border-zinc-900">
+                  {/* Image */}
                   <img 
                     src={ProfilePicture} 
                     alt="Curtis Dove portrait" 
-                    className="w-full h-auto object-cover shadow-2xl transform transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-auto aspect-square object-cover shadow-2xl transform transition-transform duration-700 group-hover:scale-110 group-hover:rotate-3"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity"></div>
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -bottom-6 -right-6 px-6 py-3 bg-zinc-800/90 backdrop-blur-sm rounded-xl border border-amber-500/30 shadow-xl transform group-hover:translate-y-2 group-hover:-translate-x-2 transition-transform duration-500">
-                  <div className="flex items-center gap-3">
+                <div className="absolute -bottom-6 right-0 px-5 py-2 bg-zinc-800/90 backdrop-blur-sm rounded-xl border border-amber-500/30 shadow-xl transform translate-y-0 group-hover:translate-y-2 group-hover:-translate-x-2 transition-transform duration-500">
+                  <div className="flex items-center gap-2">
                     <i className="fas fa-music text-amber-500"></i>
                     <div>
                       <div className="text-sm font-bold">141+ Songs</div>
-                      <div className="text-xs text-white/60">Available on all platforms</div>
+                      <div className="text-xs text-white/60">All platforms</div>
                     </div>
                   </div>
                 </div>
