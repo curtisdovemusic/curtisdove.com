@@ -361,15 +361,21 @@ export default function Home() {
           
           {/* Music Tile and Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
-            {/* Music Tile in the top-left */}
-            <div className="fixed top-20 left-10 z-50">
-              <SimpleMusicPlayer
-                title="Lagos Inferno"
-                artist="Curtis Dove"
-                coverImage="/lagos-inferno-cover.jpeg"
-                audioSrc="/lagos-inferno.mp3"
-                className="w-72 transform hover:scale-105 hover:shadow-amber-600/20"
-              />
+            {/* Audio Player */}
+            <div className="fixed top-5 right-5 z-50">
+              <div className="bg-amber-500 shadow-xl rounded-full p-2 flex items-center justify-center">
+                <button
+                  onClick={() => {
+                    const audio = new Audio('/lagos-inferno.mp3');
+                    audio.play().catch(e => console.error(e));
+                  }}
+                  className="w-10 h-10 flex items-center justify-center"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="black" strokeWidth="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </button>
+              </div>
             </div>
             
             {/* Regular visualizer at the bottom */}
