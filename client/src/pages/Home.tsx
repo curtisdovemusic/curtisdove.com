@@ -762,6 +762,33 @@ export default function Home() {
                             loading="lazy">
                           </iframe>
                         </div>
+                        
+                        {/* Slide-out links panel */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
+                          <div className="text-center p-5">
+                            <h4 className="text-white text-lg font-semibold mb-4">Visit playlist on</h4>
+                            <div className="flex justify-center gap-8 mb-3">
+                              <a 
+                                href="https://open.spotify.com/playlist/7qWyO3vNYIWRgiGcTQT9Bd?si=5DnfyoQySAOW-kghO-mdEg" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-green-400 transition-colors transform hover:scale-110"
+                              >
+                                <i className="fab fa-spotify text-4xl"></i>
+                                <p className="mt-2 text-sm">Spotify</p>
+                              </a>
+                              <a 
+                                href="https://youtube.com/playlist?list=PLli7EgSWWodvRCs3OIS0vOEqsan96bOsP&si=26GYkZEuCgMrvIbo" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-red-500 transition-colors transform hover:scale-110"
+                              >
+                                <i className="fab fa-youtube text-4xl"></i>
+                                <p className="mt-2 text-sm">YouTube</p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -788,6 +815,33 @@ export default function Home() {
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                             loading="lazy">
                           </iframe>
+                        </div>
+                        
+                        {/* Slide-out links panel */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl">
+                          <div className="text-center p-5">
+                            <h4 className="text-white text-lg font-semibold mb-4">Visit playlist on</h4>
+                            <div className="flex justify-center gap-8 mb-3">
+                              <a 
+                                href="https://open.spotify.com/playlist/13nhg6SPkxfMaAkj2Cra6M?si=J6YxCxITQVuaLEHunXBZRA" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-green-400 transition-colors transform hover:scale-110"
+                              >
+                                <i className="fab fa-spotify text-4xl"></i>
+                                <p className="mt-2 text-sm">Spotify</p>
+                              </a>
+                              <a 
+                                href="https://youtu.be/MTJ1gIenisg?si=XctmuL0lx2aFyuiK" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-red-500 transition-colors transform hover:scale-110"
+                              >
+                                <i className="fab fa-youtube text-4xl"></i>
+                                <p className="mt-2 text-sm">YouTube</p>
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
