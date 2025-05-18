@@ -379,17 +379,19 @@ export default function Home() {
           {/* Music Tile and Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
             
-            {/* Simple visualizer animation at the bottom */}
-            <div className="w-full absolute bottom-0 left-0 flex justify-center mb-6">
-              <SimpleVisualizer 
-                barCount={80}
-                minHeight={3}
-                maxHeight={30}
-                baseColor="rgba(255, 165, 0, 0.2)"
-                accentColor="rgba(255, 165, 0, 0.8)"
-                className="w-full max-w-3xl px-4"
-                animationActive={true}
-              />
+            {/* Prominent visualizer at the bottom */}
+            <div className="w-full h-32 absolute bottom-0 left-0 flex justify-center items-end">
+              <div className="bg-black/30 backdrop-blur-sm w-full py-4 px-2">
+                <SimpleVisualizer 
+                  barCount={60}
+                  minHeight={10}
+                  maxHeight={60}
+                  baseColor="rgba(255, 165, 0, 0.4)"
+                  accentColor="rgba(255, 165, 0, 1)"
+                  className="w-full max-w-4xl mx-auto h-24"
+                  animationActive={true}
+                />
+              </div>
             </div>
           </div>
           

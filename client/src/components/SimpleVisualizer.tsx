@@ -74,7 +74,8 @@ const SimpleVisualizer = ({
               style={{
                 height: `${height}px`,
                 backgroundColor: height > (minHeight + ((maxHeight - minHeight) * 0.7)) ? accentColor : baseColor,
-                transition: 'height 1.0s ease-in-out'
+                transition: 'height 1.0s ease-in-out',
+                minHeight: '5px' // Ensure minimum visibility
               }}
             />
           </div>
