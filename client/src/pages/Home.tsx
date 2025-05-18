@@ -253,14 +253,30 @@ export default function Home() {
       <nav className={`fixed w-full top-0 z-40 transition-all duration-500 ${scrollY > 50 ? 'bg-black/90 backdrop-blur-sm py-4' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
-            <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-2xl font-bold flex items-center gap-2">
-              <span className="text-amber-500">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
-                </svg>
-              </span>
-
-            </a>
+            <div className="flex items-center">
+              <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className="text-2xl font-bold flex items-center gap-2">
+                <span className="text-amber-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
+                  </svg>
+                </span>
+              </a>
+              
+              {/* Spotify Player in the header */}
+              <div className="ml-4 hidden lg:block">
+                <iframe 
+                  src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator" 
+                  width="250" 
+                  height="80" 
+                  frameBorder="0" 
+                  allowFullScreen 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                  title="Lagos Inferno Spotify Player"
+                  style={{ opacity: 0.9 }}
+                ></iframe>
+              </div>
+            </div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -353,19 +369,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Spotify Player */}
-        <div className="fixed top-24 right-6 z-50 shadow-lg rounded-lg overflow-hidden">
-          <iframe 
-            src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator" 
-            width="300" 
-            height="80" 
-            frameBorder="0" 
-            allowFullScreen 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy"
-            title="Lagos Inferno Spotify Player"
-          ></iframe>
-        </div>
+
 
         {/* Animated background with audio visualizer */}
         <div className="absolute inset-0 z-0">
