@@ -452,7 +452,7 @@ export default function Home() {
                 <div className="aspect-video bg-black rounded-lg overflow-hidden">
                   <iframe 
                     style={{ borderRadius: '12px' }} 
-                    src="https://open.spotify.com/embed/track/6n97QoeYhQr7hAKiDeWYL4?utm_source=generator" 
+                    src="https://open.spotify.com/embed/track/3jPLqB5Qu6S1AvUrcyC2Qt?utm_source=generator" 
                     width="100%" 
                     height="100%" 
                     frameBorder="0" 
