@@ -617,6 +617,48 @@ export default function Home() {
               </div>
             </div>
             
+            {/* Featured Playlist Section */}
+            <div className="w-full max-w-3xl mx-auto mb-12 relative">
+              <div className="text-center mb-4">
+                <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-green-600/30 to-blue-900/30 text-white text-base font-medium rounded-full border border-green-500/50">
+                  FEATURED PLAYLIST
+                </span>
+              </div>
+              
+              {/* Playlist container with glow */}
+              <div className="relative">
+                {/* Glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-green-600/30 via-blue-400/40 to-green-600/30 rounded-xl blur-sm"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-green-500/15 via-blue-300/20 to-green-500/15 rounded-xl blur-md"></div>
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-green-600/10 via-blue-400/15 to-green-600/10 rounded-xl blur-lg"></div>
+                
+                {/* Playlist embed */}
+                <div className="relative bg-[#121212] rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://open.spotify.com/embed/playlist/5TM9eU84gXNVG7pKJMCn39?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="352" 
+                    frameBorder="0" 
+                    allowFullScreen 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    className="rounded-lg"
+                    style={{ background: "#121212" }}
+                  ></iframe>
+                </div>
+              </div>
+              
+              {/* Call to action */}
+              <div className="mt-4 text-center">
+                <div className="inline-flex items-center justify-center bg-gradient-to-r from-green-900/60 via-blue-900/60 to-green-900/60 backdrop-blur-sm p-3 rounded-lg border border-green-500/30 shadow-lg">
+                  <span className="text-lg">🎶</span>
+                  <p className="text-white text-lg ml-2 font-medium">
+                    Over 1,100+ listeners are vibing to this — <span className="text-green-400 font-semibold">save & stream now!</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
             <div className="w-full max-w-2xl mx-auto mb-10 bg-black/40 backdrop-blur-sm rounded-md p-4">
               <div className="flex flex-wrap justify-center text-xl md:text-2xl text-white/90 mb-3">
                 <span className="text-amber-400 font-semibold mx-1">8 ALBUMS</span>
