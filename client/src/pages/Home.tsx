@@ -1460,21 +1460,24 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* Decorative elements */}
-                <div className="absolute -bottom-6 right-0 px-5 py-2 bg-zinc-800/90 backdrop-blur-sm rounded-xl border border-amber-500/30 shadow-xl transform translate-y-0 group-hover:translate-y-2 group-hover:-translate-x-2 transition-transform duration-500">
-                  <div className="flex items-center gap-2">
-                    <i className="fas fa-music text-amber-500"></i>
-                    <div>
-                      <div className="text-sm font-bold">141+ Songs</div>
-                      <div className="text-xs text-white/60">All platforms</div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Title badge */}
+                {/* Title badges */}
                 <div className="absolute -top-4 -left-4 px-4 py-2 bg-gradient-to-r from-amber-600/80 to-amber-500/80 backdrop-blur-sm rounded-xl border border-amber-400/50 shadow-xl transform rotate-355 group-hover:rotate-0 transition-transform duration-500">
                   <div className="flex items-center gap-2">
                     <div className="text-sm font-bold text-black">Digital Sound Architect</div>
+                  </div>
+                </div>
+                
+                {/* Songwriter badge */}
+                <div className="absolute top-1/4 -right-4 px-4 py-2 bg-gradient-to-r from-purple-600/80 to-purple-500/80 backdrop-blur-sm rounded-xl border border-purple-400/50 shadow-xl transform rotate-5 group-hover:rotate-0 transition-transform duration-500">
+                  <div className="flex items-center gap-2">
+                    <div className="text-sm font-bold text-black">Songwriter</div>
+                  </div>
+                </div>
+                
+                {/* Recording Artist badge */}
+                <div className="absolute bottom-1/4 -left-4 px-4 py-2 bg-gradient-to-r from-blue-600/80 to-blue-500/80 backdrop-blur-sm rounded-xl border border-blue-400/50 shadow-xl transform rotate-355 group-hover:rotate-0 transition-transform duration-500">
+                  <div className="flex items-center gap-2">
+                    <div className="text-sm font-bold text-black">Recording Artist</div>
                   </div>
                 </div>
               </div>
