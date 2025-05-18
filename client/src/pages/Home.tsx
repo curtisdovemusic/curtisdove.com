@@ -1074,7 +1074,7 @@ export default function Home() {
               
               <div className="prose prose-invert max-w-none">
                 <blockquote className="border-l-4 border-amber-500/50 pl-4 italic text-white/70">
-                  "...the range of talents and styles that Dove incorporates into his music is truly impressive. He's bringing a level of professionalism to his art that is setting him up for some bigger stages as his career continues."
+                  "...the range of talents and styles that Dove incorporates into his music is truly impressive. He's bringing a level of professionalism to his art that is setting him up for continued success as his career progresses."
                 </blockquote>
                 
                 <p className="text-white/80 mt-6">
@@ -1157,11 +1157,11 @@ export default function Home() {
                 </p>
                 
                 <p className="text-xl leading-relaxed text-white/90">
-                  His music draws inspiration from a diverse range of influences, creating sonic experiences that resonate with listeners across the globe. Curtis has built a dedicated following with his authentic approach to songwriting and performance.
+                  His music draws inspiration from a diverse range of influences, creating sonic experiences that resonate with listeners across the globe. Curtis has built a dedicated following with his authentic approach to songwriting and production.
                 </p>
                 
                 <p className="text-xl leading-relaxed text-white/90">
-                  Having performed at venues around the country, Curtis continues to push creative boundaries with each new release, crafting songs that tell stories while keeping the audience moving.
+                  Curtis continues to push creative boundaries with each new release, crafting songs that tell stories while delivering captivating musical experiences.
                 </p>
                 
                 <div className="pt-6">
