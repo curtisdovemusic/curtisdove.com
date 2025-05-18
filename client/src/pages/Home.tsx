@@ -5,6 +5,7 @@ import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
+import AudioVisualizer from "../components/AudioVisualizer";
 
 // Reference album artwork with CSS background classes instead
 // We now get album covers directly from CollapsibleGenre
