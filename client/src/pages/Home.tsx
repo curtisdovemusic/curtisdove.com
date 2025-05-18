@@ -1303,7 +1303,7 @@ export default function Home() {
                   <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
                     <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
                       <img 
-                        src="https://i.scdn.co/image/ab67616d0000b273e69c54cf21e983bce3422482" 
+                        src="https://i.ytimg.com/vi/FDAvAFSviMk/maxresdefault.jpg" 
                         alt="One Wish Album Cover" 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -1351,7 +1351,7 @@ export default function Home() {
                   <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
                     <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
                       <img 
-                        src="https://i.scdn.co/image/ab67616d0000b2734f5de3cf03cf75f00ebdbc4b" 
+                        src="https://i.ytimg.com/vi/aEDOnJLXgJs/maxresdefault.jpg" 
                         alt="Lagos Inferno Album Cover" 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -1398,7 +1398,7 @@ export default function Home() {
                   <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
                     <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
                       <img 
-                        src="https://i.scdn.co/image/ab67616d0000b273b8a5f3f9a98c8cc8bb9ca8ea" 
+                        src="https://i.ytimg.com/vi/wQ85OXHBD3E/maxresdefault.jpg" 
                         alt="Whispers in the Wind Album Cover" 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
