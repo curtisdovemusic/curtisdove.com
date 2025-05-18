@@ -238,7 +238,7 @@ export default function Home() {
   
   return (
     <div className="bg-black text-white overflow-hidden">
-      {/* Custom music note cursor effect with interaction animation */}
+      {/* Custom music cursor effect with shape-changing interaction */}
       <div 
         ref={cursorRef}
         className={`hidden md:block fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 ${isClicking ? 'opacity-100' : 'opacity-80'}`}
@@ -248,17 +248,28 @@ export default function Home() {
           height: '24px',
         }}
       >
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 24 24" 
-          fill="currentColor" 
-          className={`${isClicking ? 'text-purple-500 scale-150 rotate-12' : 'text-amber-500'} transform transition-all duration-500`}
-          style={{
-            filter: isClicking ? 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.8))' : 'none'
-          }}
-        >
-          <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
-        </svg>
+        {!isClicking ? (
+          // Default state: Music Note
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="currentColor" 
+            className="text-amber-500 transform transition-all duration-500"
+          >
+            <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
+          </svg>
+        ) : (
+          // Clicked state: Headphones
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="currentColor" 
+            className="text-purple-500 scale-150 transform transition-all duration-500"
+            style={{filter: 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.8))'}}
+          >
+            <path d="M4.5 4.5a3 3 0 00-3 3v9a3 3 0 003 3h8.25a3 3 0 003-3v-9a3 3 0 00-3-3H4.5zM19.94 18.75l-2.69-2.69V7.94l2.69-2.69c.944-.945 2.56-.276 2.56 1.06v11.38c0 1.336-1.616 2.005-2.56 1.06z" />
+          </svg>
+        )}
       </div>
       
       {/* Fixed Navigation */}
