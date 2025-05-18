@@ -558,26 +558,62 @@ export default function Home() {
               </h2>
             </div>
             
-            {/* Music Player for Lagos Inferno with glowing edge */}
-            <div className="audio-player-container w-full max-w-md mx-auto mb-8 relative">
-              {/* Multi-layered glow effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-600/20 via-amber-400/30 to-amber-600/20 rounded-xl blur-sm"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/10 via-amber-300/15 to-amber-500/10 rounded-xl blur-md"></div>
-              <div className="absolute -inset-1.5 bg-gradient-to-tr from-amber-600/5 via-amber-400/10 to-amber-600/5 rounded-xl blur-lg"></div>
+            {/* Featured tracks with glowing edges */}
+            <div className="flex flex-col md:flex-row gap-6 w-full max-w-3xl mx-auto mb-8">
+              {/* Latest Release - Vibration */}
+              <div className="audio-player-container w-full relative">
+                <div className="text-center mb-2">
+                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600/30 to-purple-900/30 text-white text-sm font-medium rounded-full border border-purple-500/50">
+                    LATEST RELEASE
+                  </span>
+                </div>
+                {/* Multi-layered glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/30 via-purple-400/40 to-purple-600/30 rounded-xl blur-sm"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/15 via-purple-300/20 to-purple-500/15 rounded-xl blur-md"></div>
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-purple-600/10 via-purple-400/15 to-purple-600/10 rounded-xl blur-lg"></div>
+                
+                {/* Player container */}
+                <div className="relative bg-[#121212] rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://open.spotify.com/embed/track/4GMOAFbPxGKeR06l3KukNo?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="80" 
+                    frameBorder="0" 
+                    allowFullScreen 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    className="rounded-lg"
+                    style={{ background: "#121212" }}
+                  ></iframe>
+                </div>
+              </div>
               
-              {/* Player container */}
-              <div className="relative bg-[#121212] rounded-lg overflow-hidden">
-                <iframe 
-                  src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator&theme=0" 
-                  width="100%" 
-                  height="80" 
-                  frameBorder="0" 
-                  allowFullScreen 
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                  loading="lazy"
-                  className="rounded-lg"
-                  style={{ background: "#121212" }}
-                ></iframe>
+              {/* Featured Track - Lagos Inferno */}
+              <div className="audio-player-container w-full relative">
+                <div className="text-center mb-2">
+                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-amber-600/30 to-amber-900/30 text-white text-sm font-medium rounded-full border border-amber-500/50">
+                    FEATURED TRACK
+                  </span>
+                </div>
+                {/* Multi-layered glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-600/20 via-amber-400/30 to-amber-600/20 rounded-xl blur-sm"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/10 via-amber-300/15 to-amber-500/10 rounded-xl blur-md"></div>
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-amber-600/5 via-amber-400/10 to-amber-600/5 rounded-xl blur-lg"></div>
+                
+                {/* Player container */}
+                <div className="relative bg-[#121212] rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://open.spotify.com/embed/track/2Jl963Qb99vuKanGnYaUeI?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="80" 
+                    frameBorder="0" 
+                    allowFullScreen 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                    className="rounded-lg"
+                    style={{ background: "#121212" }}
+                  ></iframe>
+                </div>
               </div>
             </div>
             
