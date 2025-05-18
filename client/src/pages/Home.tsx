@@ -460,8 +460,38 @@ export default function Home() {
                         <span className="w-2 h-8 bg-yellow-500 rounded-full mr-3"></span>
                         <h3 className="text-xl font-bold">Lagos Nights & Island Lights</h3>
                       </div>
-                      <div className="aspect-video">
+                      <div className="aspect-video" id="lagos-nights-player">
                         <iframe 
+                          ref={(el) => {
+                            if (el) {
+                              // Create intersection observer for this element
+                              const observer = new IntersectionObserver(
+                                (entries) => {
+                                  entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                      // When element is in view, reload iframe with autoplay parameter
+                                      // Only do this if user has interacted with the page
+                                      if (window.hasInteracted) {
+                                        const iframe = entry.target.querySelector('iframe');
+                                        if (iframe) {
+                                          // Add autoplay=1 to the URL
+                                          const currentSrc = iframe.src;
+                                          if (!currentSrc.includes('autoplay=1')) {
+                                            iframe.src = `${currentSrc}&autoplay=1`;
+                                          }
+                                        }
+                                      }
+                                      // Unobserve after first play attempt
+                                      observer.unobserve(entry.target);
+                                    }
+                                  });
+                                },
+                                { threshold: 0.7 } // 70% of element must be visible
+                              );
+                              
+                              observer.observe(el);
+                            }
+                          }}
                           style={{ borderRadius: '12px' }} 
                           src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator" 
                           width="100%" 
