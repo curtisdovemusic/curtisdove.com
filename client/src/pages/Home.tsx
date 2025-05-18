@@ -5,6 +5,7 @@ import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
+import SimpleVisualizer from "../components/SimpleVisualizer";
 import MusicVisualizer from "../components/MusicVisualizer";
 import SimpleMusicPlayer from "../components/SimpleMusicPlayer";
 
@@ -378,16 +379,16 @@ export default function Home() {
           {/* Music Tile and Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
             
-            {/* Regular visualizer at the bottom */}
+            {/* Simple visualizer animation at the bottom */}
             <div className="w-full absolute bottom-0 left-0 flex justify-center mb-6">
-              <MusicVisualizer 
+              <SimpleVisualizer 
                 barCount={80}
                 minHeight={3}
-                maxHeight={50}
+                maxHeight={30}
                 baseColor="rgba(255, 165, 0, 0.2)"
                 accentColor="rgba(255, 165, 0, 0.8)"
                 className="w-full max-w-3xl px-4"
-                audioSrc="/lagos-inferno.mp3"
+                animationActive={true}
               />
             </div>
           </div>
