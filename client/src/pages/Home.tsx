@@ -635,7 +635,7 @@ export default function Home() {
                 {/* Playlist embed */}
                 <div className="relative bg-[#121212] rounded-lg overflow-hidden">
                   <iframe 
-                    src="https://open.spotify.com/embed/playlist/5TM9eU84gXNVG7pKJMCn39?utm_source=generator&theme=0" 
+                    src="https://open.spotify.com/embed/playlist/0OMB5854ceBpFP6vtT1uHn?utm_source=generator&theme=0" 
                     width="100%" 
                     height="352" 
                     frameBorder="0" 
@@ -653,7 +653,7 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center bg-gradient-to-r from-green-900/60 via-blue-900/60 to-green-900/60 backdrop-blur-sm p-3 rounded-lg border border-green-500/30 shadow-lg">
                   <span className="text-lg">🎶</span>
                   <p className="text-white text-lg ml-2 font-medium">
-                    Over 1,100+ listeners are vibing to this — <span className="text-green-400 font-semibold">save & stream now!</span>
+                    Over 1,100+ listeners are vibing to this — <span className="text-green-400 font-semibold">Save & Stream Now!</span>
                   </p>
                 </div>
               </div>
