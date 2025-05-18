@@ -1456,8 +1456,8 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* Professional title panel */}
-                <div className="absolute -bottom-24 left-0 right-0 flex justify-center">
+                {/* Professional title panel - moved further down */}
+                <div className="absolute -bottom-36 left-0 right-0 flex justify-center">
                   <div className="px-6 py-3 bg-zinc-900/80 backdrop-blur-md rounded-lg border border-zinc-800 shadow-lg">
                     <div className="flex items-center justify-center space-x-5">
                       <div className="flex flex-col items-center">
