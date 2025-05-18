@@ -1352,12 +1352,12 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* Trending Track 2: Lagos Inferno */}
+                  {/* Trending Track 2: Lagos Islands */}
                   <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
                     <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
                       <img 
-                        src="https://i.ytimg.com/vi/aEDOnJLXgJs/maxresdefault.jpg" 
-                        alt="Lagos Inferno Album Cover" 
+                        src="https://i.ytimg.com/vi/bvyBlA0S4BA/maxresdefault.jpg" 
+                        alt="Lagos Islands Album Cover" 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60"></div>
@@ -1365,7 +1365,7 @@ export default function Home() {
                         <span className="px-2 py-1 text-xs font-semibold bg-amber-500/90 text-white rounded-full">FEATURED</span>
                       </div>
                       <a 
-                        href="https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI" 
+                        href="https://open.spotify.com/track/5OjzxlwXLT0Sp19VnKRgVV?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=9AWp_0uFTeO2MBiVc-DASQ" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center bg-green-500/90 rounded-full text-white hover:bg-green-600 transition-colors"
@@ -1373,7 +1373,7 @@ export default function Home() {
                         <i className="fab fa-spotify text-lg"></i>
                       </a>
                       <a 
-                        href="https://www.youtube.com/watch?v=aEDOnJLXgJs" 
+                        href="https://youtu.be/bvyBlA0S4BA?si=oxrhhVzI_4exuD9E" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
@@ -1381,25 +1381,26 @@ export default function Home() {
                         <i className="fas fa-play text-xl pl-1"></i>
                       </a>
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-1">Lagos Inferno</h4>
+                    <h4 className="text-xl font-bold text-white mb-1">Lagos Islands</h4>
                     <p className="text-white/60 text-sm mb-3">Album: Eko Island Beats</p>
                     <div className="flex items-center justify-between">
                       <a 
-                        href="https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI" 
+                        href="https://open.spotify.com/track/5OjzxlwXLT0Sp19VnKRgVV?context=spotify:playlist:0OMB5854ceBpFP6vtT1uHn&si=9AWp_0uFTeO2MBiVc-DASQ" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center text-white/70 hover:text-green-500 transition-colors"
                       >
                         <i className="fab fa-spotify text-green-500 mr-2"></i>
-                        <span className="text-sm">6,915 streams</span>
+                        <span className="text-sm">39,000+ streams</span>
                       </a>
                       <a 
-                        href="https://www.youtube.com/watch?v=aEDOnJLXgJs" 
+                        href="https://youtu.be/bvyBlA0S4BA?si=oxrhhVzI_4exuD9E" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-white/70 hover:text-red-500 transition-colors"
+                        className="flex items-center text-white/70 hover:text-red-500 transition-colors"
                       >
-                        <i className="fab fa-youtube text-lg"></i>
+                        <i className="fab fa-youtube text-lg mr-1"></i>
+                        <span className="text-sm">98,000+ streams</span>
                       </a>
                     </div>
                   </div>
