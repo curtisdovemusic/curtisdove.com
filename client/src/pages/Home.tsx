@@ -354,12 +354,21 @@ export default function Home() {
         <button 
           className="fixed top-24 right-6 z-50 bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-6 rounded-full shadow-lg flex items-center gap-2 transition-all hover:scale-105"
           onClick={() => {
-            // Create audio element and set specific attributes
-            const audio = new Audio('./attached_assets/Lagos Inferno.mp3');
-            // Try to play
-            audio.play()
-              .then(() => console.log("Audio playing"))
-              .catch(e => console.error("Error playing audio:", e));
+            // Create a persistent audio element if it doesn't exist
+            if (!document.getElementById('lagosinfernoaudio')) {
+              const audioElement = document.createElement('audio');
+              audioElement.id = 'lagosinfernoaudio';
+              audioElement.src = '/lagos-inferno-track.mp3';
+              document.body.appendChild(audioElement);
+            }
+            
+            // Get the audio element and play it
+            const audioEl = document.getElementById('lagosinfernoaudio') as HTMLAudioElement;
+            if (audioEl) {
+              audioEl.play()
+                .then(() => console.log("Audio playing successfully"))
+                .catch(e => console.error("Error playing audio:", e));
+            }
           }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
