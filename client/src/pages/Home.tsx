@@ -1288,7 +1288,163 @@ export default function Home() {
               </div>
             </section>
             
-            {/* Top 20 Feature Removed */}
+            {/* Trending Tracks Section */}
+            <section className="py-16 mb-10">
+              <div className="container mx-auto px-6">
+                <h3 className="text-3xl font-bold text-center mb-3">
+                  TRENDING <span className="text-amber-500">TRACKS</span>
+                </h3>
+                <p className="text-center text-white/70 mb-12 max-w-2xl mx-auto">
+                  These standout tracks are getting serious attention. Listen directly from this page or click to stream on your favorite platform.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                  {/* Trending Track 1: One Wish */}
+                  <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
+                    <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
+                      <img 
+                        src="https://i.scdn.co/image/ab67616d0000b273e69c54cf21e983bce3422482" 
+                        alt="One Wish Album Cover" 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60"></div>
+                      <div className="absolute bottom-3 left-3">
+                        <span className="px-2 py-1 text-xs font-semibold bg-green-500/90 text-white rounded-full">HOT 🔥</span>
+                      </div>
+                      <a 
+                        href="https://open.spotify.com/track/6n97QoeYhQr7hAKiDeWYL4" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center bg-green-500/90 rounded-full text-white hover:bg-green-600 transition-colors"
+                      >
+                        <i className="fab fa-spotify text-lg"></i>
+                      </a>
+                      <button 
+                        className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
+                        onClick={() => {
+                          const audio = new Audio("https://p.scdn.co/mp3-preview/9b237a7aaf5a3d60b0d80de7c9aad4c2b0a98349");
+                          audio.play();
+                        }}
+                      >
+                        <i className="fas fa-play text-xl pl-1"></i>
+                      </button>
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-1">One Wish</h4>
+                    <p className="text-white/60 text-sm mb-3">Album: One Wish – Single</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <i className="fas fa-headphones-alt text-amber-500 mr-2"></i>
+                        <span className="text-white/70 text-sm">7,978 streams</span>
+                      </div>
+                      <a 
+                        href="https://www.youtube.com/watch?v=FDAvAFSviMk" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-white/70 hover:text-red-500 transition-colors"
+                      >
+                        <i className="fab fa-youtube text-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  {/* Trending Track 2: Lagos Inferno */}
+                  <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
+                    <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
+                      <img 
+                        src="https://i.scdn.co/image/ab67616d0000b2734f5de3cf03cf75f00ebdbc4b" 
+                        alt="Lagos Inferno Album Cover" 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60"></div>
+                      <div className="absolute bottom-3 left-3">
+                        <span className="px-2 py-1 text-xs font-semibold bg-amber-500/90 text-white rounded-full">FEATURED</span>
+                      </div>
+                      <a 
+                        href="https://open.spotify.com/track/2Jl963Qb99vuKanGnYaUeI" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center bg-green-500/90 rounded-full text-white hover:bg-green-600 transition-colors"
+                      >
+                        <i className="fab fa-spotify text-lg"></i>
+                      </a>
+                      <button 
+                        className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
+                        onClick={() => {
+                          const audio = new Audio("/lagos-inferno.mp3");
+                          audio.play();
+                        }}
+                      >
+                        <i className="fas fa-play text-xl pl-1"></i>
+                      </button>
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-1">Lagos Inferno</h4>
+                    <p className="text-white/60 text-sm mb-3">Album: Eko Island Beats</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <i className="fas fa-headphones-alt text-amber-500 mr-2"></i>
+                        <span className="text-white/70 text-sm">6,915 streams</span>
+                      </div>
+                      <a 
+                        href="https://www.youtube.com/watch?v=aEDOnJLXgJs" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-white/70 hover:text-red-500 transition-colors"
+                      >
+                        <i className="fab fa-youtube text-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  {/* Trending Track 3: Whispers in the Wind */}
+                  <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
+                    <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
+                      <img 
+                        src="https://i.scdn.co/image/ab67616d0000b273b8a5f3f9a98c8cc8bb9ca8ea" 
+                        alt="Whispers in the Wind Album Cover" 
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60"></div>
+                      <div className="absolute bottom-3 left-3">
+                        <span className="px-2 py-1 text-xs font-semibold bg-blue-500/90 text-white rounded-full">TRENDING</span>
+                      </div>
+                      <a 
+                        href="https://open.spotify.com/track/5B4RtvM6NOyMNRCfLai2ez" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center bg-green-500/90 rounded-full text-white hover:bg-green-600 transition-colors"
+                      >
+                        <i className="fab fa-spotify text-lg"></i>
+                      </a>
+                      <button 
+                        className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
+                        onClick={() => {
+                          const audio = new Audio("https://p.scdn.co/mp3-preview/0c9e79a6b2c53dd4889e035ed827b3a0dee5b5ff");
+                          audio.play();
+                        }}
+                      >
+                        <i className="fas fa-play text-xl pl-1"></i>
+                      </button>
+                    </div>
+                    <h4 className="text-xl font-bold text-white mb-1">Whispers in the Wind</h4>
+                    <p className="text-white/60 text-sm mb-3">Album: Rise From Ashes</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <i className="fas fa-headphones-alt text-amber-500 mr-2"></i>
+                        <span className="text-white/70 text-sm">4,464 streams</span>
+                      </div>
+                      <a 
+                        href="https://www.youtube.com/watch?v=wQ85OXHBD3E" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-white/70 hover:text-red-500 transition-colors"
+                      >
+                        <i className="fab fa-youtube text-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
             
             {/* Listening options section */}
             <div className="mb-10">
