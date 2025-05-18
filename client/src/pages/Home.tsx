@@ -547,7 +547,7 @@ export default function Home() {
               </h1>
             </div>
             
-            <div className="relative inline-block mb-12 w-full">
+            <div className="relative inline-block mb-6 w-full">
               <span className="absolute -inset-1 -z-10 bg-gradient-to-r from-black/30 via-amber-900/20 to-black/30 blur-md opacity-40 rounded-lg"></span>
               <h2 className="relative text-2xl md:text-3xl font-medium tracking-widest py-3 px-6 rounded-lg w-full" style={{
                 letterSpacing: "0.25em",
@@ -556,6 +556,20 @@ export default function Home() {
               }}>
                 BOUNDARY-BREAKING ARTIST
               </h2>
+            </div>
+            
+            {/* Professional tagline */}
+            <div className="max-w-2xl mx-auto mb-5 text-center">
+              <h3 className="text-lg md:text-xl text-white/80 font-light tracking-wider" style={{ letterSpacing: "0.05em" }}>
+                Songwriter | Music Producer | Digital Sound Architect
+              </h3>
+            </div>
+            
+            {/* Artist bio */}
+            <div className="max-w-2xl mx-auto mb-10 text-center">
+              <p className="text-white/70 leading-relaxed">
+                Curtis Dove is a genre-bending songwriter and independent music producer, crafting emotionally rich, rhythm-forward tracks powered by cutting-edge digital production.
+              </p>
             </div>
             
             {/* Featured tracks with glowing edges */}
@@ -1415,15 +1429,15 @@ export default function Home() {
             <div className="lg:w-1/2">
               <div className="space-y-6">
                 <p className="text-xl leading-relaxed text-white/90">
-                  Curtis Dove is a boundary-pushing artist known for blending genres and creating a sound uniquely his own. With over 141+ songs released across major streaming platforms, Curtis has developed a diverse catalog that fuses elements from across the musical spectrum.
+                  Curtis Dove is a recording artist, songwriter, and digital sound architect known for blending Afrobeat, Pop, and Rock. His music fuses heartfelt storytelling with cutting-edge sound design, crafting immersive experiences across cultures and genres.
                 </p>
                 
                 <p className="text-xl leading-relaxed text-white/90">
-                  His music draws inspiration from a diverse range of influences, creating sonic experiences that resonate with listeners across the globe. Curtis has built a dedicated following with his authentic approach to songwriting and production.
+                  With over 141+ songs released across major streaming platforms, Curtis has developed a diverse catalog that resonates with listeners worldwide. His genre-bending approach creates a sound uniquely his own while pushing creative boundaries.
                 </p>
                 
                 <p className="text-xl leading-relaxed text-white/90">
-                  Curtis continues to push creative boundaries with each new release, crafting songs that tell stories while delivering captivating musical experiences.
+                  As an independent music producer, Curtis crafts emotionally rich, rhythm-forward tracks powered by cutting-edge digital production, delivering captivating musical experiences that tell authentic stories.
                 </p>
                 
                 <div className="pt-6">
@@ -1635,7 +1649,7 @@ export default function Home() {
       <footer className="py-12 bg-black border-t border-zinc-800">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <div className="mb-6">
+            <div className="mb-4">
               <a 
                 href="#home" 
                 onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
@@ -1643,6 +1657,12 @@ export default function Home() {
               >
                 CURTIS DOVE
               </a>
+            </div>
+            
+            <div className="mb-3">
+              <p className="text-amber-400/90 font-medium tracking-wider">
+                🎶 Songwriter • Producer • Digital Sound Architect
+              </p>
             </div>
             
             <div className="max-w-xl mx-auto mb-8">
