@@ -1312,7 +1312,7 @@ export default function Home() {
                         <span className="px-2 py-1 text-xs font-semibold bg-green-500/90 text-white rounded-full">HOT 🔥</span>
                       </div>
                       <a 
-                        href="https://open.spotify.com/track/6n97QoeYhQr7hAKiDeWYL4" 
+                        href="https://open.spotify.com/track/6n97QoeYhQr7hAKiDeWYL4?context=spotify:playlist:13nhg6SPkxfMaAkj2Cra6M&si=mmahD9sCQVaS0zRZO8Z6Vw" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center bg-green-500/90 rounded-full text-white hover:bg-green-600 transition-colors"
@@ -1333,16 +1333,17 @@ export default function Home() {
                     <p className="text-white/60 text-sm mb-3">Album: One Wish – Single</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
-                        <i className="fas fa-headphones-alt text-amber-500 mr-2"></i>
+                        <i className="fab fa-spotify text-green-500 mr-2"></i>
                         <span className="text-white/70 text-sm">7,978 streams</span>
                       </div>
                       <a 
                         href="https://youtu.be/FDAvAFSviMk?si=aS-x64dELs_CqGJr" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-white/70 hover:text-red-500 transition-colors"
+                        className="flex items-center text-white/70 hover:text-red-500 transition-colors"
                       >
-                        <i className="fab fa-youtube text-lg"></i>
+                        <i className="fab fa-youtube text-lg mr-1"></i>
+                        <span className="text-sm">110,000+ streams</span>
                       </a>
                     </div>
                   </div>
