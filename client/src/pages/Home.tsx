@@ -6,6 +6,7 @@ import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
 import MusicVisualizer from "../components/MusicVisualizer";
+import MusicTile from "../components/MusicTile";
 
 // Reference album artwork with CSS background classes instead
 // We now get album covers directly from CollapsibleGenre
@@ -358,28 +359,17 @@ export default function Home() {
           <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px]"></div>
           <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px]"></div>
           
-          {/* Audio Visualizer with Music Control */}
+          {/* Music Tile and Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
-            {/* Play Button at the top */}
+            {/* Music Tile in the top-left */}
             <div className="absolute top-16 left-16 z-50">
-              <button
-                onClick={() => {
-                  const audio = document.getElementById('lagos-audio') as HTMLAudioElement;
-                  if (audio) {
-                    if (audio.paused) {
-                      audio.play();
-                    } else {
-                      audio.pause();
-                    }
-                  }
-                }}
-                className="bg-amber-600 hover:bg-amber-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl border-2 border-amber-400 transition-all animate-pulse"
-                aria-label="Play Lagos Inferno"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-              </button>
+              <MusicTile 
+                title="Lagos Inferno"
+                artist="Curtis Dove"
+                coverImage="/album-covers/Beats.jpeg"
+                audioSrc="/lagos-inferno.mp3"
+                className="w-64 transform transition-all hover:scale-105"
+              />
             </div>
             
             {/* Regular visualizer at the bottom */}
@@ -395,9 +385,6 @@ export default function Home() {
               />
             </div>
           </div>
-          
-          {/* Audio element explicitly for the play button */}
-          <audio id="lagos-audio" src="/lagos-inferno.mp3" preload="auto" />
           
           {/* Hidden audio element with Lagos Inferno */}
           <audio 
