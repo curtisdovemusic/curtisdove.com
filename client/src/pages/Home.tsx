@@ -4,6 +4,7 @@ import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
 import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
+import AudioVisualizer from "../components/AudioVisualizer";
 
 // Reference album artwork with CSS background classes instead
 // We now get album covers directly from CollapsibleGenre
@@ -347,7 +348,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Animated background */}
+        {/* Animated background with audio visualizer */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10"></div>
           
@@ -355,6 +356,20 @@ export default function Home() {
           <div className="absolute top-[20%] right-[10%] w-96 h-96 rounded-full bg-purple-500/10 blur-[100px]"></div>
           <div className="absolute bottom-[30%] left-[15%] w-80 h-80 rounded-full bg-amber-500/10 blur-[100px]"></div>
           <div className="absolute top-[40%] left-[25%] w-64 h-64 rounded-full bg-red-500/10 blur-[100px]"></div>
+          
+          {/* Audio Visualizer */}
+          <div className="absolute inset-0 z-[5]">
+            <AudioVisualizer 
+              audioUrl="/lagos-inferno-preview.mp3"
+              barCount={100}
+              barSpacing={4}
+              barColor="rgba(255, 165, 0, 0.1)"
+              barColorActive="rgba(255, 165, 0, 0.6)"
+              className="w-full h-1/3 bottom-0 absolute"
+              minBarHeight={5}
+              maxBarHeight={150}
+            />
+          </div>
           
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/60 z-5"></div>
