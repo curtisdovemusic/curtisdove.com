@@ -486,14 +486,19 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="relative mb-6">
               <div className="absolute -inset-3 bg-gradient-to-r from-purple-600 via-amber-500 to-orange-500 blur-xl opacity-30 rounded-lg"></div>
-              <h1 className="relative text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-amber-400 to-amber-500">
+              <h1 className="relative text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-600" style={{
+                textShadow: "0 2px 15px rgba(255, 215, 0, 0.3)",
+                letterSpacing: "-0.02em"
+              }}>
                 CURTIS DOVE
               </h1>
             </div>
             
             <div className="relative inline-block mb-12">
               <span className="absolute -inset-1 -z-10 bg-gradient-to-r from-purple-600 via-amber-500 to-orange-500 blur-sm opacity-50 rounded-lg"></span>
-              <h2 className="relative text-2xl md:text-3xl text-white font-medium tracking-wider py-2 px-6 rounded-lg backdrop-blur-sm">
+              <h2 className="relative text-2xl md:text-3xl font-medium tracking-wider py-2 px-6 rounded-lg backdrop-blur-sm bg-clip-text text-transparent bg-gradient-to-b from-zinc-800 via-zinc-400 to-white" style={{
+                textShadow: "0 1px 8px rgba(255, 255, 255, 0.2)"
+              }}>
                 BOUNDARY-BREAKING ARTIST
               </h2>
             </div>
