@@ -667,7 +667,7 @@ export default function Home() {
                 <div className="inline-flex items-center justify-center bg-gradient-to-r from-green-900/60 via-blue-900/60 to-green-900/60 backdrop-blur-sm p-3 rounded-lg border border-green-500/30 shadow-lg">
                   <span className="text-lg">🎶</span>
                   <p className="text-white text-lg ml-2 font-medium">
-                    Over 1,100+ listeners are vibing to this — <span className="text-green-400 font-semibold">Save & Stream Now!</span>
+                    Over 1,100+ listeners are vibing to this — <a href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn?si=rC8br9wRRqubBLRLBZ7S6Q" target="_blank" rel="noopener noreferrer" className="text-green-400 font-semibold hover:text-green-300 transition-colors">Save & Stream Now!</a>
                   </p>
                 </div>
               </div>
