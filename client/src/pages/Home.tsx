@@ -1395,7 +1395,7 @@ export default function Home() {
                   <div className="bg-gradient-to-b from-zinc-800/80 to-zinc-900/90 rounded-xl p-5 border border-zinc-700/30 hover:border-amber-500/30 transition-all group">
                     <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
                       <img 
-                        src="https://i.ytimg.com/vi/wQ85OXHBD3E/maxresdefault.jpg" 
+                        src="https://i.ytimg.com/vi/Q7Gc7HMnm8Q/maxresdefault.jpg" 
                         alt="Whispers in the Wind Album Cover" 
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -1405,7 +1405,7 @@ export default function Home() {
                       </div>
 
                       <a 
-                        href="https://www.youtube.com/watch?v=wQ85OXHBD3E" 
+                        href="https://youtu.be/Q7Gc7HMnm8Q?si=4cn4uM26nsuJgcWI" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="absolute inset-0 m-auto w-16 h-16 flex items-center justify-center bg-amber-500/90 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-amber-600"
@@ -1417,21 +1417,22 @@ export default function Home() {
                     <p className="text-white/60 text-sm mb-3">Album: Rise From Ashes</p>
                     <div className="flex items-center justify-between">
                       <a 
-                        href="https://open.spotify.com/track/5B4RtvM6NOyMNRCfLai2ez" 
+                        href="https://open.spotify.com/track/00w41xZw4ODLx7YbvOh4fc?context=spotify:playlist:7lUurLZ2vBhayCAc96tTp2&si=8LhTiVtxS_qxAr1W9KgIIg" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center text-white/70 hover:text-green-500 transition-colors"
                       >
                         <i className="fab fa-spotify text-green-500 mr-2"></i>
-                        <span className="text-sm">4,464 streams</span>
+                        <span className="text-sm">34,000+ streams</span>
                       </a>
                       <a 
-                        href="https://www.youtube.com/watch?v=wQ85OXHBD3E" 
+                        href="https://youtu.be/Q7Gc7HMnm8Q?si=4cn4uM26nsuJgcWI" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-white/70 hover:text-red-500 transition-colors"
+                        className="flex items-center text-white/70 hover:text-red-500 transition-colors"
                       >
-                        <i className="fab fa-youtube text-lg"></i>
+                        <i className="fab fa-youtube text-lg mr-1"></i>
+                        <span className="text-sm">22,000+ streams</span>
                       </a>
                     </div>
                   </div>
