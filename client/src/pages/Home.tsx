@@ -1413,6 +1413,37 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity"></div>
                 </div>
                 
+                {/* Signature with spectacular glow effect */}
+                <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-full">
+                  <div className="relative">
+                    {/* Glow layer */}
+                    <div 
+                      className="absolute inset-0 blur-md opacity-70 animate-pulse-slow"
+                      style={{
+                        background: 'linear-gradient(90deg, transparent, rgba(192, 202, 211, 0.2), rgba(192, 202, 211, 0.4), rgba(192, 202, 211, 0.2), transparent)',
+                        transform: 'translateY(2px)'
+                      }}
+                    ></div>
+                    
+                    {/* Silver metallic text with enhanced glow - more elegant and professional */}
+                    <div 
+                      className="font-signature text-7xl text-center whitespace-nowrap filter drop-shadow-lg group-hover:scale-110 transition-transform duration-700"
+                      style={{
+                        background: 'linear-gradient(to bottom, #f8fafc, #94a3b8, #cbd5e1, #e2e8f0)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        textShadow: '0 0 10px rgba(226, 232, 240, 0.6), 0 0 20px rgba(226, 232, 240, 0.4), 0 0 30px rgba(226, 232, 240, 0.2), 0 0 2px #fff',
+                        fontFamily: "'Great Vibes', cursive",
+                        fontWeight: "400",
+                        letterSpacing: "0.02em",
+                        transform: 'scale(1.4)'
+                      }}
+                    >
+                      Curtis Dove
+                    </div>
+                  </div>
+                </div>
+                
                 {/* Decorative elements */}
                 <div className="absolute -bottom-6 right-0 px-5 py-2 bg-zinc-800/90 backdrop-blur-sm rounded-xl border border-amber-500/30 shadow-xl transform translate-y-0 group-hover:translate-y-2 group-hover:-translate-x-2 transition-transform duration-500">
                   <div className="flex items-center gap-2">
