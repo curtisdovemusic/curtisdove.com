@@ -19,9 +19,9 @@ const SimpleAudioVisualizer = ({
 }: SimpleAudioVisualizerProps) => {
   const bars = Array.from({ length: barCount }, (_, i) => ({
     id: i,
-    // Fixed delay and duration for consistent animation
-    delay: (i % 5) * 0.15, // Small staggered delay for visual interest
-    duration: 1 + (i % 2) * 0.2 // Back to original faster speed
+    // Staggered pattern for fluid movement
+    delay: (i % 4) * 0.1, 
+    duration: 0.8 + (i % 3) * 0.3 // Faster animation
   }));
   
   return (
@@ -38,7 +38,7 @@ const SimpleAudioVisualizer = ({
           <div 
             className="bar w-full rounded-t-md"
             style={{ 
-              height: `${minHeight + (30 + bar.id % 5 * 10)}%`,
+              height: `${minHeight + (15 + bar.id % 4 * 5)}%`, // Much shorter bars
               backgroundColor: (bar.id % 7 === 0) ? accentColor : baseColor,
               transformOrigin: 'bottom'
             }}
