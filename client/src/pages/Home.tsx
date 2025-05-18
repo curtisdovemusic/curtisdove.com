@@ -359,17 +359,24 @@ export default function Home() {
           
           {/* Audio Visualizer */}
           <div className="absolute inset-0 z-[5]">
-            <AudioVisualizer 
-              audioUrl="/lagos-inferno-preview.mp3"
-              barCount={100}
-              barSpacing={4}
-              barColor="rgba(255, 165, 0, 0.1)"
-              barColorActive="rgba(255, 165, 0, 0.6)"
-              className="w-full h-1/3 bottom-0 absolute"
-              minBarHeight={5}
-              maxBarHeight={150}
+            <SimpleAudioVisualizer 
+              barCount={80}
+              minHeight={5}
+              maxHeight={70}
+              baseColor="rgba(255, 165, 0, 0.15)"
+              accentColor="rgba(255, 165, 0, 0.6)"
+              className="w-full h-1/3 bottom-0 absolute px-4"
             />
           </div>
+          
+          {/* Hidden audio element with Lagos Inferno */}
+          <audio 
+            id="background-audio" 
+            src="/music/lagos-inferno.mp3" 
+            loop 
+            preload="auto" 
+            className="hidden"
+          ></audio>
           
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/60 z-5"></div>
