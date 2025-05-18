@@ -4,9 +4,7 @@ import ProfilePicture from "../assets/CurtisDoveProfilePicture.jpg";
 import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
-import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
-import SimpleVisualizer from "../components/SimpleVisualizer";
-import MusicVisualizer from "../components/MusicVisualizer";
+import AudioVisualizer from "../components/AudioVisualizer";
 import SimpleMusicPlayer from "../components/SimpleMusicPlayer";
 
 // Reference album artwork with CSS background classes instead
@@ -351,14 +349,13 @@ export default function Home() {
             {/* Prominent visualizer at the bottom */}
             <div className="w-full h-32 absolute bottom-0 left-0 flex justify-center items-end">
               <div className="bg-black/30 backdrop-blur-sm w-full py-4 px-2">
-                <SimpleVisualizer 
+                <AudioVisualizer 
                   barCount={60}
                   minHeight={10}
                   maxHeight={60}
                   baseColor="rgba(255, 165, 0, 0.4)"
                   accentColor="rgba(255, 165, 0, 1)"
                   className="w-full max-w-4xl mx-auto h-24"
-                  animationActive={true}
                 />
               </div>
             </div>
