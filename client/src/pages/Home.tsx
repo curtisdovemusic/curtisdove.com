@@ -170,9 +170,10 @@ export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
   const [selectedGenre, setSelectedGenre] = useState("all");
+  const [isClicking, setIsClicking] = useState(false);
   const cursorRef = useRef<HTMLDivElement>(null);
   
-  // Track mouse position for custom cursor effects
+  // Track mouse position and click events for custom cursor effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -182,12 +183,20 @@ export default function Home() {
       setScrollY(window.scrollY);
     };
     
+    const handleMouseDown = () => {
+      setIsClicking(true);
+      // Reset click state after animation completes
+      setTimeout(() => setIsClicking(false), 500);
+    };
+    
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousedown', handleMouseDown);
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
   
@@ -229,17 +238,25 @@ export default function Home() {
   
   return (
     <div className="bg-black text-white overflow-hidden">
-      {/* Custom music note cursor effect */}
+      {/* Custom music note cursor effect with interaction animation */}
       <div 
         ref={cursorRef}
-        className="hidden md:block fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 opacity-80"
+        className={`hidden md:block fixed pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 ${isClicking ? 'opacity-100' : 'opacity-80'}`}
         style={{ 
           transition: 'transform 0.15s ease-out',
           width: '24px',
           height: '24px',
         }}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 24 24" 
+          fill="currentColor" 
+          className={`${isClicking ? 'text-purple-500 scale-150 rotate-12' : 'text-amber-500'} transform transition-all duration-500`}
+          style={{
+            filter: isClicking ? 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.8))' : 'none'
+          }}
+        >
           <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" />
         </svg>
       </div>
