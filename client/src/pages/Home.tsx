@@ -1691,15 +1691,15 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* Professional title panel with blue glow effect */}
-                <div className="absolute -bottom-48 left-0 right-0 flex justify-center">
-                  <div className="relative">
+                {/* Professional title panel with blue glow effect - Mobile responsive */}
+                <div className="absolute -bottom-48 md:-bottom-48 left-0 right-0 flex justify-center mt-12 md:mt-0">
+                  <div className="relative w-full px-4 md:px-0 md:w-auto">
                     {/* Blue glow effect */}
-                    <div className="absolute -inset-3 bg-blue-500/20 blur-xl rounded-full animate-pulse-slow"></div>
-                    <div className="absolute -inset-1 bg-blue-600/15 blur-lg rounded-full"></div>
+                    <div className="absolute -inset-3 bg-blue-500/20 blur-xl rounded-full animate-pulse-slow hidden md:block"></div>
+                    <div className="absolute -inset-1 bg-blue-600/15 blur-lg rounded-full hidden md:block"></div>
                     
-                    <div className="relative px-12 py-4 bg-zinc-900/95 backdrop-blur-md rounded-full border border-blue-900/30 shadow-xl">
-                      <div className="flex items-center justify-center space-x-12">
+                    <div className="relative px-4 md:px-12 py-4 bg-zinc-900/95 backdrop-blur-md rounded-xl md:rounded-full border border-blue-900/30 shadow-xl">
+                      <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-4 md:space-y-0">
                         <div className="flex items-center gap-2">
                           <div className="text-amber-500">
                             <i className="fas fa-music text-xs"></i>
@@ -1707,7 +1707,7 @@ export default function Home() {
                           <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Digital Sound Architect</div>
                         </div>
                         
-                        <div className="h-5 w-px bg-zinc-700"></div>
+                        <div className="h-px w-24 md:h-5 md:w-px bg-zinc-700"></div>
                         
                         <div className="flex items-center gap-2">
                           <div className="text-amber-500">
@@ -1716,7 +1716,7 @@ export default function Home() {
                           <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Songwriter</div>
                         </div>
                         
-                        <div className="h-5 w-px bg-zinc-700"></div>
+                        <div className="h-px w-24 md:h-5 md:w-px bg-zinc-700"></div>
                         
                         <div className="flex items-center gap-2">
                           <div className="text-amber-500">
