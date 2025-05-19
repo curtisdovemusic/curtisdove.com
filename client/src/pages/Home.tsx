@@ -1807,6 +1807,16 @@ export default function Home() {
                       <span className="relative z-10">Alternative Rock</span>
                     </span>
                     
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-red-500/20 to-zinc-500/20 hover:from-red-500/30 hover:to-zinc-500/30 border border-red-500/30 rounded-full text-sm transition-all duration-300 hover:border-red-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-red-500 to-zinc-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Rock</span>
+                    </span>
+                    
+                    <span className="group relative px-4 py-2 bg-gradient-to-r from-zinc-500/20 to-red-500/20 hover:from-zinc-500/30 hover:to-red-500/30 border border-zinc-500/30 rounded-full text-sm transition-all duration-300 hover:border-zinc-500/50">
+                      <span className="absolute -inset-px bg-gradient-to-r from-zinc-500 to-red-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
+                      <span className="relative z-10">Metal</span>
+                    </span>
+                    
                     <span className="group relative px-4 py-2 bg-gradient-to-r from-amber-500/20 to-purple-500/20 hover:from-amber-500/30 hover:to-purple-500/30 border border-amber-500/30 rounded-full text-sm transition-all duration-300 hover:border-amber-500/50">
                       <span className="absolute -inset-px bg-gradient-to-r from-amber-500 to-purple-500 opacity-0 group-hover:opacity-20 blur-md rounded-full transition-opacity duration-300"></span>
                       <span className="relative z-10">Dance</span>
