@@ -1649,43 +1649,8 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity"></div>
                 </div>
                 
-                {/* Professional titles moved above signature for better layout */}
-                <div className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 w-full">
-                  <div className="relative w-full mb-12 flex justify-center">
-                    <div className="w-full max-w-md mx-auto px-4 md:px-0">
-                      {/* Titles container with subtle background */}
-                      <div className="relative px-4 md:px-8 py-2 md:py-3 bg-zinc-900/80 backdrop-blur-md rounded-lg border border-amber-500/20 shadow-lg">
-                        <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-3 md:space-y-0">
-                          <div className="flex items-center gap-2">
-                            <div className="text-amber-500">
-                              <i className="fas fa-music text-xs"></i>
-                            </div>
-                            <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Digital Sound Architect</div>
-                          </div>
-                          
-                          <div className="h-px w-16 md:h-4 md:w-px bg-zinc-700/50"></div>
-                          
-                          <div className="flex items-center gap-2">
-                            <div className="text-amber-500">
-                              <i className="fas fa-pen text-xs"></i>
-                            </div>
-                            <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Songwriter</div>
-                          </div>
-                          
-                          <div className="h-px w-16 md:h-4 md:w-px bg-zinc-700/50"></div>
-                          
-                          <div className="flex items-center gap-2">
-                            <div className="text-amber-500">
-                              <i className="fas fa-microphone text-xs"></i>
-                            </div>
-                            <div className="text-xs uppercase tracking-wider text-gray-200 font-medium">Recording Artist</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Signature with spectacular glow effect moved below titles */}
+                {/* Signature with glow effect */}
+                <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-full">
                   <div className="relative">
                     {/* Glow layer */}
                     <div 
