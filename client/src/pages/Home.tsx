@@ -5,6 +5,7 @@ import PhoenixImage from "../assets/phoenix_image.webp";
 import ShareButtons from "../components/ShareButtons";
 import CollapsibleGenre from "../components/CollapsibleGenre";
 import SimpleAudioVisualizer from "../components/SimpleAudioVisualizer";
+import StreamCounter from "../components/StreamCounter";
 
 // Reference album artwork with CSS background classes instead
 // We now get album covers directly from CollapsibleGenre
@@ -1288,6 +1289,15 @@ export default function Home() {
               </div>
             </section>
             
+            {/* Total Streams Counter */}
+            <section className="py-10 bg-gradient-to-b from-black to-zinc-900/60">
+              <div className="container mx-auto px-6">
+                <div className="max-w-md mx-auto bg-zinc-900/60 border border-zinc-800/50 rounded-xl p-6 shadow-xl">
+                  <StreamCounter startCount={637000} incrementIntervalSec={32.5} />
+                </div>
+              </div>
+            </section>
+                
             {/* Trending Tracks Section */}
             <section className="py-16 mb-10">
               <div className="container mx-auto px-6">
