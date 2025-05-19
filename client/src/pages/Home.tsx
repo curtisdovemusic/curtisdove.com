@@ -632,20 +632,22 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Featured Playlist Section */}
+            {/* Enhanced SEO Featured Playlist Section */}
             <div className="w-full max-w-3xl mx-auto mb-12 relative">
               <div className="text-center mb-4">
+                <h3 className="text-3xl font-bold text-white mb-2">TOP TRENDING <span className="text-amber-500">AFROBEAT PLAYLIST 2025</span></h3>
+                <p className="text-white/80 mb-4 max-w-2xl mx-auto">Discover the hottest Afrobeat tracks in our curated playlist featuring Lagos to Tokyo, Eko Island Beats, and more tropical dance hits. Already saved by thousands of music lovers.</p>
                 <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-green-600/30 to-blue-900/30 text-white text-base font-medium rounded-full border border-green-500/50">
-                  FEATURED PLAYLIST
+                  #1 AFROBEAT PLAYLIST
                 </span>
               </div>
               
-              {/* Playlist container with glow */}
+              {/* Playlist container with enhanced glow */}
               <div className="relative">
                 {/* Glow effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-green-600/30 via-blue-400/40 to-green-600/30 rounded-xl blur-sm"></div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-green-500/15 via-blue-300/20 to-green-500/15 rounded-xl blur-md"></div>
-                <div className="absolute -inset-1.5 bg-gradient-to-tr from-green-600/10 via-blue-400/15 to-green-600/10 rounded-xl blur-lg"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-green-600/40 via-blue-400/50 to-green-600/40 rounded-xl blur-sm animate-pulse-slow"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-green-500/20 via-blue-300/25 to-green-500/20 rounded-xl blur-md"></div>
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-green-600/15 via-blue-400/20 to-green-600/15 rounded-xl blur-lg"></div>
                 
                 {/* Playlist embed */}
                 <div className="relative bg-[#121212] rounded-lg overflow-hidden">
@@ -659,20 +661,37 @@ export default function Home() {
                     loading="lazy"
                     className="rounded-lg"
                     style={{ background: "#121212" }}
+                    title="Curtis Dove's Top Trending Afrobeat Playlist 2025"
                   ></iframe>
                 </div>
               </div>
               
-              {/* Call to action */}
-              <div className="mt-4 text-center">
-                <div className="bg-gradient-to-r from-green-900/60 via-blue-900/60 to-green-900/60 backdrop-blur-sm p-3 rounded-lg border border-green-500/30 shadow-lg">
-                  <div className="flex items-center justify-center">
-                    <span className="text-lg">🎶</span>
-                    <p className="text-white text-lg ml-2 font-medium">
-                      Join thousands of listeners — <a href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn?si=rC8br9wRRqubBLRLBZ7S6Q" target="_blank" rel="noopener noreferrer" className="text-green-400 font-semibold hover:text-green-300 transition-colors">Save & Stream Now!</a>
-                    </p>
+              {/* Enhanced Call to action */}
+              <div className="mt-6 text-center">
+                <div className="bg-gradient-to-r from-green-900/70 via-blue-900/70 to-green-900/70 backdrop-blur-sm p-4 rounded-lg border border-green-500/40 shadow-lg">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-3">
+                    <div className="flex items-center">
+                      <span className="text-xl">🔥</span>
+                      <p className="text-white text-lg ml-2 font-medium">
+                        Over 50,000+ streams and growing every day!
+                      </p>
+                    </div>
+                    <a 
+                      href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn?si=Av1ikmx1T3qcjSt0eBLiUw" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition-all transform hover:scale-105 flex items-center"
+                    >
+                      <i className="fab fa-spotify mr-2"></i>
+                      SAVE PLAYLIST NOW
+                    </a>
                   </div>
                 </div>
+                
+                <div className="mt-3 text-white/60 text-sm">
+                  Featuring top Afrobeat songs from Lagos to Tokyo, Sweet Poison, Fire & Wine, and more
+                </div>
+              </div>
                 
                 {/* Spotify stream counter */}
                 <div className="mt-3 flex items-center justify-center bg-black/40 py-2 px-4 rounded-full mx-auto inline-flex border border-green-500/20">
