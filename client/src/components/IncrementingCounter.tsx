@@ -41,12 +41,9 @@ const IncrementingCounter = ({
   
   return (
     <div className="stream-counter">
-      <div className="flex flex-col items-center">
-        <div className="text-xl md:text-2xl font-semibold text-white/90">Spotify Streams</div>
-        <div className="text-3xl md:text-4xl font-bold text-green-500 mt-2 transition-all duration-700">
-          {formattedValue}
-        </div>
-        <div className="text-sm text-white/60 mt-1">and counting...</div>
+      <div className="text-white text-sm font-medium flex items-center">
+        <span className="text-green-500 font-bold">{formattedValue}</span>
+        <span className="ml-1 text-white/60 text-xs">streams</span>
       </div>
     </div>
   );
