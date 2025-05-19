@@ -1289,14 +1289,7 @@ export default function Home() {
               </div>
             </section>
             
-            {/* Total Streams Counter */}
-            <section className="py-10 bg-gradient-to-b from-black to-zinc-900/60">
-              <div className="container mx-auto px-6">
-                <div className="max-w-md mx-auto bg-zinc-900/60 border border-zinc-800/50 rounded-xl p-6 shadow-xl">
-                  <IncrementingCounter startValue={637000} incrementIntervalMs={32500} />
-                </div>
-              </div>
-            </section>
+
                 
             {/* Trending Tracks Section */}
             <section className="py-16 mb-10">
@@ -1457,7 +1450,35 @@ export default function Home() {
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                {MUSIC_PLATFORMS.map((platform, index) => (
+                {/* Spotify Platform with Counter */}
+                <div className="relative col-span-1 md:col-span-2 lg:col-span-1">
+                  <a 
+                    href={MUSIC_PLATFORMS[0].url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group p-6 rounded-xl bg-zinc-900/80 backdrop-blur-sm hover:bg-zinc-800 transition-all transform hover:scale-105 border border-transparent hover:border-green-500/30 hover:shadow-lg hover:shadow-green-500/20 h-full block"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <div 
+                        className="w-16 h-16 flex items-center justify-center mb-4 rounded-full transition-transform duration-500 group-hover:scale-110 group-hover:shadow-md group-hover:shadow-green-500/20" 
+                        style={{ backgroundColor: `${MUSIC_PLATFORMS[0].color}20` }}
+                      >
+                        <i className={`${MUSIC_PLATFORMS[0].icon} text-3xl transition-all duration-300 group-hover:text-green-500`} style={{color: MUSIC_PLATFORMS[0].color}}></i>
+                      </div>
+                      <h4 className="text-xl font-bold mb-2 group-hover:text-green-400 transition-colors duration-300">{MUSIC_PLATFORMS[0].name}</h4>
+                      <div className="mt-1 mb-4">
+                        <IncrementingCounter startValue={637000} incrementIntervalMs={32500} />
+                      </div>
+                      <div className="mt-2 flex items-center text-green-500 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                        <span className="mr-2">Listen now</span>
+                        <i className="fas fa-arrow-right text-sm animate-pulse"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Other Platforms */}
+                {MUSIC_PLATFORMS.slice(1).map((platform, index) => (
                   <a 
                     key={index}
                     href={platform.url} 
