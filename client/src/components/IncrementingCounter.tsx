@@ -43,7 +43,7 @@ const IncrementingCounter = ({
     <div className="stream-counter">
       <div className="text-white text-sm font-medium flex items-center">
         <span className="text-green-500 font-bold text-base">{formattedValue}</span>
-        <span className="ml-1 text-white/70 text-xs">total Spotify streams</span>
+        <span className="ml-1 text-white/70 text-xs">Total Spotify Streams</span>
       </div>
     </div>
   );
