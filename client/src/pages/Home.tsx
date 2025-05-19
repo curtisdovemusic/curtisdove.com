@@ -691,8 +691,7 @@ export default function Home() {
                 <div className="mt-3 text-white/60 text-sm">
                   Featuring top Afrobeat songs from Lagos to Tokyo, Sweet Poison, Fire & Wine, and more
                 </div>
-              </div>
-                
+              
                 {/* Spotify stream counter */}
                 <div className="mt-3 flex items-center justify-center bg-black/40 py-2 px-4 rounded-full mx-auto inline-flex border border-green-500/20">
                   <i className="fab fa-spotify text-green-500 mr-2 text-lg"></i>
