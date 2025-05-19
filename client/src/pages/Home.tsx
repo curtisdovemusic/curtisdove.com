@@ -663,20 +663,21 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Call to action with Spotify stream counter */}
+              {/* Call to action */}
               <div className="mt-4 text-center">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 bg-gradient-to-r from-green-900/60 via-blue-900/60 to-green-900/60 backdrop-blur-sm p-3 rounded-lg border border-green-500/30 shadow-lg">
-                  <div className="flex items-center">
+                <div className="bg-gradient-to-r from-green-900/60 via-blue-900/60 to-green-900/60 backdrop-blur-sm p-3 rounded-lg border border-green-500/30 shadow-lg">
+                  <div className="flex items-center justify-center">
                     <span className="text-lg">🎶</span>
                     <p className="text-white text-lg ml-2 font-medium">
                       Join thousands of listeners — <a href="https://open.spotify.com/playlist/0OMB5854ceBpFP6vtT1uHn?si=rC8br9wRRqubBLRLBZ7S6Q" target="_blank" rel="noopener noreferrer" className="text-green-400 font-semibold hover:text-green-300 transition-colors">Save & Stream Now!</a>
                     </p>
                   </div>
-                  
-                  <div className="inline-flex items-center bg-black/40 px-3 py-1.5 rounded-full">
-                    <i className="fab fa-spotify text-green-500 mr-2"></i>
-                    <IncrementingCounter startValue={637000} incrementIntervalMs={32500} />
-                  </div>
+                </div>
+                
+                {/* Spotify stream counter */}
+                <div className="mt-3 flex items-center justify-center bg-black/40 py-2 px-4 rounded-full mx-auto inline-flex border border-green-500/20">
+                  <i className="fab fa-spotify text-green-500 mr-2 text-lg"></i>
+                  <IncrementingCounter startValue={637000} incrementIntervalMs={32500} />
                 </div>
               </div>
             </div>

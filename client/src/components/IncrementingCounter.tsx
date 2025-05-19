@@ -42,8 +42,8 @@ const IncrementingCounter = ({
   return (
     <div className="stream-counter">
       <div className="text-white text-sm font-medium flex items-center">
-        <span className="text-green-500 font-bold">{formattedValue}</span>
-        <span className="ml-1 text-white/60 text-xs">streams</span>
+        <span className="text-green-500 font-bold text-base">{formattedValue}</span>
+        <span className="ml-1 text-white/70 text-xs">total Spotify streams</span>
       </div>
     </div>
   );
